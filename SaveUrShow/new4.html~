@@ -4,13 +4,13 @@
 <!-- <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> -->
 	<!-- En-tête de la page -->
 	<meta charset="utf-8" />
-	<title> SaveUrShow/Salles </title>
+	<title> SaveUrShow/Forum </title>
 </head>
 <body>
-<!--<link rel="stylesheet" href="test_page_Salles.css" /> -->
-	<h2 id="Les_Salles"> Liste des salles:</h2>
+<!--<link rel="stylesheet" href="test_page_Forum.css" /> -->
+	<h2 id="Le_Forum"> Bienvenue sur le forum:</h2>
 	
-	<p>Souhaitez-vous revenir sur <a href="banniere.html">la page
+	<p>Souhaitez-vous revenir sur <a href="banière.html">la page
 	d'accueil </a>?</p>
 </body>
 </html>	 

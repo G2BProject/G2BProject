@@ -10,7 +10,7 @@
 <!--<link rel="stylesheet" href="test_page_Artistes.css" /> -->
 	<h2 id="Les_Artistes"> Liste des artistes:</h2>
 	
-	<p>Bonjour. Souhaitez-vous vous rendre sur <a href="file:///C:/Aude/ISEP/Ing%E91/Semestre2/TEST/SaveUrShow/GitHub/G2BProject/SaveUrShow/banniere.html">la page
+	<p>Bonjour. Souhaitez-vous vous rendre sur <a href="file:///C:/Aude/ISEP/Ing%E91/Semestre2/TEST/SaveUrShow/GitHub/G2BProject/SaveUrShow/bani%E8re.html">la page
 d'accueil </a> ?</p> <!-- problème avec le lien vers l'accueil, obliger pour l'instant de mettre le lien entier de la page d'accueil!!!!!! -->
 </body>
 </html>

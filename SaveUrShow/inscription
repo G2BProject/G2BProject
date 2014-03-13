@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Inscription</title>
+	</head>
+
+	<body>
+		<p>Vous vous inscrivez en tant que : <strong>particulier</strong>.</p>
+		<ul>
+			<li>Nom d'utilisateur :</li>
+			<li>Adresse mail :</li>
+			<li>Confirmation d'adresse mail:</li>
+			<li>Mot de passe :</li>
+			<li>Confirmation de mot de passe:</li>
+			<li>Nom :</li>
+			<li>Prenom :</li>
+			<li>Sexe :</li>
+			<li>Date de naissance :</li>
+			<li>Adresse :</li>
+			<li>Pays :</li>
+		</ul>
+	</body>
+</html>
