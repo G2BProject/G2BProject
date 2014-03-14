@@ -1,6 +1,6 @@
 body{
 	width: 1224px;
-	background-size: 230px; 
+	background-size: 250px; 
 	background-image:url(image/haut.png);
 	background-position:center top;
 	background-repeat: repeat-x;
@@ -39,7 +39,7 @@ body{
 #connexion{
 	float:right;
 	margin-right:-300px;
-	margin-top:-75px;
+	margin-top:-70px;
 }
 #connexion ul{
 	width: 300px;
@@ -108,15 +108,8 @@ display:inline;
 
  #drapeau{
  float:right;
- margin-top:110px;
- margin-right:-700px; /*à placer entre 600 et 700*/
- }
- #Suivez_nous{
- 
- }
- #réseaux{
- margin-top: -10px;
- margin-right:-700px;
+ margin-top:-110px;
+ margin-right:-540px;
  }
  a{
  	 text-decoration:none;
