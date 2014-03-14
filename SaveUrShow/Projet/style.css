@@ -55,7 +55,7 @@ body{
 #connexion li:hover {
  background-color:#00665F;
  }
- #bouton1 ul{
+ #artistes_salles ul{
  margin-top:-78.25%;
  margin-left:5.1%;
  margin-right:0px;
@@ -63,9 +63,10 @@ body{
  font-size: 18px;
  float:left; /*pour IE*/
 }
-#bouton1  li {
+#artistes_salles  li {
  display:inline;  
  width:100px;
+ margin-left:30px;
  background-color:darkred;
  text-align:center;
  padding:2px 6px 2px 6px;
@@ -76,28 +77,8 @@ body{
 /*#bouton1 li:hover {
   background-color:red;
  }*/
- #bouton2 ul{
- margin-top:-78.25%;
- margin-left:25.1%;
- margin-right:0px;
- list-style-type:none;
- font-size: 18px;
- float:left; /*pour IE*/
-}
-#bouton2 li {
- display:inline;  
- width:100px;
- background-color:darkred;
- text-align:center;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
- }
-/*#bouton2 li:hover {
-  background-color:#F7230C;
- }*/
- #bouton3 ul{
+
+ #forum_concerts ul{
  margin-top:-78.25%;
  margin-left:65.1%;
  margin-right:0px;
@@ -105,9 +86,10 @@ body{
  font-size: 18px;
  float:left; /*pour IE*/
 }
-#bouton3  li {
+#forum_concerts  li {
  display:inline;  
  width:100px;
+ margin-left:30px;
  background-color:darkred;
  text-align:center;
  padding:2px 6px 2px 6px;
@@ -118,32 +100,13 @@ body{
 /*#bouton3 li:hover {
   background-color:#00665F;
  }*/
- #bouton4 ul{
- margin-top:-78.25%;
- margin-left:85.1%;
- margin-right:0px;
- list-style-type:none;
- font-size: 18px;
- float:left; /*pour IE*/
-}
-#bouton4  li {
- display:inline;  
- width:100px;
- background-color:darkred;
- text-align:center;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
+
+ #drapeau{
+ margin-top:-86.8%;
+ margin-left:88.1%;
  }
-/*#bouton4 li:hover {
-  background-color:#00665F;
- }*/
  a{
  	 text-decoration:none;
  	 color:#FFFFFF;
  }
- p{
-margin-top:-86.8%;
- margin-left:88.1%;
- }
+ 
