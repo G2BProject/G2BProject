@@ -1,0 +1,117 @@
+body{
+	background-size: 230px;
+	background-image: url(image/haut.png);
+	background-position: center top;
+	background-repeat: repeat-x;
+	background-color: #333333;
+	margin: 0%;
+	width: 100%;
+}
+#logo{
+	background-size: 10%;
+	height: 200px;
+	background-image: url(image/logo.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#bordure{
+	width: 180px;
+	height: 1000px;
+	float: right;
+	margin-top:45px;
+	background-color: #333333;
+	border-style: solid;
+	border-radius: 3px;
+	border-width: 2px;
+	border-color: #000000;
+}
+#nom{
+	background-size: 230px;
+	margin-left: 180px;
+	margin-top:-150px;
+	height: 70px;
+	width:300px;
+	background-image: url(image/Titre.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+#connexion{
+	float:right;
+	margin-right:-300px;
+	margin-top:-70px;
+}
+#connexion ul{
+	width: 300px;
+ 	font-size: 18px;
+	float:left; /*pour IE*/
+}
+#connexion  li {
+ display:inline;  
+ width:100px;
+ background-color:#0066FF;
+ text-align:center;
+ padding:2px 6px 2px 6px;
+ border-style:solid;
+ border-width:1px;
+ border-radius:5px;
+ }
+#connexion li:hover {
+ background-color:#00665F;
+ }
+ #artistes_salles ul{
+ 	margin-top:-4px;
+	margin-left:140px;
+	margin-right:0px;
+	list-style-type:none;
+	font-size: 18px;
+	float:left; /*pour IE*/
+}
+#artistes_salles  li {
+display:inline;  
+ width:100px;
+ background-color:darkred;
+ text-align:center;
+ margin-left:50px;
+ padding:2px 6px 2px 6px;
+ border-style:solid;
+ border-width:1px;
+ border-radius:5px;
+ }
+/*#bouton1 li:hover {
+  background-color:red;
+ }*/
+#forum_concerts{
+	float:right;
+}
+ #forum_concerts ul{
+ margin-top:-4px;
+ margin-right:140px;
+ list-style-type:none;
+ font-size: 18px;
+ float:left; /*pour IE*/
+}
+#forum_concerts  li {
+ display:inline;  
+ width:100px;
+ margin-left:30px;
+ background-color:darkred;
+ text-align:center;
+ padding:2px 6px 2px 6px;
+ border-style:solid;
+ border-width:1px;
+ border-radius:5px;
+ }
+/*#bouton3 li:hover {
+  background-color:#00665F;
+ }*/
+
+ #drapeau{
+ float:right;
+ margin-top:-110px;
+ margin-right:-540px;
+ }
+ a{
+ 	 text-decoration:none;
+ 	 color:#FFFFFF;
+ }
+ 
