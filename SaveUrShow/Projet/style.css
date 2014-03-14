@@ -1,5 +1,4 @@
 body{
-	width: 1224px;
 	background-size: 250px; 
 	background-image:url(image/haut.png);
 	background-position:center top;
@@ -78,7 +77,7 @@ display:inline;
  border-width:1px;
  border-radius:5px;
  }
-/*#artistes_salles li:hover {
+/*#bouton1 li:hover {
   background-color:red;
  }*/
 #forum_concerts{
@@ -102,7 +101,7 @@ display:inline;
  border-width:1px;
  border-radius:5px;
  }
-/*#forum_concerts li:hover {
+/*#bouton3 li:hover {
   background-color:#00665F;
  }*/
 
