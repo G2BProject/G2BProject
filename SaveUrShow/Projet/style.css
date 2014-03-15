@@ -7,6 +7,8 @@ body{
 	background-color: #333333;
 	margin: 0%;
 	width: 100%;
+	color: white;
+	
 }
 #logo{
 	background-size: 10%;
@@ -114,5 +116,33 @@ display:inline;
  a{
  	 text-decoration:none;
  	 color:#FFFFFF;
+ }
+ label.standard
+ {
+ 	display: block;
+	width: 300px;
+	float: left;
+ }
+ .standard
+{
+	display: block;
+	width: 300px;
+	float: left;
+}
+ .formulaireConnexion
+ {
+ 	position:absolute;
+ 	top: 40%;
+ 	left:10%;
+ }
+ .formulaireInscription
+ {
+ 	position:absolute;
+ 	top: 40%;
+ 	left:20%;
+ }
+ .userClass
+ {
+ 	text-decoration: underline;
  }
  
