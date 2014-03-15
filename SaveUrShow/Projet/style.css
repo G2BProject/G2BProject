@@ -1,5 +1,5 @@
 body{
-	width: 1224px;
+	
 	background-size: 250px; 
 	background-image:url(image/haut.png);
 	background-position:center top;
@@ -17,103 +17,194 @@ body{
 	background-position: center;
 	background-repeat: no-repeat;
 }
-#bordure{
-	width: 180px;
-	height: 1000px;
-	float: right;
-	margin-top:45px;
-	background-color: #333333;
-	border-style: solid;
-	border-radius: 3px;
-	border-width: 2px;
-	border-color: #000000;
-}
 #nom{
 	background-size: 230px;
 	margin-left: 180px;
-	margin-top:-150px;
+	margin-top:-140px;
 	height: 70px;
-	width:300px;
+	width:20%;
 	background-image: url(image/Titre.png);
 	background-position: left top;
 	background-repeat: no-repeat;
 }
-#connexion{
-	float:right;
-	margin-right:-300px;
-	margin-top:-70px;
+#bordure{
+	width: 15%;
+	height: 1000px;
+	float: right;
+	margin-top:49px;
+	background-color: #333333;
+	border-style: solid;
+	border-radius: 3px;
+	border-width: 2px;
+	border-left-color: black;
+	border-bottom-color:#333333;
+	border-right-color:#333333;
 }
 #connexion ul{
-	width: 300px;
+	width: 90%;
  	font-size: 18px;
 	float:left; /*pour IE*/
 }
-#connexion  li {
- display:inline;  
- width:100px;
- background-color:#0066FF;
- text-align:center;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
+ #connexion{
+ 	float:right;
+	margin-right:-188px;
+	margin-top:-79px;
  }
-#connexion li:hover {
- background-color:#00665F;
+.zone1{
+ 	 display:inline;  
+	 width:20%;
+	 background-color:#0066FF;
+	 text-align:center;
+	 padding:2px 6px 2px 6px;
+	 border-style:solid;
+	 border-width:1px;
+	 border-radius:5px;
+
  }
- #artistes_salles ul{
- 	margin-top:-4px;
-	margin-left:140px;
-	margin-right:0px;
-	list-style-type:none;
-	font-size: 18px;
+#artistes_salles ul{
+	width: 90%;
+ 	font-size: 18px;
+	float:right; /*pour IE*/
+}
+ #artistes_salles{
+ 	float:left;
+	margin-left:150px;
+	margin-top:-21px;
+ }
+ .boutons1{
+ 	 display:inline;  
+	 width:20%;
+	 background-color:darkred;
+	 text-align:center;
+	 padding:2px 6px 2px 6px;
+	 border-style:solid;
+	 border-width:1px;
+	 border-radius:5px;
+	 margin-right:110px;
+ }
+
+ #forum_concerts ul{
+	width: 90%;
+ 	font-size: 18px;
 	float:left; /*pour IE*/
 }
-#artistes_salles  li {
-display:inline;  
- width:100px;
- background-color:darkred;
- text-align:center;
- margin-left:50px;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
+ #forum_concerts{
+ 	float:right;
+	margin-right:-180px;
+	margin-top:-21px;
  }
-/*#bouton1 li:hover {
+  .boutons2{
+ 	 display:inline;  
+	 width:20%;
+	 background-color:darkred;
+	 text-align:center;
+	 padding:2px 6px 2px 6px;
+	 border-style:solid;
+	 border-width:1px;
+	 border-radius:5px;
+	 margin-right: 100px;
+ }
+ /*;
+#connexion li:hover {
+ background-color:#00665F;
+ }*/
+ 
+/*#boutons1 li:hover {
   background-color:red;
  }*/
-#forum_concerts{
-	float:right;
-}
- #forum_concerts ul{
- margin-top:-4px;
- margin-right:140px;
- list-style-type:none;
- font-size: 18px;
- float:left; /*pour IE*/
-}
-#forum_concerts  li {
- display:inline;  
- width:100px;
- margin-left:30px;
- background-color:darkred;
- text-align:center;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
- }
-/*#bouton3 li:hover {
+
+/*#boutons2 li:hover {
   background-color:#00665F;
  }*/
 
  #drapeau{
  float:right;
- margin-top:-110px;
- margin-right:-540px;
+ margin-top:-115px;
+ margin-right:-390px;
  }
- a{
+
+ #Suivre{
+ 	 display:inline;  
+	 width:10%;
+	 background-color:#0066FF;
+	 text-align:center;
+	 padding:2px 6px 2px 6px;
+	 border-style:solid;
+	 border-width:1px;
+	 float:right;
+	 margin-right:-385px;
+	 margin-top:459px;
+ }
+ .reseaux{
+ 	 display:inline-block;  
+	 width:10%;
+	 background-color:grey;
+	 text-align:center;
+	 padding:2px 6px 2px 6px;
+	 border-style:solid;
+	 border-width:1px;
+	 float:right;
+	 margin-right:-385px;
+	 margin-top:484px;
+ }
+
+ .reseauxsociaux{
+ 	float: left;
+ 	margin: 7px;
+ 	display: inline-block;
+ }
+
+ .connection{
+ 	display:inline-block;  
+	 width:10%;
+	 background-color:ThreeDDarkShadow;
+	 text-align:center;
+	 padding:2px 6px 2px 6px;
+	 border-style:solid;
+	 border-width:1px;
+	 float:right;
+	 margin-right:-385px;
+	 margin-top:125px;
+ }
+
+.cadre{
+	width: 84.5%;
+	height: 930px;
+	margin-top:121px;
+	background-color:#333333;
+	border-style: solid;
+	border-radius: 3px;
+	border-width: 2px;
+	border-bottom-color:black;
+}
+
+#boutons_bas ul{
+	width: 40%;
+ 	font-size: 18px;	
+ 	/*float: center;*/
+ 	margin-left: 550px;
+}
+
+#boutons_bas{
+ 	float:left;
+	/*margin-left:150px;*/
+	margin-top:20px;
+ }
+
+.boutons3{
+ 	 display:inline;  
+	 width:20%;
+	 background-color:black;
+	 text-align:center;
+	 padding:2px 6px 2px 6px;
+	 border-style:solid;
+	 border-width:1px;
+	 border-radius:5px;
+	 border-spacing: ;
+	 margin-right: 100px;
+}
+
+a{
  	 text-decoration:none;
  	 color:#FFFFFF;
  }
