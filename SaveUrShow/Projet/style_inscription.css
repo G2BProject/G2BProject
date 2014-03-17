@@ -6,144 +6,61 @@ body{
 	background-color:#333333;
 	margin:0;
 }
-p
+header
 {
+	position :absolute ;
+	top : 0px ;
+	right : 0px ;
+}
+.particulier
+{
+	text-decoration : underline ;
+}
+.typeUtilisateur
+{
+	position : absolute ;
+	top : 30% ;
+	left : 0% ;
 	color : white ;
+	text-align : left ;
 }
-#logo{
-	background-size:140px;
-	height:260px;
-	margin-top:-25px;
-	margin-bottom:31px;
-	background-image: url(image/logo.png);
-	background-position:center;
-	background-repeat: no-repeat;
+.formulaire
+{
+	position : absolute ;
+	top : 40% ;
+	left : 5% ;
+	color : white ;
+	text-align : justify ; 
 }
-#bordure{
-	margin-left:85%;
-	margin-top:44px;
-	height:1000px;
-	background-color:#333333;
-	border-style:solid;
-	border-radius: 3px;
-	border-width: 2px;
-    border-color:#000000;
+label.standard
+{
+	display : block ;
+	float : left ;
+	width : 400px ;
+	text-align : right ;
+
 }
-#nom{
-	background-size:230px;
-	margin-top:-200px;
-	margin-left:180px;
-	height:70px;
-	background-image: url(image/Titre.png);
-	background-position:left top;
-	background-repeat: no-repeat;
+.standard
+{
+	display : block ;
+	float : left ;
+	width : 400px ;
+	text-align : right ;
+
 }
-#connexion ul{
- margin-top:-86%;
- margin-left:81.7%;
- margin-right:0px;
- list-style-type:none;
- font-size: 18px;
- float:left; /*pour IE*/
+.details
+{
+	font-size : 0.8em ;
+	text-align : center ;
 }
-#connexion  li {
- display:inline;  
- width:100px;
- background-color:#0066FF;
- text-align:center;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
- }
-#connexion li:hover {
- background-color:#00665F;
- }
- #bouton1 ul{
- margin-top:-78.25%;
- margin-left:5.1%;
- margin-right:0px;
- list-style-type:none;
- font-size: 18px;
- float:left; /*pour IE*/
+.etoile
+{
+	color : red ;
 }
-#bouton1  li {
- display:inline;  
- width:100px;
- background-color:darkred;
- text-align:center;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
- }
-#bouton1 li:hover {
-  background-color:#00665F;
- }
- #bouton2 ul{
- margin-top:-78.25%;
- margin-left:25.1%;
- margin-right:0px;
- list-style-type:none;
- font-size: 18px;
- float:left; /*pour IE*/
+.motDePasse
+{
+	display : block ;
+	position : absolute ;
+	left : 40% ;
 }
-#bouton2 li {
- display:inline;  
- width:100px;
- background-color:darkred;
- text-align:center;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
- }
-#bouton2 li:hover {
-  background-color:#00665F;
- }
- #bouton3 ul{
- margin-top:-78.25%;
- margin-left:65.1%;
- margin-right:0px;
- list-style-type:none;
- font-size: 18px;
- float:left; /*pour IE*/
-}
-#bouton3  li {
- display:inline;  
- width:100px;
- background-color:darkred;
- text-align:center;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
- }
-#bouton3 li:hover {
-  background-color:#00665F;
- }
- #bouton4 ul{
- margin-top:-78.25%;
- margin-left:85.1%;
- margin-right:0px;
- list-style-type:none;
- font-size: 18px;
- float:left; /*pour IE*/
-}
-#bouton4  li {
- display:inline;  
- width:100px;
- background-color:darkred;
- text-align:center;
- padding:2px 6px 2px 6px;
- border-style:solid;
- border-width:1px;
- border-radius:5px;
- }
-#bouton4 li:hover {
-  background-color:#00665F;
- }
- a{
- 	 text-decoration:none;
- 	 color:#FFFFFF;
- }
+
