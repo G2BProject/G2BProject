@@ -7,8 +7,6 @@ body{
 	background-color: #333333;
 	margin: 0%;
 	width: 100%;
-	color: white;
-	
 }
 
 #logo{
@@ -65,13 +63,12 @@ body{
 .zone1{
  	 display:inline;  
 	 width:20%;
-	 background-color:#0066FF;
+	 background-color:#990000;
 	 text-align:center;
 	 padding:2px 6px 2px 6px;
 	 border-style:solid;
 	 border-width:1px;
 	 border-radius:5px;
-
 }
 
 #artistes_salles ul{
@@ -84,7 +81,7 @@ body{
  	float:left;
 	margin-left:150px;
 	margin-top:-21px;
- }
+}
 
 .boutons1{
  	 display:inline;  
@@ -113,7 +110,7 @@ body{
 .boutons2{
  	 display:inline;  
 	 width:20%;
-	 background-color:darkred;
+	 background-color:#990000;
 	 text-align:center;
 	 padding:2px 6px 2px 6px;
 	 border-style:solid;
@@ -169,7 +166,7 @@ body{
 	 margin-top:0px;
 	 width:67%;
 	 height: 630px;
-	 background-color:purple;
+	 background-color:#26266A;
 	 text-align:center;
 	/* padding:2px 6px 2px 6px;*/
 	 border-style:solid;
@@ -182,7 +179,7 @@ body{
 	width: 99.7%;
 	height: 87px;
 	margin-top:100px;
-	background-color:#333333;
+	background-color:#2E2C2C;
 	border-style: solid;
 	border-top-width:7px;
 	border-bottom-width:7px; 
@@ -195,7 +192,7 @@ body{
 	 margin-right: -3.3px;
 	 width:32%;
 	 height: 340px;
-	 background-color:red;
+	 background-color:#B62727;
 	 text-align:center;
 	 /*padding:2px 6px 2px 6px;*/
 	 border-style:solid;
@@ -207,7 +204,7 @@ body{
 	width: 98.7%;
 	height: 217px;
 	margin-top:20px;
-	background-color:#333333;
+	background-color:#2E2C2C;
 	border-style: solid;
 	border-left-width: 2.5px;
 	border-right-width: 3px;
@@ -223,7 +220,7 @@ body{
 	 margin-right: -3.3px;
 	 width:30%;
 	 height: 288px;
-	 background-color:green;
+	 background-color:#0C874D;
 	 text-align:center;
 	 /*padding:2px 6px 2px 6px;*/
 	 border-style:solid;
@@ -234,7 +231,7 @@ body{
 	width: 99.1%;
 	height: 187px;
 	margin-top:20px;
-	background-color:#333333;
+	background-color:#2E2C2C;
 	border-style: solid;
 	border-left-width: 2.5px;
 	border-right-width: 2px;
@@ -250,7 +247,7 @@ body{
 	 margin-right: -3.3px;
 	 width:36.4%;
 	 height: 288px;
-	 background-color:yellow;
+	 background-color:#D2AE25;
 	 text-align:center;
 	 /*padding:2px 6px 2px 6px;*/
 	 border-style:solid;
@@ -261,7 +258,7 @@ body{
 	width: 99.9%;
 	height: 187px;
 	margin-top:20px;
-	background-color:#333333;
+	background-color:#2E2C2C;
 	border-style: solid;
 	border-left-width: 0px;
 	border-right-width: 2px;
@@ -276,7 +273,7 @@ body{
 	 margin-right: -2.3px;
 	 width:31.5%;
 	 height: 577px;
-	 background-color:cyan;
+	 background-color:#0099FF;
 	 text-align:center;
 	 /*padding:2px 6px 2px 6px;*/
 	 border-style:solid;
@@ -287,7 +284,7 @@ body{
 	width: 99.7%;
 	height: 447px;
 	margin-top:20px;
-	background-color:#333333;
+	background-color:#2E2C2C;
 	border-style: solid;
 	border-left-width: 0px;
 	border-right-width: 3px;
@@ -382,11 +379,20 @@ a2{
  	 color:white;
  	 line-height: 80px;
  	 font-size: x-large;
- }
+}
  
 a3{
  	 text-decoration:none;
  	 color:black;
  	 font-weight: bold;
  	 line-height: 35px;
+}
+
+a4{
+ 	 text-decoration:none;
+ 	 color:white;
+}
+
+p{
+	 color:white;
 }
