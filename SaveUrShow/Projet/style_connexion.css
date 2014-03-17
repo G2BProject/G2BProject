@@ -83,7 +83,7 @@ body{
 #artistes_salles{
  	float:left;
 	margin-left:150px;
-	margin-top: -0.2%;
+	margin-top:-21px;
  }
 
 .boutons1{
@@ -107,7 +107,7 @@ body{
 #forum_concerts{
  	float:right;
 	margin-right:-100px;
-	margin-top:-0.2%;
+	margin-top:-21px;
 }
 
 .boutons2{
@@ -121,15 +121,21 @@ body{
 	 border-radius:5px;
 	 margin-right: 100px;
 }
+/*
 #connexion li:hover {
  background-color:#00665F;
-}
+}*/
+ 
+/*
 #boutons1 li:hover {
   background-color:red;
-}
+}*/
+
+/*
 #boutons2 li:hover {
   background-color:#00665F;
-}
+}*/
+
 .Rechercher{
 	 display:inline;  
 	 width:20%;
@@ -359,28 +365,19 @@ body{
 	 border-radius:5px;
 	 margin-right: 100px
 }
+.formulaireConnexion
+{
+display : block ;
+float : right ;
+position : absolute ;
+top : 30% ;
+left : 0% ;
+}
+label.standard
+{
+	display : block ;
+	float : left ;
+	width : 400px ;
+	text-align : right ;
 
-a{
- 	 text-decoration:none;
- 	 color:#FFFFFF;
- } 
-
-a1{
- 	 font-style: italic;
- 	 text-decoration:none;
- 	 color:black;
-} 
-
-a2{
- 	 text-decoration:none;
- 	 color:white;
- 	 line-height: 80px;
- 	 font-size: x-large;
- }
- 
-a3{
- 	 text-decoration:none;
- 	 color:black;
- 	 font-weight: bold;
- 	 line-height: 35px;
 }
