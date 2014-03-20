@@ -113,3 +113,28 @@ h1{
 	color:white;
 	font-size: small;
 	}
+td{
+    border: 1px solid black;
+    background-color: #CCCCFF;
+    border-color:#333333 ;
+}
+table{
+    border-collapse: collapse;
+    border-radius: 7px;
+}
+th{
+    border: 1px solid black;
+    border-color:#333333 ;
+    background-color: #990000;
+    font-size: 20px;
+    color: white;
+
+}
+.Rubrique1{
+color: #8C0005;
+
+}
+.Rubrique2{
+color:#00083F;
+
+}
