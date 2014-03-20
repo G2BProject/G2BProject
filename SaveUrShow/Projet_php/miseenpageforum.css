@@ -1,0 +1,115 @@
+body {
+background-color: #333333;
+ height:100%;
+
+}
+#search {
+width:208px;
+height:24px;
+background:#F5F2F0;
+box-shadow:1px 1px 2px rgba(0,0,0,.3) inset
+}
+ 
+#search .btn-left-loupe {
+display:block;#
+background:url("loupe.png") no-repeat 0 0;
+width:15px;
+height:24px;
+float:left;
+margin:0
+}
+ 
+#search .btn-right-fleche {
+display:block;
+background:url(http://www.missionprovidence.com/french/images/60269144puce-fleche-png.png) no-repeat 0 0;
+width:24px;
+height:24px;
+float:left;
+margin:6px 0 0
+}
+
+ 
+#search input {
+outline:0;
+border:0
+}
+ 
+#search input[type=text] {
+display:block;
+font:300 12px HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+background:none;
+text-shadow:0 1px white;
+float:right;
+height:24px;
+width:160px;
+line-height:25px;
+color:#666;
+margin:0
+}
+
+div#footer 
+{ 
+margin: 700px 0px 0px 254px; 
+width: 770px ; 
+height: 50px ; 
+border: 0px #000000 solid;
+clear: both;
+display: block ; 
+text-align: center; 
+color: white ; 
+position:absolute;  
+bottom: 5%;
+} 
+
+header{
+	position: absolute;
+	top: 5%;
+	height:150px; 
+	color:blue;
+}
+nav{
+	position:absolute;
+	top: 20%;
+	height: 350px;
+}
+
+.bouton{
+	
+    padding:8px 0;
+    text-align:center;
+    display: inline-block;
+    float:left;
+    margin:0 8px 0 0;
+    border-radius:7px;
+    font-size: 0.85em;
+    width:120px;
+    color:#000;
+    font-family: Arial,sans-serif;
+    box-shadow: 0 0 1px rgba( 0, 0, 0, 0.2), 0 -1px 0 rgba( 255, 255, 255, 0.1);
+text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.3);
+}
+.bouton, .bouton:active {
+    background: #444;
+    background: linear-gradient( #555, #2C2C2C);
+    background: -webkit-linear-gradient( #555, #2C2C2C);
+    background: -moz-linear-gradient( #555, #2C2C2C);
+    background: -ms-linear-gradient( #555, #2C2C2C);
+    background: -o-linear-gradient( #555, #2C2C2C);
+    background: linear-gradient( #555, #2C2C2C);
+}
+.bouton:hover {
+    background: #555;
+    background: -webkit-linear-gradient( #777, #333);
+    background: -moz-linear-gradient( #777, #333);
+    background: -ms-linear-gradient( #777, #333);
+    background: -o-linear-gradient( #777, #333);
+    background: linear-gradient( #777, #333);
+    cursor: pointer;
+}
+.bouton:active{
+	box-shadow: 1px 1px 10px #000 inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+h1{
+	color:white;
+	font-size: small;
+	}
