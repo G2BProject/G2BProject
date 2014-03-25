@@ -141,7 +141,7 @@ body{
 	 border-style:solid;
 	 border-width:1px;
 	 float:right;
-	 margin-top:200px;
+	 margin-top:217px;
 	 margin-left: 16px;
 }
 
@@ -233,4 +233,11 @@ a{
 
 .statistique p{
 	color:#FFFFFF;
+}
+
+#contenu {
+	margin-top:120px;
+	border-bottom-style:solid;
+	border-bottom-color:#000000;
+	border-bottom-width:2px;
 }

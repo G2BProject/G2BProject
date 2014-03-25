@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <title>Save ur show</title>
 <link rel="stylesheet" href="style_menu.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="current.css" type="text/css" media="screen" />
 
 <body>
 
@@ -69,7 +70,7 @@
 </header>
 <div id="contenu">
 	<?php
-		$contenu= null;
+		$contenu= "contenu";
 		echo $contenu;		 
 	?>
 </div>
