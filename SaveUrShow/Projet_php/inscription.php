@@ -5,10 +5,6 @@
         	<title>Inscription</title>
 	</head>
 
-	<header>
-
-	</header>
-
 	<nav>
 
 	</nav>
@@ -408,8 +404,12 @@
 				<p><span class="standard">Voulez-vous vous inscrire à la newsletter ?</span>
 					 <input type="radio" name="newsletter" value="oui" id="oui" /> <label for="oui">Oui</label>
        					 <input type="radio" name="newsletter" value="non" id="non" /> <label for="non">Non</label></p>
-				
+
 				<p class="details"><span class="etoile">*</span> : champs obligatoires</p>
+
+       			<p><a class="connecter" href="">S'inscrire</a></p>
+				
+				
 			</div>
 	</body>
 </html>
