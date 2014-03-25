@@ -8,12 +8,10 @@
 	<?php include("menu.php"); ?>
 
 	<nav>
-	
+
 	</nav>
 
 	<body>
-		
-		<p class="typeUtilisateur">Vous vous inscrivez en tant que : <span class="particulier">particulier</span>.</p>
 			<div class="formulaire">
 			<form method="post" action="traitement.php">
 				<p><label class="standard"><span class="etoile">*</span>Nom d'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
