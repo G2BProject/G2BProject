@@ -1,163 +1,88 @@
-.cadre{
-	width: 84.5%;
-	height: 930px;
-	margin-top:121px;
-	background-color:#333333;
-	border-style: solid;
-	border-radius: 3px;
-	border-width: 2px;
-	border-bottom-color:black;
-	border-bottom-width:5px;
-	border-top-width:5px;
+/*.container1{
+	margin-top: 15.7em;
+}*/
+.container2{
+	/*margin-top: -30.5em;*/
+	margin-left: 47.2em;
+}
+.container3{
+	/*margin-top: -0.75em;*/
+	margin-left: 47.2em;
+}/*
+.container4{
+	margin-top: -20em;	
+}
+*/
+.container5{
+	/*margin-top: -20em;*/
+	margin-left: 20.3em;
 }
 
-.Actus{
-	 margin-top:120px;
-	 width:51.5%;
-	 height: 630px;
-	 background-color:#26266A;
-	 text-align:center;
-	/* padding:2px 6px 2px 6px;*/
-	 border-style:solid;
-	 border-width:7px;
-	 /*float:left;*/
-	 
+.photo{
+	position: relative;
+	top: 0.75em;
+	right: -3em;
 }
 
-.texte1{
-	width: 99.7%;
-	height: 87px;
-	margin-top:100px;
-	background-color:#2E2C2C;
-	border-style: solid;
-	border-top-width:7px;
-	border-bottom-width:7px; 
-	border-bottom-color:black;
+.box2 ol {
+color: white;
+text-align:left;
+line-height: 2.5em;
 }
 
-.Top3{
-	float: right;
-	 margin-top:-640px;
-	 margin-right: -3.3px;
-	 width:32%;
-	 height: 340px;
-	 background-color:#B62727;
-	 text-align:center;
-	 /*padding:2px 6px 2px 6px;*/
-	 border-style:solid;
-	 border-width:5px;
-	 /*float:left;*/
+.artistes{
+	height: 2.5em;
+	display: inline-block;
+	position:relative; 
+	top: 1em; 
+	right:0.5em; 
+	padding-left: 2em;
+	padding-right: 2em;
 }
 
-.texte2{
-	width: 98.7%;
-	height: 217px;
-	margin-top:20px;
-	background-color:#2E2C2C;
-	border-style: solid;
-	border-left-width: 2.5px;
-	border-right-width: 3px;
-	border-top-width:7px;
-	border-bottom-width:7px; 
-	border-bottom-color:black;
+.box3 ul {
+color: transparent;
+text-align:left;
+line-height: 2.5em;
+}
+.new{
+	height: 2.5em;
+	display: inline-block;
+	position:relative; 
+	top: 1em; 
+	right:0.5em; 
+	padding-left: 2em;
+	padding-right: 2em;	
 }
 
-
-.Concerts{
-	float: left;
-	 margin-top:-5px;
-	 margin-right: -3.3px;
-	 width:30%;
-	 height: 288px;
-	 background-color:#0C874D;
-	 text-align:center;
-	 /*padding:2px 6px 2px 6px;*/
-	 border-style:solid;
-	 border-width:5px;
+.box4 ul {
+color: transparent;
+text-align:left;
+line-height: 1em;
 }
 
-.texte3{
-	width: 99.1%;
-	height: 187px;
-	margin-top:20px;
-	background-color:#2E2C2C;
-	border-style: solid;
-	border-left-width: 2.5px;
-	border-right-width: 2px;
-	border-top-width:7px;
-	border-bottom-width:7px; 
-	border-bottom-color:black;
+.concert{
+	height: 2.5em;
+	display: inline-block;
+	position:relative; 
+	top: -0.5em; 
+	right:1.5em; 
+	padding-left: 2em;
+	padding-right: 2em;
 }
 
-
-.Coeur{
-	float: left;
-	 margin-top:-5px;
-	 margin-right: -3.3px;
-	 width:36.4%;
-	 height: 288px;
-	 background-color:#D2AE25;
-	 text-align:center;
-	 /*padding:2px 6px 2px 6px;*/
-	 border-style:solid;
-	 border-width:5px;
+.box5 ul {
+color: transparent;
+text-align:left;
+line-height: 2em;
 }
 
-.texte4{
-	width: 99.9%;
-	height: 187px;
-	margin-top:20px;
-	background-color:#2E2C2C;
-	border-style: solid;
-	border-left-width: 0px;
-	border-right-width: 2px;
-	border-top-width:7px;
-	border-bottom-width:7px; 
-	border-bottom-color:black;
-}
-
-.News{
-	float: right;
-	 margin-top:-295px;
-	 margin-right: -2.3px;
-	 width:31.5%;
-	 height: 577px;
-	 background-color:#0099FF;
-	 text-align:center;
-	 /*padding:2px 6px 2px 6px;*/
-	 border-style:solid;
-	 border-width:6px;
-}
-
-.texte5{
-	width: 99.7%;
-	height: 447px;
-	margin-top:20px;
-	background-color:#2E2C2C;
-	border-style: solid;
-	border-left-width: 0px;
-	border-right-width: 3px;
-	border-top-width:7px;
-	border-bottom-width:7px; 
-	border-bottom-color:black;
-}
-
-a{
- 	 text-decoration:none;
- 	 color:#FFFFFF;
- } 
-
-
-.a2{
- 	 text-decoration:none;
- 	 color:white;
- 	 line-height: 80px;
- 	 font-size: x-large;
-}
- 
-.a3{
- 	 text-decoration:none;
- 	 color:black;
- 	 font-weight: bold;
- 	 line-height: 35px;
+.coeur{
+	height: 2em;
+	display: inline-block;
+	position:relative; 
+	top: 0.5em; 
+	right:0.5em; 
+	padding-left: 2em;
+	padding-right: 2em;	
 }
