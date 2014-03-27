@@ -1,5 +1,5 @@
 body{
-	
+
 	background-size: 250px; 
 	background-image:url(image/haut.png);
 	background-position:center top;
@@ -134,7 +134,7 @@ body{
 
 #Suivre{
  	 position:fixed;
-	 width:10%;
+	 width:12%;
 	 background-color:#0066FF;
 	 text-align:center;
 	 padding:2px 6px 2px 6px;
@@ -148,7 +148,7 @@ body{
 .reseaux{
 	 position:fixed;
  	 display:inline-block;  
-	 width:10%;
+	 width:12%;
 	 background-color:grey;
 	 text-align:center;
 	 padding:2px 6px 2px 6px;
@@ -156,7 +156,7 @@ body{
 	 border-width:1px;
 	 float:right;
 	 height: 35px;
-	 margin-top:240px;
+	 margin-top:220px;
 	 margin-left: 16px;
 }
 
