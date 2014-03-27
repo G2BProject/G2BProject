@@ -1,22 +1,11 @@
-<html>
-	<head>
-        	<meta charset="utf-8" />
-        	<link rel="stylesheet" href="style_inscription.css" />
-        	<title>Inscription</title>
-	</head>
-
-	<nav>
-
-	</nav>
-
-	<body>
-
+<?php  
+$contenu='
 		<p class="typeUtilisateur">Vous vous inscrivez en tant que : <span class="particulier">particulier</span>.</p>
 			<div class="formulaire">
 			<form method="post" action="traitement.php">
-				<p><label class="standard"><span class="etoile">*</span>Nom d'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
+				<p><label class="standard"><span class="etoile">*</span>Nom d\'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
 				<p><label class="standard"><span class="etoile">*</span>Adresse mail :</label><input type="mail" name="mail" id="mail"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Confirmation d'adresse mail :</label><input type="mail" name="mailConfirm" id="mailConfirm"/></p>
+				<p><label class="standard"><span class="etoile">*</span>Confirmation d\'adresse mail :</label><input type="mail" name="mailConfirm" id="mailConfirm"/></p>
 				<p><label class="standard"><span class="etoile">*</span>Mot de passe :</label><input type="password" name="password" id="password"/></p>
 				<p><label class="standard"><span class="etoile">*</span>Confirmation de mot de passe :</label><input type="password" name="passwordConfirm" id="passwordConfirm"/></p>
 				<p><label class="standard">Nom :</label><input type="text" name="name" id="name"/></p>
@@ -222,7 +211,7 @@
 						<option value="Coree_du_Nord">Coree du Nord </option>
 						<option value="Coree_du_Sud">Coree du Sud </option>
 						<option value="Costa_Rica">Costa Rica </option>
-						<option value="Cote_d_Ivoire">Côte d'Ivoire </option>
+						<option value="Cote_d_Ivoire">Côte d\'Ivoire </option>
 						<option value="Croatie">Croatie </option>
 						<option value="Cuba">Cuba </option>
 						<option value="Danemark">Danemark </option>
@@ -407,9 +396,10 @@
 
 				<p class="details"><span class="etoile">*</span> : champs obligatoires</p>
 
-       			<p><a class="connecter" href="">S'inscrire</a></p>
+       			<div><a class="connecter" href="">S\'inscrire</a></div>
 
 
-			</div>
-	</body>
-</html>
+			</div>';
+$currentstyle='"style_inscription.css"'
+
+?>

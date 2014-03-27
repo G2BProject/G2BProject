@@ -1,17 +1,5 @@
-<!doctype html>
-
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Save ur show</title>
-<link rel="stylesheet" href="style_accueil.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="style_menu.css" type="text/css" media="screen" />
-<style> 
-
-</style>
-</head>
-<body>
-
+<?php  
+$contenu='
 <div class="container1">
 <div class="titre1"><a href="#"><img src="image/actus.png"/></a></div>
 <div class="box1">Justin Timberlake sort son nouveau single!</div>
@@ -46,7 +34,7 @@
 	<ul>
 		<li class=""><a href="#"><img class="concert" src="image/sanseverino.png"/>
 		<div id="text">Sanseverino - David Bostelli <br /> 
-		Salle de l'Albaret - Saint-Juéry <br /> 
+		Salle de l\'Albaret - Saint-Juéry <br /> 
 		Vendredi 13 juin 2014 à 18h </div2></a></li>
 	</ul>
 </div>
@@ -63,7 +51,6 @@
 </div>
 
 <div style="clear:both;"></div>
-</div>
-
-</body>
-</html>
+</div>' ;
+$currentstyle= '"style_accueil.css"'
+?>
