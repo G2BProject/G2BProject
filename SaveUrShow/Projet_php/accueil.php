@@ -10,7 +10,7 @@ $contenu='
 <div class="titre2">TOP 3 DES ARTISTES</div>
 <div class="box2">
 	<ol>
-		<li class=""><a href="#"><img class="artistes" src="image/pharrell.png"/>Pharrell Williams</a></li>
+		<li class=""><a href="#"><img class="artistes" src="im age/pharrell.png"/>Pharrell Williams</a></li>
 		<li class=""><a href="#"><img class="artistes" src="image/daftpunk.png"/>Daft Punk</a></li>
 		<li class=""><a href="#"><img class="artistes" src="image/shakira.png"/>Shakira</a></li>
 	</ol>	
