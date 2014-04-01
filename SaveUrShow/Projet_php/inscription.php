@@ -396,7 +396,7 @@ $contenu='
 
 				<p class="details"><span class="etoile">*</span> : champs obligatoires</p>
 
-       			<p class="standard"><input type="submit" value="S'inscrire"></p>
+       			<p class="standard"><input type="submit" value="S\'inscrire"></p>
 
 
 			</div>';
