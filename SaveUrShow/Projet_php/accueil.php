@@ -1,5 +1,4 @@
-<?php  
-$contenu='
+
 <div class="container1">
 <div class="titre1"><a href="#"><img src="image/actus.png"/></a></div>
 <div class="box1">Justin Timberlake sort son nouveau single!</div>
@@ -51,6 +50,4 @@ $contenu='
 </div>
 
 <div style="clear:both;"></div>
-</div>' ;
-$currentstyle= '"style_accueil.css"'
-?>
+</div>' 
