@@ -1,0 +1,215 @@
+
+
+ body{
+	background-size: 250px; 
+	background-image:url("haut.png");
+	background-position:center top;
+	background-repeat: repeat-x;
+	background-color:#333333;
+	margin:0;
+}
+#logo{
+	background-size:140px;
+	height:260px;
+	margin-top:-25px;
+	margin-bottom:31px;
+	background-image: url("Logo.png");
+	background-position:center;
+	background-repeat: no-repeat;
+}
+#bordure{
+	margin-left:80%;
+	margin-top:44px;
+	height:1000px;
+	background-color:#333333;
+	border-style:solid;
+	border-radius: 3px;
+	border-width: 1px;
+    border-color:#000000;
+}
+#nom{
+	background-size:230px;
+	margin-top:-200px;
+	margin-left:180px;
+	height:70px;
+	background-image: url("Titre.png");
+	background-position:left top;
+	background-repeat: no-repeat;
+}
+#connexion ul{
+ margin-top:-86%;
+ margin-left:81.7%;
+ margin-right:0px;
+ list-style-type:none;
+ font-size: 18px;
+ float:left; /*pour IE*/
+}
+#connexion  li {
+ display:inline;  
+ width:100px;
+ background-color:#0066FF;
+ text-align:center;
+ padding:2px 6px 2px 6px;
+ border-style:solid;
+ border-width:1px;
+ border-radius:5px;
+ }
+#connexion li:hover {
+ background-color:#00665F;
+ }
+ #bouton1 ul{
+ margin-top:-78.25%;
+ margin-left:5.1%;
+ margin-right:0px;
+ list-style-type:none;
+ font-size: 18px;
+ float:left; /*pour IE*/
+}
+#bouton1  li {
+ display:inline;  
+ width:100px;
+ background-color:darkred;
+ text-align:center;
+ padding:2px 6px 2px 6px;
+ border-style:solid;
+ border-width:1px;
+ border-radius:5px;
+ }
+/*#bouton1 li:hover {
+  background-color:red;
+ }*/
+ #bouton2 ul{
+ margin-top:-78.25%;
+ margin-left:25.1%;
+ margin-right:0px;
+ list-style-type:none;
+ font-size: 18px;
+ float:left; /*pour IE*/
+}
+#bouton2 li {
+ display:inline;  
+ width:100px;
+ background-color:darkred;
+ text-align:center;
+ padding:2px 6px 2px 6px;
+ border-style:solid;
+ border-width:1px;
+ border-radius:5px;
+ }
+/*#bouton2 li:hover {
+  background-color:#F7230C;
+ }*/
+ #bouton3 ul{
+ margin-top:-78.25%;
+ margin-left:65.1%;
+ margin-right:0px;
+ list-style-type:none;
+ font-size: 18px;
+ float:left; /*pour IE*/
+}
+#bouton3  li {
+ display:inline;  
+ width:100px;
+ background-color:darkred;
+ text-align:center;
+ padding:2px 6px 2px 6px;
+ border-style:solid;
+ border-width:1px;
+ border-radius:5px;
+ }
+/*#bouton3 li:hover {
+  background-color:#00665F;
+ }*/
+ #bouton4 ul{
+ margin-top:-78.25%;
+ margin-left:85.1%;
+ margin-right:0px;
+ list-style-type:none;
+ font-size: 18px;
+ float:left; /*pour IE*/
+}
+#bouton4  li {
+ display:inline;  
+ width:100px;
+ background-color:darkred;
+ text-align:center;
+ padding:2px 6px 2px 6px;
+ border-style:solid;
+ border-width:1px;
+ border-radius:5px;
+ }
+/*#bouton4 li:hover {
+  background-color:#00665F;
+ }*/
+ a{
+ 	 text-decoration:none;
+ 	 color:#FFFFFF;
+ }
+
+.image {
+float: right;
+left:10px;
+}
+.gauche {
+float: left;
+} 
+ .bloc1 {
+background-color: blue;
+height: 50px;
+}
+.bloc2 {
+background-color: green;
+height: 50px;
+margin-top: 20px;
+} 
+
+.conteneur 
+ {
+ border-width:1px;
+ border-style:outset;
+ border-color:red;
+ width: 800px;
+ background: #008000;
+ 
+ }
+ .gauche
+ { 
+ width: 500 px;
+top:100%;
+left:10%;
+margin-top:-(hauteur/2)px;
+margin-left:-(largeur/2)px;
+margin-right:o px;
+}
+h3
+{
+    color: white;
+}
+.image_recadre
+{
+        width: 32px;
+        height: auto;
+        
+        overflow: hidden;
+}
+
+body 
+{
+	background-color:#424242;
+	}
+	
+	
+}
+h1
+{
+    border: 1px green solid;
+	margin:100px 50px;
+}
+/h1
+
+h2
+{
+border 5px green solid;
+margin:100 px 50 px;
+}
+/h2
