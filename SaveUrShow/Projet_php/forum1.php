@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="miseenpageforum.css" />
+<link rel="stylesheet" href="style_forum.css" />
 	<meta charset="utf-8" />
 	<title> SaveUrShow/Forum </title>
 </head>
@@ -18,7 +18,7 @@
 	<input class="btn-right-fleche" name="go" type="submit"  value="" />
 	</form>
 					
-	<a href= "banniere.html"> <img src= "Titre.png" alt= "nom logo" /></a>
+	<a href= "accueil.php"> <img src=image/Titre.png alt= "nom logo" /></a>
 
 </header>
 
@@ -42,7 +42,7 @@
 									<h4>Actualités du site, aide et questions diverses,suggestions...</br>
 									Posez toutes vos questions en cas de problèmes, et faites nous part de vos remarques,souhaits d'amélioraton,bugs</h4></td>
 					<td> 12/120 </td>
-					<td> le 14/02/14 à 17h48 par <a href= "#"> saveurshowfan <?php $nom_du_visiteur = "saveurshowfan" ; echo $nom_du_visiteur ; ?></a>
+					<td> le 14/02/14 à 17h48 par <a href= "#"> saveurshowfan <?php $nom_du_visiteur = "saveurshowfan" ; echo $nom_du_visiteur ?></a>
 				</tr>
 				<tr>
 					<td><a href="#"  style="text-decoration:none"><h2>Avis et Suggestions</h2></a></br>
