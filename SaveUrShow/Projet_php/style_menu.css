@@ -1,3 +1,7 @@
+.global{
+	max-width:960px;
+	margin:auto;
+}
 body{
 
 	background-size: 250px; 
@@ -5,13 +9,11 @@ body{
 	background-position:center top;
 	background-repeat: repeat-x;
 	background-color: #333333;
-	margin: 0%;
-	width: 100%;
 }
 
 #logo{
 	background-size: 10%;
-	height: 200px;
+	height: 192px;
 	background-image: url(image/logo.png);
 	background-position: center;
 	background-repeat: no-repeat;

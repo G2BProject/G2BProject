@@ -67,7 +67,7 @@
 
 	</span>
 </header>
-
+<div class="contenu">
 <div class="container1">
 	<div class="titre1"><a href="#"><img src="image/actus.png"/></a></div>
 	<div class="box1">Justin Timberlake sort son nouveau single!</div>
@@ -119,8 +119,8 @@
 </div>
 
 <div style="clear:both;"></div>
-</div>'
 
+</div>
 <footer>
 <div id="boutons_bas">
 	<ul>
