@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="miseenpageforum.css" />
+<link rel="stylesheet" href="style_forum.css" />
 	<meta charset="utf-8" />
 	<title> SaveUrShow/Forum </title>
 </head>
