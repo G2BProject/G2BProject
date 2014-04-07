@@ -1,18 +1,18 @@
-<?php  
+<?php
 $contenu='
 		<p class="typeUtilisateur">Vous vous inscrivez en tant que : <span class="particulier">particulier</span>.</p>
 			<div class="formulaire">
-			<form method="post" action="traitement.php">
-				<p><label class="standard"><span class="etoile">*</span>Nom d\'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Adresse mail :</label><input type="mail" name="mail" id="mail"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Confirmation d\'adresse mail :</label><input type="mail" name="mailConfirm" id="mailConfirm"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Mot de passe :</label><input type="password" name="password" id="password"/></p>
+			<form action="traitement_inscription.php" method="post">
+				<p><label for="pseudo" class="standard"><span class="etoile">*</span>Nom d\'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
+				<p><label for="adresse-mail" class="standard"><span class="etoile">*</span>Adresse mail :</label><input type="mail" name="adresse_email" id="adresse_email"/></p>
+				<p><label class="standard"><span class="etoile">*</span>Confirmation d\'adresse mail :</label><input type="mail" name="emailConfirm" id="emailConfirm"/></p>
+				<p><label class="standard"><span class="etoile">*</span>Mot de passe :</label><input type="password" name="mot_de_passe" id="mot_de_passe"/></p>
 				<p><label class="standard"><span class="etoile">*</span>Confirmation de mot de passe :</label><input type="password" name="passwordConfirm" id="passwordConfirm"/></p>
 				<p><label class="standard">Nom :</label><input type="text" name="name" id="name"/></p>
 				<p><label class="standard">Prenom :</label><input type="text" name="prenom" id="prenom"/></p>
 				<p><span class="standard">Sexe :</span>
-					 <input type="radio" name="sexe" value="homme" id="homme" /> <label for="homme">Homme</label>
-       					 <input type="radio" name="sexe" value="femme" id="femme" /> <label for="femme">Femme</label></p>
+					 <input type="radio" name="sexe" value="1" id="homme" /> <label for="homme">Homme</label>
+       					 <input type="radio" name="sexe" value="2" id="femme" /> <label for="femme">Femme</label></p>
 				<p><span class="standard">Date de naissance :</span>
 					<select name="jour" size="1">
 						<option value="01">01</option>
@@ -397,6 +397,7 @@ $contenu='
 				<p class="details"><span class="etoile">*</span> : champs obligatoires</p>
 
        			<p class="standard"><input type="submit" value="S\'inscrire"></p>
+       			</form>
 
 
 			</div>';
