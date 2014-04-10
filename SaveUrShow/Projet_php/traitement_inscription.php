@@ -15,11 +15,11 @@ $mot_de_passe_hache = sha1($_POST['mot_de_passe']);
 $name = $_POST['name'];
 $prenom = $_POST['prenom'];
 $sexe = $_POST['sexe'];
-$date_de_naissance = $_POST['an']."-".$_POST['mois']."-".$_POST['jour'];
+$an = $_POST['an'];
+$mois = $_POST['mois'];
+$jour = $_POST['jour'];
+$date_de_naissance = $an.'-'.$mois.'-'.$jour;
 $adresse = $_POST['adresse'];
-
-var_dump($date_de_naissance);
-die();
 
 $req = $bdd->prepare('INSERT INTO membre(Role_ID, pseudo, adresse_email, mot_de_passe, name, prenom, sexe, date_de_naissance, adresse, date_inscription) VALUES(:Role_ID, :pseudo, :adresse_email, :mot_de_passe, :name, :prenom, :sexe, :date_de_naissance, :adresse, NOW())');
 $req -> execute(array(
