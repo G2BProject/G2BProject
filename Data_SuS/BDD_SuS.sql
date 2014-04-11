@@ -25,9 +25,11 @@ DROP TABLE IF EXISTS `mydb`.`membre` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`membre` (
   `ID` INT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(25) NOT NULL,
+  `nom` VARCHAR(25) NULL,
+  `name` VARCHAR(25) NULL,
+  `prenom` VARCHAR(25) NULL,
   `adresse_email` VARCHAR(255) NOT NULL,
-  `mot_de_passe` VARCHAR(255) NULL,
+  `mot_de_passe` VARCHAR(255) NOT NULL,
   `date_de_naissance` DATE NULL,
   `adresse` VARCHAR(40) NULL,
   `sexe` INT NULL,
