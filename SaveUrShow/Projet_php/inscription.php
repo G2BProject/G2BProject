@@ -1,8 +1,13 @@
 <?php
 $contenu='
-		<p class="typeUtilisateur">Vous vous inscrivez en tant que : <span class="particulier">particulier</span>.</p>
 			<div class="formulaire">
 			<form action="traitement_inscription.php" method="post">
+				<p><span class="standard"><span class="etoile">*</span>Type d\'utilisateur :</span>
+					<select name="Role_ID">
+						<option value selected="1">Membre</option>
+						<option value="2">Artiste</option>
+						<option value="3">Propriétaire de salle</option>
+					</select>
 				<p><label for="pseudo" class="standard"><span class="etoile">*</span>Nom d\'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
 				<p><label for="adresse-mail" class="standard"><span class="etoile">*</span>Adresse mail :</label><input type="mail" name="adresse_email" id="adresse_email"/></p>
 				<p><label class="standard"><span class="etoile">*</span>Confirmation d\'adresse mail :</label><input type="mail" name="emailConfirm" id="emailConfirm"/></p>
@@ -14,7 +19,7 @@ $contenu='
 					 <input type="radio" name="sexe" value="1" id="homme" /> <label for="homme">Homme</label>
        					 <input type="radio" name="sexe" value="2" id="femme" /> <label for="femme">Femme</label></p>
 				<p><span class="standard">Date de naissance :</span>
-					<select name="jour" size="1">
+					<select name="jour">
 						<option value="01">01</option>
 						<option value="02">02</option>
 						<option value="03">03</option>
@@ -48,22 +53,22 @@ $contenu='
 						<option value="31">31</option>
 					</select>
 
-					<select name="mois" size="1">
-						<option value="janvier">Janvier</option>
-						<option value="février">Février</option>
-						<option value="mars">Mars</option>
-						<option value="avril">Avril</option>
-						<option value="mai">Mai</option>
-						<option value="juin">Juin</option>
-						<option value="juillet">Juillet</option>
-						<option value="août">Août</option>
-						<option value="septembre">Septembre</option>
-						<option value="octobre">Octobre</option>
-						<option value="novembre">Novembre</option>
-						<option value="décembre">Décembre</option>
+					<select name="mois">
+						<option value="01">Janvier</option>
+						<option value="02">Février</option>
+						<option value="03">Mars</option>
+						<option value="04">Avril</option>
+						<option value="05">Mai</option>
+						<option value="06">Juin</option>
+						<option value="07">Juillet</option>
+						<option value="08">Août</option>
+						<option value="09">Septembre</option>
+						<option value="10">Octobre</option>
+						<option value="11">Novembre</option>
+						<option value="12">Décembre</option>
 					</select>
 
-					<select name="an" size="1">
+					<select name="an">
 						<option value="1924" >1924</option>
 						<option value="1925" >1925</option>
 						<option value="1926" >1926</option>
@@ -120,7 +125,7 @@ $contenu='
 						<option value="1977" >1977</option>
 						<option value="1978" >1978</option>
 						<option value="1979" >1979</option>
-						<option value selected="1980" >1980</option>
+						<option value="1980" >1980</option>
 						<option value="1981" >1981</option>
 						<option value="1982" >1982</option>
 						<option value="1983" >1983</option>
