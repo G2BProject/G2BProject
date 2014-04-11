@@ -26,10 +26,10 @@
 <nav>
 				
 
-				<a href="#" class="bouton"  style="text-decoration:none"><h1>Créer discussion</h1></a>
-		<table>
+				<a href="discussion.php" class="bouton"  style="text-decoration:none"><div class="discuss">Créer discussion</div></a>
+		<table class= "tableforum">
 			<thead>
-				<tr>
+				<tr class= "categforum1">
 					<th> A PROPOS DU SITE... </th>
 					<th> SUJETS/MESSAGES </th>
 					<th> DERNIER MESSAGE </th>
@@ -38,20 +38,46 @@
 
 			<tbody>
 				<tr>
-					<td><a href="#" style="text-decoration:none"><h2>Aide,Bugs du site</h2></a></br>
-									<h4>Actualités du site, aide et questions diverses,suggestions...</br>
-									Posez toutes vos questions en cas de problèmes, et faites nous part de vos remarques,souhaits d'amélioraton,bugs</h4></td>
+					<td><a href="#" style="text-decoration:none"><div class="rubrique1">Aide,Bugs du site</div></a></br>
+									<div class="descriptif">Actualités du site, aide et questions diverses,suggestions...</br>
+									Posez toutes vos questions en cas de problèmes, et faites nous part de vos remarques,souhaits d'amélioraton,bugs</div></td>
 					<td> 12/120 </td>
-					<td> le 14/02/14 à 17h48 par <a href= "#"> saveurshowfan <?php $nom_du_visiteur = "saveurshowfan" ; echo $nom_du_visiteur ?></a>
+					<td> Le 14/02/14 à 17h48 par <a href= "#"><?php $nom_du_visiteur = "saveurshowfan" ; echo $nom_du_visiteur ?></a></td>
 				</tr>
 				<tr>
-					<td><a href="#"  style="text-decoration:none"><h2>Avis et Suggestions</h2></a></br>
-									<h4>Vous pouvez nous faire part de vos avis afin d'améliorer le site</h4></td>
+					<td><a href="#"  style="text-decoration:none"><div class="rubrique2">Avis et Suggestions</div></a></br>
+									<div class="descriptif">Vous pouvez nous faire part de vos avis afin d'améliorer le site</div></td>
 					<td> 19/186 </td>
-					<td> le 15/03/14 à 9h10 par <a href= "#"> justintimber</a>
+					<td> Le 15/03/14 à 9h10 par <a href= "#"> justintimber</a>
 				</tr>
 			</tbody>
 		</table>
+		<table class= "tableforum2">
+			<thead>
+				<tr class= "categforum2">
+					<th> DISCUSSIONS </th>
+					<th> SUJETS/MESSAGES </th>
+					<th> DERNIER MESSAGE </th>
+				</tr>		
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><a href="#" style="text-decoration:none"><div class="rubrique3">Groupes/Artistes</div></a></br>
+									<div class="descriptif">Venez discuter de vos groupes/artistes préférées</div></td>
+									
+					<td> 14/160 </td>
+					<td> Le 14/03/14 à 18h00 par <a href= "#"><?php $nom_du_visiteur = "saveurshowfan2" ; echo $nom_du_visiteur ?></a>
+				</tr>
+				<tr>
+					<td><a href="#"  style="text-decoration:none"><div class="rubrique4">Concerts</div></a></br>
+									<div class="descriptif">Discuter des prochaines dates de concerts</div></td>
+					<td> 19/106 </td>
+					<td> Le 15/03/14 à 9h10 par <a href= "#"> justinbib</a>
+				</tr>
+			</tbody>
+		</table>
+
 
 
 </nav>
