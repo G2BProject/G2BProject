@@ -13,7 +13,7 @@
 
 	<body>
 			<div class="formulaire">
-			<form method="post" action="traitement.php">
+			<form method="post" action="traitement_connexion.php">
 				<p><label class="standard">Nom d'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
 				<p><label class="standard">Mot de passe :</label><input type="password" name="password" id="password"/></p>
 				<p><a class="connecter" href="">Se connecter</a></p>
