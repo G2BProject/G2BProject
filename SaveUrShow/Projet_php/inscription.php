@@ -4,7 +4,7 @@ $contenu='
 			<form action="traitement_inscription.php" method="post">
 				<p><span class="standard"><span class="etoile">*</span>Type d\'utilisateur :</span>
 					<select name="Role_ID">
-						<option value selected="1">Membre</option>
+						<option value="1">Membre</option>
 						<option value="2">Artiste</option>
 						<option value="3">Propriétaire de salle</option>
 					</select>
