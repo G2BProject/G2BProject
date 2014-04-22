@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Save ur show</title>
-<link rel="stylesheet" href="style_menu.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="style_accueil.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="style_menu.css" type="text/css" media="screen" and (min-width:960px)/>
+<link rel="stylesheet" href="style_accueil.css" type="text/css" media="screen" and (min-width:960px)/>
 
 <body>
-<div id="global">
+
 <header>
 	<div id="menu">
 	</div>
@@ -43,7 +43,7 @@
 		</ul>
 	</div>
 
-	<span class="Rechercher">rechercher:</span>
+	<span class="Rechercher">Rechercher:</span>
 
 	<span id="bordure">
 
@@ -67,7 +67,7 @@
 
 	</span>
 </header>
-<div class="contenu">
+<div class="contenuAccueil">
 <div class="container1">
 	<div class="titre1"><a href="#"><img src="image/actus.png"/></a></div>
 	<div class="box1">Justin Timberlake sort son nouveau single!</div>
@@ -78,7 +78,7 @@
 <div class="titre2">TOP 3 DES ARTISTES</div>
 <div class="box2">
 	<ol>
-		<li class=""><a href="#"><img class="artistes" src="im age/pharrell.png"/>Pharrell Williams</a></li>
+		<li class=""><a href="#"><img class="artistes" src="image/pharrell.png"/>Pharrell Williams</a></li>
 		<li class=""><a href="#"><img class="artistes" src="image/daftpunk.png"/>Daft Punk</a></li>
 		<li class=""><a href="#"><img class="artistes" src="image/shakira.png"/>Shakira</a></li>
 	</ol>	

@@ -1,19 +1,19 @@
-.contenu{
-	margin-top:120px;
+.contenuAccueil{
+	margin-top:150px;
 }
 
 div.container1
 {
-width:47em;
-border:0.3em solid;
+width:752px;
+border:4px solid;
 background-color:#26266A;
 border-color:black;
-height:37em;
+height:592px;
 }
 div.titre1
 {
 text-align:center;
-margin-top:1em;
+margin-top:16px;
 }
 
 div.box1
@@ -21,30 +21,30 @@ div.box1
 -moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
-height:5em;
-border-top:0.3em solid black;
-border-bottom:0.3em solid black;
+height:80px;
+border-top:4px solid black;
+border-bottom:4px solid black;
 text-align:center;
-margin-top:1.5em;
+margin-top:24px;
 background-color:#404040;
 color:white;
-line-height: 4em;
+line-height: 64px;
 font-size: large;
 }
 
 div.container2
 {
-margin-top:-37.5em;
-width:25em;
-border:0.3em solid;
+margin-top:-600px;
+width:400px;
+border:4px solid;
 background-color:#B62727;
 border-color:black;
-height:24em;
+height:384px;
 }
 div.titre2
 {
 text-align:center;
-margin-top:2em;
+margin-top:32px;
 font-weight:bold;
 }
 div.box2
@@ -52,27 +52,27 @@ div.box2
 -moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
-height:14em;
-border-top:0.3em solid black;
-border-bottom:0.3em solid black;
+height:224px;
+border-top:4px solid black;
+border-bottom:4px solid black;
 text-align:center;
-margin-top:2em;
+margin-top:32px;
 background-color:#404040;
 }
 
 div.container3
 {
-margin-top:-0.5em;
-width:25em;
-border:0.3em solid;
+margin-top:-8px;
+width:400px;
+border:4px solid;
 background-color:#0099FF;
 border-color:black;
-height:25em;
+height:400px;
 }
 div.titre3
 {
 text-align:center;
-margin-top:2em;
+margin-top:32px;
 font-weight:bold;
 }
 div.box3
@@ -80,28 +80,28 @@ div.box3
 -moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
-height:15em;
-border-top:0.3em solid black;
-border-bottom:0.3em solid black;
+height:240px;
+border-top:4px solid black;
+border-bottom:4px solid black;
 text-align:center;
-margin-top:2em;
+margin-top:32px;
 background-color:#404040;
 
 }
 
 div.container4
 {
-margin-top:-13em;
-width:20em;
-border:0.3em solid;
+margin-top:-208px;
+width:320px;
+border:4px solid;
 background-color:#0C874D;
 border-color:black;
-height:12.5em;
+height:200px;
 }
 div.titre4
 {
 text-align:center;
-margin-top:1em;
+margin-top:16px;
 font-weight:bold;
 }
 div.box4
@@ -109,27 +109,27 @@ div.box4
 -moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
-height:7.5em;
-border-top:0.3em solid black;
-border-bottom:0.3em solid black;
+height:120px;
+border-top:4px solid black;
+border-bottom:4px solid black;
 text-align:center;
-margin-top:0.5em;
+margin-top:8px;
 background-color:#404040;
 }
 
 div.container5
 {
-margin-top:-13em; 
-width:26.55em;
-border:0.3em solid;
+margin-top:-208px; 
+width:427px;
+border:4px solid;
 background-color:#D2AE25;
 border-color:black;
-height:12.5em;
+height:200px;
 }
 div.titre5
 {
 text-align:center;
-margin-top:1em;
+margin-top:16px;
 font-weight:bold;
 }
 div.box5
@@ -137,20 +137,20 @@ div.box5
 -moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
-height:7.5em;
-border-top:0.3em solid black;
-border-bottom:0.3em solid black;
+height:120px;
+border-top:4px solid black;
+border-bottom:4px solid black;
 text-align:center;
-margin-top:0.5em;
+margin-top:8px;
 background-color:#404040;
 }
 .container2{
 	/*margin-top: -30.5em;*/
-	margin-left: 47.2em;
+	margin-left: 755px;
 }
 .container3{
 	/*margin-top: -0.75em;*/
-	margin-left: 47.2em;
+	margin-left: 755px;
 }/*
 .container4{
 	margin-top: -20em;	
@@ -158,79 +158,79 @@ background-color:#404040;
 */
 .container5{
 	/*margin-top: -20em;*/
-	margin-left: 20.3em;
+	margin-left: 324px;
 }
 
 .photo{
 	position: relative;
-	top: 0.75em;
-	right: -3em;
+	top: 12px;
+	right: -48px;
 }
 
 .box2 ol {
 color: white;
 text-align:left;
-line-height: 2.5em;
+line-height: 40px;
 }
 
 .artistes{
-	height: 2.5em;
+	height: 40px;
 	display: inline-block;
 	position:relative; 
-	top: 1em; 
-	right:0.5em; 
-	padding-left: 2em;
-	padding-right: 2em;
+	top: 16px; 
+	right:8px; 
+	padding-left: 32px;
+	padding-right: 32px;
 }
 
 .box3 ul {
 color: transparent;
 text-align:left;
-line-height: 2.5em;
+line-height: 40px;
 }
 .new{
-	height: 2.5em;
+	height: 40px;
 	display: inline-block;
 	position:relative; 
-	top: 1em; 
-	right:0.5em; 
-	padding-left: 2em;
-	padding-right: 2em;	
+	top: 16px; 
+	right:8px; 
+	padding-left: 32px;
+	padding-right: 32px;	
 }
 
 .box4 ul {
 	color: transparent;
 	text-align:left;
-	line-height: 1em;
+	line-height: 16px;
 }
 
 #text{
-	margin-top: -2em;
-	margin-left:3em;
+	margin-top: -32px;
+	margin-left:48px;
 	text-align: left;
 }
 .concert{
-	height: 2.5em;
+	height: 40px;
 	display: inline-block;
 	position:relative; 
-	top: 1em; 
-	right:3em; 
-	padding-left: 2em;
-	padding-right: 2em;
+	top: 16px; 
+	right:48px; 
+	padding-left: 32px;
+	padding-right: 32px;
 }
 
 .box5 ul {
 color: transparent;
 text-align:left;
-line-height: 2em;
+line-height: 32px;
 }
 
 .coeur{
-	height: 2em;
+	height: 32px;
 	display: inline-block;
 	position:relative; 
-	top: 0.5em; 
-	right:0.5em; 
-	padding-left: 2em;
-	padding-right: 2em;	
+	top: 8px; 
+	right:8px; 
+	padding-left: 32px;
+	padding-right: 32px;	
 }
