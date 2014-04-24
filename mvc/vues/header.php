@@ -8,9 +8,6 @@
 <body>
 
 <header>
-	<div id="menu">
-	</div>
-
 	<div id="logo">
 	</div>
 
