@@ -11,8 +11,8 @@
 	<div id="logo">
 	</div>
 
-	<div id="nom">
-	</div>
+	<a href="?page=accueil"><div id="nom">
+	</div></a>
 
 	<div id="drapeau">
 		<img src="ressources/image/drap_fr.png"/> <img src="ressources/image/drap_en.png"/>
@@ -20,8 +20,17 @@
 
 	<div id="connexion">
 		<ul>
-			<li class="zone1"><a href="#">Connexion</a></li>
-			<li class="zone1"><a href="index.php?page=inscription">Inscription</a></li>
+			<?php 
+			if (empty($GLOBALS['connexion']) or $GLOBALS['connexion']=='FALSE'){
+				echo '
+				<li class="zone1"><a href="?page=connexion">Connexion</a></li>
+				<li class="zone1"><a href="?page=inscription">Inscription</a></li>';
+			}else{
+				echo'
+				<li class="zone1"><a href="?page=Profile">Profile</a></li>
+				<li class="zone1"><a href="?page=deconnexion.php">Deconnexion</a></li>';
+			}
+			 ?>
 		</ul>
 	</div>
 
