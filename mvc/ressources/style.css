@@ -804,3 +804,172 @@ font-size: 45%;
 text-decoration:none;
 }
 
+/*inscription*/
+.particulier
+{
+	text-decoration : underline ;
+}
+.typeUtilisateur
+{
+	position : relative ;
+	left : 0% ;
+	color : white ;
+	text-align : left ;
+}
+.formulaire
+{
+	position : relative ;
+	top:40px;
+	left : 5% ;
+	color : white ;
+	text-align : justify ; 
+	margin-bottom:105px;
+}
+label.standard
+{
+	display : inline-block ;
+	float : left ;
+	width : 400px ;
+	text-align : right ;
+
+}
+.standard
+{
+	display : inline-block ;
+	float : left ;
+	width : 400px ;
+	text-align : right ;
+
+}
+.details
+{
+	font-size : 0.8em ;
+	text-align : center ;
+}
+.etoile
+{
+	color : red ;
+}
+.motDePasse
+{
+	display : block ;
+	position :relative ;
+	left : 40% ;
+}
+.connecter
+{
+	display:inline-block;  
+	background-color:#0066FF;
+	padding:2px 6px 2px 6px;
+	border-style:solid;
+	border-width:1px;
+	border-radius:5px;
+	margin-left: 400px;
+	color: white ;
+	text-decoration: none;	
+	margin-bottom:100px;
+}
+#formu_connexion{
+	margin:auto;
+}
+/*ListArtiste*/
+#LAordrealpha{
+	position : relative ;
+	top : 30% ;
+	left:27%;
+	color : black ;
+	text-decoration: underline;
+	font-size:150%;
+
+}	
+
+div.LAcadre1
+{
+	width: 350px;
+	height: 50px;
+	border:0.3em solid;
+	border-color: black;
+	background-color: #DA9E06;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div.LAtexte1{
+	font-weight:bold;
+	text-align: center;
+}
+#LAgenre{
+	position : relative ;
+	top : 30% ;
+	left : 36% ;
+	color : black ;
+	margin-right:5px;
+	text-decoration: underline;
+	font-size:150%;
+}	
+
+
+
+div.LATableau span {
+	float: left;
+	font-weight:bold;
+    display:inline;
+    border:3px solid;
+    border-color: black;
+    background-color: #DA9E06;
+    padding:4.5px;
+    width: 350px;
+	height: 30px;
+	text-align: center;
+}
+
+div.LATableau p {
+	margin-left: 153px;
+	clear: left;
+    padding:1px;
+}
+
+#LAlistecomplete{
+	position : relative ;
+	top : 30% ;
+	left : 31% ;
+	color : black ;
+	margin-right:5px;
+	text-decoration: underline;
+	font-size:150%;
+	background-color: none;
+}
+  
+.LATableau span.LAcol1 {
+	width:150px;
+}
+.LATableau span.LAcol2 {
+	width:150px;
+}
+.LATableau span.LAcol3 {
+	width:150px;
+}	
+
+#LAliste1{
+	display:inline-block;
+	margin-right:25px;
+	font-weight:bold;
+	text-align: center;
+	list-style-type: none; 
+}
+#LAliste2{
+	display:inline-block;
+	margin-right:25px;
+	font-weight:bold;
+	list-style-type: none; 
+}
+#LAliste3{
+	display:inline-block;
+	margin-right:25px;
+	font-weight:bold;
+	list-style-type: none; 
+}
+.LAartistes{
+	text-align: center;
+	font-size:110%;
+}

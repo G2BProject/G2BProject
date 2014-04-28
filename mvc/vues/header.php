@@ -1,21 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>Save ur show</title>
 <link rel="stylesheet" href="ressources/style.css" type="text/css" media="screen" />
 
 <body>
 
 <header>
-	<div id="menu">
-	</div>
-
 	<div id="logo">
 	</div>
 
-	<div id="nom">
-	</div>
+	<a href="?page=accueil"><div id="nom">
+	</div></a>
 
 	<div id="drapeau">
 		<img src="ressources/image/drap_fr.png"/> <img src="ressources/image/drap_en.png"/>
@@ -23,22 +20,31 @@
 
 	<div id="connexion">
 		<ul>
-			<li class="zone1"><a href="#">Connexion</a></li>
-			<li class="zone1"><a href="index.php?page=inscription">Inscription</a></li>
+			<?php 
+			if (empty($GLOBALS['connexion']) or $GLOBALS['connexion']=='FALSE'){
+				echo '
+				<li class="zone1"><a href="?page=connexion">Connexion</a></li>
+				<li class="zone1"><a href="?page=inscription">Inscription</a></li>';
+			}else{
+				echo'
+				<li class="zone1"><a href="?page=Profile">Profile</a></li>
+				<li class="zone1"><a href="?page=deconnexion.php">Deconnexion</a></li>';
+			}
+			 ?>
 		</ul>
 	</div>
 
 	<div id="artistes_salles">
 		<ul>
-			<li class="boutons1"><a href="index.php?page=Artiste">Artistes</a></li>
-			<li class="boutons1"><a href="index.php?page=Salle">Salles</a></li>
+			<li class="boutons1"><a href="?page=listeartiste">Artistes</a></li>
+			<li class="boutons1"><a href="new3.html">Salles</a></li>
 		</ul>
 	</div>
 
 	<div id="forum_concerts">
 		<ul>
-			<li class="boutons2"><a href="index.php?page=Forum">Forum</a></li>
-			<li class="boutons2"><a href="index.php?page=ConcertController">Concerts</a></li>
+			<li class="boutons2"><a href="forum.html">Forum</a></li>
+			<li class="boutons2"><a href="new5.html">Concerts</a></li>
 		</ul>
 	</div>
 
