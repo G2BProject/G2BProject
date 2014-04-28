@@ -27,7 +27,7 @@
 				<li class="zone1"><a href="?page=inscription">Inscription</a></li>';
 			}else{
 				echo'
-				<li class="zone1"><a href="?page=Profile">Profile</a></li>
+				<li class="zone1"><a href="?page=Profil">Profile</a></li>
 				<li class="zone1"><a href="?page=deconnexion.php">Deconnexion</a></li>';
 			}
 			 ?>
