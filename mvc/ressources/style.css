@@ -473,17 +473,6 @@ margin-top:-0.2em;
 }
 
 /*inscription*/
-.particulier
-{
-	text-decoration : underline ;
-}
-.typeUtilisateur
-{
-	position : relative ;
-	left : 0% ;
-	color : white ;
-	text-align : left ;
-}
 .formulaire
 {
 	position : relative ;
@@ -517,12 +506,6 @@ label.standard
 .etoile
 {
 	color : red ;
-}
-.motDePasse
-{
-	display : block ;
-	position :relative ;
-	left : 40% ;
 }
 .connecter
 {

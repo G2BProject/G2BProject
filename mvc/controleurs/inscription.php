@@ -16,12 +16,20 @@ if (empty($_POST['Role_ID'])) {
 	
 }else{
 
+	$bdd = new PDO('mysql:host=localhost;dbname=mydb','root','');
 
 	$Role_ID = $_POST['Role_ID'];
 
 	if(preg_match("#\w#", $_POST['pseudo']))
 	{
 		$pseudo = $_POST['pseudo'];
+		$req = $bdd -> prepare('SELECT pseudo FROM membre WHERE pseudo = :pseudo');
+		$req -> execute(array('pseudo' => $pseudo));
+		$res = $req->fetch();
+		if($res)
+		{ 
+			die('Le pseudo choisi est deja utilise.');
+		} 
 	}
 	else
 	{
@@ -34,7 +42,14 @@ if (empty($_POST['Role_ID'])) {
 	{
 		if(preg_match("#$adresse_email2#", $_POST['adresse_email']))
 		{
-			$adresse_email = $_POST['adresse_email'];	
+			$adresse_email = $_POST['adresse_email'];
+			$req = $bdd -> prepare('SELECT adresse_email FROM membre WHERE adresse_email = :adresse_email');
+			$req -> execute(array('adresse_email' => $adresse_email));
+			$res2 = $req -> fetch();
+			if ($res2)
+			{
+				die('L\'adresse mail renseigne est deja utilise.');
+			}	
 		}
 		else
 		{
@@ -62,7 +77,7 @@ if (empty($_POST['Role_ID'])) {
 					}
 					else
 					{
-						die('Les deux mots de passe renseignés doivent être identiques');
+						die('Les deux mots de passe renseignés doivent être identiques.');
 					}
 				}
 				else
@@ -72,12 +87,12 @@ if (empty($_POST['Role_ID'])) {
 			}
 			else
 			{
-				die('Votre mot de passe doit contenir au moins une lettre majuscule.');
+				die('Votre mot de passe doit contenir au moins une majuscule.');
 			}
 		}
 		else
 		{
-			die('Votre mot de passe doit contenir au moins une lettre minuscule.');
+			die('Votre mot de passe doit contenir au moins une minuscule.');
 		}
 	}
 	else
@@ -94,8 +109,6 @@ if (empty($_POST['Role_ID'])) {
 	$jour = $_POST['jour'];
 	$date_de_naissance = $an.'-'.$mois.'-'.$jour;
 	$adresse = $_POST['adresse'];
-
-	$bdd = new PDO('mysql:host=localhost;dbname=mydb','root','');
 
 	$req = $bdd->prepare('INSERT INTO membre(Role_ID, pseudo, adresse_email, mot_de_passe, name, prenom, sexe, date_de_naissance, adresse, date_inscription) VALUES(:Role_ID, :pseudo, :adresse_email, :mot_de_passe, :name, :prenom, :sexe, :date_de_naissance, :adresse, NOW())');
 	$req -> execute(array(
