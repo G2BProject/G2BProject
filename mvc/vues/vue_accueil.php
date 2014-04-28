@@ -3,7 +3,7 @@
 <div class="container1">
 <div class="titre1"><a href="#"><img src="ressources/image/actus.png"/></a></div>
 <div class="box1">Justin Timberlake sort son nouveau single!</div>
-<a href="#"><img class="photo" src="ressources/image/jtTEST.png"/></a>
+<a href="#"><img class="photo" src="ressources/image/jt.png"/></a>
 </div>
 
 <div class="container2">
