@@ -31,14 +31,14 @@
 	<div id="artistes_salles">
 		<ul>
 			<li class="boutons1"><a href="index.php?page=ArtisteController">Artistes</a></li>
-			<li class="boutons1"><a href="new3.html">Salles</a></li>
+			<li class="boutons1"><a href="index.php?page=Salle">Salles</a></li>
 		</ul>
 	</div>
 
 	<div id="forum_concerts">
 		<ul>
-			<li class="boutons2"><a href="forum.html">Forum</a></li>
-			<li class="boutons2"><a href="new5.html">Concerts</a></li>
+			<li class="boutons2"><a href="index.php?page=Forum">Forum</a></li>
+			<li class="boutons2"><a href="index.php?page=ConcertController">Concerts</a></li>
 		</ul>
 	</div>
 
