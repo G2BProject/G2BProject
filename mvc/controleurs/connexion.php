@@ -9,8 +9,7 @@
 
 		include('vues/footer.php');
 	}else{
-		include('../modeles/modele_news.php');
-		session_start();
+		include('modeles/modele_news.php');
 	    if (empty($_POST['pseudo']) || empty($_POST['password']) ) //Oublie d'un champ
 	    {
 	        echo '<p>une erreur s\'est produite pendant votre identification.
@@ -20,7 +19,7 @@
 	    else //On check le mot de passe
 	    {
 	    	$bdd = new PDO('mysql:host=localhost;dbname=mydb','root','');
-
+	    	
 	    	$pseudo = $_POST['pseudo'];
 			$password = $_POST['password'];
 	        $query=$bdd->prepare('SELECT membre.mot_de_passe, membre.pseudo
@@ -31,7 +30,9 @@
 			if ($data['mot_de_passe'] == sha1($password)) // Acces OK !
 			{
 			    $_SESSION['pseudo'] = $data['pseudo'];
-			    header('Location: ../index.php?action=connexion');
+			    $GLOBALS['connexion'] = 'TRUE';
+			    include('controleurs/accueil.php');
+			    
 			} 
 			else // Acces pas OK !
 			{
@@ -46,6 +47,5 @@
 	    }
 
 	}
-
 
  ?>
