@@ -1,4 +1,4 @@
-<div class="formulaire">
+<div class="formulaire_inscription">
 			<form action="controleurs/inscription.php" method="post">
 				<p><span class="standard"><span class="etoile">*</span>Type d'utilisateur :</span>
 					<select name="Role_ID">
