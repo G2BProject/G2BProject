@@ -27,7 +27,7 @@
 				<li class="zone1"><a href="?page=inscription">Inscription</a></li>';
 			}else{
 				echo'
-				<li class="zone1"><a href="?page=Profil">'.$_SESSION['pseudo'].'</a></li>
+				<li class="zone1"><a href="?page=none">Profil</a></li>
 				<li class="zone1"><a href="?page=deconnexion.php">Deconnexion</a></li>';
 			}
 			 ?>
@@ -37,14 +37,14 @@
 	<div id="artistes_salles">
 		<ul>
 			<li class="boutons1"><a href="?page=listeartiste">Artistes</a></li>
-			<li class="boutons1"><a href="new3.html">Salles</a></li>
+			<li class="boutons1"><a href="?page=salles">Salles</a></li>
 		</ul>
 	</div>
 
 	<div id="forum_concerts">
 		<ul>
-			<li class="boutons2"><a href="forum.html">Forum</a></li>
-			<li class="boutons2"><a href="new5.html">Concerts</a></li>
+			<li class="boutons2"><a href="?page=forum">Forum</a></li>
+			<li class="boutons2"><a href="?page=Concerts">Concerts</a></li>
 		</ul>
 	</div>
 
@@ -65,8 +65,8 @@
 	</div>	
 
 	<div class="statistique">
-		<p> Connectés: <br />
-			Nombre d'inscrits:
+		<p> Connectés: 5 <br />
+			Inscrits: 96
 		</p>
 	</div>
 

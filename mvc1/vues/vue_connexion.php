@@ -1,5 +1,5 @@
 <html>
-<form method="post" action="?page=connexion">
+<form method="post" action="controleurs/connexion.php">
 <div class="formulaire">
 	<div class="details">Connexion</div>
 	<p>
