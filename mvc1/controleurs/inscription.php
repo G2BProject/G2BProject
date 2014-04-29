@@ -104,11 +104,15 @@ if (empty($_POST['Role_ID'])) {
 	$name = $_POST['name'];
 	$prenom = $_POST['prenom'];
 	$sexe = $_POST['sexe'];
+
 	$an = $_POST['an'];
 	$mois = $_POST['mois'];
 	$jour = $_POST['jour'];
 	$date_de_naissance = $an.'-'.$mois.'-'.$jour;
-	$adresse = $_POST['adresse'];
+
+	$adresse_postale = $_POST['adresse'];
+	$pays = $_POST['pays'];
+	$adresse = $pays.', '.$adresse_postale;
 
 	$req = $bdd->prepare('INSERT INTO membre(Role_ID, pseudo, adresse_email, mot_de_passe, name, prenom, sexe, date_de_naissance, adresse, date_inscription) VALUES(:Role_ID, :pseudo, :adresse_email, :mot_de_passe, :name, :prenom, :sexe, :date_de_naissance, :adresse, NOW())');
 	$req -> execute(array(
