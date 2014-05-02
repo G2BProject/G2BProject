@@ -21,14 +21,14 @@
 	<div id="connexion">
 		<ul>
 			<?php 
-			if (empty($GLOBALS['connexion']) or $GLOBALS['connexion']=='FALSE'){
+			if (!isset($_SESSION['pseudo'])){
 				echo '
 				<li class="zone1"><a href="?page=connexion">Connexion</a></li>
 				<li class="zone1"><a href="?page=inscription">Inscription</a></li>';
 			}else{
 				echo'
 				<li class="zone1"><a href="?page=none">Profil</a></li>
-				<li class="zone1"><a href="?page=deconnexion.php">Deconnexion</a></li>';
+				<li class="zone1"><a href="?page=deconnexion">Deconnexion</a></li>';
 			}
 			 ?>
 		</ul>
