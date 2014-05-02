@@ -34,7 +34,7 @@
 		<div><a class="txt4" href="#">Nom de l'utilisateur :</a></div>
 		<div><a class="txt4" href="#">Date :</a></div>
 		<div><a class="txt4" href="#">Laisser un commentaire :</a></div>
-		<div class="formulaire">
+		<div class="formulaireartiste">
 			<form method="post" action="traitement.php">
 				<p><label class=""></label>
 				<textarea name="post" rows ="5" cols="55" id="post"></textarea></p>
