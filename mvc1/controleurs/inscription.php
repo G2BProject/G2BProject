@@ -16,8 +16,6 @@ if (empty($_POST['Role_ID'])) {
 	
 }else{
 
-	$bdd = new PDO('mysql:host=localhost;dbname=mydb','root','');
-
 	$Role_ID = $_POST['Role_ID'];
 
 	if(!isset($_POST['cgu']))
@@ -127,7 +125,7 @@ if (empty($_POST['Role_ID'])) {
 		'date_de_naissance' => $date_de_naissance,
 		'adresse' => $adresse,
 		));
-		header('Location: ../index.php');
+		include('controleurs/accueil.php');
 }
 
  ?>
