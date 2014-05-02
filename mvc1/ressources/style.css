@@ -637,10 +637,17 @@ font-size: 60%;
 text-decoration: underline;
 }
 
+<<<<<<< HEAD
 
 .formulaire{
 top : 5px ;
 left : 3px ;
+=======
+.formulaireartiste
+{
+top : 4px ;
+left : 1% ;
+>>>>>>> 09a78714bac49a10df2b0fb1509f6e6b9666d278
 color : white ;
 }
 
@@ -723,7 +730,7 @@ text-decoration:none;
 }
 
 /*inscription*/
-.formulaire_inscription
+.formulaire
 {
 	position : relative ;
 	top:40px;
@@ -876,43 +883,54 @@ div.LATableau p {
 }
 
 /*inscription*/
+/*salles*/
 
 .conteneur 
  {
- border-width:1px;
- border-style:outset;
- border-color:red;
- width: 800px;
- background: #008000;
+ width: 860px;
+ height: 200px;
+ background: #666666;
  
  }
+
+
+
  .gauche
  { 
- width: 500 px;
-top:100%;
+float:left;
+width: 200px;
+top:50%;
 left:10%;
 margin-top:-(hauteur/2)px;
 margin-left:-(largeur/2)px;
-margin-right:o px;
+margin-right: 0px;
 }
 
 
 
 	
-	
-}
+}	
+
 h1
 {
     border: 1px green solid;
 	margin:100px 50px;
+	
+	
 }
-/h1
+
 
 h2
 {
+
 border 5px green solid;
 margin:100 px 50 px;
+font-size: 24px;
+    font-family: Patrick hand sc;
+
+
 }
+<<<<<<< HEAD
 /h2
 
 /*concerts*/
@@ -1176,3 +1194,6 @@ color: white;
 font-size: 45%;
 text-decoration:none;
 }
+=======
+
+>>>>>>> 09a78714bac49a10df2b0fb1509f6e6b9666d278
