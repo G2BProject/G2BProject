@@ -1,4 +1,4 @@
-<div class="contenu">
+﻿<div class="contenu">
 
 	<div class="container6">
 		<div id="photo">
@@ -19,7 +19,7 @@
 	<div class="container7">
 		<div><a href="#"><img class="barre" /></a></div>
 		<div><a href="#"><img class="liste" /></a></div>
-		<div class=mail>Recevoir l'actualité de WOODKID par mail</div>
+		<div class="mail">Recevoir l'actualité de WOODKID par mail</div>
 			</div>
 
 	<div class="container8">
