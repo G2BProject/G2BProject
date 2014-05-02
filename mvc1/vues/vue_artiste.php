@@ -1,4 +1,4 @@
-﻿<div class="contenu">
+<div class="contenuArtiste">
 
 	<div class="container6">
 		<div id="photo">
@@ -12,14 +12,14 @@
 				<li class="caract"><div class="txt2"href="#"><a class="style">   Dernière production </a>:    Nom et date de la dernière production de l'artiste</div></li>
 				<li class="caract"><div class="txt2"href="#"><a class="style">   Nombre de fans</a>:    XXX</div></li>
 			</ul>
-			<div class="fan">Devenir fan</div>
+			<div class="fanartiste">Devenir fan</div>
 		</div>
 	</div>
 
 	<div class="container7">
 		<div><a href="#"><img class="barre" /></a></div>
 		<div><a href="#"><img class="liste" /></a></div>
-		<div class="mail">Recevoir l'actualité de WOODKID par mail</div>
+		<div class="mailartiste">Recevoir l'actualité de WOODKID par mail</div>
 			</div>
 
 	<div class="container8">
@@ -37,7 +37,7 @@
 		<div class="formulaire">
 			<form method="post" action="traitement.php">
 				<p><label class=""></label>
-				<textarea name="post" rows ="5" cols="55" id="post"></textarea></p>
+				<textarea name="post" rows ="5" cols="40" id="post"></textarea></p>
 				<div><a class="txt5" href="#">Publier</a></div>
 			</form>
 		</div>
