@@ -1,4 +1,4 @@
-<div class="formulaire">
+<div class="formulaire_inscription">
 			<form action="controleurs/inscription.php" method="post">
 				<p><span class="standard"><span class="etoile">*</span>Type d'utilisateur :</span>
 					<select name="Role_ID">
@@ -162,8 +162,8 @@
 				<p><label class="standard">Adresse :</label><input type="text" name="adresse" id="adresse"/></p>
 
 					<p><span class="standard">Pays :</span>
-					<select name="pays" size="1">			
-						<option value selected="France">France </option>
+					<select name="pays">			
+						<option value="France">France </option>
 						<option value="Afghanistan">Afghanistan </option>
 						<option value="Afrique_Centrale">Afrique centrale </option>
 						<option value="Afrique_du_sud">Afrique du Sud </option>
@@ -232,7 +232,6 @@
 						<option value="Feroe">Feroe </option>
 						<option value="Fidji">Fidji </option>
 						<option value="Finlande">Finlande </option>
-						<option value="France">France </option>
 						<option value="Gabon">Gabon </option>
 						<option value="Gambie">Gambie </option>
 						<option value="Georgie">Georgie </option>
