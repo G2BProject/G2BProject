@@ -44,7 +44,7 @@
 	<div id="forum_concerts">
 		<ul>
 			<li class="boutons2"><a href="?page=forum">Forum</a></li>
-			<li class="boutons2"><a href="?page=Concerts">Concerts</a></li>
+			<li class="boutons2"><a href="?page=concert">Concerts</a></li>
 		</ul>
 	</div>
 

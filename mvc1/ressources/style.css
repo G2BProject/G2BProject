@@ -557,7 +557,7 @@ height: 61px;
 width: 250px;
 margin-left: 25px;
 margin-top: 15px;
-background-image: url(image/barre2.png);
+background-image: url(image/barre.png);
 background-repeat: no-repeat;
 }
 
@@ -645,8 +645,7 @@ color : white ;
 }
 
 #post{
-margin-top: -15px;
-margin-left:-23px; 
+margin-top: 7px;
 }
 
 .txt5{
@@ -1038,7 +1037,7 @@ background-repeat: no-repeat;
 
 .mailconcert{
 margin-top : 10px ;
-margin-left : 15px ;
+margin-left : 35px ;
 color : white ;
 font-size: 100%;
 text-decoration:none;
