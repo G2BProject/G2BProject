@@ -1,5 +1,5 @@
 <div class="formulaire">
-			<form action="controleurs/inscription.php" method="post">
+			<form action="index.php?page=inscription" method="post">
 				<p><span class="standard"><span class="etoile">*</span>Type d'utilisateur :</span>
 					<select name="Role_ID">
 						<option value="1">Membre</option>
