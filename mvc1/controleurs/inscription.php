@@ -20,6 +20,11 @@ if (empty($_POST['Role_ID'])) {
 
 	$Role_ID = $_POST['Role_ID'];
 
+	if(!isset($_POST['cgu']))
+	{
+		die('Vous devez accepter les condition generales d\'utilisation du site.');
+	} 
+
 	if(preg_match("#\w#", $_POST['pseudo']))
 	{
 		$pseudo = $_POST['pseudo'];
@@ -53,7 +58,7 @@ if (empty($_POST['Role_ID'])) {
 		}
 		else
 		{
-			die('Les deux adresses mails renseignées doivent être identiques');
+			die('Les deux adresses mails renseignees doivent etre identiques');
 		}
 	}
 	else
@@ -77,7 +82,7 @@ if (empty($_POST['Role_ID'])) {
 					}
 					else
 					{
-						die('Les deux mots de passe renseignés doivent être identiques.');
+						die('Les deux mots de passe renseignes doivent etre identiques.');
 					}
 				}
 				else
@@ -97,7 +102,7 @@ if (empty($_POST['Role_ID'])) {
 	}
 	else
 	{
-		die('Votre mot de passe doit comporter au moins 8 caractères.');
+		die('Votre mot de passe doit comporter au moins 8 caracteres.');
 	}
 
 

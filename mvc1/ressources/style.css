@@ -557,7 +557,7 @@ height: 61px;
 width: 250px;
 margin-left: 25px;
 margin-top: 15px;
-background-image: url(image/barre.png);
+background-image: url(image/barre2.png);
 background-repeat: no-repeat;
 }
 
@@ -638,11 +638,14 @@ text-decoration: underline;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 .formulaire{
 top : 5px ;
 left : 3px ;
 =======
+=======
+>>>>>>> 6c841a213b8f57d72b4a1d20eaf1c487a8e9fa3f
 .formulaireartiste
 {
 top : 4px ;
@@ -743,7 +746,7 @@ label.standard
 {
 	display : inline-block ;
 	float : left ;
-	width : 400px ;
+	width : 420px ;
 	text-align : right ;
 
 }
@@ -751,7 +754,7 @@ label.standard
 {
 	display : inline-block ;
 	float : left ;
-	width : 400px ;
+	width : 420px ;
 	text-align : right ;
 
 }
@@ -930,7 +933,7 @@ font-size: 24px;
 
 
 }
-<<<<<<< HEAD
+
 /h2
 
 /*concerts*/
@@ -1194,6 +1197,4 @@ color: white;
 font-size: 45%;
 text-decoration:none;
 }
-=======
 
->>>>>>> 09a78714bac49a10df2b0fb1509f6e6b9666d278
