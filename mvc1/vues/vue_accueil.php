@@ -34,7 +34,7 @@
 	<ul>
 		<li class=""><a href="#"><img class="concert" src="ressources/image/sanseverino.png"/>
 		<div id="text">Sanseverino - David Bostelli <br /> 
-		Salle de l\'Albaret - Saint-Juéry <br /> 
+		Salle de l'Albaret - Saint-Juéry <br /> 
 		Vendredi 13 juin 2014 à 18h </div2></a></li>
 	</ul>
 </div>
@@ -50,5 +50,5 @@
 </div>
 </div>
 
-<div style="clear:both"></div>
+<div style="clear:both;"></div>
 </div>

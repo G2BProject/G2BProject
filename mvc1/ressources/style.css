@@ -143,7 +143,6 @@ body{
 	 border-width:1px;
 	 margin: auto;
 	 margin-top:100px;
-	
 }
 
 .reseaux{
@@ -164,7 +163,6 @@ body{
 }
 
 .reseauxsociaux{
-
  	width:30px;
  	margin: 0px;
  	margin-top:1px;
@@ -186,6 +184,7 @@ body{
 	 margin-top:100px;
 	 margin-bottom: 100px;
 }
+
 #bordure{
 	position:relative;
 	display:inline-block;
@@ -229,11 +228,12 @@ body{
 a{
  	 text-decoration:none;
  	 color:#FFFFFF;
- } 
+} 
 
 .statistique p{
 	color:#FFFFFF;
 }
+
 #contenu {
 	margin-top:121px;
 	border-bottom-style:solid;
@@ -246,22 +246,20 @@ a{
 }
 
 /*accueil*/
-div.container1
-{
+div.container1{
 width:30em;
 border:0.3em solid;
 background-color:#26266A;
 border-color:black;
 height:28em;
 }
-div.titre1
-{
+
+div.titre1{
 text-align:center;
 margin-top:1em;
 }
 
-div.box1
-{
+div.box1{
 -moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
@@ -276,8 +274,7 @@ line-height: 4em;
 font-size: large;
 }
 
-div.container2
-{
+div.container2{
 margin-top:-28.5em;
 width:20.4em;
 border:0.3em solid;
@@ -286,14 +283,14 @@ border-color:black;
 height:22em;
 margin-left:30.3em;
 }
-div.titre2
-{
+
+div.titre2{
 text-align:center;
 margin-top:2em;
 font-weight:bold;
 }
-div.box2
-{
+
+div.box2{
 -moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
@@ -305,8 +302,7 @@ margin-top:2em;
 background-color:#404040;
 }
 
-div.container3
-{
+div.container3{
 margin-top:-0.2em;
 width:20.4em;
 border:0.3em solid;
@@ -315,14 +311,15 @@ border-color:black;
 height:18em;
 margin-left:30.3em;
 }
-div.titre3
-{
+
+div.titre3{
 text-align:center;
 margin-top:2em;
 font-weight:bold;
 }
-div.box3
-{
+
+div.box3{
+-moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
 height:11em;
@@ -331,11 +328,9 @@ border-bottom:0.3em solid black;
 text-align:center;
 margin-top:2em;
 background-color:#404040;
-
 }
 
-div.container4
-{
+div.container4{
 margin-top:-13em;
 width:17em;
 border:0.3em solid;
@@ -343,14 +338,15 @@ background-color:#0C874D;
 border-color:black;
 height:12.5em;
 }
-div.titre4
-{
+
+div.titre4{
 text-align:center;
 margin-top:1em;
 font-weight:bold;
 }
-div.box4
-{
+
+div.box4{
+-moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
 height:7.5em;
@@ -361,8 +357,7 @@ margin-top:0.5em;
 background-color:#404040;
 }
 
-div.container5
-{
+div.container5{
 margin-top:-13em; 
 width:13em;
 border:0.3em solid;
@@ -371,14 +366,15 @@ border-color:black;
 height:12.5em;
 margin-left:17em;
 }
-div.titre5
-{
+
+div.titre5{
 text-align:center;
 margin-top:1em;
 font-weight:bold;
 }
-div.box5
-{
+
+div.box5{
+-moz-box-sizing:border-box;
 box-sizing:border-box;
 width:100%;
 height:7.5em;
@@ -389,14 +385,13 @@ margin-top:0.5em;
 background-color:#404040;
 }
 
-
 .photo{
 	position: relative;
 	top: 0.75em;
 	right: -3em;
 }
 
-.box2 ol {
+.box2 ol{
 color: white;
 text-align:left;
 line-height: 2.5em;
@@ -412,12 +407,13 @@ line-height: 2.5em;
 	padding-right: 2em;
 }
 
-.box3 ul {
+.box3 ul{
 color: transparent;
 text-align:left;
 line-height: 2.5em;
 margin-top:-0.5em;
 }
+
 .new{
 	height: 2.5em;
 	display: inline-block;
@@ -428,7 +424,7 @@ margin-top:-0.5em;
 	padding-right: 2em;	
 }
 
-.box4 ul {
+.box4 ul{
 	color: transparent;
 	text-align:left;
 	line-height: 1em;
@@ -439,6 +435,7 @@ margin-top:-0.5em;
 	margin-left:3em;
 	text-align: left;
 }
+
 .concert{
 	height: 2.5em;
 	display: inline-block;
@@ -449,7 +446,7 @@ margin-top:-0.5em;
 	padding-right: 2em;
 }
 
-.box5 ul {
+.box5 ul{
 color: transparent;
 text-align:left;
 line-height: 1.3em;
@@ -520,15 +517,14 @@ color:white;
 font-size: 100%;
 }
 
-.style{
+.styleartiste{
 display: inline-block;
 margin-left: 0px;
 margin-top: 0px;
 text-decoration: underline;
 }
 
-.fanartiste
-{
+.fanartiste{
 margin-top : -40px ;
 width: 90px;
 text-align: center;
@@ -644,7 +640,7 @@ left : 1% ;
 color : white ;
 }
 
-#post{
+#postartiste{
 margin-top: 7px;
 }
 
@@ -722,8 +718,7 @@ text-decoration:none;
 }
 
 /*inscription*/
-.formulaire
-{
+.formulaire{
 	position : relative ;
 	top:40px;
 	left : 5% ;
@@ -731,33 +726,31 @@ text-decoration:none;
 	text-align : justify ; 
 	margin-bottom:105px;
 }
-label.standard
-{
+
+label.standard{
 	display : inline-block ;
 	float : left ;
 	width : 420px ;
 	text-align : right ;
-
 }
-.standard
-{
+
+.standard{
 	display : inline-block ;
 	float : left ;
 	width : 420px ;
 	text-align : right ;
-
 }
-.details
-{
+
+.details{
 	font-size : 0.8em ;
 	text-align : center ;
 }
-.etoile
-{
+
+.etoile{
 	color : red ;
 }
-.connecter
-{
+
+.connecter{
 	display:inline-block;  
 	background-color:#0066FF;
 	padding:2px 6px 2px 6px;
@@ -765,14 +758,17 @@ label.standard
 	border-width:1px;
 	border-radius:5px;
 	margin-left: 400px;
-	color: white ;
+	color: white;
 	text-decoration: none;	
 	margin-bottom:100px;
 }
+
 #formu_connexion{
 	margin:auto;
 }
+
 /*ListArtiste*/
+
 #LAordrealpha{
 	position : relative ;
 	top : 30% ;
@@ -780,11 +776,9 @@ label.standard
 	color : black ;
 	text-decoration: underline;
 	font-size:150%;
-
 }	
 
-div.LAcadre1
-{
+div.LAcadre1{
 	width: 350px;
 	height: 50px;
 	border:0.3em solid;
@@ -798,6 +792,7 @@ div.LAtexte1{
 	font-weight:bold;
 	text-align: center;
 }
+
 #LAgenre{
 	position : relative ;
 	top : 30% ;
@@ -808,9 +803,7 @@ div.LAtexte1{
 	font-size:150%;
 }	
 
-
-
-div.LATableau span {
+div.LATableau span{
 	float: left;
 	font-weight:bold;
     display:inline;
@@ -823,7 +816,7 @@ div.LATableau span {
 	text-align: center;
 }
 
-div.LATableau p {
+div.LATableau p{
 	margin-left: 153px;
 	clear: left;
     padding:1px;
@@ -840,13 +833,15 @@ div.LATableau p {
 	background-color: none;
 }
   
-.LATableau span.LAcol1 {
+.LATableau span.LAcol1{
 	width:150px;
 }
-.LATableau span.LAcol2 {
+
+.LATableau span.LAcol2{
 	width:150px;
 }
-.LATableau span.LAcol3 {
+
+.LATableau span.LAcol3{
 	width:150px;
 }	
 
@@ -857,38 +852,37 @@ div.LATableau p {
 	text-align: center;
 	list-style-type: none; 
 }
+
 #LAliste2{
 	display:inline-block;
 	margin-right:25px;
 	font-weight:bold;
 	list-style-type: none; 
 }
+
 #LAliste3{
 	display:inline-block;
 	margin-right:25px;
 	font-weight:bold;
 	list-style-type: none; 
 }
+
 .LAartistes{
 	text-align: center;
 	font-size:110%;
 }
 
-/*inscription*/
+
 /*salles*/
 
-.conteneur 
- {
+.conteneur{
  width: 860px;
  height: 200px;
  background: #666666;
  margin-top:-39px;
- }
+}
 
-
-
- .gauche
- { 
+.gauche{ 
 float:left;
 width: 200px;
 top:50%;
@@ -898,32 +892,18 @@ margin-left:-(largeur/2)px;
 margin-right: 0px;
 }
 
-
-
-	
-}	
-
-h1
-{
+h1{
     border: 1px green solid;
-	margin:100px 50px;
-	
-	
+	margin:100px 50px;	
 }
 
 
-h2
-{
-
-border 5px green solid;
+h2{
+border:5px green solid;
 margin:100 px 50 px;
 font-size: 24px;
-    font-family: Patrick hand sc;
-
-
+font-family: Patrick hand sc;
 }
-
-/h2
 
 /*concerts*/
 
@@ -983,25 +963,25 @@ margin-left: 0px;
 margin-top: 0px;
 text-decoration: underline;
 }
+
 .locconcert{
 margin-top :-40px ;
-background-image: url(image/Localiser.png);
+background-image: url(image/localiser.png);
 background-repeat: no-repeat;
 height: 25px;
 width: 18px;
-margin-left:-25px; 
+margin-left:0px; 
 }
 
-.localiserconcert
-{
-margin-top : -40px ;
+.localiserconcert{
+margin-top:-40px ;
 width: 90px;
 text-align: center;
-margin-left : 5px ;
-color : white;
-background-color: ThreeDDarkShadow;
-border-radius: 7px;
-font-size: 120%;
+margin-left:30px ;
+color:white;
+background-color:ThreeDDarkShadow;
+border-radius:7px;
+font-size: 110%;
 text-decoration:none;
 }
 
@@ -1126,9 +1106,8 @@ text-decoration:none;
 }
 
 .container5concert{
-margin-top:-365px;
 float: right;
-margin-right:-177px; 
+margin-right:-143px; 
 width:135px;
 height:280px;
 border:solid 2px;
@@ -1186,4 +1165,3 @@ color: white;
 font-size: 45%;
 text-decoration:none;
 }
-
