@@ -15,4 +15,13 @@
 		));
 	}
 
+	function connexion($pseudo,$password){
+		global $bdd;
+	    $query=$bdd->prepare('SELECT membre.mot_de_passe, membre.pseudo
+	    FROM membre WHERE membre.pseudo = :pseudo');
+        $query->bindValue(':pseudo',$pseudo, PDO::PARAM_STR);
+        $query->execute();
+	    $data=$query->fetch();
+	    return $data;
+	}
  ?>
