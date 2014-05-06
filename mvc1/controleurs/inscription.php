@@ -20,8 +20,9 @@ if (empty($_POST['Role_ID'])) {
 	$Role_ID = $_POST['Role_ID'];
 
 	if(!isset($_POST['cgu']))
-	{
-		die('Vous devez accepter les condition generales d\'utilisation du site.');
+	{	
+		die('<div class="titre1">Vous devez accepter les condition generales d\'utilisation du site. </br> <a href="?page=inscription">Retour</a></div>');
+
 	} 
 
 	if(preg_match("#\w#", $_POST['pseudo']))
@@ -32,12 +33,12 @@ if (empty($_POST['Role_ID'])) {
 		$res = $req->fetch();
 		if($res)
 		{ 
-			die('Le pseudo choisi est deja utilise.');
+			die('<div class="titre1">Le pseudo choisi est deja utilise. </br> <a href="?page=inscription">Retour</a></div>');
 		} 
 	}
 	else
 	{
-		die('Vous devez choisir un nom d\'utilisateur');
+		die('<div class="titre1">Vous devez choisir un nom d\'utilisateur. </br> <a href="?page=inscription">Retour</a></div>');
 	}
 
 	$adresse_email2 = $_POST['emailConfirm'];
@@ -52,17 +53,17 @@ if (empty($_POST['Role_ID'])) {
 			$res2 = $req -> fetch();
 			if ($res2)
 			{
-				die('L\'adresse mail renseigne est deja utilise.');
+				die('<div class="titre1">L\'adresse mail renseigne est deja utilise. </br> <a href="?page=inscription">Retour</a></div>');
 			}	
 		}
 		else
 		{
-			die('Les deux adresses mails renseignees doivent etre identiques');
+			die('<div class="titre1">Les deux adresses mails renseignees doivent etre identiques. </br> <a href="?page=inscription">Retour</a></div>');
 		}
 	}
 	else
 	{
-		die('Votre adresse mail n\'a pas un format valide.');
+		die('<div class="titre1">Votre adresse mail n\'a pas un format valide. </br> <a href="?page=inscription">Retour</a></div>');
 	}
 
 	$mot_de_passe = $_POST['mot_de_passe'];
@@ -81,27 +82,27 @@ if (empty($_POST['Role_ID'])) {
 					}
 					else
 					{
-						die('Les deux mots de passe renseignes doivent etre identiques.');
+						die('<div class="titre1">Les deux mots de passe renseignes doivent etre identiques. </br> <a href="?page=inscription">Retour</a></div>');
 					}
 				}
 				else
 				{
-					die('Votre mot de passe doit contenir au moins un chiffre.');
+					die('<div class="titre1">Votre mot de passe doit contenir au moins un chiffre. </br> <a href="?page=inscription">Retour</a></div>');
 				}
 			}
 			else
 			{
-				die('Votre mot de passe doit contenir au moins une majuscule.');
+				die('<div class="titre1">Votre mot de passe doit contenir au moins une majuscule. </br> <a href="?page=inscription">Retour</a></div>');
 			}
 		}
 		else
 		{
-			die('Votre mot de passe doit contenir au moins une minuscule.');
+			die('<div class="titre1">Votre mot de passe doit contenir au moins une minuscule. </br> <a href="?page=inscription">Retour</a></div>');
 		}
 	}
 	else
 	{
-		die('Votre mot de passe doit comporter au moins 8 caracteres.');
+		die('<div class="titre1">Votre mot de passe doit comporter au moins 8 caracteres. </br> <a href="?page=inscription">Retour</a></div>');
 	}
 
 
