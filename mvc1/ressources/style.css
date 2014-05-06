@@ -882,6 +882,8 @@ div.LATableau p{
  margin-top:-39px;
 }
 
+
+
 .gauche{ 
 float:left;
 width: 200px;
@@ -890,20 +892,8 @@ left:10%;
 margin-top:-(hauteur/2)px;
 margin-left:-(largeur/2)px;
 margin-right: 0px;
-}
+}	
 
-h1{
-    border: 1px green solid;
-	margin:100px 50px;	
-}
-
-
-h2{
-border:5px green solid;
-margin:100 px 50 px;
-font-size: 24px;
-font-family: Patrick hand sc;
-}
 
 /*concerts*/
 
