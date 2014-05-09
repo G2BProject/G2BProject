@@ -27,7 +27,7 @@
 <nav>
 				
 
-				<a href="?page=accueil" class="boutonforum"  style="text-decoration:none"><div class="discuss">Créer discussion</div></a>
+				<a href="?page=discussion" class="boutonforum"  style="text-decoration:none"><div class="discuss">Créer discussion</div></a>
 		<table class= "tableforum">
 			<thead>
 				<tr class= "categforum1">
