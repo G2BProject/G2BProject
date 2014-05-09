@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="ressources/style_forum.css" type="text/css" media="screen" />
@@ -27,7 +27,7 @@
 <nav>
 				
 
-				<a href="discussion.php" class="boutonforum"  style="text-decoration:none"><div class="discuss">Créer discussion</div></a>
+				<a href="?page=accueil" class="boutonforum"  style="text-decoration:none"><div class="discuss">Créer discussion</div></a>
 		<table class= "tableforum">
 			<thead>
 				<tr class= "categforum1">
