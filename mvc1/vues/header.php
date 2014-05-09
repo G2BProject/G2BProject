@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -27,7 +27,7 @@
 				<li class="zone1"><a href="?page=inscription">Inscription</a></li>';
 			}else{
 				echo'
-				<li class="zone1"><a href="?page=none">'.$_SESSION['pseudo'].'</a></li>
+				<li class="zone1"><a href="?page=none">Profil</a></li>
 				<li class="zone1"><a href="?page=deconnexion">Deconnexion</a></li>';
 			}
 			 ?>
@@ -58,7 +58,7 @@
 	<div class="reseaux">
 		<div> <a href="https://www.facebook.com/pages/Save-Ur-Show/281799091982222?fref=ts"> <img class="reseauxsociaux" src="ressources/image/facebook.png" /></a> <span></span>
 		</div> 
-		<div> <a href="https://twitter.com/SaveUrShow0"> <img class="reseauxsociaux" src="ressources/image/twitter.png"/></a> <span></span>
+		<div> <a href="https://twitter.com/SaveUrShow01"> <img class="reseauxsociaux" src="ressources/image/twitter.png"/></a> <span></span>
 		</div> 
 		<div> <a href="https://plus.google.com/"> <img class="reseauxsociaux" src="ressources/image/g.png"/></a> <span></span>
 		</div> 
@@ -69,6 +69,8 @@
 			Inscrits: 96
 		</p>
 	</div>
+	
+	<a class="ajoutConcert" href="index.php?page=ajoutConcert"> Ajouter un concert</a>
 
 	</span>
 </header>

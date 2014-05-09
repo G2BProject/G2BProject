@@ -2,7 +2,7 @@
 
 if (empty($_POST['Role_ID'])) {
 	
-	
+	include('modeles/modele_utilisateur.php');
 	//on executera ici les fonction du modèle dont nous aurons besoin.
 
 
@@ -15,14 +15,12 @@ if (empty($_POST['Role_ID'])) {
 	include('vues/footer.php');
 	
 }else{
-	include('modeles/modele_utilisateur.php');
-	include('vues/header.php');
+
 	$Role_ID = $_POST['Role_ID'];
 
 	if(!isset($_POST['cgu']))
-	{	
-		die('<div class="titre1">Vous devez accepter les condition generales d\'utilisation du site. </br> <a href="?page=inscription">Retour</a></div>');
-
+	{
+		die('Vous devez accepter les condition generales d\'utilisation du site.');
 	} 
 
 	if(preg_match("#\w#", $_POST['pseudo']))
@@ -33,12 +31,12 @@ if (empty($_POST['Role_ID'])) {
 		$res = $req->fetch();
 		if($res)
 		{ 
-			die('<div class="titre1">Le pseudo choisi est deja utilise. </br> <a href="?page=inscription">Retour</a></div>');
+			die('Le pseudo choisi est deja utilise.');
 		} 
 	}
 	else
 	{
-		die('<div class="titre1">Vous devez choisir un nom d\'utilisateur. </br> <a href="?page=inscription">Retour</a></div>');
+		die('Vous devez choisir un nom d\'utilisateur');
 	}
 
 	$adresse_email2 = $_POST['emailConfirm'];
@@ -53,17 +51,17 @@ if (empty($_POST['Role_ID'])) {
 			$res2 = $req -> fetch();
 			if ($res2)
 			{
-				die('<div class="titre1">L\'adresse mail renseigne est deja utilise. </br> <a href="?page=inscription">Retour</a></div>');
+				die('L\'adresse mail renseigne est deja utilise.');
 			}	
 		}
 		else
 		{
-			die('<div class="titre1">Les deux adresses mails renseignees doivent etre identiques. </br> <a href="?page=inscription">Retour</a></div>');
+			die('Les deux adresses mails renseignees doivent etre identiques');
 		}
 	}
 	else
 	{
-		die('<div class="titre1">Votre adresse mail n\'a pas un format valide. </br> <a href="?page=inscription">Retour</a></div>');
+		die('Votre adresse mail n\'a pas un format valide.');
 	}
 
 	$mot_de_passe = $_POST['mot_de_passe'];
@@ -82,27 +80,27 @@ if (empty($_POST['Role_ID'])) {
 					}
 					else
 					{
-						die('<div class="titre1">Les deux mots de passe renseignes doivent etre identiques. </br> <a href="?page=inscription">Retour</a></div>');
+						die('Les deux mots de passe renseignes doivent etre identiques.');
 					}
 				}
 				else
 				{
-					die('<div class="titre1">Votre mot de passe doit contenir au moins un chiffre. </br> <a href="?page=inscription">Retour</a></div>');
+					die('Votre mot de passe doit contenir au moins un chiffre.');
 				}
 			}
 			else
 			{
-				die('<div class="titre1">Votre mot de passe doit contenir au moins une majuscule. </br> <a href="?page=inscription">Retour</a></div>');
+				die('Votre mot de passe doit contenir au moins une majuscule.');
 			}
 		}
 		else
 		{
-			die('<div class="titre1">Votre mot de passe doit contenir au moins une minuscule. </br> <a href="?page=inscription">Retour</a></div>');
+			die('Votre mot de passe doit contenir au moins une minuscule.');
 		}
 	}
 	else
 	{
-		die('<div class="titre1">Votre mot de passe doit comporter au moins 8 caracteres. </br> <a href="?page=inscription">Retour</a></div>');
+		die('Votre mot de passe doit comporter au moins 8 caracteres.');
 	}
 
 
@@ -115,9 +113,19 @@ if (empty($_POST['Role_ID'])) {
 	$date_de_naissance = $an.'-'.$mois.'-'.$jour;
 	$adresse = $_POST['adresse'];
 
-	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$name,$prenom,$sexe,$date_de_naissance,$adresse);
-		include('vues/vue_accueil.php');
-}	
-	
+	$req = $bdd->prepare('INSERT INTO membre(Role_ID, pseudo, adresse_email, mot_de_passe, name, prenom, sexe, date_de_naissance, adresse, date_inscription) VALUES(:Role_ID, :pseudo, :adresse_email, :mot_de_passe, :name, :prenom, :sexe, :date_de_naissance, :adresse, NOW())');
+	$req -> execute(array(
+		'Role_ID' => $Role_ID,
+		'pseudo' => $pseudo,
+		'adresse_email' => $adresse_email,
+		'mot_de_passe' => $mot_de_passe_hache,
+		'name' => $name,
+		'prenom' => $prenom,
+		'sexe' => $sexe,
+		'date_de_naissance' => $date_de_naissance,
+		'adresse' => $adresse,
+		));
+		include('controleurs/accueil.php');
+}
 
  ?>
