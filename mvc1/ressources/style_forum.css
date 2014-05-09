@@ -220,3 +220,28 @@ font-family:Patrick hand sc;
     font-style: Arial;  
     
 }
+/* style creer discussion */
+.formulairediscuss{
+    
+    position : relative ;
+    top:200px;
+    left : 100px ;
+    color : white ;
+    text-align : justify ; 
+    margin-bottom:105px;
+    
+}
+
+label.sous_categorie_forum{
+    display : inline-block ;
+    float : left ;
+    width : 420px ;
+    text-align : right ;
+}
+
+.standard{
+    display : inline-block ;
+    float : left ;
+    width : 420px ;
+    text-align : right ;
+}
