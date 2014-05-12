@@ -27,7 +27,7 @@
 				<li class="zone1"><a href="?page=inscription">Inscription</a></li>';
 			}else{
 				echo'
-				<li class="zone1"><a href="?page=none">Profil</a></li>
+				<li class="zone1"><a href="?page=none">'.$_SESSION['pseudo'].'</a></li>
 				<li class="zone1"><a href="?page=deconnexion">Deconnexion</a></li>';
 			}
 			 ?>
