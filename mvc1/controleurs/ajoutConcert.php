@@ -2,7 +2,7 @@
 
 if (empty($_POST['nom_du_concert'])) {
 	
-	include('modeles/modele_concert.php');
+	
 	//on executera ici les fonction du modèle dont nous aurons besoin.
 
 
@@ -15,13 +15,11 @@ if (empty($_POST['nom_du_concert'])) {
 	include('vues/footer.php');
 	
 }else{
-
+	include('modeles/modele_concert.php');
 	if(isset($_POST['nom_du_concert']))
 	{
 		$nom_du_concert = $_POST['nom_du_concert'];
-		$req = $bdd -> prepare('SELECT nom_du_concert FROM concert WHERE nom_du_concert = :nom_du_concert');
-		$req -> execute(array('nom_du_concert' => $nom_du_concert));
-		$res = $req->fetch();
+		$res = nomConcert($nom_du_concert);
 		if($res)
 		{ 
 			die('Le nom choisi est deja utilise.');
@@ -42,12 +40,7 @@ if (empty($_POST['nom_du_concert'])) {
 	$seconde=0;
 	$heure_du_concert = $heure.':'.$minute.':'.$seconde;
 
-	$req = $bdd->prepare('INSERT INTO concert(nom_du_concert, date_du_concert, heure, date_ajout_concert) VALUES(:nom_du_concert, :date_du_concert, :heure_du_concert, NOW())');
-	$req -> execute(array(
-		'nom_du_concert' => $nom_du_concert,
-		'date_du_concert' => $date_du_concert,
-		'heure_du_concert' => $heure_du_concert,
-		));
+	ajoutConcert($nom_du_concert,$date_du_concert,$heure);
 		include('controleurs/accueil.php');
 }
 
