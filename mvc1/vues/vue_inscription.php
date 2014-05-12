@@ -397,7 +397,7 @@
 					 <input type="radio" name="newsletter" value="oui" id="oui" /> <label for="oui">Oui</label>
        					 <input type="radio" name="newsletter" value="non" id="non" /> <label for="non">Non</label></p>
 
-       			<p><label class="standard" for="cgu">J'ai lu et j'accepte les conditions générales d'utilisation du site.</label><input type="checkbox" name="cgu" id="cgu" /></p>
+       			<p><label class="standard" for="cgu"><span class="etoile">*</span>J'ai lu et j'accepte les conditions générales d'utilisation du site.</label><input type="checkbox" name="cgu" id="cgu" /></p>
 
 				<p class="details"><span class="etoile">*</span> : champs obligatoires</p>
 
