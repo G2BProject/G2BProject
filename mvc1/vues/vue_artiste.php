@@ -2,8 +2,7 @@
 
 	<div class="container6">
 		<div id="photo">
-			<p class="txt">
-			Nom de l'artiste:
+			<p class="txt"><?php echo $data_artiste['nom']; ?>
 			</p>
 			<ul>
 				<li class="caract"><div class="txt2" href="#"><a class="styleartiste">Qui? </a>   Nom du ou des artistes se produisant sous le nom indiqué</div></li>
@@ -24,9 +23,8 @@
 
 	<div class="container8">
 		<div><a class="txt3" href="#">BIOGRAPHIE</a></div>
-		<div><a class="txtbio" href="#">Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla </a></div>
-		<div><a class="txtbio" href="#">Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla </a></div>
-	</div>
+		<div><a class="txtbio" href="#"><?php echo $data_artiste['bio']; ?> </a></div>
+		
 	
 	<div class="container9">
 			<div><a href="#"><img class="user" /></a></div>

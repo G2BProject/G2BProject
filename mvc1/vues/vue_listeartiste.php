@@ -45,7 +45,7 @@
 </br>
 <div class="LAartistes">
 <ul id="LAliste1">
-   <li><a href="?page=artiste">Aaliyah</a></li>
+   <li><a href="?page=artiste&name=test">Aaliyah</a></li>
    <li>Aaron Carter</li>
    <li>Aaron Gillespie</li>
    <li>Aaron Kamin</li>
