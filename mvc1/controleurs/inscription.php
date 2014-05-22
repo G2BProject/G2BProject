@@ -125,7 +125,10 @@ if (empty($_POST['Role_ID'])) {
 		'date_de_naissance' => $date_de_naissance,
 		'adresse' => $adresse,
 		));
+		$_SESSION['pseudo'] = $pseudo;
+		$_SESSION['mot_de_passe'] = $mot_de_passe;
 		include('controleurs/accueil.php');
+		echo '<script> alert("Vous etes correctement inscrit '.$pseudo.'!");	</script>';
 }
 
  ?>
