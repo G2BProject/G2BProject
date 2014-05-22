@@ -71,6 +71,7 @@
 	</div>
 	
 	<a class="ajoutConcert" href="index.php?page=ajoutConcert"> Ajouter un concert</a>
+	<a class="ajoutConcert" href="index.php?page=ajoutSalle"> Ajouter une salle</a>
 
 	</span>
 </header>
