@@ -1,6 +1,8 @@
+
+	<meta charset="utf-8" />
 <?php 
 
-if (empty($_POST['categorie_forum_ID'])) {
+	if (empty($_POST['categorie_forum_ID'])) {
 	
 	
 include('vues/vue_discussion.php');
@@ -12,11 +14,15 @@ include('vues/vue_discussion.php');
 
 	$categorie_forum_ID = $_POST['categorie_forum_ID'];
 
-	if(!isset($_POST['sous_categorie_forum']))
+	if(empty($_POST['sous_categorie_forum']))
 	{
-		die('Veuillez préciser le sujet');
+	echo "<script>alert(\"veuillez preciser le sujet\")</script>"; 
+
+			 echo '<script LANGUAGE="JavaScript">
+document.location.href="index.php?page=discussion" </script>'; 
+	die;
 	} 
-	if(isset($_POST['sous_categorie_forum']))
+	if(!empty($_POST['sous_categorie_forum']))
 	{
 
 	
@@ -27,7 +33,11 @@ include('vues/vue_discussion.php');
 		$res = $req->fetch();
 		if($res)
 		{ 
-			die('le sujet existe deja');
+			echo "<script>alert(\"le sujet existe deja\")</script>";
+			
+			 echo '<script LANGUAGE="JavaScript">
+document.location.href="index.php?page=discussion" </script>'; 
+die;
 		} 
 	}
 	
@@ -48,7 +58,11 @@ include('vues/vue_discussion.php');
 		
 	));
 
-		include('controleurs/forum.php');
+		echo "<script>alert(\"le sujet a bien été créé\")</script>";
+			
+			 echo '<script LANGUAGE="JavaScript">
+document.location.href="index.php?page=forum" </script>';
+		
 }
 
  ?>
