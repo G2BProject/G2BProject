@@ -1,20 +1,17 @@
 <?php 
-	function Search($mot_cle, $type_recherche){
+	function SearchArtist($mot_cle, $type_recherche){
 		global $bdd;
-		$req = $bdd->prepare('INSERT INTO recherche(mot_cle, type_recherche, date_recherche) VALUES(:mot_cle,:type_recherche, NOW())');
-		$req -> execute(array(
-			'mot_cle' => $mot_cle,
-			'type_recherche' => $type_recherche,
-		));
-		
-		$req1 = $bdd -> query('SELECT * FROM artiste WHERE nom_artiste LIKE \'%'.$mot_cle.'%\' ');
-
-			while($donnee = $req1 -> fetch()){
-				echo $donnee['nom_artiste'];
-				?>
-				<br/><?php
+		if($type_recherche == '1'){
+			$req = $bdd -> query("SELECT nom_artiste FROM artiste WHERE nom_artiste like '%$mot_cle%'");
+			return $req;
+		}elseif($type_recherche == '2'){
+			$req = $bdd -> query("SELECT nom_du_concert FROM concert WHERE nom_du_concert like '%$mot_cle%'");
+			return $req;
+		}else{
+			$req = $bdd -> query("SELECT nom_de_la_salle FROM salle WHERE nom_de_la_salle like '%$mot_cle%'");
+			return $req;
+		}
+    			
 			}
-		$req1 -> closeCursor();
-		
-	}
+	
 ?>
