@@ -1,5 +1,5 @@
 <?php 
-	function ajoutArtiste($nom_artiste, $bio){
+	function ajoutArtiste($nom_artiste, $bio_artiste){
 		global $bdd;
 		$req = $bdd->prepare('INSERT INTO artiste(nom_artiste, bio_artiste, date_ajout_artiste ) VALUES(:nom_artiste, :bio_artiste, NOW())');
 	$req -> execute(array(
