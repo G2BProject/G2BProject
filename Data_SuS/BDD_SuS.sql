@@ -1,488 +1,522 @@
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+-- phpMyAdmin SQL Dump
+-- version 4.0.4
+-- http://www.phpmyadmin.net
+--
+-- Client: localhost
+-- Généré le: Ven 23 Mai 2014 à 09:43
+-- Version du serveur: 5.6.12-log
+-- Version de PHP: 5.4.16
 
-DROP SCHEMA IF EXISTS `mydb` ;
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `mydb` ;
-
--- -----------------------------------------------------
--- Table `mydb`.`Role`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`Role` ;
-
-CREATE TABLE IF NOT EXISTS `mydb`.`Role` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `Role` VARCHAR(45) NULL,
-  PRIMARY KEY (`ID`))
-ENGINE = InnoDB;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
--- -----------------------------------------------------
--- Table `mydb`.`membre`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`membre` ;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`membre` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(25) NULL,
-  `name` VARCHAR(25) NULL,
-  `prenom` VARCHAR(25) NULL,
-  `adresse_email` VARCHAR(255) NOT NULL,
-  `mot_de_passe` VARCHAR(255) NOT NULL,
-  `date_de_naissance` DATE NULL,
-  `adresse` VARCHAR(40) NULL,
-  `sexe` INT NULL,
-  `bio` TEXT NULL,
-  `date_d'inscription` DATE NULL,
-  `nombre_de_message` INT NULL,
-  `etat_conexion` INT NOT NULL,
-  `Role_ID` INT NOT NULL,
+--
+-- Base de données: `mydb`
+--
+CREATE DATABASE IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `mydb`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `artiste`
+--
+
+CREATE TABLE IF NOT EXISTS `artiste` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_artiste` varchar(25) NOT NULL,
+  `date_ajout_artiste` datetime DEFAULT NULL,
+  `image_artiste` varchar(25) DEFAULT NULL,
+  `bio_artiste` text,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categorie_forum`
+--
+
+CREATE TABLE IF NOT EXISTS `categorie_forum` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `categorie_forum` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commentaire`
+--
+
+CREATE TABLE IF NOT EXISTS `commentaire` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `titre_commentaire` varchar(25) NOT NULL,
+  `contenu_commentaire` text,
+  `date_ajout_commentaire` datetime DEFAULT NULL,
+  `membre_ID` int(11) NOT NULL,
+  `artiste_ID` int(11) NOT NULL,
+  `concert_ID` int(11) NOT NULL,
+  `salle_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_membre_Role1_idx` (`Role_ID` ASC),
-  CONSTRAINT `fk_membre_Role1`
-    FOREIGN KEY (`Role_ID`)
-    REFERENCES `mydb`.`Role` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  KEY `fk_message_membre1_idx` (`membre_ID`),
+  KEY `fk_message_artiste1_idx` (`artiste_ID`),
+  KEY `fk_message_concert1_idx` (`concert_ID`),
+  KEY `fk_message_salle1_idx` (`salle_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`artiste`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`artiste` ;
+--
+-- Structure de la table `concert`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`artiste` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(25) NOT NULL,
-  `date_de_creation` DATE NULL,
-  `image` VARCHAR(25) NULL,
-  `bio` TEXT NULL,
-  PRIMARY KEY (`ID`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`salle`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`salle` ;
-
-CREATE TABLE IF NOT EXISTS `mydb`.`salle` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `nom_de_la_salle` VARCHAR(255) NOT NULL,
-  `adresse` VARCHAR(40) NULL,
-  `description` TEXT NULL,
-  `image` VARCHAR(25) NULL,
-  `nombre_de_place` INT NOT NULL,
-  `numero_de_telephone` INT NULL,
-  `membre_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `concert` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_du_concert` varchar(255) NOT NULL,
+  `date_du_concert` date DEFAULT NULL,
+  `heure_du_concert` time DEFAULT NULL,
+  `salle_ID` int(11) DEFAULT NULL,
+  `date_ajout_concert` datetime DEFAULT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_salle_membre1_idx` (`membre_ID` ASC),
-  CONSTRAINT `fk_salle_membre1`
-    FOREIGN KEY (`membre_ID`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `fk_concert_salle1_idx` (`salle_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
+--
+-- Contenu de la table `concert`
+--
 
--- -----------------------------------------------------
--- Table `mydb`.`concert`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`concert` ;
+INSERT INTO `concert` (`ID`, `nom_du_concert`, `date_du_concert`, `heure_du_concert`, `salle_ID`, `date_ajout_concert`) VALUES
+(7, 'eda', '2014-03-19', '18:00:00', NULL, NULL),
+(8, 'dezbulfj', '2014-03-19', '16:00:00', NULL, '2014-05-09 12:05:10');
 
-CREATE TABLE IF NOT EXISTS `mydb`.`concert` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(255) NOT NULL,
-  `date` DATE NULL,
-  `heure` TIME NULL,
-  `salle_ID` INT NOT NULL,
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `follow`
+--
+
+CREATE TABLE IF NOT EXISTS `follow` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `membre_ID` int(11) NOT NULL,
+  `artiste_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_concert_salle1_idx` (`salle_ID` ASC),
-  CONSTRAINT `fk_concert_salle1`
-    FOREIGN KEY (`salle_ID`)
-    REFERENCES `mydb`.`salle` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `fk_follow_membre_idx` (`membre_ID`),
+  KEY `fk_follow_artiste1_idx` (`artiste_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`commentaire`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`commentaire` ;
+--
+-- Structure de la table `genre`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`commentaire` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `titre` VARCHAR(25) NOT NULL,
-  `contenu` TEXT NULL,
-  `date_de_creation` DATETIME NULL,
-  `membre_ID` INT NOT NULL,
-  `artiste_ID` INT NOT NULL,
-  `concert_ID` INT NOT NULL,
-  `salle_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `genre` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `genre` varchar(25) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `membre`
+--
+
+CREATE TABLE IF NOT EXISTS `membre` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `pseudo` varchar(255) NOT NULL,
+  `nom_membre` varchar(25) DEFAULT NULL,
+  `prenom_membre` varchar(255) DEFAULT NULL,
+  `adresse_email` varchar(255) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
+  `date_de_naissance` date DEFAULT NULL,
+  `adresse_membre` varchar(40) DEFAULT NULL,
+  `sexe` int(11) DEFAULT NULL,
+  `bio_membre` text,
+  `date_inscription` datetime DEFAULT NULL,
+  `nombre_de_message` int(11) DEFAULT NULL,
+  `etat_connexion` int(11) NOT NULL,
+  `Role_ID` int(11) NOT NULL,
+  `etat_compte` int(2) NOT NULL DEFAULT '0',
+  `cle_validation` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_message_membre1_idx` (`membre_ID` ASC),
-  INDEX `fk_message_artiste1_idx` (`artiste_ID` ASC),
-  INDEX `fk_message_concert1_idx` (`concert_ID` ASC),
-  INDEX `fk_message_salle1_idx` (`salle_ID` ASC),
-  CONSTRAINT `fk_message_membre1`
-    FOREIGN KEY (`membre_ID`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_message_artiste1`
-    FOREIGN KEY (`artiste_ID`)
-    REFERENCES `mydb`.`artiste` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_message_concert1`
-    FOREIGN KEY (`concert_ID`)
-    REFERENCES `mydb`.`concert` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_message_salle1`
-    FOREIGN KEY (`salle_ID`)
-    REFERENCES `mydb`.`salle` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `fk_membre_Role1_idx` (`Role_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
+--
+-- Contenu de la table `membre`
+--
 
--- -----------------------------------------------------
--- Table `mydb`.`categorie_forum`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`categorie_forum` ;
+INSERT INTO `membre` (`ID`, `pseudo`, `nom_membre`, `prenom_membre`, `adresse_email`, `mot_de_passe`, `date_de_naissance`, `adresse_membre`, `sexe`, `bio_membre`, `date_inscription`, `nombre_de_message`, `etat_connexion`, `Role_ID`, `etat_compte`, `cle_validation`) VALUES
+(3, 'Test', 'Nom', 'Prenom', 'test@gmail.com', '37a668a7ae9501af42255f27d26449b309770222', '1924-01-01', 'Adresse', 1, NULL, '2014-05-15 10:06:12', NULL, 0, 1, 0, 'f86e32610480c1d722a4dc20247dc7f327bc9594');
 
-CREATE TABLE IF NOT EXISTS `mydb`.`categorie_forum` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `categorie` VARCHAR(45) NULL,
-  PRIMARY KEY (`ID`))
-ENGINE = InnoDB;
+-- --------------------------------------------------------
 
+--
+-- Structure de la table `membre_has_artiste`
+--
 
--- -----------------------------------------------------
--- Table `mydb`.`sous_categorie_forum`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`sous_categorie_forum` ;
+CREATE TABLE IF NOT EXISTS `membre_has_artiste` (
+  `membre_ID` int(11) NOT NULL,
+  `artiste_ID` int(11) NOT NULL,
+  KEY `fk_membre_has_artiste_membre1_idx` (`membre_ID`),
+  KEY `fk_membre_has_artiste_artiste1_idx` (`artiste_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`sous_categorie_forum` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `sous_categorie_forum` VARCHAR(45) NULL,
-  `categorie_forum_ID` INT NOT NULL,
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `message_forum`
+--
+
+CREATE TABLE IF NOT EXISTS `message_forum` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `titre_message` varchar(25) DEFAULT NULL,
+  `contenu_message` text,
+  `date_ajout_message` datetime DEFAULT NULL,
+  `topic_ID` int(11) NOT NULL,
+  `membre_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_sous_categorie_forum_categorie_forum1_idx` (`categorie_forum_ID` ASC),
-  CONSTRAINT `fk_sous_categorie_forum_categorie_forum1`
-    FOREIGN KEY (`categorie_forum_ID`)
-    REFERENCES `mydb`.`categorie_forum` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  KEY `fk_message_forum_topic1_idx` (`topic_ID`),
+  KEY `fk_message_forum_membre1_idx` (`membre_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`topic`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`topic` ;
+--
+-- Structure de la table `message_prive`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`topic` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `titre` TEXT NOT NULL,
-  `nbr_message` INT NULL,
-  `date` DATETIME NULL,
-  `sous_categorie_forum_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `message_prive` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `titre_mp` varchar(45) DEFAULT NULL,
+  `message_prive` text,
+  `ID_expéditeur` int(11) NOT NULL,
+  `ID_destinataire` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_topic_sous_categorie_forum1_idx` (`sous_categorie_forum_ID` ASC),
-  CONSTRAINT `fk_topic_sous_categorie_forum1`
-    FOREIGN KEY (`sous_categorie_forum_ID`)
-    REFERENCES `mydb`.`sous_categorie_forum` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `fk_message_prive_membre1_idx` (`ID_expéditeur`),
+  KEY `fk_message_prive_membre2_idx` (`ID_destinataire`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`genre`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`genre` ;
+--
+-- Structure de la table `musique`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`genre` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `genre` VARCHAR(25) NOT NULL,
-  PRIMARY KEY (`ID`));
-
-
--- -----------------------------------------------------
--- Table `mydb`.`photo_profil`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`photo_profil` ;
-
-CREATE TABLE IF NOT EXISTS `mydb`.`photo_profil` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(25) NOT NULL,
-  `lien` VARCHAR(45) NOT NULL,
-  `membre_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `musique` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `titre_musique` varchar(45) NOT NULL,
+  `lien_musique` varchar(45) NOT NULL,
+  `artiste_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_photo_membre1_idx` (`membre_ID` ASC),
-  CONSTRAINT `fk_photo_membre1`
-    FOREIGN KEY (`membre_ID`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `fk_musique_artiste1_idx` (`artiste_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`follow`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`follow` ;
+--
+-- Structure de la table `participation`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`follow` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `membre_ID` INT NOT NULL,
-  `artiste_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `participation` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `membre_ID` int(11) NOT NULL,
+  `concert_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_follow_membre_idx` (`membre_ID` ASC),
-  INDEX `fk_follow_artiste1_idx` (`artiste_ID` ASC),
-  CONSTRAINT `fk_follow_membre`
-    FOREIGN KEY (`membre_ID`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_follow_artiste1`
-    FOREIGN KEY (`artiste_ID`)
-    REFERENCES `mydb`.`artiste` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `fk_participation_membre1_idx` (`membre_ID`),
+  KEY `fk_participation_concert1_idx` (`concert_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`style_des_groupes`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`style_des_groupes` ;
+--
+-- Structure de la table `photo_artiste`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`style_des_groupes` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `artiste_ID` INT NOT NULL,
-  `genre_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `photo_artiste` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `photo_artiste` varchar(25) NOT NULL,
+  `lien_photo_artiste` varchar(45) NOT NULL,
+  `artiste_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_style_des_groupes_artiste1_idx` (`artiste_ID` ASC),
-  INDEX `fk_style_des_groupes_genre1_idx` (`genre_ID` ASC),
-  CONSTRAINT `fk_style_des_groupes_artiste1`
-    FOREIGN KEY (`artiste_ID`)
-    REFERENCES `mydb`.`artiste` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_style_des_groupes_genre1`
-    FOREIGN KEY (`genre_ID`)
-    REFERENCES `mydb`.`genre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `fk_photo_artiste_artiste1_idx` (`artiste_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`participation`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`participation` ;
+--
+-- Structure de la table `photo_de_concert`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`participation` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `membre_ID` INT NOT NULL,
-  `concert_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `photo_de_concert` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `photo_concert` varchar(25) NOT NULL,
+  `lien_photo_concert` varchar(45) NOT NULL,
+  `membre_ID` int(11) NOT NULL,
+  `concert_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_participation_membre1_idx` (`membre_ID` ASC),
-  INDEX `fk_participation_concert1_idx` (`concert_ID` ASC),
-  CONSTRAINT `fk_participation_membre1`
-    FOREIGN KEY (`membre_ID`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_participation_concert1`
-    FOREIGN KEY (`concert_ID`)
-    REFERENCES `mydb`.`concert` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  KEY `fk_photo_de_concert_membre1_idx` (`membre_ID`),
+  KEY `fk_photo_de_concert_concert1_idx` (`concert_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`représentation`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`représentation` ;
+--
+-- Structure de la table `photo_profil`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`représentation` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `concert_ID` INT NOT NULL,
-  `artiste_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `photo_profil` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `photo_profil` varchar(25) NOT NULL,
+  `lien_photo_profil` varchar(45) NOT NULL,
+  `membre_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_représentation_concert1_idx` (`concert_ID` ASC),
-  INDEX `fk_représentation_artiste1_idx` (`artiste_ID` ASC),
-  CONSTRAINT `fk_représentation_concert1`
-    FOREIGN KEY (`concert_ID`)
-    REFERENCES `mydb`.`concert` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_représentation_artiste1`
-    FOREIGN KEY (`artiste_ID`)
-    REFERENCES `mydb`.`artiste` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  KEY `fk_photo_membre1_idx` (`membre_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`photo_artiste`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`photo_artiste` ;
+--
+-- Structure de la table `recherche`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`photo_artiste` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(25) NOT NULL,
-  `lien` VARCHAR(45) NOT NULL,
-  `artiste_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `recherche` (
+  `mot_cle` varchar(255) NOT NULL,
+  `date_recherche` datetime NOT NULL,
+  `type_recherche` int(3) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `recherche`
+--
+
+INSERT INTO `recherche` (`mot_cle`, `date_recherche`, `type_recherche`) VALUES
+('reg', '2014-05-23 11:42:21', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `représentation`
+--
+
+CREATE TABLE IF NOT EXISTS `représentation` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `concert_ID` int(11) NOT NULL,
+  `artiste_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_photo_artiste_artiste1_idx` (`artiste_ID` ASC),
-  CONSTRAINT `fk_photo_artiste_artiste1`
-    FOREIGN KEY (`artiste_ID`)
-    REFERENCES `mydb`.`artiste` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `fk_représentation_concert1_idx` (`concert_ID`),
+  KEY `fk_représentation_artiste1_idx` (`artiste_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`photo_de_concert`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`photo_de_concert` ;
+--
+-- Structure de la table `role`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`photo_de_concert` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(25) NOT NULL,
-  `lien` VARCHAR(45) NOT NULL,
-  `membre_ID` INT NOT NULL,
-  `concert_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `role` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Role` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `salle`
+--
+
+CREATE TABLE IF NOT EXISTS `salle` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `nom_de_la_salle` varchar(255) NOT NULL,
+  `adresse_salle` varchar(40) DEFAULT NULL,
+  `description_salle` text,
+  `image_salle` varchar(25) DEFAULT NULL,
+  `nombre_de_place` int(11) NOT NULL,
+  `numero_de_telephone` int(11) DEFAULT NULL,
+  `membre_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_photo_de_concert_membre1_idx` (`membre_ID` ASC),
-  INDEX `fk_photo_de_concert_concert1_idx` (`concert_ID` ASC),
-  CONSTRAINT `fk_photo_de_concert_membre1`
-    FOREIGN KEY (`membre_ID`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_photo_de_concert_concert1`
-    FOREIGN KEY (`concert_ID`)
-    REFERENCES `mydb`.`concert` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+  KEY `fk_salle_membre1_idx` (`membre_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`musique`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`musique` ;
+--
+-- Structure de la table `sous_categorie_forum`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`musique` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `nom` VARCHAR(45) NOT NULL,
-  `lien` VARCHAR(45) NOT NULL,
-  `artiste_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `sous_categorie_forum` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `sous_categorie_forum` varchar(45) DEFAULT NULL,
+  `categorie_forum_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_musique_artiste1_idx` (`artiste_ID` ASC),
-  CONSTRAINT `fk_musique_artiste1`
-    FOREIGN KEY (`artiste_ID`)
-    REFERENCES `mydb`.`artiste` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  KEY `fk_sous_categorie_forum_categorie_forum1_idx` (`categorie_forum_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`statistique`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`statistique` ;
+--
+-- Structure de la table `statistique`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`statistique` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `nbr_visiteurs` INT NULL,
-  `nbr_conectés` VARCHAR(45) NULL,
-  `nbr_visite` VARCHAR(45) NULL,
-  PRIMARY KEY (`ID`))
-ENGINE = InnoDB;
+CREATE TABLE IF NOT EXISTS `statistique` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_visiteurs` int(11) DEFAULT NULL,
+  `nombre_connectés` int(11) DEFAULT NULL,
+  `nombre_visite` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`message_prive`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`message_prive` ;
+--
+-- Structure de la table `style_des_groupes`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`message_prive` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `titre` VARCHAR(45) NULL,
-  `message` TEXT NULL,
-  `membre_ID` INT NOT NULL,
-  `membre_ID1` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `style_des_groupes` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `artiste_ID` int(11) NOT NULL,
+  `genre_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_message_prive_membre1_idx` (`membre_ID` ASC),
-  INDEX `fk_message_prive_membre2_idx` (`membre_ID1` ASC),
-  CONSTRAINT `fk_message_prive_membre1`
-    FOREIGN KEY (`membre_ID`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_message_prive_membre2`
-    FOREIGN KEY (`membre_ID1`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  KEY `fk_style_des_groupes_artiste1_idx` (`artiste_ID`),
+  KEY `fk_style_des_groupes_genre1_idx` (`genre_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+-- --------------------------------------------------------
 
--- -----------------------------------------------------
--- Table `mydb`.`message_forum`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`message_forum` ;
+--
+-- Structure de la table `topic???`
+--
 
-CREATE TABLE IF NOT EXISTS `mydb`.`message_forum` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `titre` VARCHAR(25) NULL,
-  `contenu` TEXT NULL,
-  `date_de_creation` DATETIME NULL,
-  `topic_ID` INT NOT NULL,
-  `membre_ID` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `topic???` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `titre` text NOT NULL,
+  `nbr_message` int(11) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  `sous_categorie_forum_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  INDEX `fk_message_forum_topic1_idx` (`topic_ID` ASC),
-  INDEX `fk_message_forum_membre1_idx` (`membre_ID` ASC),
-  CONSTRAINT `fk_message_forum_topic1`
-    FOREIGN KEY (`topic_ID`)
-    REFERENCES `mydb`.`topic` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_message_forum_membre1`
-    FOREIGN KEY (`membre_ID`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  KEY `fk_topic_sous_categorie_forum1_idx` (`sous_categorie_forum_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+--
+-- Contraintes pour les tables exportées
+--
 
--- -----------------------------------------------------
--- Table `mydb`.`membre_has_artiste`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`membre_has_artiste` ;
+--
+-- Contraintes pour la table `commentaire`
+--
+ALTER TABLE `commentaire`
+  ADD CONSTRAINT `fk_message_artiste1` FOREIGN KEY (`artiste_ID`) REFERENCES `artiste` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_message_concert1` FOREIGN KEY (`concert_ID`) REFERENCES `concert` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_message_membre1` FOREIGN KEY (`membre_ID`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_message_salle1` FOREIGN KEY (`salle_ID`) REFERENCES `salle` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`membre_has_artiste` (
-  `membre_ID` INT NOT NULL,
-  `artiste_ID` INT NOT NULL,
-  INDEX `fk_membre_has_artiste_membre1_idx` (`membre_ID` ASC),
-  INDEX `fk_membre_has_artiste_artiste1_idx` (`artiste_ID` ASC),
-  CONSTRAINT `fk_membre_has_artiste_membre1`
-    FOREIGN KEY (`membre_ID`)
-    REFERENCES `mydb`.`membre` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_membre_has_artiste_artiste1`
-    FOREIGN KEY (`artiste_ID`)
-    REFERENCES `mydb`.`artiste` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+--
+-- Contraintes pour la table `concert`
+--
+ALTER TABLE `concert`
+  ADD CONSTRAINT `fk_concert_salle1` FOREIGN KEY (`salle_ID`) REFERENCES `salle` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
+--
+-- Contraintes pour la table `follow`
+--
+ALTER TABLE `follow`
+  ADD CONSTRAINT `fk_follow_artiste1` FOREIGN KEY (`artiste_ID`) REFERENCES `artiste` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_follow_membre` FOREIGN KEY (`membre_ID`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+--
+-- Contraintes pour la table `membre_has_artiste`
+--
+ALTER TABLE `membre_has_artiste`
+  ADD CONSTRAINT `fk_membre_has_artiste_artiste1` FOREIGN KEY (`artiste_ID`) REFERENCES `artiste` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_membre_has_artiste_membre1` FOREIGN KEY (`membre_ID`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `message_forum`
+--
+ALTER TABLE `message_forum`
+  ADD CONSTRAINT `fk_message_forum_membre1` FOREIGN KEY (`membre_ID`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_message_forum_topic1` FOREIGN KEY (`topic_ID`) REFERENCES `topic???` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `message_prive`
+--
+ALTER TABLE `message_prive`
+  ADD CONSTRAINT `fk_message_prive_membre1` FOREIGN KEY (`ID_expéditeur`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_message_prive_membre2` FOREIGN KEY (`ID_destinataire`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `musique`
+--
+ALTER TABLE `musique`
+  ADD CONSTRAINT `fk_musique_artiste1` FOREIGN KEY (`artiste_ID`) REFERENCES `artiste` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `participation`
+--
+ALTER TABLE `participation`
+  ADD CONSTRAINT `fk_participation_concert1` FOREIGN KEY (`concert_ID`) REFERENCES `concert` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_participation_membre1` FOREIGN KEY (`membre_ID`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `photo_artiste`
+--
+ALTER TABLE `photo_artiste`
+  ADD CONSTRAINT `fk_photo_artiste_artiste1` FOREIGN KEY (`artiste_ID`) REFERENCES `artiste` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `photo_de_concert`
+--
+ALTER TABLE `photo_de_concert`
+  ADD CONSTRAINT `fk_photo_de_concert_concert1` FOREIGN KEY (`concert_ID`) REFERENCES `concert` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_photo_de_concert_membre1` FOREIGN KEY (`membre_ID`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `photo_profil`
+--
+ALTER TABLE `photo_profil`
+  ADD CONSTRAINT `fk_photo_membre1` FOREIGN KEY (`membre_ID`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `représentation`
+--
+ALTER TABLE `représentation`
+  ADD CONSTRAINT `fk_représentation_artiste1` FOREIGN KEY (`artiste_ID`) REFERENCES `artiste` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_représentation_concert1` FOREIGN KEY (`concert_ID`) REFERENCES `concert` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `salle`
+--
+ALTER TABLE `salle`
+  ADD CONSTRAINT `fk_salle_membre1` FOREIGN KEY (`membre_ID`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `sous_categorie_forum`
+--
+ALTER TABLE `sous_categorie_forum`
+  ADD CONSTRAINT `fk_sous_categorie_forum_categorie_forum1` FOREIGN KEY (`categorie_forum_ID`) REFERENCES `categorie_forum` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `style_des_groupes`
+--
+ALTER TABLE `style_des_groupes`
+  ADD CONSTRAINT `fk_style_des_groupes_artiste1` FOREIGN KEY (`artiste_ID`) REFERENCES `artiste` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_style_des_groupes_genre1` FOREIGN KEY (`genre_ID`) REFERENCES `genre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `topic???`
+--
+ALTER TABLE `topic???`
+  ADD CONSTRAINT `fk_topic_sous_categorie_forum1` FOREIGN KEY (`sous_categorie_forum_ID`) REFERENCES `sous_categorie_forum` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
