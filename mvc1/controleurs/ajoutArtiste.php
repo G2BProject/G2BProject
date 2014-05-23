@@ -33,7 +33,7 @@ else
 
 	$bio_artiste = $_POST['bio_artiste'];
 
-	if($_FILES['image']['size'] > $maxSize) $erreur = "L'image est trop grande." ;
+	/*if($_FILES['image']['size'] > $maxSize) $erreur = "L'image est trop grande." ;
 
 	$extensions_valides = array('jpg', 'png');
 
@@ -41,7 +41,7 @@ else
 	if ( in_array($extension_upload,$extensions_valides) ) echo "Extension correcte";
 
 	$image_sizes = getimagesize($_FILES['image']['tmp_name']);
-	if ($image_sizes[0] > $maxwidth OR $image_sizes[1] > $maxheight) $erreur = "L'image est trop grande.";
+	if ($image_sizes[0] > $maxwidth OR $image_sizes[1] > $maxheight) $erreur = "L'image est trop grande.";*/
 
 	
 	ajoutArtiste($nom_artiste, $bio_artiste);
