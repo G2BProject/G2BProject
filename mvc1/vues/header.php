@@ -70,11 +70,9 @@
 		</p>
 	</div>
 	
-<<<<<<< HEAD
 	<p><a class="ajout" href="index.php?page=ajoutArtiste"> Ajouter un artiste</a></p>
 	<p><a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a></p>
 	<p><a class="ajout" href="index.php?page=ajoutSalle"> Ajouter une salle</a></p>
->>>>>>> a7e082441aa85a6eb7800bd2ecab37076d2c20fc
 
 	</span>
 </header>
