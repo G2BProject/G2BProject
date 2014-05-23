@@ -7,12 +7,12 @@
 						<option value="3">Propriétaire de salle</option>
 					</select>
 				<p><label for="pseudo" class="standard"><span class="etoile">*</span>Nom d'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
-				<p><label for="adresse-mail" class="standard"><span class="etoile">*</span>Adresse mail :</label><input type="mail" name="adresse_email" id="adresse_email"/></p>
+				<p><label for="adresse_email" class="standard"><span class="etoile">*</span>Adresse mail :</label><input type="mail" name="adresse_email" id="adresse_email"/></p>
 				<p><label class="standard"><span class="etoile">*</span>Confirmation d'adresse mail :</label><input type="mail" name="emailConfirm" id="emailConfirm"/></p>
 				<p><label class="standard"><span class="etoile">*</span>Mot de passe :</label><input type="password" name="mot_de_passe" id="mot_de_passe"/></p>
 				<p><label class="standard"><span class="etoile">*</span>Confirmation de mot de passe :</label><input type="password" name="passwordConfirm" id="passwordConfirm"/></p>
-				<p><label class="standard">Nom :</label><input type="text" name="name" id="name"/></p>
-				<p><label class="standard">Prenom :</label><input type="text" name="prenom" id="prenom"/></p>
+				<p><label class="standard">Nom :</label><input type="text" name="nom_membre" id="nom_membre"/></p>
+				<p><label class="standard">Prenom :</label><input type="text" name="prenom_membre" id="prenom_membre"/></p>
 				<p><span class="standard">Sexe :</span>
 					 <input type="radio" name="sexe" value="1" id="homme" /> <label for="homme">Homme</label>
        					 <input type="radio" name="sexe" value="2" id="femme" /> <label for="femme">Femme</label></p>
@@ -159,7 +159,7 @@
 						<option value="2013" >2013</option>
 						<option value="2014" >2014</option>
 					</select>
-				<p><label class="standard">Adresse :</label><input type="text" name="adresse" id="adresse"/></p>
+				<p><label class="standard">Adresse :</label><input type="text" name="adresse_membre" id="adresse_membre"/></p>
 
 					<p><span class="standard">Pays :</span>
 					<select name="pays" size="1">			

@@ -102,8 +102,8 @@ if (empty($_POST['Role_ID'])) {
 	}
 
 
-	$name = $_POST['name'];
-	$prenom = $_POST['prenom'];
+	$nom_membre = $_POST['nom_membre'];
+	$prenom_membre = $_POST['prenom_membre'];
 	$sexe = $_POST['sexe'];
 	$an = $_POST['an'];
 	$mois = $_POST['mois'];
@@ -111,7 +111,7 @@ if (empty($_POST['Role_ID'])) {
 	$date_de_naissance = $an.'-'.$mois.'-'.$jour;
 	$adresse = $_POST['adresse'];
 
-	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$name,$prenom,$sexe,$date_de_naissance,$adresse);
+	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$name,$prenom_membre,$sexe,$date_de_naissance,$adresse);
 
 	$_SESSION['pseudo'] = $pseudo;
 	$_SESSION['mot_de_passe'] = $mot_de_passe;
