@@ -65,12 +65,16 @@
 	</div>	
 
 	<div class="statistique">
-		<p> Connectés: 5 <br />
-			Inscrits: 96
+		<p> Connectés: 1856247 <br />
+			Inscrits: 1
 		</p>
 	</div>
 	
-	<a class="ajoutConcert" href="index.php?page=ajoutConcert"> Ajouter un concert</a>
+	<p><a class="ajoutConcert" href="index.php?page=ajoutConcert"> Ajouter un concert</a></p>
+
+	<p><a class="ajoutArtiste" href="index.php?page=ajoutArtiste"> Ajouter un artiste</a></p>
+
+
 
 	</span>
 </header>

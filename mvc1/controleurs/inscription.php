@@ -2,10 +2,6 @@
 
 if (empty($_POST['Role_ID'])) {
 	
-	include('modeles/modele_utilisateur.php');
-	//on executera ici les fonction du modèle dont nous aurons besoin.
-
-
 	include('vues/header.php');
 
 
@@ -16,11 +12,13 @@ if (empty($_POST['Role_ID'])) {
 	
 }else{
 
+	include('modeles/modele_utilisateur.php');
+
 	$Role_ID = $_POST['Role_ID'];
 
 	if(!isset($_POST['cgu']))
 	{
-		die('Vous devez accepter les condition generales d\'utilisation du site.');
+		die('Vous devez accepter les condition generales d\'utilisation du site pour vous inscrire.');
 	} 
 
 	if(preg_match("#\w#", $_POST['pseudo']))
@@ -113,18 +111,8 @@ if (empty($_POST['Role_ID'])) {
 	$date_de_naissance = $an.'-'.$mois.'-'.$jour;
 	$adresse = $_POST['adresse'];
 
-	$req = $bdd->prepare('INSERT INTO membre(Role_ID, pseudo, adresse_email, mot_de_passe, name, prenom, sexe, date_de_naissance, adresse, date_inscription) VALUES(:Role_ID, :pseudo, :adresse_email, :mot_de_passe, :name, :prenom, :sexe, :date_de_naissance, :adresse, NOW())');
-	$req -> execute(array(
-		'Role_ID' => $Role_ID,
-		'pseudo' => $pseudo,
-		'adresse_email' => $adresse_email,
-		'mot_de_passe' => $mot_de_passe_hache,
-		'name' => $name,
-		'prenom' => $prenom,
-		'sexe' => $sexe,
-		'date_de_naissance' => $date_de_naissance,
-		'adresse' => $adresse,
-		));
+	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$name,$prenom,$sexe,$date_de_naissance,$adresse);
+
 		include('controleurs/accueil.php');
 }
 

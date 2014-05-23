@@ -1,7 +1,10 @@
 <?php 
 	function inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$name,$prenom,$sexe,$date_de_naissance,$adresse){
 		global $bdd;
-		$req = $bdd->prepare('INSERT INTO membre(Role_ID, pseudo, adresse_email, mot_de_passe, name, prenom, sexe, date_de_naissance, adresse, date_inscription) VALUES(:Role_ID, :pseudo, :adresse_email, :mot_de_passe, :name, :prenom, :sexe, :date_de_naissance, :adresse, NOW())');
+
+	$cle_validation = sha1(microtime(TRUE)*100000);
+
+	$req = $bdd->prepare('INSERT INTO membre(Role_ID, pseudo, adresse_email, mot_de_passe, name, prenom, sexe, date_de_naissance, adresse, cle_validation, date_inscription) VALUES(:Role_ID, :pseudo, :adresse_email, :mot_de_passe, :name, :prenom, :sexe, :date_de_naissance, :adresse, :cle_validation, NOW())');
 	$req -> execute(array(
 		'Role_ID' => $Role_ID,
 		'pseudo' => $pseudo,
@@ -12,7 +15,9 @@
 		'sexe' => $sexe,
 		'date_de_naissance' => $date_de_naissance,
 		'adresse' => $adresse,
+		'cle_validation' => $cle_validation,
 		));
+
 	}
 
 	function connexion($pseudo,$password){
@@ -23,5 +28,19 @@
         $query->execute();
 	    $data=$query->fetch();
 	    return $data;
+	}
+
+	function mail_validation($adresse_email, $pseudo, $cle_validation){
+
+		$destinataire = $adresse_email ;
+		$sujet = 'Activation de votre compte SaveUrShow' ;
+		$message = 'Bienvenue sur SaveUrShow ! 
+		Pour pouvoir profiter dès maintenant de toutes les fonctionnalités du site grâce à votre compte, vous devez l\'activer en cliquant sur le lien ci-dessous ou en le copiant/collant dans votre navigateur.
+
+		http://localhost/G2BProject/mvc1/index.php?page=validation?log='.urlencode($pseudo).'&cle'.urlencode($cle_validation).'' ;
+
+		$entete = "From : inscription@SaveUrShow.com" ;
+
+		mail($destinataire, $sujet, $message, $entete);
 	}
  ?>
