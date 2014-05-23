@@ -31,7 +31,7 @@ else
 		die('Vous devez choisir un nom d\'utilisateur');
 	}
 
-	$bio = $_POST['bio'];
+	$bio_artiste = $_POST['bio_artiste'];
 
 	if($_FILES['image']['size'] > $maxSize) $erreur = "L'image est trop grande." ;
 
@@ -44,7 +44,7 @@ else
 	if ($image_sizes[0] > $maxwidth OR $image_sizes[1] > $maxheight) $erreur = "L'image est trop grande.";
 
 	
-	ajoutArtiste($nom_artiste, $bio);
+	ajoutArtiste($nom_artiste, $bio_artiste);
 			include('controleurs/accueil.php');
 }
 
