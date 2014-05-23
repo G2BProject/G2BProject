@@ -113,8 +113,8 @@ if (empty($_POST['Role_ID'])) {
 
 	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$name,$prenom,$sexe,$date_de_naissance,$adresse);
 
-		$_SESSION['pseudo'] = $pseudo;
-		$_SESSION['mot_de_passe'] = $mot_de_passe;
+	$_SESSION['pseudo'] = $pseudo;
+	$_SESSION['mot_de_passe'] = $mot_de_passe;
 
 		include('controleurs/accueil.php');
 		echo '<script> alert("Vous etes correctement inscrit '.$pseudo.'!");	</script>';
