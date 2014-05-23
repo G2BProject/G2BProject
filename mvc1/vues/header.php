@@ -48,7 +48,17 @@
 		</ul>
 	</div>
 
-	<span class="Rechercher">rechercher:</span>
+	<div class="Rechercher">
+			<form action="index.php?page=recherche" method="post" name="Recherche">
+			<label>Recherche:</label><input type="text" name="mot_cle" id="mot_cle"/>
+					<select name="type_recherche">
+						<option value="1">Artiste</option>
+						<option value="2">Concert</option>
+						<option value="3">Salle</option>
+					</select>
+					<input type="submit" value="chercher">
+			</form>
+	</div>
 
 	<span id="bordure">
 
