@@ -25,7 +25,7 @@
 		<div><a class="txt3" href="#">BIOGRAPHIE</a></div>
 		<div><a class="txtbio" href="#"><?php echo $data_artiste['bio_artiste']; ?> </a></div>
 		
-	
+	</div>
 	<div class="container9">
 			<div><a href="#"><img class="user" /></a></div>
 		<div><a class="txt4" href="#">Nom de l'utilisateur :</a></div>
@@ -61,4 +61,5 @@
 	
 </div>
 <div style="clear:both;"></div>
+
 </div>
