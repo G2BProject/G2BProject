@@ -1,3 +1,7 @@
+<script type="text/javascript"
+src="vues/javascript.js">
+</script> 
+
 <div class="formulaire">
 			<form action="index.php?page=inscription" method="post">
 				<p><span class="standard"><span class="etoile">*</span>Type d'utilisateur :</span>
@@ -7,10 +11,10 @@
 						<option value="3">Propriétaire de salle</option>
 					</select>
 				<p><label for="pseudo" class="standard"><span class="etoile">*</span>Nom d'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
-				<p><label for="adresse_email" class="standard"><span class="etoile">*</span>Adresse mail :</label><input type="mail" name="adresse_email" id="adresse_email"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Confirmation d'adresse mail :</label><input type="mail" name="emailConfirm" id="emailConfirm"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Mot de passe :</label><input type="password" name="mot_de_passe" id="mot_de_passe"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Confirmation de mot de passe :</label><input type="password" name="passwordConfirm" id="passwordConfirm"/></p>
+				<p><label for="adresse_email" class="standard" ><span class="etoile">*</span>Adresse mail :</label><input type="mail" name="adresse_email" id="adresse_email" onchange="verifEmail();"/></p>
+				<p><label class="standard"><span class="etoile">*</span>Confirmation d'adresse mail :</label><input type="mail" name="emailConfirm" id="emailConfirm"onchange="verifEmail();"/></p>
+				<p><label class="standard"><span class="etoile">*</span>Mot de passe :</label><input type="password" name="mot_de_passe" id="mot_de_passe" onchange="verifPassword();"/></p>
+				<p><label class="standard"><span class="etoile">*</span>Confirmation de mot de passe :</label><input type="password" name="passwordConfirm" id="passwordConfirm" onchange="verifPassword();"/></p>
 				<p><label class="standard">Nom :</label><input type="text" name="nom_membre" id="nom_membre"/></p>
 				<p><label class="standard">Prenom :</label><input type="text" name="prenom_membre" id="prenom_membre"/></p>
 				<p><span class="standard">Sexe :</span>
