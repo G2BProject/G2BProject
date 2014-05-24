@@ -16,4 +16,14 @@
 		$res = $req->fetch();
 		return $res;
 	}
+
+	function pageArtiste($nom_artiste){
+		global $bdd;
+		$query=$bdd->prepare('SELECT artiste.nom_artiste, artiste.date_ajout_artiste, artiste.image_artiste, artiste.bio_artiste, ID_genre
+	    FROM artiste WHERE artiste.nom_artiste = :nom_artiste');
+        $query->bindValue(':nom_artiste',$nom_artiste, PDO::PARAM_STR);
+        $query->execute();
+	    $data_artiste=$query->fetch();
+	    return $data_artiste;
+	}
  ?>

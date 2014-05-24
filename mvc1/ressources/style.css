@@ -1218,7 +1218,6 @@ margin-top:10px;
 color:white;
 font-size: 100%;
 display: inline-block;
-text-decoration: underline;
 text-align: justify;
 }
 
@@ -1229,8 +1228,7 @@ width: 300px;
 margin-top:0px;
 color:white;
 font-size: 100%;
-display: inline-block;
-text-decoration: underline;	
+display: inline-block;	
 }
 
 
@@ -1240,7 +1238,6 @@ margin-top:-200px;
 margin-left: 450px;
 color:white;
 font-size: 130%;
-text-decoration: underline;
 }
 
 

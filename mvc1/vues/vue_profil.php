@@ -3,14 +3,28 @@
 	<div class="container1Profil">
 		<div class="modifier_profil"><a href="#"> Modifier</a></div>
 		<div ><a href='#'><img class="photo_profil" src "h/f.png"/> </a></div>
-		<div class="date_insc">Date d'inscription:</div>
-		<div class="pseudo">Pseudo:</div>
+		<div class="date_insc">Date d'inscription:<?php echo $info['date_inscription']; ?></div>
+		<div class="pseudo">Pseudo:<?php echo $info['pseudo']; ?></div>
 		<ul>
-			<li class="txt1Profil">Adresse :</li>
-			<li class="txt1Profil">Date de naissance:</li>
-			<li class="txt1Profil">Mail:</li>
-			<li class="txt1Profil">Numero de telephone:</li>
-			<li class="txt1Profil">Centres d'interets:</li>
+			<li class="txt1Profil">Adresse : <?php echo $info['adresse_membre']; ?></li>
+			<li class="txt1Profil">Date de naissance: <?php echo $info['date_de_naissance']; ?></li>
+			<li class="txt1Profil">Mail: <?php echo $info['adresse_email']; ?></li>
+			<li class="txt1Profil">bio: <?php echo $info['bio_membre']; ?></li>
+			<li class="txt1Profil">
+			<?php 
+			if($info['role_ID']==1){
+
+				}elseif($info['role_ID']==2){
+				echo'	<p><a class="ajout" href="index.php?page=ajoutArtiste"> Ajouter un artiste</a></p>
+					<p><a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a></p> ';
+
+				}elseif($info['role_ID']==3){
+					echo'<p><a class="ajout" href="index.php?page=ajoutSalle"> Ajouter une salle</a></p>
+					<p><a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a></p>';
+				}elseif($info['role_ID']==4){
+
+				}
+			?></li>
 		</ul>
 	</div>
 

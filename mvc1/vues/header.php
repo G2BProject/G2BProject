@@ -27,7 +27,7 @@
 				<li class="zone1"><a href="?page=inscription">Inscription</a></li>';
 			}else{
 				echo'
-				<li class="zone1"><a href="?page=profil">'.$_SESSION['pseudo'].'</a></li>
+				<li class="zone1"><a href="?page=profil&profil='.$_SESSION['pseudo'].'">'.$_SESSION['pseudo'].'</a></li>
 				<li class="zone1"><a href="?page=deconnexion">Deconnexion</a></li>';
 			}
 			 ?>
@@ -79,10 +79,6 @@
 			Inscrits: 1
 		</p>
 	</div>
-	
-	<p><a class="ajout" href="index.php?page=ajoutArtiste"> Ajouter un artiste</a></p>
-	<p><a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a></p>
-	<p><a class="ajout" href="index.php?page=ajoutSalle"> Ajouter une salle</a></p>
 
 	</span>
 </header>
