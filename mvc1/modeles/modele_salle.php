@@ -11,4 +11,10 @@
 		));
 
 	}
+
+	function listSalles(){
+		global $bdd;
+		$req = $bdd -> query('SELECT nom_de_la_salle, adresse_salle, description_salle, image_salle, nombre_de_place, numero_de_telephone FROM salle');
+		return $req;
+	}
 ?>

@@ -2,7 +2,7 @@
 	if($type_recherche== '1'){
 		foreach ($reqRecherche as $nom_artiste) {
 			
-				echo '<p class="standard"> <a href=""> artiste : '.$nom_artiste['nom_artiste'].'</a><br /></p>';
+				echo '<p class="standard"> <a href="?page=artiste&artiste='.$nom_artiste['nom_artiste'].'"> artiste : '.$nom_artiste['nom_artiste'].'</a><br /></p>';
 			}
 	}elseif ($type_recherche=='2'){
 

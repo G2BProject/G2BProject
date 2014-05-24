@@ -896,9 +896,10 @@ div.LATableau p{
 
 .conteneur{
  width: 860px;
- height: 200px;
+ height: 235px;
  background: #666666;
  margin-top:-39px;
+ border:solid 2px;
 }
 
 

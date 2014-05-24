@@ -37,7 +37,7 @@
 	<div id="artistes_salles">
 		<ul>
 			<li class="boutons1"><a href="?page=listeartiste">Artistes</a></li>
-			<li class="boutons1"><a href="?page=salles">Salles</a></li>
+			<li class="boutons1"><a href="?page=listeSalles">Salles</a></li>
 		</ul>
 	</div>
 
