@@ -5,7 +5,10 @@
     	if(email==emailconf){
     		document.getElementById("adresse_email").style.backgroundColor="#33CC00";
     		document.getElementById("emailConfirm").style.backgroundColor="#33CC00";
-    	}
+    	}else{
+            document.getElementById("adresse_email").style.backgroundColor="#990000";
+            document.getElementById("emailConfirm").style.backgroundColor="#990000";
+        }
     }
 
     function verifPassword(){
@@ -14,5 +17,8 @@
     	if(passwordConfirm==password){
     		document.getElementById("passwordConfirm").style.backgroundColor="#33CC00"	;
     		document.getElementById("mot_de_passe").style.backgroundColor="#33CC00"	;
-    	}
+    	}else{
+            document.getElementById("passwordConfirm").style.backgroundColor="#990000"  ;
+            document.getElementById("mot_de_passe").style.backgroundColor="#990000" ;
+        }
 	}
