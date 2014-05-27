@@ -23,7 +23,7 @@
 
 	function connexion($pseudo,$password){
 		global $bdd;
-	    $query=$bdd->prepare('SELECT mot_de_passe, pseudo
+	    $query=$bdd->prepare('SELECT mot_de_passe, pseudo, departement
 	    FROM membre WHERE membre.pseudo = :pseudo');
         $query->bindValue(':pseudo',$pseudo, PDO::PARAM_STR);
         $query->execute();

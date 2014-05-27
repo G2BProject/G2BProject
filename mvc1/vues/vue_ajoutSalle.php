@@ -3,6 +3,7 @@
 
 <p><label class="standard">Nom de la salle:</label><input type="text" name="name" id="name"/></p>
 <p><label class="standard">adresse:</label><input type="text" name="adresse" id="adresse"/></p>
+<p><label class="standard">Departement :</label><input type="text" name="departement" id="departement"/> ex: pour Paris tapez:75</p>
 <p><label class="standard"></span>description:</label><input type="text" name="description" id="description"/></p>
 <p><label class="standard"></span>numero de téléphone:</label><input type="text" name="numero" id="numero"/></p>
 <p><label class="standard">nombre de places:</label><input type="text" name="nb_places" id="nb_places"/></p>
