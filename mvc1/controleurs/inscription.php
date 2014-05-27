@@ -110,8 +110,9 @@ if (empty($_POST['Role_ID'])) {
 	$jour = $_POST['jour'];
 	$date_de_naissance = $an.'-'.$mois.'-'.$jour;
 	$adresse_membre = $_POST['adresse_membre'];
+	$departement = $_POST['departement'];
 
-	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$nom_membre,$prenom_membre,$sexe,$date_de_naissance,$adresse_membre);
+	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$nom_membre,$prenom_membre,$sexe,$date_de_naissance,$adresse_membre, $departement);
 
 	$_SESSION['pseudo'] = $pseudo;
 	$_SESSION['mot_de_passe'] = $mot_de_passe;

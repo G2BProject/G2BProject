@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 27 Mai 2014 à 13:53
+-- Généré le: Mar 27 Mai 2014 à 14:15
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.16
 
@@ -171,6 +171,7 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `mot_de_passe` varchar(255) NOT NULL,
   `date_de_naissance` date DEFAULT NULL,
   `adresse_membre` varchar(40) DEFAULT NULL,
+  `departement` int(11) DEFAULT NULL,
   `sexe` int(11) DEFAULT NULL,
   `bio_membre` text,
   `date_inscription` datetime DEFAULT NULL,
@@ -181,18 +182,19 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `cle_validation` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_membre_Role1_idx` (`Role_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `membre`
 --
 
-INSERT INTO `membre` (`ID`, `pseudo`, `nom_membre`, `prenom_membre`, `adresse_email`, `mot_de_passe`, `date_de_naissance`, `adresse_membre`, `sexe`, `bio_membre`, `date_inscription`, `nombre_de_message`, `etat_connexion`, `Role_ID`, `etat_compte`, `cle_validation`) VALUES
-(3, 'Test', 'Nom', 'Prenom', 'test@gmail.com', '37a668a7ae9501af42255f27d26449b309770222', '1924-01-01', 'Adresse', 1, NULL, '2014-05-15 10:06:12', NULL, 0, 1, 0, 'f86e32610480c1d722a4dc20247dc7f327bc9594'),
-(4, 'vbdsv', 'jfsdFSDGF', 'FSDGSDE', 'dssdb@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'xwvdxwsv', 1, NULL, '2014-05-23 22:08:02', NULL, 0, 1, 0, 'b8f790610a98f4fd015b3d19aa60464799e6d625'),
-(5, 'testrole2', 'fsq', 'fseqzgferd', 'fqesz@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'vsfdwvsfd', 1, NULL, '2014-05-24 03:17:00', NULL, 0, 2, 0, '92c94b690a345083c3c9ec6d7df1e417ecdd7c34'),
-(6, 'prop', 'fsq', 'gsdregdhh', 'prop@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'n,f,nhyngdf', 1, NULL, '2014-05-24 03:57:40', NULL, 0, 3, 0, 'edc311f0470ffa4f48eec6133485ed725724187e'),
-(7, 'mem', 'gsgtdde', 'HGDHDH', 'mem@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', ',hjgfdsc', 1, NULL, '2014-05-24 03:58:21', NULL, 0, 1, 0, '7c6f16c8564de39fb8e335b5cdff236f5409e148');
+INSERT INTO `membre` (`ID`, `pseudo`, `nom_membre`, `prenom_membre`, `adresse_email`, `mot_de_passe`, `date_de_naissance`, `adresse_membre`, `departement`, `sexe`, `bio_membre`, `date_inscription`, `nombre_de_message`, `etat_connexion`, `Role_ID`, `etat_compte`, `cle_validation`) VALUES
+(3, 'Test', 'Nom', 'Prenom', 'test@gmail.com', '37a668a7ae9501af42255f27d26449b309770222', '1924-01-01', 'Adresse', NULL, 1, NULL, '2014-05-15 10:06:12', NULL, 0, 1, 0, 'f86e32610480c1d722a4dc20247dc7f327bc9594'),
+(4, 'vbdsv', 'jfsdFSDGF', 'FSDGSDE', 'dssdb@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'xwvdxwsv', NULL, 1, NULL, '2014-05-23 22:08:02', NULL, 0, 1, 0, 'b8f790610a98f4fd015b3d19aa60464799e6d625'),
+(5, 'testrole2', 'fsq', 'fseqzgferd', 'fqesz@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'vsfdwvsfd', NULL, 1, NULL, '2014-05-24 03:17:00', NULL, 0, 2, 0, '92c94b690a345083c3c9ec6d7df1e417ecdd7c34'),
+(6, 'prop', 'fsq', 'gsdregdhh', 'prop@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'n,f,nhyngdf', NULL, 1, NULL, '2014-05-24 03:57:40', NULL, 0, 3, 0, 'edc311f0470ffa4f48eec6133485ed725724187e'),
+(7, 'mem', 'gsgtdde', 'HGDHDH', 'mem@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', ',hjgfdsc', NULL, 1, NULL, '2014-05-24 03:58:21', NULL, 0, 1, 0, '7c6f16c8564de39fb8e335b5cdff236f5409e148'),
+(8, 'testdep', 'test', 'tretsd', 'testdep@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'hfsdhbrdtht', 75, 1, NULL, '2014-05-27 16:14:22', NULL, 0, 1, 0, 'f564717f68611fc6743ebd90a6cd78a3fcc3f57a');
 
 -- --------------------------------------------------------
 
@@ -386,6 +388,7 @@ CREATE TABLE IF NOT EXISTS `salle` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `nom_de_la_salle` varchar(255) NOT NULL,
   `adresse_salle` varchar(40) DEFAULT NULL,
+  `departement` int(11) DEFAULT NULL,
   `description_salle` text,
   `image_salle` varchar(25) DEFAULT NULL,
   `nombre_de_place` int(11) DEFAULT NULL,
@@ -400,10 +403,10 @@ CREATE TABLE IF NOT EXISTS `salle` (
 -- Contenu de la table `salle`
 --
 
-INSERT INTO `salle` (`ID`, `nom_de_la_salle`, `adresse_salle`, `description_salle`, `image_salle`, `nombre_de_place`, `numero_de_telephone`, `membre_ID`) VALUES
-(2, 'testsalle', 'tgsqer', 'frseger', NULL, 12, 12354, NULL),
-(3, 'testsalle', 'testsalle adresse 52 rue', 'belle salle de testsalle', 'fresfgre', 120, 1234567890, NULL),
-(4, 'hbbdrtbt', 'mlsfdm,lvd,mvdsm,', ',mlfdmfds', NULL, 123, 2147483647, NULL);
+INSERT INTO `salle` (`ID`, `nom_de_la_salle`, `adresse_salle`, `departement`, `description_salle`, `image_salle`, `nombre_de_place`, `numero_de_telephone`, `membre_ID`) VALUES
+(2, 'testsalle', 'tgsqer', NULL, 'frseger', NULL, 12, 12354, NULL),
+(3, 'testsalle', 'testsalle adresse 52 rue', NULL, 'belle salle de testsalle', 'fresfgre', 120, 1234567890, NULL),
+(4, 'hbbdrtbt', 'mlsfdm,lvd,mvdsm,', NULL, ',mlfdmfds', NULL, 123, 2147483647, NULL);
 
 -- --------------------------------------------------------
 

@@ -164,6 +164,8 @@ src="vues/javascript.js">
 						<option value="2014" >2014</option>
 					</select>
 				<p><label class="standard">Adresse :</label><input type="text" name="adresse_membre" id="adresse_membre"/></p>
+					
+				<p><label class="standard">Departement :</label><input type="text" name="departement" id="departement"/> ex: pour Paris tapez:75</p>
 
 					<p><span class="standard">Pays :</span>
 					<select name="pays" size="1">			
