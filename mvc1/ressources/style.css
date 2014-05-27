@@ -739,7 +739,6 @@ text-decoration:none;
 .formulaire{
 	position : relative ;
 	top:40px;
-	left : 5% ;
 	color : white ;
 	text-align : justify ; 
 	margin-bottom:105px;
@@ -754,7 +753,7 @@ label.standard{
 
 .standard{
 	display : inline-block ;
-	float : left ;
+	/*float : left ;*/
 	width : 420px ;
 	text-align : right ;
 }
