@@ -13,12 +13,14 @@ if (empty($_POST['Role_ID'])) {
 }else{
 
 	include('modeles/modele_utilisateur.php');
-
+	include('vues/header.php');
 	$Role_ID = $_POST['Role_ID'];
 
 	if(!isset($_POST['cgu']))
 	{
-		die('Vous devez accepter les condition generales d\'utilisation du site pour vous inscrire.');
+		die('<div class="titre1"><p>Vous devez accepter les condition generales d\'utilisation du site pour vous inscrire.</p>
+		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+			');
 	} 
 
 	if(preg_match("#\w#", $_POST['pseudo']))
@@ -29,12 +31,16 @@ if (empty($_POST['Role_ID'])) {
 		$res = $req->fetch();
 		if($res)
 		{ 
-			die('Le pseudo choisi est deja utilise.');
+			die('<div class="titre1"><p>Le pseudo choisi est deja utilise.</p>
+		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+				');
 		} 
 	}
 	else
 	{
-		die('Vous devez choisir un nom d\'utilisateur');
+		die('<div class="titre1"><p>Vous devez choisir un nom d\'utilisateur.</p>
+		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+			');
 	}
 
 	$adresse_email2 = $_POST['emailConfirm'];
@@ -49,17 +55,23 @@ if (empty($_POST['Role_ID'])) {
 			$res2 = $req -> fetch();
 			if ($res2)
 			{
-				die('L\'adresse mail renseigne est deja utilise.');
+				die('<div class="titre1"><p>L\'adresse mail renseigne est deja utilise.</p>
+		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+					');
 			}	
 		}
 		else
 		{
-			die('Les deux adresses mails renseignees doivent etre identiques');
+			die('<div class="titre1"><p>Les deux adresses mails renseignees doivent etre identiques.</p>
+		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+				');
 		}
 	}
 	else
 	{
-		die('Votre adresse mail n\'a pas un format valide.');
+		die('<div class="titre1"><p>Votre adresse mail n\'a pas un format valide.</p>
+		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+			');
 	}
 
 	$mot_de_passe = $_POST['mot_de_passe'];
@@ -78,27 +90,37 @@ if (empty($_POST['Role_ID'])) {
 					}
 					else
 					{
-						die('Les deux mots de passe renseignes doivent etre identiques.');
+						die('<div class="titre1"><p>Les deux mots de passe renseignes doivent etre identiques.</p>
+							<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+							');
 					}
 				}
 				else
 				{
-					die('Votre mot de passe doit contenir au moins un chiffre.');
+					die('<div class="titre1"><p>Votre mot de passe doit contenir au moins un chiffre.</p>
+							<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+						');
 				}
 			}
 			else
 			{
-				die('Votre mot de passe doit contenir au moins une majuscule.');
+				die('<div class="titre1"><p>Votre mot de passe doit contenir au moins une majuscule.</p>
+					 <p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+					');
 			}
 		}
 		else
 		{
-			die('Votre mot de passe doit contenir au moins une minuscule.');
+			die('<div class="titre1"><p>Votre mot de passe doit contenir au moins une minuscule.</p>
+					 <p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+				');
 		}
 	}
 	else
 	{
-		die('Votre mot de passe doit comporter au moins 8 caracteres.');
+		die('<div class="titre1"><p> Votre mot de passe doit comporter au moins 8 caracteres.</p>
+					 <p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+					');
 	}
 
 
