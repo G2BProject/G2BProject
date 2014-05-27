@@ -898,8 +898,14 @@ div.LATableau p{
  width: 860px;
  height: 235px;
  background: #666666;
- margin-top:-39px;
+ margin-top:10px;
  border:solid 2px;
+}
+.listDep{
+	display:block;
+	color : white ;
+	text-align : center ;
+	margin-bottom:20px;
 }
 
 
