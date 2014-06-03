@@ -38,7 +38,6 @@ body{
 
 #connexion ul{
 	color:black;
-	width: 85%;
  	font-size: 18px;
 	float:left; /*pour IE*/
 }
@@ -1318,4 +1317,15 @@ margin-top:15px;
 margin-left: -2px;
 border: solid 2px;
 background-color:#D2AE25;
+}
+
+/*contact*/
+
+.nous_contacter{
+text-decoration: underline;
+width: 200px;
+margin-left: 350px;
+color:white;
+font-size: 130%;
+margin-top: 130px;
 }
