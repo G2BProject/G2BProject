@@ -138,6 +138,7 @@ if (empty($_POST['Role_ID'])) {
 
 	$_SESSION['pseudo'] = $pseudo;
 	$_SESSION['mot_de_passe'] = $mot_de_passe;
+	$_SESSION['departement'] = $departement;
 		include('vues/vue_accueil.php');
 		echo '<script> alert("Vous etes correctement inscrit '.$pseudo.'!");	</script>';
 }

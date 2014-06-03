@@ -24,6 +24,7 @@
 					<p><a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a></p>';
 				}elseif($info['role_ID']==4){
 					echo'
+					<a class="ajout" href="index.php?page=backOffice"> Administration du site</a></br>
 					<p><a class="ajout" href="index.php?page=ajoutArtiste"> Ajouter un artiste</a>
 					<a class="ajout" href="index.php?page=ajoutSalle"> Ajouter une salle</a></p>
 					<p><a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a>
