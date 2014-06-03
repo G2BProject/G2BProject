@@ -50,9 +50,7 @@ if (empty($_POST['Role_ID'])) {
 		if(preg_match("#$adresse_email2#", $_POST['adresse_email']))
 		{
 			$adresse_email = $_POST['adresse_email'];
-			$req = $bdd -> prepare('SELECT adresse_email FROM membre WHERE adresse_email = :adresse_email');
-			$req -> execute(array('adresse_email' => $adresse_email));
-			$res2 = $req -> fetch();
+			$res2 = verifMail($adresse_email);
 			if ($res2)
 			{
 				die('<div class="titre1"><p>L\'adresse mail renseigne est deja utilise.</p>

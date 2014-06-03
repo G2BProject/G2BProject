@@ -20,7 +20,13 @@
 		));
 
 	}
-
+	function verifMail($mail){
+			global $bdd;
+			$req = $bdd -> prepare('SELECT adresse_email FROM membre WHERE adresse_email = :adresse_email');
+			$req -> execute(array('adresse_email' => $mail));
+			$res2 = $req -> fetch();
+			return $res2;
+	}
 	function connexion($pseudo,$password){
 		global $bdd;
 	    $query=$bdd->prepare('SELECT mot_de_passe, pseudo, departement
