@@ -1320,6 +1320,7 @@ background-color:#D2AE25;
 }
 
 /*contact*/
+
 .nous_contacter{
 text-decoration: underline;
 width: 200px;
@@ -1327,16 +1328,4 @@ margin-left: 350px;
 color:white;
 font-size: 130%;
 margin-top: 130px;
-}
-
-label.standard1{
-		text-align : right ;
-}
-
-
-.standard1{
-	float : left ;
-	width : 420px ;
-	text-align : center ;
-	color:white;
 }
