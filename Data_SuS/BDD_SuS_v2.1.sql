@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 27 Mai 2014 à 14:15
+-- Généré le: Mar 27 Mai 2014 à 15:47
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.16
 
@@ -62,7 +62,17 @@ CREATE TABLE IF NOT EXISTS `categorie_forum` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `categorie_forum` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `categorie_forum`
+--
+
+INSERT INTO `categorie_forum` (`ID`, `categorie_forum`) VALUES
+(1, 'Aide,Bugs du Site'),
+(2, 'Avis et suggestions'),
+(3, 'Groupes/Artistes'),
+(4, 'Concerts');
 
 -- --------------------------------------------------------
 
@@ -420,7 +430,7 @@ CREATE TABLE IF NOT EXISTS `sous_categorie_forum` (
   `categorie_forum_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_sous_categorie_forum_categorie_forum1_idx` (`categorie_forum_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
 
