@@ -32,19 +32,34 @@ else
 	}
 
 	$bio_artiste = $_POST['bio_artiste'];
-	$ID_genre= $_POST['genre'];
+	$ID_genre = $_POST['genre'];
 
-	/*if($_FILES['image']['size'] > $maxSize) $erreur = "L'image est trop grande." ;
+	$max_size = 1000000 ;
+	$max_height = 1000 ;
+	$max_width = 1000 ;
 
-	$extensions_valides = array('jpg', 'png');
+	$extensions_valides = array('jpg','jpeg','png');
+	$extension_upload = strtolower(substr(strrchr($_FILES['image_artiste']['name'],'.'),1));
+	if (!in_array($extension_upload,$extensions_valides)) $erreur = "Extension invalide.";
 
-	$extension_upload = strtolower(substr(strrchr($_FILES['image']['name'], '.'),1));
-	if ( in_array($extension_upload,$extensions_valides) ) echo "Extension correcte";
+	if($_FILES['image_artiste']['size'] > $max_size) $erreur = "Le fichier dépasse la taille limite." ;
 
-	$image_sizes = getimagesize($_FILES['image']['tmp_name']);
-	if ($image_sizes[0] > $maxwidth OR $image_sizes[1] > $maxheight) $erreur = "L'image est trop grande.";*/
+	$image_sizes = getimagesize($_FILES['image_artiste']['tmp_name']);
+	if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "L'image a des dimensions trop importantes.";
 
-	
+	if(isset($erreur)){
+		echo "$erreur";
+	}
+	else{
+		$user_pseudo = $_SESSION['pseudo'];
+		mkdir('../Images_SuS/Avatars/'.$user_pseudo, 0777, true);
+
+		$user_id = sha1($_SESSION['pseudo']);
+
+		$file_name = '../Images_SuS/Avatars/'.$user_pseudo.'/'.$user_id;
+		$resultat = move_uploaded_file($_FILES['image_artiste']['tmp_name'],$file_name);
+	}
+
 	ajoutArtiste($nom_artiste, $bio_artiste, $ID_genre);
 			include('controleurs/accueil.php');
 }
