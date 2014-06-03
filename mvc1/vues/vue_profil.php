@@ -20,12 +20,14 @@
 
 				}elseif($info['role_ID']==3){
 					echo'
-					<p><a class="ajout" href="index.php?page=ajoutArtiste"> Ajouter un artiste</a></p>
 					<p><a class="ajout" href="index.php?page=ajoutSalle"> Ajouter une salle</a></p>
 					<p><a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a></p>';
 				}elseif($info['role_ID']==4){
-					echo'<p><a class="ajout" href="index.php?page=ajoutSalle"> Ajouter une salle</a></p>
-					<p><a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a></p>';
+					echo'
+					<p><a class="ajout" href="index.php?page=ajoutArtiste"> Ajouter un artiste</a>
+					<a class="ajout" href="index.php?page=ajoutSalle"> Ajouter une salle</a></p>
+					<p><a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a>
+					<a class="ajout" href="index.php?page=ajoutConcert"> Ajouter un concert</a></p>';
 				}
 			?></li>
 		</ul>
