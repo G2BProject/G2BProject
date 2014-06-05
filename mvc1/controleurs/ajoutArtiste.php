@@ -52,7 +52,7 @@ else
 	}
 	else{
 		$user_pseudo = $_SESSION['pseudo'];
-		mkdir('../Images_SuS/Avatars/'.$user_pseudo, 0777, true);
+		mkdir('../Images_SuS/Avatars/'.$user_pseudo, true);
 
 		$user_id = sha1($_SESSION['pseudo']);
 

@@ -56,7 +56,7 @@
 						<option value="2">Concert</option>
 						<option value="3">Salle</option>
 					</select>
-					<input type="submit" value="chercher">
+					<input type="submit" value="Rechercher">
 			</form>
 	</div>
 
