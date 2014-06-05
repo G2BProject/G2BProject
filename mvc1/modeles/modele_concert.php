@@ -1,13 +1,35 @@
 <?php 
-	function ajoutConcert($nom_du_concert,$date_du_concert,$heure){
+	function ajoutConcert($nom_du_concert, $salle, $artiste, $date_du_concert, $heure){
 		global $bdd;
-		$req = $bdd->prepare('INSERT INTO concert(nom_du_concert, date_du_concert, heure, date_ajout_concert) VALUES(:nom_du_concert, :date_du_concert, :heure, NOW())');
+
+		$req1 = $bdd -> query("SELECT ID FROM salle WHERE nom_de_la_salle ='$salle'");
+		$res1 = $req1->fetch();
+		$salle_ID= (int)$res1['ID'];
+
+		$req = $bdd->prepare('INSERT INTO concert(nom_du_concert, salle_ID, date_du_concert, heure_du_concert, date_ajout_concert) VALUES(:nom_du_concert, :salle_ID, :date_du_concert, :heure, NOW())');
 	$req -> execute(array(
 		'nom_du_concert' => $nom_du_concert,
 		'date_du_concert' => $date_du_concert,
 		'heure' => $heure,
-		//'salle_ID' => $salle_ID,
+		'salle_ID' => $salle_ID,
 		));
+
+		$req2 = $bdd -> query("SELECT ID FROM concert WHERE nom_du_concert ='$nom_du_concert'");
+		$res2 = $req2->fetch();
+		$concert_ID= (int)$res2['ID'];
+
+		$req3 = $bdd -> query("SELECT ID FROM artiste WHERE nom_artiste = '$artiste'");
+		$res3 = $req3->fetch();
+		$artiste_ID= (int)$res3['ID'];
+
+		$req4 = $bdd->prepare('INSERT INTO representation(concert_ID, artiste_ID) VALUES(:concert_ID, :artiste_ID)');
+	    $req4 -> execute(array(
+		'concert_ID' => $concert_ID,
+		'artiste_ID' => $artiste_ID,
+		));
+
+
+
 	}
 
 	function nomConcert($nom_du_concert){
