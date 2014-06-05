@@ -1,6 +1,6 @@
 <?php 
 include('modeles/modele_administration.php');
-if(isset($_SESSION['pseudo'])){
+if  (isset($_SESSION['pseudo'])){
 	include('modeles/modele_utilisateur.php');
 	$nom=$_SESSION['pseudo'];
  
@@ -16,7 +16,25 @@ if (!empty($_POST['suppMembre'])) {
 		suppMembre($_POST['suppMembre']);
 		echo '<script> alert("Vous avez supprimé le compte de '.$_POST['suppMembre'].'!");	</script>';
 	}else{
-		echo '<script> alert("'.$_POST['suppMembre'].' n\'est pas un membbre existant!");	</script>';
+		echo '<script> alert("'.$_POST['suppMembre'].' n\'est pas un membre existant!");	</script>';
+	}
+}
+
+if (!empty($_POST['suppArtiste'])) {
+	if(verifArtiste($_POST['suppArtiste'])){
+		suppArtiste($_POST['suppArtiste']);
+		echo '<script> alert("Vous avez supprimé le compte de l\'artiste '.$_POST['suppArtiste'].'!");	</script>';
+	}else{
+		echo '<script> alert("'.$_POST['suppArtiste'].' n\'est pas un artiste existant!");	</script>';
+	}
+}
+
+if (!empty($_POST['suppConcert'])) {
+	if(verifConcert($_POST['suppConcert'])){
+		suppConcert($_POST['suppConcert']);
+		echo '<script> alert("Vous avez supprimé le concert '.$_POST['suppArtiste'].'!");	</script>';
+	}else{
+		echo '<script> alert("'.$_POST['suppConcert'].' n\'est pas un concert existant!");	</script>';
 	}
 }
 

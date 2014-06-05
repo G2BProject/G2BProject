@@ -7,7 +7,8 @@
 
 		<p>
 			<label for="suppMembre" class="standard">Supprimer le membre suivant :</label><input name="suppMembre" type="text" id="suppMembre" /><br />
-			<label for="suppArtiste" class="standard">Supprimer l'artiste suivant :</label><input type="text" name="suppArtiste" id="suppArtiste" />
+			<label for="suppArtiste" class="standard">Supprimer l'artiste suivant :</label><input type="text" name="suppArtiste" id="suppArtiste" /><br />
+			<label for="suppConcert" class="standard">Supprimer le concert suivant :</label><input type="text" name="suppConcert" id="suppConcert" />
 		</p>
 		
 		<p class="details"><input type="submit" value="Actualisation des données" /></p>
