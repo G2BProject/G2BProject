@@ -121,10 +121,15 @@ if (empty($_POST['Role_ID'])) {
 					');
 	}
 
+	if(isset($_POST['sexe'])){
+		$sexe = $_POST['sexe'];
+	}
+	else{
+		$sexe = NULL ;
+	}
 
 	$nom_membre = $_POST['nom_membre'];
 	$prenom_membre = $_POST['prenom_membre'];
-	$sexe = $_POST['sexe'];
 	$an = $_POST['an'];
 	$mois = $_POST['mois'];
 	$jour = $_POST['jour'];
@@ -132,11 +137,45 @@ if (empty($_POST['Role_ID'])) {
 	$adresse_membre = $_POST['adresse_membre'];
 	$departement = $_POST['departement'];
 
-	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$nom_membre,$prenom_membre,$sexe,$date_de_naissance,$adresse_membre, $departement);
+	if(isset($_FILES['image_membre']['name'])){ // Revoir la condition d'entrée //
+
+		$max_size = 1000000 ;
+		$max_height = 1000 ;
+		$max_width = 1000 ;
+		
+		$extensions_valides = array('jpg','jpeg','png');
+		$extension_upload = strtolower(substr(strrchr($_FILES['image_membre']['name'],'.'),1));
+		if (!in_array($extension_upload,$extensions_valides)) $erreur = "Extension invalide.";
+
+		if($_FILES['image_membre']['size'] > $max_size) $erreur = "Le fichier dépasse la taille limite." ;
+
+		$image_sizes = getimagesize($_FILES['image_membre']['tmp_name']);
+		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "L'image a des dimensions trop importantes.";
+
+		if(isset($erreur)){
+			echo "$erreur";
+		}
+		else{
+
+			if(!is_dir('ressources/avatars/membres/'.$pseudo)){
+				mkdir('ressources/avatars/membres/'.$pseudo, true);
+			}
+
+			$image_membre = 'ressources/avatars/membres/'.$pseudo.'/'.$pseudo;
+			$resultat = move_uploaded_file($_FILES['image_membre']['tmp_name'],$image_membre);
+		}
+
+	}
+	else{
+		$image_membre = NULL ;
+	}
+
+	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$nom_membre,$prenom_membre,$sexe,$date_de_naissance,$adresse_membre, $departement,$image_membre);
 
 	$_SESSION['pseudo'] = $pseudo;
 	$_SESSION['mot_de_passe'] = $mot_de_passe;
 	$_SESSION['departement'] = $departement;
+
 		include('vues/vue_accueil.php');
 		include('vues/footer.php');
 	echo '<script> alert("Vous etes correctement inscrit '.$pseudo.'!");	</script>';

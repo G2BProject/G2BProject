@@ -1,9 +1,10 @@
 <?php 
-	function ajoutArtiste($nom_artiste, $bio_artiste, $ID_genre){
+	function ajoutArtiste($nom_artiste, $image_artiste, $bio_artiste, $ID_genre){
 		global $bdd;
-		$req = $bdd->prepare('INSERT INTO artiste(nom_artiste, bio_artiste, ID_genre, date_ajout_artiste) VALUES(:nom_artiste, :bio_artiste, :ID_genre, NOW())');
+		$req = $bdd->prepare('INSERT INTO artiste(nom_artiste, image_artiste, bio_artiste, ID_genre, date_ajout_artiste) VALUES(:nom_artiste, :image_artiste, :bio_artiste, :ID_genre, NOW())');
 	$req -> execute(array(
 		'nom_artiste' => $nom_artiste,
+		'image_artiste' => $image_artiste,
 		'bio_artiste' => $bio_artiste,
 		'ID_genre' => $ID_genre,
 		));

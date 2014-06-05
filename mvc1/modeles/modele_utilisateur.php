@@ -1,10 +1,10 @@
 <?php 
-	function inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$nom_membre,$prenom_membre,$sexe,$date_de_naissance,$adresse_membre,$departement){
+	function inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$nom_membre,$prenom_membre,$sexe,$date_de_naissance,$adresse_membre,$departement,$image_membre){
 		global $bdd;
 
 	$cle_validation = sha1(microtime(TRUE)*100000);
 
-	$req = $bdd->prepare('INSERT INTO membre(Role_ID, pseudo, adresse_email, mot_de_passe, nom_membre, prenom_membre, sexe, date_de_naissance, adresse_membre, departement, cle_validation, date_inscription) VALUES(:Role_ID, :pseudo, :adresse_email, :mot_de_passe, :nom_membre, :prenom_membre, :sexe, :date_de_naissance, :adresse_membre, :departement, :cle_validation, NOW())');
+	$req = $bdd->prepare('INSERT INTO membre(Role_ID, pseudo, adresse_email, mot_de_passe, nom_membre, prenom_membre, sexe, date_de_naissance, adresse_membre, departement, image_membre, cle_validation, date_inscription) VALUES(:Role_ID, :pseudo, :adresse_email, :mot_de_passe, :nom_membre, :prenom_membre, :sexe, :date_de_naissance, :adresse_membre, :departement, :image_membre, :cle_validation, NOW())');
 	$req -> execute(array(
 		'Role_ID' => $Role_ID,
 		'pseudo' => $pseudo,
@@ -16,6 +16,7 @@
 		'date_de_naissance' => $date_de_naissance,
 		'adresse_membre' => $adresse_membre,
 		'departement' => $departement,
+		'image_membre' => $image_membre,
 		'cle_validation' => $cle_validation,
 		));
 

@@ -51,16 +51,20 @@ else
 		echo "$erreur";
 	}
 	else{
+
 		$user_pseudo = $_SESSION['pseudo'];
-		mkdir('../Images_SuS/Avatars/'.$user_pseudo, true);
 
-		$user_id = sha1($_SESSION['pseudo']);
+		if(!is_dir('ressources/avatars/artistes/'.$user_pseudo)){
+			mkdir('ressources/avatars/artistes/'.$user_pseudo, true);
+		}
 
-		$file_name = '../Images_SuS/Avatars/'.$user_pseudo.'/'.$user_id;
-		$resultat = move_uploaded_file($_FILES['image_artiste']['tmp_name'],$file_name);
+		// $user_id = sha1($_SESSION['pseudo']); //
+
+		$image_artiste = 'ressources/avatars/artistes/'.$user_pseudo.'/'.$nom_artiste;
+		move_uploaded_file($_FILES['image_artiste']['tmp_name'],$image_artiste);
 	}
 
-	ajoutArtiste($nom_artiste, $bio_artiste, $ID_genre);
+	ajoutArtiste($nom_artiste, $image_artiste, $bio_artiste, $ID_genre);
 			include('controleurs/accueil.php');
 }
 

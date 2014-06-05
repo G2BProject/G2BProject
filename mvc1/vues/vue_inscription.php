@@ -3,7 +3,7 @@ src="vues/javascript.js">
 </script> 
 
 <div class="formulaire">
-			<form action="index.php?page=inscription" method="post">
+			<form action="index.php?page=inscription" method="post" enctype="multipart/form-data">
 				<p><span class="standard"><span class="etoile">*</span>Type d'utilisateur :</span>
 					<select name="Role_ID">
 						<option value="1">Membre</option>
@@ -398,6 +398,9 @@ src="vues/javascript.js">
 						<option value="Zambie">Zambie </option>
 						<option value="Zimbabwe">Zimbabwe </option>
 					</select>
+
+				<p><label for="image_membre" class="standard">Votre avatar (PNG, JPG ou JPEG, 1 Mo max.) :</label><input type="file" name="image_membre" id="image_membre"/></p>
+				<p><input type="hidden" name="maxFileSize" value="1000000" /></p>
 
 				<p><span class="standard">Voulez-vous vous inscrire à la newsletter ?</span>
 					 <input type="radio" name="newsletter" value="oui" id="oui" /> <label for="oui">Oui</label>
