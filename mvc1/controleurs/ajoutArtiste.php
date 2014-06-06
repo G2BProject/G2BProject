@@ -18,7 +18,7 @@ else
 	include('modeles/modele_artiste.php');
 	if(isset($_POST['nom_artiste']))
 	{
-		$nom_artiste = $_POST['nom_artiste'];
+		$nom_artiste = htmlspecialchars($_POST['nom_artiste']);
 		$res = nomArtiste($nom_artiste);
 		if($res)
 		{ 
@@ -31,8 +31,8 @@ else
 		die('Vous devez choisir un nom d\'utilisateur');
 	}
 
-	$bio_artiste = $_POST['bio_artiste'];
-	$ID_genre = $_POST['genre'];
+	$bio_artiste = htmlspecialchars($_POST['bio_artiste']);
+	$ID_genre = htmlspecialchars($_POST['genre']);
 
 	if($_FILES['image_artiste']['error'] == 0){
 

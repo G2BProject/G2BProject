@@ -20,7 +20,7 @@ if (empty($_POST['nom_du_concert'])) {
 	include('vues/header.php');
 	if(isset($_POST['nom_du_concert']))
 	{
-		$nom_du_concert = $_POST['nom_du_concert'];
+		$nom_du_concert = htmlspecialchars($_POST['nom_du_concert']);
 		$res = nomConcert($nom_du_concert);
 		if($res)
 		{ 
@@ -34,7 +34,7 @@ if (empty($_POST['nom_du_concert'])) {
 
 	if(isset($_POST['salle']))
 	{
-		$salle = $_POST['salle'];
+		$salle = htmlspecialchars($_POST['salle']);
 	}
 	else
 	{
@@ -43,7 +43,7 @@ if (empty($_POST['nom_du_concert'])) {
 
 	if(isset($_POST['artiste']))
 	{	
-		$artiste = $_POST['artiste'];
+		$artiste = htmlspecialchars($_POST['artiste']);
 		$res2 = nomArtiste($artiste);
 		if(!$res2)
 		{ 
@@ -57,12 +57,12 @@ if (empty($_POST['nom_du_concert'])) {
 
 
 
-	$an = $_POST['an'];
-	$mois = $_POST['mois'];
-	$jour = $_POST['jour'];
+	$an = htmlspecialchars($_POST['an']);
+	$mois = htmlspecialchars($_POST['mois']);
+	$jour = htmlspecialchars($_POST['jour']);
 	$date_du_concert = $an.'-'.$mois.'-'.$jour;
-	$heure = $_POST['heure'];
-	$minute = $_POST['minute'];
+	$heure = htmlspecialchars($_POST['heure']);
+	$minute = htmlspecialchars($_POST['minute']);
 	$seconde=0;
 	$heure_du_concert = $heure.':'.$minute.':'.$seconde;
 

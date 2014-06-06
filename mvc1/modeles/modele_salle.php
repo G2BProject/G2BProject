@@ -1,14 +1,15 @@
 <?php
-	function ajoutSalle($name,$adresse,$departement,$description,$numero,$nb_places){
+	function ajoutSalle($nom_salle,$adresse_salle,$departement,$description_salle,$image_salle,$capacite,$telephone){
 		global $bdd;
-		$req = $bdd->prepare('INSERT INTO salle(nom_de_la_salle, adresse_salle, departement, description_salle, nombre_de_place, numero_de_telephone) VALUES(:nom_de_la_salle, :adresse, :departement, :description, :nombre_de_place, :numero_de_telephone)');
+		$req = $bdd->prepare('INSERT INTO salle(nom_salle, adresse_salle, departement, description_salle, image_salle, capacite, telephone) VALUES(:nom_salle, :adresse_salle, :departement, :description_salle, :image_salle, :capacite, :telephone)');
 	$req -> execute(array(
-		'nom_de_la_salle' => $name,
-		'adresse' => $adresse,
+		'nom_salle' => $nom_salle,
+		'adresse_salle' => $adresse_salle,
 		'departement' => $departement,
-		'description' => $description,
-		'nombre_de_place' => $nb_places,
-		'numero_de_telephone' => $numero
+		'description_salle' => $description_salle,
+		'capacite' => $capacite,
+		'image_salle' => $image_salle,
+		'telephone' => $telephone
 		));
 
 	}
