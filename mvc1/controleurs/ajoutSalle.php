@@ -21,12 +21,12 @@ if (empty($_POST['nom_salle'])) {
 		include('vues/header.php');
 		die('Vous devez ajouter le nom de la salle.');
 	}
-	$nom_salle = $_POST['nom_salle'];
-	$adresse_salle = $_POST['adresse_salle'];
-	$departement = $_POST['departement'];
-	$description_salle = $_POST['description_salle'];
-	$telephone = $_POST['telephone'];
-	$capacite = $_POST['capacite'];
+	$nom_salle = htmlspecialchars($_POST['nom_salle']);
+	$adresse_salle = htmlspecialchars($_POST['adresse_salle']);
+	$departement = htmlspecialchars($_POST['departement']);
+	$description_salle = htmlspecialchars($_POST['description_salle']);
+	$telephone = htmlspecialchars($_POST['telephone']);
+	$capacite = htmlspecialchars($_POST['capacite']);
 
 	if($_FILES['image_salle']['error'] == 0){
 
