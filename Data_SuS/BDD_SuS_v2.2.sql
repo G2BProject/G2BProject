@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 27 Mai 2014 à 15:47
+-- Généré le: Ven 06 Juin 2014 à 09:13
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.16
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `artiste` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `nom_artiste` varchar(25) NOT NULL,
   `date_ajout_artiste` datetime DEFAULT NULL,
-  `image_artiste` varchar(25) DEFAULT NULL,
+  `image_artiste` varchar(255) DEFAULT NULL,
   `bio_artiste` text,
   `ID_genre` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
@@ -43,7 +43,6 @@ CREATE TABLE IF NOT EXISTS `artiste` (
 --
 
 INSERT INTO `artiste` (`ID`, `nom_artiste`, `date_ajout_artiste`, `image_artiste`, `bio_artiste`, `ID_genre`) VALUES
-(1, 'test', '2014-05-23 21:01:50', NULL, NULL, 0),
 (2, 'testsfd', '2014-05-23 21:18:58', NULL, NULL, 0),
 (3, 'test1', '2014-05-23 22:40:00', NULL, 'tgdsqgd', 0),
 (4, 'fds', '2014-05-24 01:48:11', NULL, 'gsd', 0),
@@ -111,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `concert` (
   `date_ajout_concert` datetime DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_concert_salle1_idx` (`salle_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Contenu de la table `concert`
@@ -119,7 +118,8 @@ CREATE TABLE IF NOT EXISTS `concert` (
 
 INSERT INTO `concert` (`ID`, `nom_du_concert`, `date_du_concert`, `heure_du_concert`, `salle_ID`, `date_ajout_concert`) VALUES
 (7, 'eda', '2014-03-19', '18:00:00', NULL, NULL),
-(8, 'dezbulfj', '2014-03-19', '16:00:00', NULL, '2014-05-09 12:05:10');
+(8, 'dezbulfj', '2014-03-19', '16:00:00', NULL, '2014-05-09 12:05:10'),
+(9, 'testacsalle', '2014-01-01', '00:00:00', 3, '2014-06-05 10:35:22');
 
 -- --------------------------------------------------------
 
@@ -179,6 +179,7 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `prenom_membre` varchar(255) DEFAULT NULL,
   `adresse_email` varchar(255) NOT NULL,
   `mot_de_passe` varchar(255) NOT NULL,
+  `image_membre` varchar(255) NOT NULL,
   `date_de_naissance` date DEFAULT NULL,
   `adresse_membre` varchar(40) DEFAULT NULL,
   `departement` int(11) DEFAULT NULL,
@@ -192,19 +193,21 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `cle_validation` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_membre_Role1_idx` (`Role_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Contenu de la table `membre`
 --
 
-INSERT INTO `membre` (`ID`, `pseudo`, `nom_membre`, `prenom_membre`, `adresse_email`, `mot_de_passe`, `date_de_naissance`, `adresse_membre`, `departement`, `sexe`, `bio_membre`, `date_inscription`, `nombre_de_message`, `etat_connexion`, `Role_ID`, `etat_compte`, `cle_validation`) VALUES
-(3, 'Test', 'Nom', 'Prenom', 'test@gmail.com', '37a668a7ae9501af42255f27d26449b309770222', '1924-01-01', 'Adresse', NULL, 1, NULL, '2014-05-15 10:06:12', NULL, 0, 1, 0, 'f86e32610480c1d722a4dc20247dc7f327bc9594'),
-(4, 'vbdsv', 'jfsdFSDGF', 'FSDGSDE', 'dssdb@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'xwvdxwsv', NULL, 1, NULL, '2014-05-23 22:08:02', NULL, 0, 1, 0, 'b8f790610a98f4fd015b3d19aa60464799e6d625'),
-(5, 'testrole2', 'fsq', 'fseqzgferd', 'fqesz@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'vsfdwvsfd', NULL, 1, NULL, '2014-05-24 03:17:00', NULL, 0, 2, 0, '92c94b690a345083c3c9ec6d7df1e417ecdd7c34'),
-(6, 'prop', 'fsq', 'gsdregdhh', 'prop@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'n,f,nhyngdf', NULL, 1, NULL, '2014-05-24 03:57:40', NULL, 0, 3, 0, 'edc311f0470ffa4f48eec6133485ed725724187e'),
-(7, 'mem', 'gsgtdde', 'HGDHDH', 'mem@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', ',hjgfdsc', NULL, 1, NULL, '2014-05-24 03:58:21', NULL, 0, 1, 0, '7c6f16c8564de39fb8e335b5cdff236f5409e148'),
-(8, 'testdep', 'test', 'tretsd', 'testdep@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '1924-01-01', 'hfsdhbrdtht', 75, 1, NULL, '2014-05-27 16:14:22', NULL, 0, 1, 0, 'f564717f68611fc6743ebd90a6cd78a3fcc3f57a');
+INSERT INTO `membre` (`ID`, `pseudo`, `nom_membre`, `prenom_membre`, `adresse_email`, `mot_de_passe`, `image_membre`, `date_de_naissance`, `adresse_membre`, `departement`, `sexe`, `bio_membre`, `date_inscription`, `nombre_de_message`, `etat_connexion`, `Role_ID`, `etat_compte`, `cle_validation`) VALUES
+(5, 'testrole2', 'fsq', 'fseqzgferd', 'fqesz@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'vsfdwvsfd', NULL, 1, NULL, '2014-05-24 03:17:00', NULL, 0, 2, 0, '92c94b690a345083c3c9ec6d7df1e417ecdd7c34'),
+(6, 'prop', 'fsq', 'gsdregdhh', 'prop@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'n,f,nhyngdf', NULL, 1, NULL, '2014-05-24 03:57:40', NULL, 0, 3, 0, 'edc311f0470ffa4f48eec6133485ed725724187e'),
+(7, 'mem', 'gsgtdde', 'HGDHDH', 'mem@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', ',hjgfdsc', NULL, 1, NULL, '2014-05-24 03:58:21', NULL, 0, 1, 0, '7c6f16c8564de39fb8e335b5cdff236f5409e148'),
+(8, 'testdep', 'test', 'tretsd', 'testdep@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'hfsdhbrdtht', 75, 1, NULL, '2014-05-27 16:14:22', NULL, 0, 1, 0, 'f564717f68611fc6743ebd90a6cd78a3fcc3f57a'),
+(9, 'administrateur', 'admin', 'admin', 'admin@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'vgfsdv', 0, 1, NULL, '2014-06-03 16:30:41', NULL, 0, 1, 0, 'bde32cebe2eec78215ae01c8aa0e87702e8b7a12'),
+(11, 'administrateur1', 'admin', 'admin', 'admin1@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'vgfsdv', 0, 1, NULL, '2014-06-03 16:35:09', NULL, 0, 4, 0, 'b2dbc0e2ed9dbb4b56bf4b4af2c63bc791b99868'),
+(12, 'test2', '', '', 'prop@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', '', 0, NULL, NULL, '2014-06-03 18:19:02', NULL, 0, 1, 0, '289d111d27e34f32dd5d0b3c01c0f0dfa16a2434'),
+(13, 'julcity', 'Bosselut', 'Julian', 'julcity77@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', 'ressources/avatars/membres/julcity/julcity.jpg', '1924-01-01', 'dfg 14', 75, 1, NULL, '2014-06-06 10:13:39', NULL, 0, 1, 0, '08fa86922756c4ad32b344853d02f0583fe62995');
 
 -- --------------------------------------------------------
 
@@ -355,10 +358,10 @@ INSERT INTO `recherche` (`mot_cle`, `date_recherche`, `type_recherche`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `représentation`
+-- Structure de la table `representation`
 --
 
-CREATE TABLE IF NOT EXISTS `représentation` (
+CREATE TABLE IF NOT EXISTS `representation` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `concert_ID` int(11) NOT NULL,
   `artiste_ID` int(11) NOT NULL,
@@ -414,7 +417,6 @@ CREATE TABLE IF NOT EXISTS `salle` (
 --
 
 INSERT INTO `salle` (`ID`, `nom_de_la_salle`, `adresse_salle`, `departement`, `description_salle`, `image_salle`, `nombre_de_place`, `numero_de_telephone`, `membre_ID`) VALUES
-(2, 'testsalle', 'tgsqer', NULL, 'frseger', NULL, 12, 12354, NULL),
 (3, 'testsalle', 'testsalle adresse 52 rue', NULL, 'belle salle de testsalle', 'fresfgre', 120, 1234567890, NULL),
 (4, 'hbbdrtbt', 'mlsfdm,lvd,mvdsm,', NULL, ',mlfdmfds', NULL, 123, 2147483647, NULL);
 
@@ -430,7 +432,14 @@ CREATE TABLE IF NOT EXISTS `sous_categorie_forum` (
   `categorie_forum_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_sous_categorie_forum_categorie_forum1_idx` (`categorie_forum_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `sous_categorie_forum`
+--
+
+INSERT INTO `sous_categorie_forum` (`ID`, `sous_categorie_forum`, `categorie_forum_ID`) VALUES
+(1, 'lol', 1);
 
 -- --------------------------------------------------------
 
@@ -557,9 +566,9 @@ ALTER TABLE `photo_profil`
   ADD CONSTRAINT `fk_photo_membre1` FOREIGN KEY (`membre_ID`) REFERENCES `membre` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Contraintes pour la table `représentation`
+-- Contraintes pour la table `representation`
 --
-ALTER TABLE `représentation`
+ALTER TABLE `representation`
   ADD CONSTRAINT `fk_représentation_artiste1` FOREIGN KEY (`artiste_ID`) REFERENCES `artiste` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_représentation_concert1` FOREIGN KEY (`concert_ID`) REFERENCES `concert` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 

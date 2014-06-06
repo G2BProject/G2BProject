@@ -5,7 +5,6 @@ if($_SESSION['pseudo']==$_GET['profil']){
 	$nom=$_GET['profil'];
  
 	$info = infoProfil($nom);
-
 	include('vues/header.php');
 
 	include('vues/vue_profil.php');

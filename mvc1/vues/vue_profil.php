@@ -2,7 +2,12 @@
 
 	<div class="container1Profil">
 		<div class="modifier_profil"><a href="#"> Modifier</a></div>
-		<div ><a href='#'><img class="photo_profil" src "h/f.png"/> </a></div>
+		<div ><img class="photo_profil" src=<?php 
+		if(empty($info['image_membre'])){
+		echo '"ressources/avatars/defaultPicture.jpg"';
+		}else{
+		echo '"'.$info['image_membre'].'"';
+		}?>/></div>
 		<div class="date_insc">Date d'inscription:<?php echo $info['date_inscription']; ?></div>
 		<div class="pseudo">Pseudo:<?php echo $info['pseudo']; ?></div>
 		<ul>

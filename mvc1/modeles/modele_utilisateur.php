@@ -54,7 +54,7 @@
 
 	function infoProfil($nom){
 		global $bdd;
-		$query=$bdd->prepare('SELECT ID, pseudo, nom_membre, prenom_membre, adresse_email, date_de_naissance, adresse_membre, sexe, bio_membre, date_inscription, role_ID
+		$query=$bdd->prepare('SELECT ID, pseudo, nom_membre, prenom_membre, adresse_email, date_de_naissance, adresse_membre, sexe, bio_membre, date_inscription, role_ID, image_membre
 	    FROM membre WHERE pseudo = :nom');
         $query->bindValue(':nom',$nom, PDO::PARAM_STR);
         $query->execute();
