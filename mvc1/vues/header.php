@@ -75,8 +75,8 @@
 	</div>	
 
 	<div class="statistique">
-		<p> Connectés: 1856247 <br />
-			Inscrits: 1
+		<p> Visites : <?php echo $nbrVisite; ?> <br />
+			Inscrits: <?php echo $nbrInscrit; ?>
 		</p>
 	</div>
 
