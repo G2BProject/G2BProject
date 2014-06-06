@@ -10,8 +10,6 @@ if(!isset($_SESSION['new_visite'])){
 }
 $nbrVisite= nbrvisite();
 $nbrInscrit= nbrInscrit();
-var_dump($nbrInscrit);
-
 if(!empty($_GET['page']) AND is_file('controleurs/'.$_GET['page'].'.php') ){
 	include('controleurs/'.$_GET['page'].'.php');
 }else{
