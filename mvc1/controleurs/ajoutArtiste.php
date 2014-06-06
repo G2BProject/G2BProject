@@ -62,7 +62,7 @@ else
 
 			// $user_id = sha1($_SESSION['pseudo']); //
 
-			$image_artiste = 'ressources/avatars/artistes/'.$user_pseudo.'/'.$nom_artiste;
+			$image_artiste = 'ressources/avatars/artistes/'.$user_pseudo.'/'.$nom_artiste.'.'.$extension_upload;
 			move_uploaded_file($_FILES['image_artiste']['tmp_name'],$image_artiste);
 		}
 	}

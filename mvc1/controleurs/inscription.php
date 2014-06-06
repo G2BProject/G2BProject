@@ -161,7 +161,7 @@ if (empty($_POST['Role_ID'])) {
 				mkdir('ressources/avatars/membres/'.$pseudo, true);
 			}
 
-			$image_membre = 'ressources/avatars/membres/'.$pseudo.'/'.$pseudo;
+			$image_membre = 'ressources/avatars/membres/'.$pseudo.'/'.$pseudo.'.'.$extension_upload;
 			$resultat = move_uploaded_file($_FILES['image_membre']['tmp_name'],$image_membre);
 		}
 	}
