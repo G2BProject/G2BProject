@@ -25,7 +25,7 @@ if (empty($_POST['Role_ID'])) {
 
 	if(preg_match("#\w#", $_POST['pseudo']))
 	{
-		$pseudo = $_POST['pseudo'];
+		$pseudo = htmlspecialchars($_POST['pseudo']);
 		$req = $bdd -> prepare('SELECT pseudo FROM membre WHERE pseudo = :pseudo');
 		$req -> execute(array('pseudo' => $pseudo));
 		$res = $req->fetch();
@@ -49,7 +49,7 @@ if (empty($_POST['Role_ID'])) {
 	{
 		if(preg_match("#$adresse_email2#", $_POST['adresse_email']))
 		{
-			$adresse_email = $_POST['adresse_email'];
+			$adresse_email = htmlspecialchars($_POST['adresse_email']);
 			$res2 = verifMail($adresse_email);
 			if ($res2)
 			{
@@ -72,7 +72,7 @@ if (empty($_POST['Role_ID'])) {
 			');
 	}
 
-	$mot_de_passe = $_POST['mot_de_passe'];
+	$mot_de_passe = htmlspecialchars($_POST['mot_de_passe']);
 
 	if(preg_match("#[0-9]+#", $_POST['mot_de_passe']))
 	{
@@ -122,20 +122,20 @@ if (empty($_POST['Role_ID'])) {
 	}
 
 	if(isset($_POST['sexe'])){
-		$sexe = $_POST['sexe'];
+		$sexe = htmlspecialchars($_POST['sexe']);
 	}
 	else{
 		$sexe = NULL ;
 	}
 
-	$nom_membre = $_POST['nom_membre'];
-	$prenom_membre = $_POST['prenom_membre'];
-	$an = $_POST['an'];
-	$mois = $_POST['mois'];
-	$jour = $_POST['jour'];
+	$nom_membre = htmlspecialchars($_POST['nom_membre']);
+	$prenom_membre = htmlspecialchars($_POST['prenom_membre']);
+	$an = htmlspecialchars($_POST['an']);
+	$mois = htmlspecialchars($_POST['mois']);
+	$jour = htmlspecialchars($_POST['jour']);
 	$date_de_naissance = $an.'-'.$mois.'-'.$jour;
-	$adresse_membre = $_POST['adresse_membre'];
-	$departement = $_POST['departement'];
+	$adresse_membre = htmlspecialchars($_POST['adresse_membre']);
+	$departement = htmlspecialchars($_POST['departement']);
 
 	if($_FILES['image_membre']['error'] == 0){
 		

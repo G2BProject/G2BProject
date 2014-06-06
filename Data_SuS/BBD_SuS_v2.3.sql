@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Client: localhost
--- Généré le: Ven 06 Juin 2014 à 09:13
--- Version du serveur: 5.6.12-log
--- Version de PHP: 5.4.16
+-- Client :  127.0.0.1
+-- Généré le :  Ven 06 Juin 2014 à 12:01
+-- Version du serveur :  5.6.17
+-- Version de PHP :  5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,10 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `mydb`
+-- Base de données :  `mydb`
 --
-CREATE DATABASE IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `mydb`;
 
 -- --------------------------------------------------------
 
@@ -36,20 +34,7 @@ CREATE TABLE IF NOT EXISTS `artiste` (
   `bio_artiste` text,
   `ID_genre` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
-
---
--- Contenu de la table `artiste`
---
-
-INSERT INTO `artiste` (`ID`, `nom_artiste`, `date_ajout_artiste`, `image_artiste`, `bio_artiste`, `ID_genre`) VALUES
-(2, 'testsfd', '2014-05-23 21:18:58', NULL, NULL, 0),
-(3, 'test1', '2014-05-23 22:40:00', NULL, 'tgdsqgd', 0),
-(4, 'fds', '2014-05-24 01:48:11', NULL, 'gsd', 0),
-(5, 'testgenre', '2014-05-24 01:55:46', NULL, 'ferq', 4),
-(6, 'testpop1', '2014-05-24 02:07:08', NULL, 'bds', 1),
-(7, 'testpop2', '2014-05-24 02:07:17', NULL, 'bdw', 1),
-(8, 'dgs', '2014-05-24 02:33:17', NULL, 'bxcfdb', 9);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -110,16 +95,7 @@ CREATE TABLE IF NOT EXISTS `concert` (
   `date_ajout_concert` datetime DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_concert_salle1_idx` (`salle_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
-
---
--- Contenu de la table `concert`
---
-
-INSERT INTO `concert` (`ID`, `nom_du_concert`, `date_du_concert`, `heure_du_concert`, `salle_ID`, `date_ajout_concert`) VALUES
-(7, 'eda', '2014-03-19', '18:00:00', NULL, NULL),
-(8, 'dezbulfj', '2014-03-19', '16:00:00', NULL, '2014-05-09 12:05:10'),
-(9, 'testacsalle', '2014-01-01', '00:00:00', 3, '2014-06-05 10:35:22');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -179,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `prenom_membre` varchar(255) DEFAULT NULL,
   `adresse_email` varchar(255) NOT NULL,
   `mot_de_passe` varchar(255) NOT NULL,
-  `image_membre` varchar(255) NOT NULL,
+  `image_membre` varchar(255) DEFAULT NULL,
   `date_de_naissance` date DEFAULT NULL,
   `adresse_membre` varchar(40) DEFAULT NULL,
   `departement` int(11) DEFAULT NULL,
@@ -193,21 +169,7 @@ CREATE TABLE IF NOT EXISTS `membre` (
   `cle_validation` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_membre_Role1_idx` (`Role_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
-
---
--- Contenu de la table `membre`
---
-
-INSERT INTO `membre` (`ID`, `pseudo`, `nom_membre`, `prenom_membre`, `adresse_email`, `mot_de_passe`, `image_membre`, `date_de_naissance`, `adresse_membre`, `departement`, `sexe`, `bio_membre`, `date_inscription`, `nombre_de_message`, `etat_connexion`, `Role_ID`, `etat_compte`, `cle_validation`) VALUES
-(5, 'testrole2', 'fsq', 'fseqzgferd', 'fqesz@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'vsfdwvsfd', NULL, 1, NULL, '2014-05-24 03:17:00', NULL, 0, 2, 0, '92c94b690a345083c3c9ec6d7df1e417ecdd7c34'),
-(6, 'prop', 'fsq', 'gsdregdhh', 'prop@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'n,f,nhyngdf', NULL, 1, NULL, '2014-05-24 03:57:40', NULL, 0, 3, 0, 'edc311f0470ffa4f48eec6133485ed725724187e'),
-(7, 'mem', 'gsgtdde', 'HGDHDH', 'mem@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', ',hjgfdsc', NULL, 1, NULL, '2014-05-24 03:58:21', NULL, 0, 1, 0, '7c6f16c8564de39fb8e335b5cdff236f5409e148'),
-(8, 'testdep', 'test', 'tretsd', 'testdep@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'hfsdhbrdtht', 75, 1, NULL, '2014-05-27 16:14:22', NULL, 0, 1, 0, 'f564717f68611fc6743ebd90a6cd78a3fcc3f57a'),
-(9, 'administrateur', 'admin', 'admin', 'admin@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'vgfsdv', 0, 1, NULL, '2014-06-03 16:30:41', NULL, 0, 1, 0, 'bde32cebe2eec78215ae01c8aa0e87702e8b7a12'),
-(11, 'administrateur1', 'admin', 'admin', 'admin1@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'vgfsdv', 0, 1, NULL, '2014-06-03 16:35:09', NULL, 0, 4, 0, 'b2dbc0e2ed9dbb4b56bf4b4af2c63bc791b99868'),
-(12, 'test2', '', '', 'prop@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', '', 0, NULL, NULL, '2014-06-03 18:19:02', NULL, 0, 1, 0, '289d111d27e34f32dd5d0b3c01c0f0dfa16a2434'),
-(13, 'julcity', 'Bosselut', 'Julian', 'julcity77@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', 'ressources/avatars/membres/julcity/julcity.jpg', '1924-01-01', 'dfg 14', 75, 1, NULL, '2014-06-06 10:13:39', NULL, 0, 1, 0, '08fa86922756c4ad32b344853d02f0583fe62995');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -399,26 +361,18 @@ INSERT INTO `role` (`ID`, `Role`) VALUES
 
 CREATE TABLE IF NOT EXISTS `salle` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `nom_de_la_salle` varchar(255) NOT NULL,
+  `nom_salle` varchar(255) NOT NULL,
   `adresse_salle` varchar(40) DEFAULT NULL,
   `departement` int(11) DEFAULT NULL,
   `description_salle` text,
-  `image_salle` varchar(25) DEFAULT NULL,
-  `nombre_de_place` int(11) DEFAULT NULL,
-  `numero_de_telephone` int(11) DEFAULT NULL,
+  `image_salle` varchar(255) DEFAULT NULL,
+  `capacite` int(11) DEFAULT NULL,
+  `telephone` varchar(15) DEFAULT NULL,
   `membre_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_salle_membre1_idx` (`membre_ID`),
   KEY `ID` (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
-
---
--- Contenu de la table `salle`
---
-
-INSERT INTO `salle` (`ID`, `nom_de_la_salle`, `adresse_salle`, `departement`, `description_salle`, `image_salle`, `nombre_de_place`, `numero_de_telephone`, `membre_ID`) VALUES
-(3, 'testsalle', 'testsalle adresse 52 rue', NULL, 'belle salle de testsalle', 'fresfgre', 120, 1234567890, NULL),
-(4, 'hbbdrtbt', 'mlsfdm,lvd,mvdsm,', NULL, ',mlfdmfds', NULL, 123, 2147483647, NULL);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

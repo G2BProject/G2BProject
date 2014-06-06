@@ -8,7 +8,7 @@
 		}else{
 		echo '"'.$info['image_membre'].'"';
 		}?>/></div>
-		<div class="date_insc">Date d'inscription:<?php echo $info['date_inscription']; ?></div>
+		<div class="date_insc">Date d'inscription:<?php echo $info['date_inscription'] ; ?></div>
 		<div class="pseudo">Pseudo:<?php echo $info['pseudo']; ?></div>
 		<ul>
 			<li class="txt1Profil">Adresse : <?php echo $info['adresse_membre']; ?></li>
