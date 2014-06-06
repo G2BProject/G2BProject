@@ -34,34 +34,40 @@ else
 	$bio_artiste = $_POST['bio_artiste'];
 	$ID_genre = $_POST['genre'];
 
-	$max_size = 1000000 ;
-	$max_height = 1000 ;
-	$max_width = 1000 ;
+	if($_FILES['image_artiste']['error'] == 0){
 
-	$extensions_valides = array('jpg','jpeg','png');
-	$extension_upload = strtolower(substr(strrchr($_FILES['image_artiste']['name'],'.'),1));
-	if (!in_array($extension_upload,$extensions_valides)) $erreur = "Extension invalide.";
+		$max_size = 1000000 ;
+		$max_height = 1000 ;
+		$max_width = 1000 ;
 
-	if($_FILES['image_artiste']['size'] > $max_size) $erreur = "Le fichier dépasse la taille limite." ;
+		$extensions_valides = array('jpg','jpeg','png');
+		$extension_upload = strtolower(substr(strrchr($_FILES['image_artiste']['name'],'.'),1));
+		if (!in_array($extension_upload,$extensions_valides)) $erreur = "Extension invalide.";
 
-	$image_sizes = getimagesize($_FILES['image_artiste']['tmp_name']);
-	if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "L'image a des dimensions trop importantes.";
+		if($_FILES['image_artiste']['size'] > $max_size) $erreur = "Le fichier dépasse la taille limite." ;
 
-	if(isset($erreur)){
-		echo "$erreur";
+		$image_sizes = getimagesize($_FILES['image_artiste']['tmp_name']);
+		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "L'image a des dimensions trop importantes.";
+
+		if(isset($erreur)){
+			echo "$erreur";
+		}
+		else{
+
+			$user_pseudo = $_SESSION['pseudo'];
+
+			if(!is_dir('ressources/avatars/artistes/'.$user_pseudo)){
+				mkdir('ressources/avatars/artistes/'.$user_pseudo, true);
+			}
+
+			// $user_id = sha1($_SESSION['pseudo']); //
+
+			$image_artiste = 'ressources/avatars/artistes/'.$user_pseudo.'/'.$nom_artiste;
+			move_uploaded_file($_FILES['image_artiste']['tmp_name'],$image_artiste);
+		}
 	}
 	else{
-
-		$user_pseudo = $_SESSION['pseudo'];
-
-		if(!is_dir('ressources/avatars/artistes/'.$user_pseudo)){
-			mkdir('ressources/avatars/artistes/'.$user_pseudo, true);
-		}
-
-		// $user_id = sha1($_SESSION['pseudo']); //
-
-		$image_artiste = 'ressources/avatars/artistes/'.$user_pseudo.'/'.$nom_artiste;
-		move_uploaded_file($_FILES['image_artiste']['tmp_name'],$image_artiste);
+		$image_artiste = NULL ;
 	}
 
 	ajoutArtiste($nom_artiste, $image_artiste, $bio_artiste, $ID_genre);

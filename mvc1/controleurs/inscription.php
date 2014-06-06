@@ -137,8 +137,8 @@ if (empty($_POST['Role_ID'])) {
 	$adresse_membre = $_POST['adresse_membre'];
 	$departement = $_POST['departement'];
 
-	if(isset($_FILES['image_membre']['name'])){ // Revoir la condition d'entrée //
-
+	if($_FILES['image_membre']['error'] == 0){
+		
 		$max_size = 1000000 ;
 		$max_height = 1000 ;
 		$max_width = 1000 ;
@@ -164,7 +164,6 @@ if (empty($_POST['Role_ID'])) {
 			$image_membre = 'ressources/avatars/membres/'.$pseudo.'/'.$pseudo;
 			$resultat = move_uploaded_file($_FILES['image_membre']['tmp_name'],$image_membre);
 		}
-
 	}
 	else{
 		$image_membre = NULL ;
