@@ -33,9 +33,16 @@ function getIDCoeur(){
 
 function getNewArtiste(){
 		global $bdd;
-		$query=$bdd->prepare('SELECT artiste.nom_artiste, artiste.image_artiste FROM artiste ORDER BY date_ajout_artiste');
+		$query=$bdd->prepare('SELECT artiste.nom_artiste, artiste.image_artiste FROM artiste ORDER BY date_ajout_artiste DESC');
         $query->execute();
 	    $new_artiste=$query->fetchAll();
 	    return $new_artiste;
+}
+function getLastConcert(){
+		global $bdd;
+		$query=$bdd->prepare('SELECT nom_du_concert FROM concert ORDER BY date_du_concert DESC');
+        $query->execute();
+	    $lastConcert=$query->fetchAll();
+	    return $lastConcert;
 }
 ?>

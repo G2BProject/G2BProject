@@ -19,9 +19,9 @@
 <div class="titre3">NOUVEAUX ARTISTES</div>
 <div class="box3">
 	<ul>
-		<li class=""><a href="#"> <img class="new" src="ressources/image/gvincent.png"/>Guillaume Vincent</a></li>
-		<li class=""><a href="#"> <img class="new" src="ressources/image/fauve.png"/>Fauve</a></li>
-		<li class=""><a href="#"> <img class="new" src="ressources/image/hypfou.png"/>Hyppocampe Fou</a></li>
+		<li class=""><a href="#"> <img class="new" src="ressources/image/gvincent.png"/><?php echo $newArtiste[0]['nom_artiste'] ?></a></li>
+		<li class=""><a href="#"> <img class="new" src="ressources/image/fauve.png"/><?php echo $newArtiste[1]['nom_artiste'] ?></a></li>
+		<li class=""><a href="#"> <img class="new" src="ressources/image/hypfou.png"/><?php echo $newArtiste[2]['nom_artiste'] ?></a></li>
 	</ul>
 </div>
 </div>
@@ -29,11 +29,11 @@
 <div class="container4">
 <div class="titre4">CONCERTS A VENIR</div>
 <div class="box4">
+<br />
 	<ul>
-		<li class=""><a href="#"><img class="concert" src="ressources/image/sanseverino.png"/>
-		<div id="text">Sanseverino - David Bostelli <br /> 
-		Salle de l'Albaret - Saint-Juéry <br /> 
-		Vendredi 13 juin 2014 à 18h </div2></a></li>
+		<li><a href="#"><?php echo $lastConcert[0]['nom_du_concert'] ?></a><br /> <br /> 
+		<li><a href="#"><?php echo $lastConcert[1]['nom_du_concert'] ?></a></li>
+		
 	</ul>
 </div>
 </div>
@@ -43,7 +43,7 @@
 <div class="box5">
 	<ul>
 		<li class=""><a href="#"><img class="coeur" src="ressources/image/beyonce.png"/><?php echo $coeur1['nom_artiste'] ?></a></li>
-		<li class=""><a href="#"><img class="coeur" src="ressources/image/sevran.png"/><?php echo $coeur1['nom_artiste'] ?></a></li>
+		<li class=""><a href="#"><img class="coeur" src="ressources/image/sevran.png"/><?php echo $coeur2['nom_artiste'] ?></a></li>
 	</ul>
 </div>
 </div>

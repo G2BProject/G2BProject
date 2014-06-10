@@ -12,8 +12,9 @@ $IDCoeur = getIDCoeur();
 $coeur1= getArtiste($IDCoeur['ID_artiste1']);
 $coeur2= getArtiste($IDCoeur['ID_artiste2']);
 
-var_dump(getNewArtiste());
 $newArtiste = getNewArtiste();
+
+$lastConcert= getLastConcert();
 include('vues/header.php');
 
 include('vues/vue_accueil.php');
