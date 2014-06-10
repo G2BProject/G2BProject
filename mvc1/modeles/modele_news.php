@@ -26,10 +26,16 @@ function getArtiste($ID){
 
 function getIDCoeur(){
 		global $bdd;
-		$req = $bdd -> query("SELECT ID_artiste1,  ID_artiste2, FROM coup_de_coeur");
-		$IDTop=$req->fetch();
+		$req = $bdd -> query("SELECT ID_artiste1,  ID_artiste2 FROM coup_de_coeur");
+		$IDCoeur=$req->fetch();
 	    return $IDCoeur;
 }
 
-
- ?>
+function getNewArtiste(){
+		global $bdd;
+		$query=$bdd->prepare('SELECT artiste.nom_artiste, artiste.image_artiste FROM artiste ORDER BY date_ajout_artiste');
+        $query->execute();
+	    $new_artiste=$query->fetchAll();
+	    return $new_artiste;
+}
+?>

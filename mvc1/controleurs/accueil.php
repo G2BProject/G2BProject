@@ -7,6 +7,13 @@ $IDTop= getIDTop();
 $artiste1= getArtiste($IDTop['ID_artiste1']);
 $artiste2= getArtiste($IDTop['ID_artiste2']);
 $artiste3= getArtiste($IDTop['ID_artiste3']);
+
+$IDCoeur = getIDCoeur();
+$coeur1= getArtiste($IDCoeur['ID_artiste1']);
+$coeur2= getArtiste($IDCoeur['ID_artiste2']);
+
+//var_dump(getNewArtiste());
+$newArtiste = getNewArtiste();
 include('vues/header.php');
 
 include('vues/vue_accueil.php');

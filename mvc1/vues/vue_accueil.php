@@ -42,8 +42,8 @@
 <div class="titre5">COUPS DE COEUR</div>
 <div class="box5">
 	<ul>
-		<li class=""><a href="#"><img class="coeur" src="ressources/image/beyonce.png"/>Drunk in love - Beyonce feat Jay Z</a></li>
-		<li class=""><a href="#"><img class="coeur" src="ressources/image/sevran.png"/>S.E.V.R.A.N - Kaaris</a></li>
+		<li class=""><a href="#"><img class="coeur" src="ressources/image/beyonce.png"/><?php echo $coeur1['nom_artiste'] ?></a></li>
+		<li class=""><a href="#"><img class="coeur" src="ressources/image/sevran.png"/><?php echo $coeur1['nom_artiste'] ?></a></li>
 	</ul>
 </div>
 </div>
