@@ -12,7 +12,7 @@ $IDCoeur = getIDCoeur();
 $coeur1= getArtiste($IDCoeur['ID_artiste1']);
 $coeur2= getArtiste($IDCoeur['ID_artiste2']);
 
-//var_dump(getNewArtiste());
+var_dump(getNewArtiste());
 $newArtiste = getNewArtiste();
 include('vues/header.php');
 
