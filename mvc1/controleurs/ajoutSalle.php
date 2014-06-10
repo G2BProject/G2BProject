@@ -1,6 +1,6 @@
 <?php
 
-if (empty($_POST['nom_salle'])) {
+if (empty($_POST['nom_de_la_salle'])) {
 	
 	
 	//on executera ici les fonction du modèle dont nous aurons besoin.
@@ -16,17 +16,17 @@ if (empty($_POST['nom_salle'])) {
 	
 }else{
 	include('modeles/modele_salle.php');
-	if(empty($_POST['nom_salle']))
+	if(empty($_POST['nom_de_la_salle']))
 	{
 		include('vues/header.php');
 		die('Vous devez ajouter le nom de la salle.');
 	}
-	$nom_salle = htmlspecialchars($_POST['nom_salle']);
+	$nom_de_la_salle = htmlspecialchars($_POST['nom_de_la_salle']);
 	$adresse_salle = htmlspecialchars($_POST['adresse_salle']);
 	$departement = htmlspecialchars($_POST['departement']);
 	$description_salle = htmlspecialchars($_POST['description_salle']);
-	$telephone = htmlspecialchars($_POST['telephone']);
-	$capacite = htmlspecialchars($_POST['capacite']);
+	$numero_de_telephone = htmlspecialchars($_POST['numero_de_telephone']);
+	$nombre_de_place = htmlspecialchars($_POST['nombre_de_place']);
 
 	if($_FILES['image_salle']['error'] == 0){
 
@@ -56,7 +56,7 @@ if (empty($_POST['nom_salle'])) {
 
 			// $user_id = sha1($_SESSION['pseudo']); //
 
-			$image_salle = 'ressources/avatars/salles/'.$user_pseudo.'/'.$nom_salle.'.'.$extension_upload;
+			$image_salle = 'ressources/avatars/salles/'.$user_pseudo.'/'.$nom_de_la_salle.'.'.$extension_upload;
 			move_uploaded_file($_FILES['image_salle']['tmp_name'],$image_salle);
 		}
 	}
@@ -64,7 +64,7 @@ if (empty($_POST['nom_salle'])) {
 		$image_salle = NULL ;
 	}
 
-	ajoutSalle($nom_salle,$adresse_salle,$departement,$description_salle,$image_salle,$capacite,$telephone);
+	ajoutSalle($nom_de_la_salle,$adresse_salle,$departement,$description_salle,$image_salle,$nombre_de_place,$numero_de_telephone);
 		include('controleurs/accueil.php');
 		echo '<script> alert("Votre salle est bien ajoutée!");	</script>';
 }

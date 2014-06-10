@@ -44,7 +44,7 @@
 	<div id="forum_concerts">
 		<ul>
 			<li class="boutons2"><a href="?page=forum">Forum</a></li>
-			<li class="boutons2"><a href="?page=concert">Concerts</a></li>
+			<li class="boutons2"><a href="?page=listeConcerts">Concerts</a></li>
 		</ul>
 	</div>
 
@@ -62,7 +62,7 @@
 
 	<span id="bordure">
 
-	<div id="Suivre"><span class="a3">Suivez-nous!</span>
+	<div id="Suivre"><span class="a3">Suivez-nous !</span>
 	</div>
 
 	<div class="reseaux">

@@ -1,5 +1,5 @@
 ﻿<?php
-	if(isset($_SESSION['pseudo']) and empty($reqSallesDepP)){
+	if(isset($_SESSION['pseudo']) and empty($reqSallesDep)){
 		echo'<div class="listDep"><p> Voici les salles de votre région : '.$_SESSION['departement'].'<br /><br /></p>';
 		echo'
 			<p >Si vous voulez voir les salles d\'un autre departement, rentrez le ici : </p>

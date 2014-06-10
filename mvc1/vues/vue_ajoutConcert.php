@@ -1,8 +1,10 @@
 <div class="formulaire">
-			<form action="index.php?page=ajoutConcert" method="post">
+			<form action="index.php?page=ajoutConcert" method="post" enctype="multipart/form-data">
 				<p><label for="nom_du_concert" class="standard"> Nom du concert :</label> <input type="text" name="nom_du_concert" id="nom_du_concert"/></p>
-				<p><label for="salle" class="standard"> Nom de la salle:</label><input type="salle" name="salle" id="salle"/></p>
-				<p><label for="artiste" class="standard"> Nom de l'artiste:</label><input type="artiste" name="artiste" id="artiste"/></p>
+				<p><label for="salle" class="standard"> Nom de la salle:</label><input type="text" name="salle" id="salle"/></p>
+				<p><label for="artiste" class="standard"> Nom de l'artiste:</label><input type="text" name="artiste" id="artiste"/></p>
+				<p><label for="image_concert" class="standard"> Affiche du concert :</label><input type="file" name="image_concert" id="image_concert"/></p>
+					<p><input type="hidden" name="maxFileSize" value="1000000" /></p>
 				<p><span class="standard">Date du concert :</span>
 					<select name="jour">
 						<option value="01">01</option>

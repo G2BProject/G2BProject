@@ -1,17 +1,18 @@
 <?php 
-	function ajoutConcert($nom_du_concert, $salle, $artiste, $date_du_concert, $heure){
+	function ajoutConcert($nom_du_concert, $salle, $artiste, $date_du_concert, $heure_du_concert, $image_concert){
 		global $bdd;
 
 		$req1 = $bdd -> query("SELECT ID FROM salle WHERE nom_de_la_salle ='$salle'");
 		$res1 = $req1->fetch();
 		$salle_ID= (int)$res1['ID'];
 
-		$req = $bdd->prepare('INSERT INTO concert(nom_du_concert, salle_ID, date_du_concert, heure_du_concert, date_ajout_concert) VALUES(:nom_du_concert, :salle_ID, :date_du_concert, :heure, NOW())');
+		$req = $bdd->prepare('INSERT INTO concert(nom_du_concert, salle_ID, date_du_concert, heure_du_concert, image_concert, date_ajout_concert) VALUES(:nom_du_concert, :salle_ID, :date_du_concert, :heure_du_concert, :image_concert, NOW())');
 	$req -> execute(array(
 		'nom_du_concert' => $nom_du_concert,
 		'date_du_concert' => $date_du_concert,
-		'heure' => $heure,
+		'heure_concert' => $heure_du_concert,
 		'salle_ID' => $salle_ID,
+		'image_concert' => $image_concert
 		));
 
 		$req2 = $bdd -> query("SELECT ID FROM concert WHERE nom_du_concert ='$nom_du_concert'");
@@ -27,9 +28,13 @@
 		'concert_ID' => $concert_ID,
 		'artiste_ID' => $artiste_ID,
 		));
+	}
 
-
-
+	function listConcertDep($departement){
+		global $bdd;
+		$req = $bdd -> prepare('SELECT concert.nom_du_concert, concert.date_du_concert, concert.heure_du_concert, salle.nom_de_la_salle FROM concert, salle WHERE concert.salle_ID = salle.ID AND salle.departement = :departement');
+		$req -> execute(array('departement' => $departement));
+		return $req ;
 	}
 
 	function nomConcert($nom_du_concert){
