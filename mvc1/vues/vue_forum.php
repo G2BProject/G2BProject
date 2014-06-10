@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+
 <head>
 <link rel="stylesheet" href="ressources/style_forum.css" type="text/css" media="screen" />
 
@@ -39,16 +39,28 @@
 
 			<tbody>
 				<tr>
-					<td class="cellule"><a href="#" style="text-decoration:none"><div class="rubrique1">Aide,Bugs du site</div></a></br>
+					<td class="cellule"><a href="?page=sous_categ1" style="text-decoration:none"><div class="rubrique1">Aide,Bugs du site</div></a></br>
 									<div class="descriptif">Actualités du site, aide et questions diverses,suggestions...</br>
 									Posez toutes vos questions en cas de problèmes, et faites nous part de vos remarques,souhaits d'amélioraton,bugs</div></td>
-					<td class="cellule"> 12/120 </td>
+					<td class="cellule">  <?php $reponse = $bdd->query('SELECT COUNT(*) AS nbsujets  FROM sous_categorie_forum WHERE categorie_forum_ID=1 ');
+
+$count = $reponse->fetch(PDO::FETCH_ASSOC);   
+       
+     echo $count['nbsujets'];   
+?> </td>
 					<td class="cellule"> Le 14/02/14 à 17h48 par <a href= "#"><?php $nom_du_visiteur = "saveurshowfan" ; echo $nom_du_visiteur ?></a></td>
 				</tr>
 				<tr>
-					<td class="cellule"><a href="#"  style="text-decoration:none"><div class="rubrique2">Avis et Suggestions</div></a></br>
+					<td class="cellule"><a href="?page=sous_categ2"  style="text-decoration:none"><div class="rubrique2">Avis et Suggestions</div></a></br>
 									<div class="descriptif">Vous pouvez nous faire part de vos avis afin d'améliorer le site</div></td>
-					<td class="cellule"> 19/186 </td>
+					<td class="cellule"> <?php $reponse = $bdd->query('SELECT COUNT(*) AS nbsujets  FROM sous_categorie_forum WHERE categorie_forum_ID=2 ');
+
+$count = $reponse->fetch(PDO::FETCH_ASSOC);   
+       
+     echo $count['nbsujets'];   
+?> 
+
+</td>
 					<td class="cellule"> Le 15/03/14 à 9h10 par <a href= "#"> justintimber</a>
 				</tr>
 			</tbody>
@@ -64,16 +76,26 @@
 
 			<tbody>
 				<tr>
-					<td class="cellule"><a href="#" style="text-decoration:none"><div class="rubrique3">Groupes/Artistes</div></a></br>
+					<td class="cellule"><a href="?page=sous_categ3" style="text-decoration:none"><div class="rubrique3">Groupes/Artistes</div></a></br>
 									<div class="descriptif">Venez discuter de vos groupes/artistes préférées</div></td>
 									
-					<td class="cellule"> 14/160 </td>
-					<td class="cellule"> Le 14/03/14 à 18h00 par <a href= "#"><?php $nom_du_visiteur = "saveurshowfan2" ; echo $nom_du_visiteur ?></a>
+					<td class="cellule">  <?php $reponse = $bdd->query('SELECT COUNT(*) AS nbsujets  FROM sous_categorie_forum WHERE categorie_forum_ID=3 ');
+
+$count = $reponse->fetch(PDO::FETCH_ASSOC);   
+       
+     echo $count['nbsujets'];   
+?> </td>
+					<td class="cellule"> Le 14/03/14 à 18h00 par <a href= "#"></a>
 				</tr>
 				<tr>
-					<td class="cellule"><a href="#"  style="text-decoration:none"><div class="rubrique4">Concerts</div></a></br>
+					<td class="cellule"><a href="?page=sous_categ4"  style="text-decoration:none"><div class="rubrique4">Concerts</div></a></br>
 									<div class="descriptif">Discuter des prochaines dates de concerts</div></td>
-					<td class="cellule"> 19/106 </td>
+					<td class="cellule">  <?php $reponse = $bdd->query('SELECT COUNT(*) AS nbsujets  FROM sous_categorie_forum WHERE categorie_forum_ID=4 ');
+
+$count = $reponse->fetch(PDO::FETCH_ASSOC);   
+       
+     echo $count['nbsujets'];   
+?>  </td>
 					<td class="cellule"> Le 15/03/14 à 9h10 par <a href= "#"> justinbib</a></td>
 				</tr>
 			</tbody>
@@ -98,4 +120,3 @@
 
 </footer>
 </body>
-</html>	 

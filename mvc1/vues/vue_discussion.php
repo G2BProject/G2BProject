@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+
 <head>
 <link rel="stylesheet" href="ressources/style_forum.css" type="text/css" media="screen" />
 
@@ -33,7 +32,7 @@
 						<option value="3">Groupes/Artistes</option>
 						<option value="4">Concerts</option>
 					</select>
-	<p><label class="sous_categorie_forum" for="sous_categorie_forum">Sujet :</label><input type="text" name="sous_categorie_forum" id="sous_categorie_forum"/></p>
+	<p><label for="sous_categorie_forum" class="sous_categorie_forum" >Sujet :</label><input type="text" name="sous_categorie_forum" id="sous_categorie_forum" rows="5" cols="30"/></p>
 	<p class="standard"><input type="submit" value="Valider"></p>
        			</form>
 
