@@ -1,18 +1,16 @@
-
-
 <div class="container1">
 <div class="titre1"><a href="#"><img src="ressources/image/actus.png"/></a></div>
-<div class="box1">Justin Timberlake sort son nouveau single!</div>
-<a href="#"><img class="photo" src="ressources/image/jt.png"/></a>
+<div class="box1"><?php echo $actu['texte'] ?></div>
+<a href="#"><img class="photo" src=<?php echo '"'.$actu['photo'].'"' ?>/></a>
 </div>
 
 <div class="container2">
 <div class="titre2">TOP 3 DES ARTISTES</div>
 <div class="box2">
 	<ol>
-		<li class=""><a href="#"><img class="artistes" src="ressources/image/pharrell.png"/>Pharrell Williams</a></li>
-		<li class=""><a href="#"><img class="artistes" src="ressources/image/daftpunk.png"/>Daft Punk</a></li>
-		<li class=""><a href="#"><img class="artistes" src="ressources/image/shakira.png"/>Shakira</a></li>
+		<li class=""><a href="#"><img class="artistes" src="ressources/image/pharrell.png"/><?php echo $artiste1['nom_artiste'] ?></a></li>
+		<li class=""><a href="#"><img class="artistes" src="ressources/image/daftpunk.png"/><?php echo $artiste2['nom_artiste'] ?></a></li>
+		<li class=""><a href="#"><img class="artistes" src="ressources/image/shakira.png"/><?php echo $artiste3['nom_artiste'] ?></a></li>
 	</ol>	
 </div>
 </div>

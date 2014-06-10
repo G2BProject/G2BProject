@@ -1,9 +1,13 @@
 <?php 
 include('modeles/modele_news.php');
 //on executera ici les fonction du modèle dont nous aurons besoin.
+$actu= getActu();
 
+$IDTop= getIDTop();
+$artiste1= getArtiste($IDTop['ID_artiste1']);
+$artiste2= getArtiste($IDTop['ID_artiste2']);
+$artiste3= getArtiste($IDTop['ID_artiste3']);
 include('vues/header.php');
-
 
 include('vues/vue_accueil.php');
 
