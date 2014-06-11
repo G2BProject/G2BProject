@@ -5,8 +5,6 @@ include('modeles/modele_utilisateur.php');
 include('vues/header.php');
 
 
-
-
 include('vues/footer.php');
 
  ?>

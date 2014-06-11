@@ -1,15 +1,5 @@
-<!-- <div> 
-	<strong id="LAordrealpha"> Rechercher pas ordre alphabetique : </strong> 
-</div>
-	<br />
-<div class="LAcadre1">
-	<div class="LAtexte1"> A B C D E F G H I J K L M N O P K R S T U V W X Y Z</br>
-                         1 2 3 4 5 6 7 8  9 0
-    </div>
- </div>
- <br />
-<div>  -->
-	<strong id="LAgenre"> Rechercher pas genre : </strong> 
+<br />	
+   <strong id="LAgenre"> Rechercher pas genre : </strong> 
 
 <br />
 
@@ -38,40 +28,3 @@
 <br />
 <br />
 <br />
-<br />
-<!-- <div> 
-	<strong id="LAlistecomplete"> Liste complete des artistes: </strong> 
-</div>
-</br>
-<div class="LAartistes">
-<ul id="LAliste1">
-   <li><a href="?page=artiste&name=test">Aaliyah</a></li>
-   <li>Aaron Carter</li>
-   <li>Aaron Gillespie</li>
-   <li>Aaron Kamin</li>
-   <li>Abba</li>
-   <li>...</li>
-   <li>...</li>
-   <li>...</li>
-</ul>
-<ul id="LAliste2">
-   <li>Gerald De Palmas</li>
-   <li>Gerard Berliner</li>
-   <li>Gerard Lenorman</li>
-   <li>Gerard Palaprat</li>
-   <li>Gerard Rinaldi</li>
-   <li>...</li>
-   <li>...</li>
-   <li>...</li>
-</ul>
-<ul id="LAliste3">
-   <li>Will Smith</li>
-   <li>Will.I.Am</li>
-   <li>William Beckett</li>
-   <li>William Scheller</li>
-   <li>Willie Colon</li>
-   <li>...</li>
-   <li>...</li>
-   <li>...</li>
-</ul>
-</div> -->

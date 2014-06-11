@@ -1,17 +1,8 @@
-<?php 
-include('modeles/modele_salle.php');
-if(empty($_POST['departement'])){
-	//$reqSalles=listSalles();
-	if(isset($_SESSION['pseudo'])){
-		$reqSallesDep= listSallesDep($_SESSION['departement']);
-	}
+	<?php 
+	include('modeles/modele_salle.php');
+	$reqSalles=listSalles();
 	include('vues/header.php');
 	include('vues/vue_salles.php');
+
 	include('vues/footer.php');
-	}else{
-	include('vues/header.php');
-	$reqSallesDepP= listSallesDep($_POST['departement']);
-	include('vues/vue_salles.php');
-	include('vues/footer.php');
-	}
-?>
+	?>

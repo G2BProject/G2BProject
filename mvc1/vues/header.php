@@ -15,7 +15,8 @@
 	</div></a>
 
 	<div id="drapeau">
-		<img src="ressources/image/drap_fr.png"/> <img src="ressources/image/drap_en.png"/>
+	<a href="?page=select_lang&lang=fr"> <img src="ressources/image/drap_fr.png" alt="Version Française" /></a>
+	<a href="?page=select_lang&lang=en"> <img src="ressources/image/drap_en.png" alt="Version Anglaise"/></a>
 	</div>
 
 	<div id="connexion">
@@ -23,12 +24,12 @@
 			<?php 
 			if (!isset($_SESSION['pseudo'])){
 				echo '
-				<li class="zone1"><a href="?page=connexion">Connexion</a></li>
-				<li class="zone1"><a href="?page=inscription">Inscription</a></li>';
+				<li class="zone1"><a href="?page=connexion">'.$CONNEXION.'</a></li>
+				<li class="zone1"><a href="?page=inscription">'.$INSCRIPTION.'</a></li>';
 			}else{
 				echo'
 				<li class="zone1"><a href="?page=profil&profil='.$_SESSION['pseudo'].'">'.$_SESSION['pseudo'].'</a></li>
-				<li class="zone1"><a href="?page=deconnexion">Deconnexion</a></li>';
+				<li class="zone1"><a href="?page=deconnexion">'.$DECONNEXION.'</a></li>';
 			}
 			 ?>
 		</ul>
@@ -36,33 +37,33 @@
 
 	<div id="artistes_salles">
 		<ul>
-			<li class="boutons1"><a href="?page=listeartiste">Artistes</a></li>
-			<li class="boutons1"><a href="?page=listeSalles">Salles</a></li>
+			<li class="boutons1"><a href="?page=listeartiste"><?php echo $TXT_ARTISTES;?></a></li>
+			<li class="boutons1"><a href="?page=listeSalles"><?php echo $TXT_SALLES;?></a></li>
 		</ul>
 	</div>
 
 	<div id="forum_concerts">
 		<ul>
-			<li class="boutons2"><a href="?page=forum">Forum</a></li>
-			<li class="boutons2"><a href="?page=listeConcerts">Concerts</a></li>
+			<li class="boutons2"><a href="?page=forum"><?php echo $TXT_FORUM;?></a></li>
+			<li class="boutons2"><a href="?page=listeConcerts"><?php echo $TXT_CONCERTS;?></a></li>
 		</ul>
 	</div>
 
 	<div class="Rechercher">
 			<form action="index.php?page=recherche" method="post" name="Recherche">
-			<label>Recherche:</label><input type="text" name="mot_cle" id="mot_cle"/>
+			<label><?php echo $RECHERCHE;?></label><input type="text" name="mot_cle" id="mot_cle"/>
 					<select name="type_recherche">
-						<option value="1">Artiste</option>
-						<option value="2">Concert</option>
-						<option value="3">Salle</option>
+						<option value="1"><?php echo $TXT_ARTISTES;?></option>
+						<option value="2"><?php echo $TXT_CONCERTS;?></option>
+						<option value="3"><?php echo $TXT_SALLES;?></option>
 					</select>
-					<input type="submit" value="Rechercher">
+					<input type="submit" value="<?php echo $TXT_CHERCHER ;?>">
 			</form>
 	</div>
 
 	<span id="bordure">
 
-	<div id="Suivre"><span class="a3">Suivez-nous !</span>
+	<div id="Suivre"><span class="a3"><?php echo $TXT_SUIVRE;?></span>
 	</div>
 
 	<div class="reseaux">
@@ -75,8 +76,8 @@
 	</div>	
 
 	<div class="statistique">
-		<p> Visites : <?php echo $nbrVisite; ?> <br />
-			Inscrits: <?php echo $nbrInscrit; ?>
+		<p> <?php echo $TXT_CONNECTES;?> <?php echo $nbrVisite; ?> <br />
+			<?php echo $TXT_INSCRITS;?> <?php echo $nbrInscrit; ?>
 		</p>
 	</div>
 

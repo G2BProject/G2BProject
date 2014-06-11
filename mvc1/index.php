@@ -10,6 +10,17 @@ if(!isset($_SESSION['new_visite'])){
 }
 $nbrVisite= nbrvisite();
 $nbrInscrit= nbrInscrit();
+
+if(!isset($_SESSION['lang'])){
+        $_SESSION['lang'] = 'fr';
+}
+if ($_SESSION['lang']=='en') {
+		include('controleurs/en.php');
+}else{
+		include('controleurs/fr.php');
+}
+
+//include('controleurs/fr.php');
 if(!empty($_GET['page']) AND is_file('controleurs/'.$_GET['page'].'.php') ){
 	include('controleurs/'.$_GET['page'].'.php');
 }else{

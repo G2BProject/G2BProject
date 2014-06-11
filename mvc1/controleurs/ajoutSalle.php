@@ -1,8 +1,8 @@
 <?php
 
 if (empty($_POST['nom_de_la_salle'])) {
-	
-	
+
+
 	//on executera ici les fonction du modèle dont nous aurons besoin.
 
 
@@ -13,7 +13,7 @@ if (empty($_POST['nom_de_la_salle'])) {
 
 
 	include('vues/footer.php');
-	
+
 }else{
 	include('modeles/modele_salle.php');
 	if(empty($_POST['nom_de_la_salle']))
