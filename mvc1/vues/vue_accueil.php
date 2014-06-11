@@ -5,7 +5,7 @@
 </div>
 
 <div class="container2">
-<div class="titre2">TOP 3 DES ARTISTES</div>
+<div class="titre2"><?php echo $_TOP_ARTISTE ?></div>
 <div class="box2">
 	<ol>
 		<li class=""><a href="#"><img class="artistes" src="ressources/image/pharrell.png"/><?php echo $artiste1['nom_artiste'] ?></a></li>
@@ -16,7 +16,7 @@
 </div>
 
 <div class="container3">
-<div class="titre3">NOUVEAUX ARTISTES</div>
+<div class="titre3"><?php echo $_NEW_ARTISTE ?></div>
 <div class="box3">
 	<ul>
 		<li class=""><a href="#"> <img class="new" src="ressources/image/gvincent.png"/><?php echo $newArtiste[0]['nom_artiste'] ?></a></li>
@@ -27,7 +27,7 @@
 </div>
 
 <div class="container4">
-<div class="titre4">CONCERTS A VENIR</div>
+<div class="titre4"><?php echo $VENIR ?></div>
 <div class="box4">
 <br />
 	<ul>
@@ -39,7 +39,7 @@
 </div>
 
 <div class="container5">
-<div class="titre5">COUPS DE COEUR</div>
+<div class="titre5"><?php echo $COEUR ?></div>
 <div class="box5">
 	<ul>
 		<li class=""><a href="#"><img class="coeur" src="ressources/image/beyonce.png"/><?php echo $coeur1['nom_artiste'] ?></a></li>

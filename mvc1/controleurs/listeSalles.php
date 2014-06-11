@@ -1,6 +1,6 @@
 	<?php 
 	include('modeles/modele_salle.php');
-	$reqSalles=listSalles();
+	$reqSalles = listSalles();
 	include('vues/header.php');
 	include('vues/vue_salles.php');
 

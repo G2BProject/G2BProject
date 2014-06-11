@@ -12,7 +12,6 @@
 	$TXT_CHERCHER = 'Submit';
 //Fin header 
 	
-
 // Body
 
 	$TXT_A_VRNIR = 'FOLLOWING CONCERTS';
@@ -106,38 +105,28 @@
 	$_CORRECT = 'You are properly registered';
 //fin Conditions Inscription
 
+// Accueil
+$_TOP_ARTISTE = 'Top 3 all artists';
+$_NEW_ARTISTE = 'New artists';
+$COEUR = 'Our liking';
+$VENIR = 'Future concerts';
+// Fin accueil
 
-//Top 3 Artistes
-
-//Fin Top 3 Artistes
-
-
-//Nouveaux artistes
-
-//Fin Nouveaux artistes
-
-
-//Coup de coeur 
-
-//Fin Coup de coeur
-
-
-//Concerts à venir
-
-//Fin Concerts à venir
-
-
-
-
-
-//Connexion
-
-//Fin Conexion
-
-
-//Connexion
-
-//Fin Conexion
+//Liste artistes
+$_RECHERCHE_GENRE = 'Search by genre';
+$POP = 'Pop';
+$CLASSIC = 'Classic';
+$_MUSIQUE_MONDE = 'World music';
+$METAL = 'Metal';
+$REGGAE = 'Reggae';
+$VARIETE = 'Variety';
+$ALTERNATIF = 'Alternative';
+$ELECT = 'Electronic/House';
+$_R_B = 'R&ampB';
+$JAZZ = 'Jazz';
+$RAP = 'Rap';
+$ROCK = 'Rock';
+// Fin liste artistes
 
 
  ?>

@@ -103,37 +103,69 @@ $_CORRECT = 'Vous &ecirctes correctement inscrit';
 //fin Conditions Inscription
 
 
-//Top 3 Artistes
+//Accueil
+$_TOP_ARTISTE = 'Top 3 Artistes';
+$_NEW_ARTISTE = 'Nouveaux artistes';
+$COEUR = 'Coup de coeur';
+$VENIR = 'Concerts à venir';
+//Fin Accueil
 
-//Fin Top 3 Artistes
-
-
-//Nouveaux artistes
-
-//Fin Nouveaux artistes
-
-
-//Coup de coeur 
-
-//Fin Coup de coeur
-
-
-//Concerts à venir
-
-//Fin Concerts à venir
-
-
-
-
-
-//Connexion
-
-//Fin Conexion
+//Liste artistes
+$_RECHERCHE_GENRE = 'Rechercher pas genre';
+$POP = 'Pop';
+$CLASSIC = 'Classique';
+$_MUSIQUE_MONDE = 'Musique du monde';
+$METAL = 'Metal';
+$REGGAE = 'Reggae';
+$VARIETE = 'Vari&eacutet&eacute';
+$ALTERNATIF = 'Alternatif';
+$ELECT = 'Electro/House';
+$_R_B = 'R&ampB';
+$JAZZ = 'Jazz';
+$RAP = 'Rap';
+$ROCK = 'Rock';
+// Fin liste artistes
 
 
-//Connexion
+//
 
-//Fin Conexion
 
+// Fin
+
+
+//
+
+
+// Fin
+
+
+//
+
+
+// Fin
+
+
+//
+
+
+// Fin
+
+
+//
+
+
+// Fin
+
+
+//
+
+
+// Fin
+
+
+//
+
+
+// Fin
 
  ?>
