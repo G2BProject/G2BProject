@@ -30,6 +30,15 @@
 		));
 	}
 
+	function infoConcert($nom){
+		global $bdd;
+		$query=$bdd->prepare('SELECT concert.nom_du_concert, concert.date_du_concert, concert.heure_du_concert, salle.nom_de_la_salle FROM concert, salle WHERE nom_du_concert = :nom');
+        $query->bindValue(':nom',$nom, PDO::PARAM_STR);
+        $query->execute();
+	    $data_artiste=$query->fetch();
+	    return $data_artiste;
+	}
+
 	function listConcertDep($departement){
 		global $bdd;
 		$req = $bdd -> prepare('SELECT concert.nom_du_concert, concert.date_du_concert, concert.heure_du_concert, salle.nom_de_la_salle FROM concert, salle WHERE concert.salle_ID = salle.ID AND salle.departement = :departement');

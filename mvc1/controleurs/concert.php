@@ -1,7 +1,8 @@
 <?php 
 //include('modeles/modele_artiste.php');
 //on executera ici les fonctions du modèle dont nous aurons besoin.
-
+	$nom = $_GET['concert'] ;
+	$info = infoConcert($nom) ;
 
 
 include('vues/header.php');

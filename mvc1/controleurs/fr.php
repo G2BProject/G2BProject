@@ -13,11 +13,6 @@
 //Fin header
 
 // Body
-
-	$TXT_A_VRNIR = 'CONCERTS A VENIR';
-	$TXT_COEUR = 'COUPS DE COEUR';
-	$TXT_TOP = 'TOP 3 DES ARTISTES';
-	$TXT_NOUVEAUTES = 'NOUVEAUX ARTISTES';
 	$TXT_SUIVRE = 'Suivez-nous!';
 	$TXT_CONNECTES = 'Connectés';
 	$TXT_INSCRITS = 'Inscrits';
@@ -138,11 +133,11 @@ $ENVOI = 'Envoyer';
 
 
 //listeSalles
-$SALLES = 'Voici les salles de votre région';
+$SALLES = 'Voici les salles de votre r&eacutegion';
 $_SALLES_DEP = 'Si vous voulez voir les salles d\'un autre d&eacutepartement, rentrez le ici';
 $DEPARTEMENT = 'D&eacutepartement';
 $TXT_EX = 'Ex: pour Paris tapez :75';
-$_VOIR_SALLE = 'Voir les salles de ce d&eacutepartement';
+$_VOIR_SALLE = 'Voir les salles de ce département';
 // Fin listeSalles
 
 
@@ -151,14 +146,26 @@ $CONCERT = 'Voici les concerts de votre d&eacutepartement';
 $_CONCERT_DEP = 'Si vous voulez voir les concerts d\'un d&eacutepartement précis, rentrez le ici :';
 $DEPARTEMENT = 'D&eacutepartement';
 //$TXT_EX = 'Ex: pour Paris tapez :75';
-$_VOIR_CONCERT = 'Voir les concerts de ce d&eacutepartement';
+$_VOIR_CONCERT = 'Voir les concerts de ce département';
 // Fin listeConcerts
 
 
-//
-
-
-// Fin
+// Profil
+$MODIF = 'Modifier';
+$DATE_INSCRIT = 'Date d\'inscription';
+$BIO = 'Biographie';
+$AJOUT_ARTISTE = 'Ajouter un artiste';
+$AJOUT_CONCERT = 'Ajouter un concert';
+$AJOUT_SALLE = 'Ajouter une salle';
+$ADMIN = 'Administration du site';
+$NOM_ARTISTE = 'Nom de l\'artiste';
+$DATE_CONCERT = 'Date du concert';
+$LIEU = 'Lieu';
+$NOM_SALLE = 'Nom de la salle';
+$PREFERE = 'Artistes pr&eacutef&eacuter&eacutes';
+$MES_GENRES = 'Mes genres musicaux';
+$GENRE = 'Genre';
+// Fin Profil
 
 
 //

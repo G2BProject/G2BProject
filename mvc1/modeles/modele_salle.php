@@ -20,9 +20,17 @@
 		return $req;
 	}
 
+	/* function listSallesDep($departement){
+		global $bdd;
+		$req = $bdd -> query("SELECT nom_de_la_salle, adresse_salle, description_salle, image_salle, nombre_de_place, numero_de_telephone FROM salle WHERE departement = $departement");
+		return $req;
+	} */
+
 	function listSallesDep($departement){
 		global $bdd;
-		$req = $bdd -> query("SELECT nom_de_la_salle, adresse_salle, description_salle, image_salle, nombre_de_place, numero_de_telephone FROM salle WHERE departement = '$departement'");
-		return $req;
+		$req = $bdd -> prepare('SELECT nom_de_la_salle, adresse_salle, nombre_de_place, image_salle, numero_de_telephone FROM salle WHERE salle.departement = :departement');
+		$req -> execute(array('departement' => $departement));
+		return $req ;
 	}
+
 ?>
