@@ -12,9 +12,9 @@
 		foreach ($reqConcertDep as $concert){
 			echo'
 			<div class="conteneur"> <img class="gauche" alt="Concert" width="200" height="200" src="ressources/image/Salle1.png" />
-			  <h1>Nom du concert : '.$concert['nom_du_concert'].'</h1> 
-			  <p>Date et heure : '.$concert['date_du_concert'].' à '.$concert['heure_du_concert'].'</p>
-			  <p>Salle : '.$concert['nom_de_la_salle'].'
+			  <h1> Nom du concert : <a href="?page=concert&concert='.$concert['nom_du_concert'].'">'.$concert['nom_du_concert'].'</a></h1> 
+			  <p> Date et heure : '.$concert['date_du_concert'].' à '.$concert['heure_du_concert'].'</p>
+			  <p> Salle : '.$concert['nom_de_la_salle'].'
 			  </div>';
 		}
 	}else{
@@ -30,9 +30,9 @@
 			foreach ($reqConcertDep as $concert){
 				echo'
 				<div class="conteneur"> <img class="gauche" alt="Concert" width="200" height="200" src="ressources/image/Salle1.png" />
-				<h1>Nom du concert : '.$concert['nom_du_concert'].'</h1>
-				<p>Date et heure : '.$concert['date_du_concert'].' à '.$concert['heure_du_concert'].' </p>
-				<p>Salle : '.$concert['nom_de_la_salle'].'
+				<h1> Nom du concert : <a href="?page=concert&concert='.$concert['nom_du_concert'].'">'.$concert['nom_du_concert'].'</a></h1>
+				<p> Date et heure : '.$concert['date_du_concert'].' à '.$concert['heure_du_concert'].' </p>
+				<p> Salle : '.$concert['nom_de_la_salle'].'
 				</div>';
 			}
 		}
