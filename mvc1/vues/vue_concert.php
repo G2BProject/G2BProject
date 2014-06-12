@@ -13,7 +13,7 @@
 				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> Nombre de places : </a> <?php echo $info['nombre_de_place'] ; ?></div> </li>
 			</ul>
 
-			<div class="locconcert"> </div>fo
+			<div class="locconcert"> </div>
 			<div class="localiserconcert"> Localiser le concert : </div>
 		</div>
 	</div>
