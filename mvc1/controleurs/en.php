@@ -13,11 +13,6 @@
 //Fin header 
 	
 // Body
-
-	$TXT_A_VRNIR = 'FOLLOWING CONCERTS';
-	$TXT_COEUR = 'OUR FAVORITE SONGS';
-	$TXT_TOP = 'TOP 3 all artists';
-	$TXT_NOUVEAUTES = 'LATEST ARTISTS';
 	$TXT_SUIVRE = 'Follow-us!';
 	$TXT_CONNECTES = 'Connected';
 	$TXT_INSCRITS = 'Subscribers';
@@ -157,4 +152,23 @@ $DEPARTEMENT = 'Department';
 //$TXT_EX = 'Ex: for Paris write : 75';
 $_VOIR_CONCERT = 'Check this department\'s lives';
 // Fin listeConcerts
+
+
+// Profil
+$MODIF = 'Modify';
+$DATE_INSCRIT = 'Registration date';
+$BIO = 'Biography';
+$AJOUT_ARTISTE = 'Add an artist';
+$AJOUT_CONCERT = 'Add a concert';
+$AJOUT_SALLE = 'Add a stage';
+$ADMIN = 'Site administration';
+$NOM_ARTISTE = 'Artist name';
+$DATE_CONCERT = 'Concert date';
+$LIEU = 'Place';
+$NOM_SALLE = 'Stage name';
+$PREFERE = 'Favorite artists';
+$MES_GENRES = 'My genres';
+$GENRE = 'Genre';
+// Fin Profil
+
  ?>

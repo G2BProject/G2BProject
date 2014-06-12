@@ -4,8 +4,8 @@
 		echo'
 			<p > '.$_SALLES_DEP.': </p>
 			<form action="index.php?page=listeSalles" method="post">
-				<p><label >'.$DEPARTEMENT.':</label><input type="text" name="departement" id="departement"/> $TXT_EX</p>
-				<p ><input type="submit" value="'.$_VOIR_SALLE.'"></p>
+			<p><label >'.$DEPARTEMENT.' :</label><input type="text" name="departement" id="departement"/> $TXT_EX</p>
+			<p><input type="submit" value="'.$_VOIR_SALLE.'"></p>
        		</form>
        		</div>
 		';

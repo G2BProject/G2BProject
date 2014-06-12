@@ -5,7 +5,7 @@
 			<p >'.$_CONCERT_DEP.' :<br /><br /></p>
 			<form action="index.php?page=listeConcerts" method="post">
 				<p><label >'.$DEPARTEMENT.' :</label><input type="text" name="departement" id="departement"/> '.$TXT_EX.'</p>
-				<p ><input type="submit" value="Voir les concerts de ce departement"></p>
+				<p ><input type="submit" value="'.$_VOIR_CONCERT.'"></p>
        		</form>
        		</div>
 		';
