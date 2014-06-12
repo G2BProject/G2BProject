@@ -67,7 +67,7 @@
 	$NOVEMBRE= 'Novembre';
 	$DECEMBRE = 'Décembre';
 	$ADRESSE = 'Adresse';
-	$DEPARTEMENT = 'Département';
+	$DEPARTEMENT = 'D&eacutepartement';
 	$TXT_EX = 'Ex: pour Paris tapez : 75';
 	$TXT_PAYS = 'Pays';
 	$AVATAR = 'Votre avatar ';
@@ -127,22 +127,32 @@ $ROCK = 'Rock';
 // Fin liste artistes
 
 
-//
+//Contact
+$CONTACT = 'Nous contacter';
+$NOM = 'Nom, Prémon';
+//$TXT_MAIL = 'Adresse mail';
+$OBJET = 'Objet';
+$MESSAGE = 'Message';
+$ENVOI = 'Envoyer';
+// Fin Contact
 
 
-// Fin
+//listeSalles
+$SALLES = 'Voici les salles de votre région';
+$_SALLES_DEP = 'Si vous voulez voir les salles d\'un autre d&eacutepartement, rentrez le ici';
+$DEPARTEMENT = 'D&eacutepartement';
+$TXT_EX = 'Ex: pour Paris tapez :75';
+$_VOIR_SALLE = 'Voir les salles de ce d&eacutepartement';
+// Fin listeSalles
 
 
-//
-
-
-// Fin
-
-
-//
-
-
-// Fin
+//listeConcerts
+$CONCERT = 'Voici les concerts de votre d&eacutepartement';
+$_CONCERT_DEP = 'Si vous voulez voir les concerts d\'un d&eacutepartement précis, rentrez le ici :';
+$DEPARTEMENT = 'D&eacutepartement';
+//$TXT_EX = 'Ex: pour Paris tapez :75';
+$_VOIR_CONCERT = 'Voir les concerts de ce d&eacutepartement';
+// Fin listeConcerts
 
 
 //

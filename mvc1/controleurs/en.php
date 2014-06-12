@@ -105,12 +105,14 @@
 	$_CORRECT = 'You are properly registered';
 //fin Conditions Inscription
 
+
 // Accueil
 $_TOP_ARTISTE = 'Top 3 all artists';
 $_NEW_ARTISTE = 'New artists';
 $COEUR = 'Our liking';
 $VENIR = 'Future concerts';
 // Fin accueil
+
 
 //Liste artistes
 $_RECHERCHE_GENRE = 'Search by genre';
@@ -129,4 +131,30 @@ $ROCK = 'Rock';
 // Fin liste artistes
 
 
+//Contact
+$CONTACT = 'Contact us';
+$NOM = 'Last name, First name';
+//$TXT_MAIL = 'Adresse mail';
+$OBJET = 'Object';
+$MESSAGE = 'Message';
+$ENVOI = 'Submit';
+// Fin Contact
+
+
+//listeSalles
+$SALLES = 'Stages from your region';
+$_SALLES_DEP = 'If you want to check another department\'s stages, submit it below';
+$DEPARTEMENT = 'Department';
+//$TXT_EX = 'Ex: for Paris write : 75';
+$_VOIR_SALLE = 'Check this department\'s stages';
+// Fin listeSalles
+
+
+//listeConcerts
+$CONCERT = 'Lives from your region';
+$_CONCERT_DEP = 'If you want to check another department\'s live, submit it below';
+$DEPARTEMENT = 'Department';
+//$TXT_EX = 'Ex: for Paris write : 75';
+$_VOIR_CONCERT = 'Check this department\'s lives';
+// Fin listeConcerts
  ?>
