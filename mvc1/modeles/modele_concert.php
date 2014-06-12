@@ -12,7 +12,7 @@
 		'date_du_concert' => $date_du_concert,
 		'heure_concert' => $heure_du_concert,
 		'salle_ID' => $salle_ID,
-		'image_concert' => $image_concert
+		'image_concert' => $image_concert,
 		));
 
 		$req2 = $bdd -> query("SELECT ID FROM concert WHERE nom_du_concert ='$nom_du_concert'");

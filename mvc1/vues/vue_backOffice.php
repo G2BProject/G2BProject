@@ -10,7 +10,11 @@
 			<label for="suppArtiste" class="standard">Supprimer l'artiste suivant :</label><input type="text" name="suppArtiste" id="suppArtiste" /><br />
 			<label for="suppConcert" class="standard">Supprimer le concert suivant :</label><input type="text" name="suppConcert" id="suppConcert" />
 		</p>
-		
+		<br>
+		<div class="details">Choisissez ci dessus les news</div>
+		<p>
+			<label for="suppConcert" class="standard">Changer le coup de coeur numero 1:</label><input type="text" name="suppConcert" id="suppConcert" />
+		</p>	
 		<p class="details"><input type="submit" value="Actualisation des données" /></p>
 </div> </form>
 </html>
