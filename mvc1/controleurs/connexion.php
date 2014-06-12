@@ -28,7 +28,6 @@
 			{
 			    $_SESSION['pseudo'] = $data['pseudo'];
 			    $_SESSION['mot_de_passe'] = $data['mot_de_passe'];
-			    $_SESSION['departement'] = $data['departement'];
 			   	include('controleurs/accueil.php');
 			    
 			} 

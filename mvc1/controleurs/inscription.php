@@ -18,8 +18,8 @@ if (empty($_POST['Role_ID'])) {
 
 	if(!isset($_POST['cgu']))
 	{
-		die('<div class="titre1"><p>Vous devez accepter les condition generales d\'utilisation du site pour vous inscrire.</p>
-		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+		die('<div class="titre1"><p>'.$_CONDITION.'.</p>
+		<p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 			');
 	} 
 
@@ -31,15 +31,15 @@ if (empty($_POST['Role_ID'])) {
 		$res = $req->fetch();
 		if($res)
 		{ 
-			die('<div class="titre1"><p>Le pseudo choisi est deja utilise.</p>
-		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+			die('<div class="titre1"><p>'.$_PSEUDO_UTILISE.'.</p>
+		<p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 				');
 		} 
 	}
 	else
 	{
-		die('<div class="titre1"><p>Vous devez choisir un nom d\'utilisateur.</p>
-		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+		die('<div class="titre1"><p>'.$_CHOIX.'.</p>
+		<p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 			');
 	}
 
@@ -53,22 +53,22 @@ if (empty($_POST['Role_ID'])) {
 			$res2 = verifMail($adresse_email);
 			if ($res2)
 			{
-				die('<div class="titre1"><p>L\'adresse mail renseigne est deja utilise.</p>
-		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+				die('<div class="titre1"><p>'.$_MAIL_UTILISE.'.</p>
+		<p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 					');
 			}	
 		}
 		else
 		{
-			die('<div class="titre1"><p>Les deux adresses mails renseignees doivent etre identiques.</p>
-		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+			die('<div class="titre1"><p>'.$_MEME_MAIL.'.</p>
+		<p>'.$_APPUI.'<a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 				');
 		}
 	}
 	else
 	{
-		die('<div class="titre1"><p>Votre adresse mail n\'a pas un format valide.</p>
-		<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+		die('<div class="titre1"><p>'.$_FORMAT_MAIL.'.</p>
+		<p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 			');
 	}
 
@@ -88,36 +88,36 @@ if (empty($_POST['Role_ID'])) {
 					}
 					else
 					{
-						die('<div class="titre1"><p>Les deux mots de passe renseignes doivent etre identiques.</p>
-							<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+						die('<div class="titre1"><p>'.$_MEME_MDP.'.</p>
+							<p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 							');
 					}
 				}
 				else
 				{
-					die('<div class="titre1"><p>Votre mot de passe doit contenir au moins un chiffre.</p>
-							<p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+					die('<div class="titre1"><p>'.$_CHIFFRE.'.</p>
+							<p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 						');
 				}
 			}
 			else
 			{
-				die('<div class="titre1"><p>Votre mot de passe doit contenir au moins une majuscule.</p>
-					 <p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+				die('<div class="titre1"><p>'.$_MAJ.'.</p>
+					 <p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 					');
 			}
 		}
 		else
 		{
-			die('<div class="titre1"><p>Votre mot de passe doit contenir au moins une minuscule.</p>
-					 <p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+			die('<div class="titre1"><p>'.$_MIN.'.</p>
+					 <p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 				');
 		}
 	}
 	else
 	{
-		die('<div class="titre1"><p> Votre mot de passe doit comporter au moins 8 caracteres.</p>
-					 <p>Cliquez <a href="javascript:history.go(-1)">ici</a> pour revenir</p></div>
+		die('<div class="titre1"><p> '.$_CARACT.'.</p>
+					 <p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
 					');
 	}
 
@@ -145,12 +145,12 @@ if (empty($_POST['Role_ID'])) {
 		
 		$extensions_valides = array('jpg','jpeg','png');
 		$extension_upload = strtolower(substr(strrchr($_FILES['image_membre']['name'],'.'),1));
-		if (!in_array($extension_upload,$extensions_valides)) $erreur = "Extension invalide.";
+		if (!in_array($extension_upload,$extensions_valides)) $erreur = "'.$EXTENSION.'";
 
-		if($_FILES['image_membre']['size'] > $max_size) $erreur = "Le fichier dépasse la taille limite." ;
+		if($_FILES['image_membre']['size'] > $max_size) $erreur = "'.$TAILLE.'." ;
 
 		$image_sizes = getimagesize($_FILES['image_membre']['tmp_name']);
-		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "L'image a des dimensions trop importantes.";
+		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "'.$DIM.'.";
 
 		if(isset($erreur)){
 			echo "$erreur";
@@ -177,7 +177,7 @@ if (empty($_POST['Role_ID'])) {
 
 		include('vues/vue_accueil.php');
 		include('vues/footer.php');
-	echo '<script> alert("Vous etes correctement inscrit '.$pseudo.'!");	</script>';
+	echo '<script> alert("'.$CORRECT.' '.$pseudo.'!");	</script>';
 }
 
  ?>

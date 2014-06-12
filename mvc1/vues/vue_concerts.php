@@ -1,10 +1,12 @@
 <?php
 	if(isset($_SESSION['pseudo']) and empty($reqConcertDep)){
-		echo'<div class="listDep"><p> Voici les concerts de votre département : '.$_SESSION['departement'].'<br /><br /></p>';
+		echo'<div class="listDep"><p> '.$CONCERT.' : '.$_SESSION['departement'].' <br /><br /></p>';
 		echo'
-			<p >Si vous voulez voir les concerts d\'un autre departement, rentrez le ici : </p>
+			<br />
+			<br /> 
+			<p >'.$_CONCERT_DEP.' :<br /><br /></p>
 			<form action="index.php?page=listeConcerts" method="post">
-				<p><label >Departement :</label><input type="text" name="departement" id="departement"/> ex: pour Paris tapez:75</p>
+				<p><label >'.$DEPARTEMENT.' :</label><input type="text" name="departement" id="departement"/> '.$TXT_EX.'</p>
 				<p ><input type="submit" value="Voir les concerts de ce departement"></p>
        		</form>
        		</div>
@@ -15,11 +17,11 @@
 			  <h1>Nom du concert : '.$concert['nom_du_concert'].'</h1> <p> Date et heure : '.$concert['date_du_concert'].' à '.$concert['heure_du_concert'].' </p></div>';
 		}
 	}else{
-		echo'<div class="listDep">
-			<p >Si vous voulez voir les concerts d\'un departement précis, rentrez le ici : </p>
+		echo'<div class="listDep"><br />
+			<p >'.$_CONCERT_DEP.' </p>
 			<form action="index.php?page=listeConcerts" method="post">
-				<p><label>Departement :</label><input type="text" name="departement" id="departement"/> ex: pour Paris tapez:75</p>
-				<p><input type="submit" value="Voir les concerts de ce departement"></p>
+				<p><label>'.$DEPARTEMENT.' :</label><input type="text" name="departement" id="departement"/> '.$TXT_EX.'</p>
+				<p><input type="submit" value="'.$_VOIR_CONCERT.'"></p>
        		</form>
        		</div>
 		';

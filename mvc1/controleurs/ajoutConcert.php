@@ -1,8 +1,8 @@
 <?php
 
 if (empty($_POST['nom_du_concert'])) {
-	
-	
+
+
 	//on executera ici les fonction du modèle dont nous aurons besoin.
 
 
@@ -13,7 +13,7 @@ if (empty($_POST['nom_du_concert'])) {
 
 
 	include('vues/footer.php');
-	
+
 }else{
 	include('modeles/modele_concert.php');
 	include('modeles/modele_artiste.php');

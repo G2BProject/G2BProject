@@ -17,7 +17,7 @@ if (empty($_POST['mot_cle'])) {
 	$type_recherche = $_POST['type_recherche'];
 	$reqRecherche = search($mot_cle,$type_recherche);
 	
-	include('vues/header.php');
+	include('vues/header_fr.php');
 	include('vues/vue_resultat.php');
 	include('vues/footer.php');
 	

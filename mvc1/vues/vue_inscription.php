@@ -1,26 +1,26 @@
 <script type="text/javascript"
 src="vues/javascript.js">
 </script> 
-
-<div class="formulaire">
+ 
+	<div class="formulaire">
 			<form action="index.php?page=inscription" method="post" enctype="multipart/form-data">
-				<p><span class="standard"><span class="etoile">*</span>Type d'utilisateur :</span>
+				<p><span class="standard"><span class="etoile">*</span><?php echo $TXT_UTILISATEUR ?> :</span>
 					<select name="Role_ID">
-						<option value="1">Membre</option>
-						<option value="2">Artiste</option>
-						<option value="3">Propriétaire de salle</option>
+						<option value="1"><?php echo $TXT_MEMBRE ?></option>
+						<option value="2"><?php echo $TXT_ARTISTE ?></option>
+						<option value="3"><?php echo $TXT_PROPRIETAIRE ?></option>
 					</select>
-				<p><label for="pseudo" class="standard"><span class="etoile">*</span>Nom d'utilisateur :</label><input type="text" name="pseudo" id="pseudo"/></p>
-				<p><label for="adresse_email" class="standard" ><span class="etoile">*</span>Adresse mail :</label><input type="mail" name="adresse_email" id="adresse_email" onchange="verifEmail();"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Confirmation d'adresse mail :</label><input type="mail" name="emailConfirm" id="emailConfirm"onchange="verifEmail();"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Mot de passe :</label><input type="password" name="mot_de_passe" id="mot_de_passe" onchange="verifPassword();"/></p>
-				<p><label class="standard"><span class="etoile">*</span>Confirmation de mot de passe :</label><input type="password" name="passwordConfirm" id="passwordConfirm" onchange="verifPassword();"/></p>
-				<p><label class="standard">Nom :</label><input type="text" name="nom_membre" id="nom_membre"/></p>
-				<p><label class="standard">Prenom :</label><input type="text" name="prenom_membre" id="prenom_membre"/></p>
-				<p><span class="standard">Sexe :</span>
-					 <input type="radio" name="sexe" value="1" id="homme" /> <label for="homme">Homme</label>
-       					 <input type="radio" name="sexe" value="2" id="femme" /> <label for="femme">Femme</label></p>
-				<p><span class="standard">Date de naissance :</span>
+				<p><label for="pseudo" class="standard"><span class="etoile">*</span><?php echo $TXT_NOM_UTILISATEUR ?>:</label><input type="text" name="pseudo" id="pseudo"/></p>
+				<p><label for="adresse_email" class="standard" ><span class="etoile">*</span><?php echo $TXT_MAIL ?> :</label><input type="mail" name="adresse_email" id="adresse_email" onchange="verifEmail();"/></p>
+				<p><label class="standard"><span class="etoile">*</span><?php echo $TXT_CONFIRMER_MAIL ?> :</label><input type="mail" name="emailConfirm" id="emailConfirm"onchange="verifEmail();"/></p>
+				<p><label class="standard"><span class="etoile">*</span><?php echo $TXT_MDP ?> :</label><input type="password" name="mot_de_passe" id="mot_de_passe" onchange="verifPassword();"/></p>
+				<p><label class="standard"><span class="etoile">*</span><?php echo $TXT_CONFIRMER_MDP ?> :</label><input type="password" name="passwordConfirm" id="passwordConfirm" onchange="verifPassword();"/></p>
+				<p><label class="standard"><?php echo $TXT_NOM ?> :</label><input type="text" name="nom_membre" id="nom_membre"/></p>
+				<p><label class="standard"><?php echo $TXT_PRENOM ?> :</label><input type="text" name="prenom_membre" id="prenom_membre"/></p>
+				<p><span class="standard"><?php echo $TXT_SEXE ?> :</span>
+					 <input type="radio" name="sexe" value="1" id="homme" /> <label for="homme"><?php echo $TXT_H ?></label>
+       					 <input type="radio" name="sexe" value="2" id="femme" /> <label for="femme"><?php echo $TXT_F ?></label></p>
+				<p><span class="standard"><?php echo $TXT_NAISSANCE ?> :</span>
 					<select name="jour">
 						<option value="01">01</option>
 						<option value="02">02</option>
@@ -56,18 +56,18 @@ src="vues/javascript.js">
 					</select>
 
 					<select name="mois">
-						<option value="01">Janvier</option>
-						<option value="02">Février</option>
-						<option value="03">Mars</option>
-						<option value="04">Avril</option>
-						<option value="05">Mai</option>
-						<option value="06">Juin</option>
-						<option value="07">Juillet</option>
-						<option value="08">Août</option>
-						<option value="09">Septembre</option>
-						<option value="10">Octobre</option>
-						<option value="11">Novembre</option>
-						<option value="12">Décembre</option>
+						<option value="01"><?php echo $JANVIER ?></option>
+						<option value="02"><?php echo $FERVRIER ?></option>
+						<option value="03"><?php echo $MARS ?></option>
+						<option value="04"><?php echo $AVRIL ?></option>
+						<option value="05"><?php echo $MAI ?></option>
+						<option value="06"><?php echo $JUIN ?></option>
+						<option value="07"><?php echo $JUILLET ?></option>
+						<option value="08"><?php echo $AOUT ?></option>
+						<option value="09"><?php echo $SEPTEMBRE ?></option>
+						<option value="10"><?php echo $OCTOBRE ?></option>
+						<option value="11"><?php echo $NOVEMBRE ?></option>
+						<option value="12"><?php echo $DECEMBRE ?></option>
 					</select>
 
 					<select name="an">
@@ -163,11 +163,11 @@ src="vues/javascript.js">
 						<option value="2013" >2013</option>
 						<option value="2014" >2014</option>
 					</select>
-				<p><label class="standard">Adresse :</label><input type="text" name="adresse_membre" id="adresse_membre"/></p>
+				<p><label class="standard"><?php echo $ADRESSE ?> :</label><input type="text" name="adresse_membre" id="adresse_membre"/></p>
 					
-				<p><label class="standard">Departement :</label><input type="text" name="departement" id="departement"/> ex: pour Paris tapez:75</p>
+				<p><label class="standard"><?php echo $DEPARTEMENT ?> :</label><input type="text" name="departement" id="departement"/> <?php echo $TXT_EX ?></p>
 
-					<p><span class="standard">Pays :</span>
+					<p><span class="standard"><?php echo $TXT_PAYS ?> :</span>
 					<select name="pays" size="1">			
 						<option value selected="France">France </option>
 						<option value="Afghanistan">Afghanistan </option>
@@ -398,19 +398,19 @@ src="vues/javascript.js">
 						<option value="Zambie">Zambie </option>
 						<option value="Zimbabwe">Zimbabwe </option>
 					</select>
-
-				<p><label for="image_membre" class="standard">Votre avatar (PNG, JPG ou JPEG, 1 Mo max.) :</label><input type="file" name="image_membre" id="image_membre"/></p>
+ 
+				<p><label for="image_membre" class="standard"><?php echo $AVATAR ?> (PNG, JPG ou JPEG, 1 Mo max.) :</label><input type="file" name="image_membre" id="image_membre"/></p>
 				<p><input type="hidden" name="maxFileSize" value="1000000" /></p>
 
-				<p><span class="standard">Voulez-vous vous inscrire à la newsletter ?</span>
-					 <input type="radio" name="newsletter" value="oui" id="oui" /> <label for="oui">Oui</label>
-       					 <input type="radio" name="newsletter" value="non" id="non" /> <label for="non">Non</label></p>
+				<p><span class="standard"><?php echo $TXT_NEWS ?></span>
+					 <input type="radio" name="newsletter" value="oui" id="oui" /> <label for="oui"><?php echo $OUI ?></label>
+       					 <input type="radio" name="newsletter" value="non" id="non" /> <label for="non"><?php echo $NON ?></label></p>
+						<!-- voir pour la traduction du bouton "choisissez un fichier"-->
+       			<p><label class="standard" for="cgu"><span class="etoile">*</span><?php echo $TXT_CGU ?>.</label><input type="checkbox" name="cgu" id="cgu" /></p>
 
-       			<p><label class="standard" for="cgu"><span class="etoile">*</span>J'ai lu et j'accepte les conditions générales d'utilisation du site.</label><input type="checkbox" name="cgu" id="cgu" /></p>
+				<p class="details"><span class="etoile"> * </span> : <?php echo $TXT_OBLIGATOIRE ?></p>
 
-				<p class="details"><span class="etoile">*</span> : champs obligatoires</p>
-
-       			<p class="standard"><input type="submit" value="S'inscrire"></p>
+       			<p class="standard"><input type="submit" value="<?php echo $TXT_S_INSCRIRE ?>"></p>
        			</form>
 
 

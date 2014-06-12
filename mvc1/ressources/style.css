@@ -14,7 +14,7 @@ body{
 	background-size: 12%;
 	margin:auto;
 	height: 200px;
-	background-image: url(image/logo.png);
+	background-image: url(image/Logo.png);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -1328,4 +1328,31 @@ margin-left: 350px;
 color:white;
 font-size: 130%;
 margin-top: 130px;
+}
+
+/*conditions générales */
+
+.Conditions_Generales{
+text-decoration: underline;
+width: 800px;
+margin-top:0px;
+color:white;
+font-size: 150%;
+text-align : center ;
+}
+
+.cgu{
+color : white ;
+font-size: 110%;
+
+}
+
+.cgu1{
+color : white ;
+font-size: 90%;	
+}
+
+.cgu2{ 
+	color : white ;	
+	text-indent: justify;
 }
