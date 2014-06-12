@@ -1,5 +1,5 @@
 <html>
-	<form method="post" action="index.php?page=backOffice">
+	<form method="post" action="index.php?page=backOffice" enctype="multipart/form-data">
 		<div class="formulaire">
 		<div class="details">Administation du site</div></br>
 		<div class="details">Remplissez les champs de texte pour faire les modifications voulues</div>
@@ -10,10 +10,22 @@
 			<label for="suppArtiste" class="standard">Supprimer l'artiste suivant :</label><input type="text" name="suppArtiste" id="suppArtiste" /><br />
 			<label for="suppConcert" class="standard">Supprimer le concert suivant :</label><input type="text" name="suppConcert" id="suppConcert" />
 		</p>
-		<br>
-		<div class="details">Choisissez ci dessus les news</div>
 		<p>
-			<label for="suppConcert" class="standard">Changer le coup de coeur numero 1:</label><input type="text" name="suppConcert" id="suppConcert" />
+		<div class="details">Choisissez ci dessus les news</div><br />
+		<label for="actu" class="standard">intitulé de l'actu:</label><input type="text" name="actu" id="actu" />
+		<p><label for="photo_actu" class="standard">Image de l'actu (PNG, 1 Mo max.) :</label><input type="file" name="photo_actu" id="photo_actu"/></p>
+		<p><input type="hidden" name="maxFileSize" value="1000000" /></p>
+		</p>
+		<p>
+			<div class="details">Changer les coups de coeur </div><br />
+			<label for="num1" class="standard">numero 1:</label><input type="text" name="num1" id="num1" /><br />
+			<label for="num2" class="standard">numero 2:</label><input type="text" name="num2" id="num2" />
+		</p>
+				<p>
+			<div class="details">Changer le top3 </div><br />
+			<label for="top1" class="standard">Top 1:</label><input type="text" name="top1" id="top1" /><br />
+			<label for="top2" class="standard">Top 2:</label><input type="text" name="top2" id="top2" /><br />
+			<label for="top3" class="standard">Top 3:</label><input type="text" name="top3" id="top3" />
 		</p>	
 		<p class="details"><input type="submit" value="Actualisation des données" /></p>
 </div> </form>

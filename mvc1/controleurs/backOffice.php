@@ -38,4 +38,68 @@ if (!empty($_POST['suppConcert'])) {
 	}
 }
 
+if (!empty($_POST['num1'])) {
+	if (!empty($_POST['num2'])) {
+	if(!changeCoup($_POST['num1'],$_POST['num2'])){
+		echo '<script> alert("Un de vos coups de coeur n\'existe pas");	</script>';
+	}else{
+		echo '<script> alert("Vous aves bien mis à jour vos coups de coeur");	</script>';
+	}
+	}else{
+	echo '<script> alert("Vous devez remplir le coup de coeur 1 et 2");	</script>';	
+	}
+}elseif (!empty($_POST['num2'])) {
+	echo '<script> alert("Vous devez remplir le coup de coeur 1 et 2");	</script>';	
+}
+
+if (!empty($_POST['top1']) AND !empty($_POST['top2']) AND !empty($_POST['top3'])){
+	if(!changeTop($_POST['top1'],$_POST['top2'],$_POST['top3'])){
+		echo '<script> alert("Un de vos artistes du top n\'existe pas");	</script>';
+	}else{
+		echo '<script> alert("Vous aves bien mis à jour votre top 3");	</script>';
+	}
+}elseif((!empty($_POST['top1']) and (empty($_POST['top2']) OR empty($_POST['top3']))) OR (!empty($_POST['top2']) and (empty($_POST['top1']) OR empty($_POST['top3']))) OR (!empty($_POST['top3']) and (empty($_POST['top2']) OR empty($_POST['top1'])))) {
+	echo '<script> alert("Vous devez remplir tous vos top");	</script>';
+}
+
+
+
+if(!empty($_POST['actu'])){
+	if($_FILES['photo_actu']['error'] == 0){
+
+		$max_size = 1000000 ;
+		$max_height = 1000 ;
+		$max_width = 1000 ;
+
+		$extensions_valides = array('png');
+		$extension_upload = strtolower(substr(strrchr($_FILES['photo_actu']['name'],'.'),1));
+		if (!in_array($extension_upload,$extensions_valides)) $erreur = "Extension invalide.";
+
+		if($_FILES['photo_actu']['size'] > $max_size) $erreur = "Le fichier dépasse la taille limite." ;
+
+		$image_sizes = getimagesize($_FILES['photo_actu']['tmp_name']);
+		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "L'image a des dimensions trop importantes.";
+
+		if(isset($erreur)){
+			echo "$erreur";
+		}
+		else{
+
+
+
+			if(!is_dir('ressources/image/actu')){
+				mkdir('ressources/image/actu', true);
+			}
+			//chmod('ressources/image/actu/actu.png',0755); //Change the file permissions if allowed
+     		unlink('ressources/image/actu/actu.png');
+			$photo_actu = 'ressources/image/actu/actu.png';
+			move_uploaded_file($_FILES['photo_actu']['tmp_name'],$photo_actu);
+		}
+	}
+	else{
+		$photo_actu = NULL ;
+	}	
+	updateActu($_POST['actu']);
+	echo '<script> alert("Vous avez mis a jour l\'actu de la page d\'accueil");	</script>';
+}
  ?>

@@ -52,4 +52,50 @@ function verifConcert($nom_concert){
 	}
  }
 
+function changeCoup($num1,$num2){
+	global $bdd;
+
+	$req1 = $bdd -> query("SELECT ID FROM artiste WHERE nom_artiste ='$num1'");
+	$res1 = $req1->fetch();
+	$ID_num1= (int)$res1['ID'];
+
+	$req2 = $bdd -> query("SELECT ID FROM artiste WHERE nom_artiste ='$num2'");
+	$res2 = $req2->fetch();
+	$ID_num2= (int)$res2['ID'];
+
+	if($res1 AND $res2){
+		$bdd->exec("UPDATE coup_de_coeur SET ID_artiste1= '$ID_num1' , ID_artiste2= '$ID_num2'");
+		return true;
+	}else{
+		return false;
+	}
+}
+function changeTop($top1,$top2,$top3){
+	global $bdd;
+
+	$req1 = $bdd -> query("SELECT ID FROM artiste WHERE nom_artiste ='$top1'");
+	$res1 = $req1->fetch();
+	$ID_top1= (int)$res1['ID'];
+
+	$req2 = $bdd -> query("SELECT ID FROM artiste WHERE nom_artiste ='$top2'");
+	$res2 = $req2->fetch();
+	$ID_top2= (int)$res2['ID'];
+
+	$req3 = $bdd -> query("SELECT ID FROM artiste WHERE nom_artiste ='$top3'");
+	$res3 = $req3->fetch();
+	$ID_top3= (int)$res3['ID'];
+
+	if($res1 AND $res2 AND $res3){
+		$bdd->exec("UPDATE top SET ID_artiste1= '$ID_top1' , ID_artiste2= '$ID_top2', ID_artiste3= '$ID_top3'");
+		return true;
+	}else{
+		return false;
+	}
+}
+
+function updateActu($actu){
+	global $bdd;
+	$bdd -> exec("UPDATE actu SET texte= '$actu'");
+}
+
  ?>
