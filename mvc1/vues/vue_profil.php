@@ -8,13 +8,13 @@
 		}else{
 		echo '"'.$info['image_membre'].'"';
 		}?>/></div>
-		<div class="date_insc"><?php echo $DATE_INSCRIT ?>:<?php echo $info['date_inscription'] ; ?></div>
-		<div class="pseudo"><?php echo $TXT_PSEUDO ?>:<?php echo $info['pseudo']; ?></div>
+		<div class="date_insc"><?php echo $DATE_INSCRIT ?> : <?php echo $info['date_inscription'] ; ?></div>
+		<div class="pseudo"><?php echo $TXT_PSEUDO ?> : <?php echo $info['pseudo']; ?></div>
 		<ul>
-			<li class="txt1Profil"><?php echo $ADRESSE ?>: <?php echo $info['adresse_membre']; ?></li>
-			<li class="txt1Profil"><?php echo $TXT_NAISSANCE ?>: <?php echo $info['date_de_naissance']; ?></li>
-			<li class="txt1Profil"><?php echo $TXT_MAIL ?>: <?php echo $info['adresse_email']; ?></li>
-			<li class="txt1Profil"><?php echo $BIO ?>: <?php echo $info['bio_membre']; ?></li>
+			<li class="txt1Profil"><?php echo $ADRESSE ?> : <?php echo $info['adresse_membre']; ?></li>
+			<li class="txt1Profil"><?php echo $TXT_NAISSANCE ?> : <?php echo $info['date_de_naissance']; ?></li>
+			<li class="txt1Profil"><?php echo $TXT_MAIL ?> : <?php echo $info['adresse_email']; ?></li>
+			<li class="txt1Profil"><?php echo $BIO ?> : <?php echo $info['bio_membre']; ?></li>
 			<li class="txt1Profil">
 			<?php 
 			if($info['role_ID']==1){
