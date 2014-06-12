@@ -3,18 +3,17 @@
 	<div class="container1concert">
 		<div id="photoconcert">
 			<p class="txt1concert">
-			Nom du concert:
+			<?php echo $info['nom_du_concert'] ; ?>
 			</p>
 
 			<ul>
-				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> Qui? </a>: Nom du ou des artistes se produisant sous le nom indiqué </div> </li>
-				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> Date </a>: le JJ/MM/AAAA à XXhXX </div> </li>
-				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> Lieu </a>: Adresse précise ou lien vers la page de la salle correspondante si répertoriée </div> </li>
+				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> Date : </a> <?php echo $info['date_du_concert'].' à '.$info['heure_du_concert']; ?></div> </li>
+				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> Lieu : </a> <?php echo $info['nom_de_la_salle'] ; ?></div> </li>
 				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> Où réserver </a>: Liens vers un site vendant des places </div> </li>
-				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> Nombre de places </a>: XXXX </div> </li>
+				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> Nombre de places : </a> <?php echo $info['nombre_de_place'] ; ?></div> </li>
 			</ul>
 
-			<div class="locconcert"> </div>
+			<div class="locconcert"> </div>fo
 			<div class="localiserconcert"> Localiser le concert : </div>
 		</div>
 	</div>

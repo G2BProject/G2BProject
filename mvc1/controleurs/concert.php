@@ -1,5 +1,5 @@
 <?php 
-//include('modeles/modele_artiste.php');
+include('modeles/modele_concert.php');
 //on executera ici les fonctions du modèle dont nous aurons besoin.
 	$nom = $_GET['concert'] ;
 	$info = infoConcert($nom) ;
