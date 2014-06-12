@@ -21,6 +21,10 @@ if (empty($_POST['nom_de_la_salle'])) {
 		include('vues/header.php');
 		die('Vous devez ajouter le nom de la salle.');
 	}
+	if(empty($_POST['departement'])){
+		include('vues/header.php');
+		die('Vous devez specifier un numero de departement pour votre salle.')
+	}
 	$nom_de_la_salle = htmlspecialchars($_POST['nom_de_la_salle']);
 	$adresse_salle = htmlspecialchars($_POST['adresse_salle']);
 	$departement = htmlspecialchars($_POST['departement']);
