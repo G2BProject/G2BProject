@@ -20,6 +20,7 @@ if (empty($_POST['nom_du_concert'])) {
 	if(isset($_POST['nom_du_concert']))
 	{
 		$nom_du_concert = htmlspecialchars($_POST['nom_du_concert']);
+		$nom_du_concert_image = preg_replace('/\s/', '', $nom_du_concert)
 		$res = nomConcert($nom_du_concert);
 		if($res)
 		{ 
@@ -93,7 +94,7 @@ if (empty($_POST['nom_du_concert'])) {
 
 			// $user_id = sha1($_SESSION['pseudo']); //
 
-			$image_concert = 'ressources/avatars/concerts/'.$user_pseudo.'/'.$nom_du_concert.'.'.$extension_upload;
+			$image_concert = 'ressources/avatars/concerts/'.$user_pseudo.'/'.$nom_du_concert_image.'.'.$extension_upload;
 			move_uploaded_file($_FILES['image_concert']['tmp_name'],$image_concert);
 		}
 	}

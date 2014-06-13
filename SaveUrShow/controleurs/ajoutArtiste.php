@@ -19,6 +19,7 @@ else
 	if(isset($_POST['nom_artiste']))
 	{
 		$nom_artiste = htmlspecialchars($_POST['nom_artiste']);
+		$nom_artiste_image = preg_replace('/\s/', '', $nom_artiste)
 		$res = nomArtiste($nom_artiste);
 		if($res)
 		{ 
@@ -62,7 +63,7 @@ else
 
 			// $user_id = sha1($_SESSION['pseudo']); //
 
-			$image_artiste = 'ressources/avatars/artistes/'.$user_pseudo.'/'.$nom_artiste.'.'.$extension_upload;
+			$image_artiste = 'ressources/avatars/artistes/'.$user_pseudo.'/'.$nom_artiste_image.'.'.$extension_upload;
 			move_uploaded_file($_FILES['image_artiste']['tmp_name'],$image_artiste);
 		}
 	}
