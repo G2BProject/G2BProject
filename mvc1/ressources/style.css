@@ -674,9 +674,10 @@ text-decoration:none;
 }
 
 .container10{
+position: relative;
 margin-top:50px;
 float: right;
-margin-right:-142px; 
+margin-right:-143.5px; 
 width:135px;
 height:280px;
 border:solid 2px;
@@ -695,9 +696,9 @@ font-size: 75%;
 .container11{
 float:right;
 margin-top:0px;
-width:135px;
-height:207px;
-margin-right:-1px;
+width:134.7px;
+height:206px;
+margin-right:-1.1px;
 border:solid 2px;
 }
 
