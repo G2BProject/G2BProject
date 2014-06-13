@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	if(isset($_SESSION['pseudo']) and empty($reqSallesDep)){
 		echo'<div class="listDep"><p> '.$SALLES.' : '.$_SESSION['departement'].'<br /><br /></p>';
 		echo'

@@ -1,4 +1,4 @@
-﻿
+
 
 <head>
 <link rel="stylesheet" href="ressources/style_forum.css" type="text/css" media="screen" />
