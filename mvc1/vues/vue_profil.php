@@ -29,10 +29,11 @@
 					<p><a class="ajout" href="index.php?page=ajoutConcert"> '.$AJOUT_CONCERT.'</a></p>';
 				}elseif($info['role_ID']==4){
 					echo'
-					<a class="ajout" href="index.php?page=backOffice"> '.$ADMIN.'</a></br>
+					<p><a class="ajout" href="index.php?page=backOffice"> '.$ADMIN.'</a>
+					<a class="ajout" href="index.php?page=ajoutConcert"> '.$AJOUT_CONCERT.'</a></p>
 					<p><a class="ajout" href="index.php?page=ajoutArtiste"> '.$AJOUT_ARTISTE.'</a>
 					<a class="ajout" href="index.php?page=ajoutSalle"> '.$AJOUT_SALLE.'</a></p>
-					<p><a class="ajout" href="index.php?page=ajoutConcert"> '.$AJOUT_CONCERT.'</a>';
+					';
 				}
 			?></li>
 		</ul>
