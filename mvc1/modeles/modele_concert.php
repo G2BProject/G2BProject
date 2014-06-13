@@ -41,7 +41,7 @@
 
 	function listConcertDep($departement){
 		global $bdd;
-		$req = $bdd -> prepare('SELECT concert.nom_du_concert, concert.date_du_concert, concert.heure_du_concert, salle.nom_de_la_salle FROM concert, salle WHERE concert.salle_ID = salle.ID AND salle.departement = :departement');
+		$req = $bdd -> prepare('SELECT concert.nom_du_concert, concert.date_du_concert, concert.heure_du_concert, concert.image_concert, salle.nom_de_la_salle FROM concert, salle WHERE concert.salle_ID = salle.ID AND salle.departement = :departement');
 		$req -> execute(array('departement' => $departement));
 		return $req ;
 	}
