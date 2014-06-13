@@ -57,7 +57,7 @@ src="vues/javascript.js">
 
 					<select name="mois">
 						<option value="01"><?php echo $JANVIER ?></option>
-						<option value="02"><?php echo $FERVRIER ?></option>
+						<option value="02"><?php echo $FEVRIER ?></option>
 						<option value="03"><?php echo $MARS ?></option>
 						<option value="04"><?php echo $AVRIL ?></option>
 						<option value="05"><?php echo $MAI ?></option>

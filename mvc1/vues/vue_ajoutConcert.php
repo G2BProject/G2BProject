@@ -1,11 +1,11 @@
 <div class="formulaire">
 			<form action="index.php?page=ajoutConcert" method="post" enctype="multipart/form-data">
-				<p><label for="nom_du_concert" class="standard"> Nom du concert :</label> <input type="text" name="nom_du_concert" id="nom_du_concert"/></p>
-				<p><label for="salle" class="standard"> Nom de la salle:</label><input type="text" name="salle" id="salle"/></p>
-				<p><label for="artiste" class="standard"> Nom de l'artiste:</label><input type="text" name="artiste" id="artiste"/></p>
-				<p><label for="image_concert" class="standard"> Affiche du concert :</label><input type="file" name="image_concert" id="image_concert"/></p>
+				<p><label for="nom_du_concert" class="standard"> <?php echo $NOM_CONCERT ?> :</label> <input type="text" name="nom_du_concert" id="nom_du_concert"/></p>
+				<p><label for="salle" class="standard"> <?php echo $NOM_SALLE ?>:</label><input type="text" name="salle" id="salle"/></p>
+				<p><label for="artiste" class="standard"> <?php echo $NOM_ARTISTE ?>:</label><input type="text" name="artiste" id="artiste"/></p>
+				<p><label for="image_concert" class="standard"> <?php echo $AFFICHE ?> :</label><input type="file" name="image_concert" id="image_concert"/></p>
 					<p><input type="hidden" name="maxFileSize" value="1000000" /></p>
-				<p><span class="standard">Date du concert :</span>
+				<p><span class="standard"><?php echo $DATE_CONCERT ?> :</span>
 					<select name="jour">
 						<option value="01">01</option>
 						<option value="02">02</option>
@@ -41,18 +41,18 @@
 					</select>
 
 					<select name="mois">
-						<option value="01">Janvier</option>
-						<option value="02">Février</option>
-						<option value="03">Mars</option>
-						<option value="04">Avril</option>
-						<option value="05">Mai</option>
-						<option value="06">Juin</option>
-						<option value="07">Juillet</option>
-						<option value="08">Août</option>
-						<option value="09">Septembre</option>
-						<option value="10">Octobre</option>
-						<option value="11">Novembre</option>
-						<option value="12">Décembre</option>
+						<option value="01"><?php echo $JANVIER ?></option>
+						<option value="02"><?php echo $FEVRIER ?></option>
+						<option value="03"><?php echo $MARS ?></option>
+						<option value="04"><?php echo $AVRIL ?></option>
+						<option value="05"><?php echo $MAI ?></option>
+						<option value="06"><?php echo $JUIN ?></option>
+						<option value="07"><?php echo $JUILLET ?></option>
+						<option value="08"><?php echo $AOUT ?></option>
+						<option value="09"><?php echo $SEPTEMBRE ?></option>
+						<option value="10"><?php echo $OCTOBRE ?></option>
+						<option value="11"><?php echo $NOVEMBRE ?></option>
+						<option value="12"><?php echo $DECEMBRE ?></option>
 					</select>
 
 					<select name="an">
@@ -66,7 +66,7 @@
 					</select>
 				</p>
 
-				<p><span class="standard"> Heure du concert :</span>
+				<p><span class="standard"> <?php echo $HEURE_CONCERT ?> :</span>
 					<select name="heure">
 						<option value="00">00h</option>
 						<option value="01">01h</option>
@@ -158,6 +158,6 @@
 					</select>
 				</p>
 
-       			<p class="standard"><input type="submit" value="Ajouter le concert"></p>
+       			<p class="standard"><input type="submit" value="<?php echo $AJOUT_CONCERT ?>"></p>
        		</form>
 </div>
