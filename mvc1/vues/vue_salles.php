@@ -29,7 +29,7 @@
 		if(!empty($reqSallesDep)){
 			foreach ($reqSallesDep as $salle){
 				echo'
-				<div class="conteneur"> <img class="gauche" alt="Concert" width="200" height="200" src="'.$salle['image_salle'].'" />
+				<div class="conteneur"> <img class="gauche" alt="Salles" width="200" height="200" src="'.$salle['image_salle'].'" />
 				<h1>Nom de la salle : '.$salle['nom_de_la_salle'].'</h1>
 				<p>Adresse : '.$salle['adresse_salle'].'</p>
 				<p>Numero : '.$salle['numero_de_telephone'].'</p>

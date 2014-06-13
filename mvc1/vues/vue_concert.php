@@ -1,21 +1,15 @@
-<div class="contenuConcert">
-	
-	<div class="container1concert">
-		<div id="photoconcert">
-			<p class="txt1concert">
-			<?php echo $info['nom_du_concert'] ; ?>
-			</p>
+<div class="Profil">
 
-			<ul>
-				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> <?php echo $DATE ?> : </a> <?php echo $info['date_du_concert'].' à '.$info['heure_du_concert']; ?></div> </li>
-				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> <?php echo $LIEU ?> : </a> <?php echo $info['nom_de_la_salle'] ; ?></div> </li>
-				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> <?php echo $OU ?> : </a>: Liens vers un site vendant des places </div> </li>
-				<li class="caractconcert"> <div class="txt2concert" href="#"> <a class="styleconcert"> <?php echo $PLACE ?> : </a> <?php echo $info['nombre_de_place'] ; ?></div> </li>
-			</ul>
-
-			<div class="locconcert"> </div>
-			<div class="localiserconcert"> <?php echo $LOCAL_CONCERT ?>: </div>
-		</div>
+		<div class="container1Profil">
+		<br />
+		<br g/>
+		<img class="photo_profil" src=<?php echo $info['image_concert']; ?>>
+		<div class="pseudo"><?php echo $NOM_CONCERT ?> : <?php echo $info['nom_du_concert']; ?></div>
+		<ul>
+			<li class="txt1Profil"><?php echo $NOM_SALLE ?> : <?php echo $info['nom_de_la_salle']; ?></li>
+			<li class="txt1Profil"><?php echo $PLACE ?> : <?php echo $info['nombre_de_place']; ?></li>
+			<li class="txt1Profil"><?php echo $NUM ?> : <?php echo $info['numero_de_telephone']; ?></li>
+		</ul>
 	</div>
 
 	<div class="container2concert">

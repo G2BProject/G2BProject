@@ -67,7 +67,7 @@ else
 		}
 	}
 	else{
-		$image_artiste = NULL ;
+		$image_artiste = 'ressources/avatars/defaultPicture.jpg' ;
 	}
 
 	ajoutArtiste($nom_artiste, $image_artiste, $bio_artiste, $ID_genre);

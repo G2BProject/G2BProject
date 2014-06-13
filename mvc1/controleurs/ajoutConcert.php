@@ -98,7 +98,7 @@ if (empty($_POST['nom_du_concert'])) {
 		}
 	}
 	else{
-		$image_concert = NULL ;
+		$image_concert = 'ressources/avatars/defaultPicture.jpg' ;
 	}
 
 	var_dump(ajoutConcert($nom_du_concert, $salle, $artiste, $date_du_concert, $heure_du_concert, $image_concert));
