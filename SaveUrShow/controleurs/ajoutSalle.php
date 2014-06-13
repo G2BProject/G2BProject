@@ -25,8 +25,8 @@ if (empty($_POST['nom_de_la_salle'])) {
 		die(''.$SPECIFIE_DEP_SALLE.'.');
 	}
 
-	$nom_de_la_salle_0 = htmlspecialchars($_POST['nom_de_la_salle']);
-	$nom_de_la_salle = preg_replace('/\s/', '', $nom_de_la_salle_0);
+	$nom_de_la_salle = htmlspecialchars($_POST['nom_de_la_salle']);
+	$nom_de_la_salle_image = preg_replace('/\s/', '', $nom_de_la_salle);
 
 	$adresse_salle = htmlspecialchars($_POST['adresse_salle']);
 	$departement = htmlspecialchars($_POST['departement']);
@@ -62,7 +62,7 @@ if (empty($_POST['nom_de_la_salle'])) {
 
 			// $user_id = sha1($_SESSION['pseudo']); //
 
-			$image_salle = 'ressources/avatars/salles/'.$user_pseudo.'/'.$nom_de_la_salle.'.'.$extension_upload;
+			$image_salle = 'ressources/avatars/salles/'.$user_pseudo.'/'.$nom_de_la_salle_image.'.'.$extension_upload;
 			move_uploaded_file($_FILES['image_salle']['tmp_name'],$image_salle);
 		}
 	}
