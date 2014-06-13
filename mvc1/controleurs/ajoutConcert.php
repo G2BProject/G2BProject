@@ -23,12 +23,12 @@ if (empty($_POST['nom_du_concert'])) {
 		$res = nomConcert($nom_du_concert);
 		if($res)
 		{ 
-			die('Le nom choisi est deja utilise.');
+			die(''.$_NOM_UTILISE.'.');
 		} 
 	}
 	else
 	{
-		die('Vous devez ajouter le nom du concert.');
+		die(''.$_CHOIX_NOM_CONCERT.'.');
 	}
 
 	if(isset($_POST['salle']))
@@ -37,7 +37,7 @@ if (empty($_POST['nom_du_concert'])) {
 	}
 	else
 	{
-		die('Vous devez ajouter le nom de la salle.');
+		die(''.$_CHOIX_NOM_SALLE.'.');
 	}
 
 	if(isset($_POST['artiste']))
@@ -46,12 +46,12 @@ if (empty($_POST['nom_du_concert'])) {
 		$res2 = nomArtiste($artiste);
 		if(!$res2)
 		{ 
-			die('Le nom de l\'artiste choisi n\'existe pas.');
+			die(''.$PAS_NOM.'.');
 		}
 	}
 	else
 	{
-		die('Vous devez ajouter le nom de l\'artiste.');
+		die(''.$CHOIX_NOM_ARTISTE.'.');
 	}
 
 
@@ -73,12 +73,12 @@ if (empty($_POST['nom_du_concert'])) {
 
 		$extensions_valides = array('jpg','jpeg','png');
 		$extension_upload = strtolower(substr(strrchr($_FILES['image_concert']['name'],'.'),1));
-		if (!in_array($extension_upload,$extensions_valides)) $erreur = "Extension invalide.";
+		if (!in_array($extension_upload,$extensions_valides)) $erreur = "'.$_EXTENSION.'.";
 
-		if($_FILES['image_concert']['size'] > $max_size) $erreur = "Le fichier dépasse la taille limite." ;
+		if($_FILES['image_concert']['size'] > $max_size) $erreur = "'.$_TAILLE.'." ;
 
 		$image_sizes = getimagesize($_FILES['image_concert']['tmp_name']);
-		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "L'image a des dimensions trop importantes.";
+		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "'.$_DIM.'.";
 
 		if(isset($erreur)){
 			echo "$erreur";
@@ -103,7 +103,7 @@ if (empty($_POST['nom_du_concert'])) {
 
 	var_dump(ajoutConcert($nom_du_concert, $salle, $artiste, $date_du_concert, $heure_du_concert, $image_concert));
 		include('controleurs/accueil.php');
-	echo '<script> alert("Votre concert a bien été ajouté !");	</script>';
+	echo '<script> alert("'.$CORRECT_CONCERT.' !");	</script>';
 }
 
  ?>

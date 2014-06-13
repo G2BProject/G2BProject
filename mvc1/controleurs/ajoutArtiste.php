@@ -22,13 +22,13 @@ else
 		$res = nomArtiste($nom_artiste);
 		if($res)
 		{ 
-			die('Le nom choisi est deja utilise.');
+			die(''.$_NOM_UTILISE.'.');
 		}
 	}
 	else
 	{
 
-		die('Vous devez choisir un nom d\'utilisateur');
+		die(''.$_CHOIX.'');
 	}
 
 	$bio_artiste = htmlspecialchars($_POST['bio_artiste']);
@@ -42,12 +42,12 @@ else
 
 		$extensions_valides = array('jpg','jpeg','png');
 		$extension_upload = strtolower(substr(strrchr($_FILES['image_artiste']['name'],'.'),1));
-		if (!in_array($extension_upload,$extensions_valides)) $erreur = "Extension invalide.";
+		if (!in_array($extension_upload,$extensions_valides)) $erreur = "'.$_EXTENSION.'.";
 
-		if($_FILES['image_artiste']['size'] > $max_size) $erreur = "Le fichier dépasse la taille limite." ;
+		if($_FILES['image_artiste']['size'] > $max_size) $erreur = "'.$_TAILLE.'." ;
 
 		$image_sizes = getimagesize($_FILES['image_artiste']['tmp_name']);
-		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "L'image a des dimensions trop importantes.";
+		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "'.$_DIM.'.";
 
 		if(isset($erreur)){
 			echo "$erreur";

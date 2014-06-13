@@ -14,9 +14,9 @@
 	    {
 	    	include('vues/header.php');
 
-	        echo '<div class="titre1"><p>une erreur s\'est produite pendant votre identification.
-		Vous devez remplir tous les champs</p>
-		<p>Cliquez <a href="?page=connexion">ici</a> pour revenir</p></div>';
+	        echo '<div class="titre1"><p>'.$ERREUR.'.
+		'.$CHAMPS.'</p>
+		<p>'.$APPUI.' <a href="?page=connexion">'.$_ICI.'</a> '.$_REVENIR.'</p></div>';
 			include('vues/footer.php');
 	    }
 	    else //On check le mot de passe
@@ -36,12 +36,10 @@
 			else // Acces pas OK !
 			{
 				include('vues/header.php');
-			    echo  '<div class="titre1"><p>Une erreur s\'est produite 
-			    pendant votre identification.<br /> Le mot de passe ou le pseudo 
-		            entré n\'est pas correcte.</p><p>Cliquez <a href="?page=connexion">ici</a> 
-			    pour revenir à la page précédente
-			    <br /><br />Cliquez <a href="index.php">ici</a> 
-			    pour revenir à la page d accueil</p> </div>';
+			    echo  '<div class="titre1"><p>'.$ERREUR.'.<br /> '.$_ERREUR.'.</p><p>'.$APPUI.' <a href="?page=connexion">'.$_ICI.'</a> 
+			    '.$RETOUR_PAGE.'
+			    <br /><br />'.$APPUI.' <a href="index.php">'.$_ICI.'</a> 
+			    '.$RETOUR_ACCUEIL.'</p> </div>';
 				include('vues/footer.php');
 			}
 	    }

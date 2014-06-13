@@ -18,11 +18,11 @@ if (empty($_POST['nom_de_la_salle'])) {
 	include('modeles/modele_salle.php');
 	if(empty($_POST['nom_de_la_salle'])){
 		include('vues/header.php');
-		die('Vous devez ajouter le nom de la salle.');
+		die(''.$_CHOIX_NOM_SALLE.'.');
 	}
 	if(empty($_POST['departement'])){
 		include('vues/header.php');
-		die('Vous devez specifier un numero de departement pour votre salle.');
+		die(''.$SPECIFIE_DEP_SALLE.'.');
 	}
 
 	$nom_de_la_salle_0 = htmlspecialchars($_POST['nom_de_la_salle']);
@@ -42,12 +42,12 @@ if (empty($_POST['nom_de_la_salle'])) {
 
 		$extensions_valides = array('jpg','jpeg','png');
 		$extension_upload = strtolower(substr(strrchr($_FILES['image_salle']['name'],'.'),1));
-		if (!in_array($extension_upload,$extensions_valides)) $erreur = "Extension invalide.";
+		if (!in_array($extension_upload,$extensions_valides)) $erreur = "'.$_EXTENSION.'.";
 
-		if($_FILES['image_salle']['size'] > $max_size) $erreur = "Le fichier dépasse la taille limite." ;
+		if($_FILES['image_salle']['size'] > $max_size) $erreur = "'.$_TAILLE.'." ;
 
 		$image_sizes = getimagesize($_FILES['image_salle']['tmp_name']);
-		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "L'image a des dimensions trop importantes.";
+		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "'.$_DIM.'.";
 
 		if(isset($erreur)){
 			echo "$erreur";
@@ -72,7 +72,7 @@ if (empty($_POST['nom_de_la_salle'])) {
 
 	ajoutSalle($nom_de_la_salle,$adresse_salle,$departement,$description_salle,$image_salle,$nombre_de_place,$numero_de_telephone);
 		include('controleurs/accueil.php');
-		echo '<script> alert("Votre salle est bien ajoutée!");	</script>';
+		echo '<script> alert("V'.$CORRECT_SALLE.' !");	</script>';
 }
 
  ?>

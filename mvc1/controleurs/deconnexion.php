@@ -2,6 +2,6 @@
 session_unset();
 session_destroy();
 include('controleurs/accueil.php');
-echo '<script> alert("Vous etes deconnecté!");	</script>';
+echo '<script> alert("'.$_DECONNEXION.' !");	</script>';
 exit();
 ?>
