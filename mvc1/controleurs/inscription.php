@@ -166,7 +166,7 @@ if (empty($_POST['Role_ID'])) {
 		}
 	}
 	else{
-		$image_membre = NULL ;
+		$image_membre = 'ressources/avatars/defaultPicture.jpg' ;
 	}
 
 	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$nom_membre,$prenom_membre,$sexe,$date_de_naissance,$adresse_membre, $departement,$image_membre);
