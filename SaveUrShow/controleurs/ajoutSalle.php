@@ -25,7 +25,9 @@ if (empty($_POST['nom_de_la_salle'])) {
 		die('Vous devez specifier un numero de departement pour votre salle.');
 	}
 
-	$nom_de_la_salle = htmlspecialchars($_POST['nom_de_la_salle']);
+	$nom_de_la_salle_0 = htmlspecialchars($_POST['nom_de_la_salle']);
+	$nom_de_la_salle = preg_replace('/\s/', '', $nom_de_la_salle_0);
+
 	$adresse_salle = htmlspecialchars($_POST['adresse_salle']);
 	$departement = htmlspecialchars($_POST['departement']);
 	$description_salle = htmlspecialchars($_POST['description_salle']);
