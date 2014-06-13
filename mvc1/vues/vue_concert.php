@@ -2,6 +2,13 @@
 	
 	<div class="container1concert">
 		<div id="photoconcert">
+			<img class = "photoprofil" src= <?php
+			if(isset($info['image_concert'])){
+				echo $info['image_concert'];
+			}
+			else{
+				echo "ressources/avatars" ;
+			} ?>
 			<p class="txt1concert">
 			<?php echo $info['nom_du_concert'] ; ?>
 			</p>

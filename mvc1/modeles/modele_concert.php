@@ -10,7 +10,7 @@
 	$req -> execute(array(
 		'nom_du_concert' => $nom_du_concert,
 		'date_du_concert' => $date_du_concert,
-		'heure_concert' => $heure_du_concert,
+		'heure_du_concert' => $heure_du_concert,
 		'salle_ID' => $salle_ID,
 		'image_concert' => $image_concert,
 		));
@@ -32,7 +32,7 @@
 
 	function infoConcert($nom){
 		global $bdd;
-		$query=$bdd->prepare('SELECT concert.nom_du_concert, concert.date_du_concert, concert.heure_du_concert, salle.nombre_de_place, salle.nom_de_la_salle FROM concert, salle WHERE nom_du_concert = :nom');
+		$query=$bdd->prepare('SELECT concert.nom_du_concert, concert.date_du_concert, concert.heure_du_concert, concert.image_concert, salle.nombre_de_place, salle.nom_de_la_salle FROM concert, salle WHERE nom_du_concert = :nom');
         $query->bindValue(':nom',$nom, PDO::PARAM_STR);
         $query->execute();
 	    $data_artiste=$query->fetch();
