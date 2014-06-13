@@ -1356,3 +1356,122 @@ font-size: 90%;
 	color : white ;	
 	text-indent: justify;
 }
+
+/*gestion profil*/
+.container1gestionprofil{
+position:relative;
+margin-right:0px;
+height:80px;
+top:40px;
+}
+
+.container2gestionprofil{
+position:relative;
+margin-left:0px;
+height:60px;
+top:10px;
+}
+
+.txt_gestion_profil{
+display: inline-block;
+float:left;
+width: 320px;
+margin-left:10px;
+margin-top:0px;
+margin-right:10px;
+color: #333333;
+font-size: 100%;
+background-color:#FFFFFF;
+}
+
+.txt0_gestion_profil{
+display: inline-block;
+float:left;
+width: 320px;
+margin-left:10px;
+margin-top:0px;
+margin-right:10px;
+color: white;
+font-size: 100%;
+background-color:#B62727;
+text-decoration:none;
+border:solid 2px;
+}
+
+
+.txt11_gestion_profil{
+display: inline-block;
+float:left;
+width: 320px;
+margin-left:10px;
+margin-top:0px;
+margin-right:10px;
+color: white;
+font-size: 100%;
+text-decoration:none;
+border:solid 2px;
+}
+
+.txtconcerts_gestion_profil{
+display: inline-block;
+float:left;
+width: 320px;
+margin-left:10px;
+margin-top:0px;
+margin-right:10px;
+color: white;
+font-size: 100%;
+background-color:#0C874D;
+text-decoration:none;
+border:solid 2px;
+}
+
+
+.txtgenre_gestion_profil{
+display: inline-block;
+float:left;
+width: 320px;
+margin-left:10px;
+margin-top:0px;
+margin-right:10px;
+color: white;
+font-size: 100%;
+background-color:#D2AE25;
+text-decoration:none;
+border:solid 2px;
+}
+
+.txtartistes_gestion_profil{
+display: inline-block;
+float:left;
+width: 320px;
+margin-left:10px;
+margin-top:0px;
+margin-right:10px;
+color: white;
+font-size: 100%;
+background-color:#26266A;
+text-decoration:none;
+border:solid 2px;
+}
+
+.txt3_gestion_profil{
+display: inline-block;
+margin-left:10px;
+margin-top:10px;
+color: white;
+font-size: 130%;
+text-decoration:none;
+background-color:blue;
+background-color:blue;
+}
+
+#txtgestionprofil{
+float:left;
+margin-left: 10px;
+}
+
+.input{
+margin-left: 10px;
+width:225px;
+}
