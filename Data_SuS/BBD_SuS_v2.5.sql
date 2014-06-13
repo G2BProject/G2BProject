@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 10 Juin 2014 à 15:58
+-- Généré le: Ven 13 Juin 2014 à 09:33
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.16
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `artiste` (
   `bio_artiste` text,
   `ID_genre` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `artiste`
@@ -69,7 +69,8 @@ INSERT INTO `artiste` (`ID`, `nom_artiste`, `date_ajout_artiste`, `image_artiste
 (5, 'testgenre', '2014-05-24 01:55:46', NULL, 'ferq', 4),
 (6, 'testpop1', '2014-05-24 02:07:08', NULL, 'bds', 1),
 (7, 'testpop2', '2014-05-24 02:07:17', NULL, 'bdw', 1),
-(8, 'dgs', '2014-05-24 02:33:17', NULL, 'bxcfdb', 9);
+(8, 'dgs', '2014-05-24 02:33:17', NULL, 'bxcfdb', 9),
+(10, 'testimage', '2014-06-13 10:20:34', 'ressources/avatars/artistes/administrateur1/testimage.png', 'c''est un test avec image', 6);
 
 -- --------------------------------------------------------
 
@@ -124,22 +125,24 @@ CREATE TABLE IF NOT EXISTS `commentaire` (
 CREATE TABLE IF NOT EXISTS `concert` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `nom_du_concert` varchar(255) NOT NULL,
+  `image_concert` varchar(255) DEFAULT NULL,
   `date_du_concert` date DEFAULT NULL,
   `heure_du_concert` time DEFAULT NULL,
   `salle_ID` int(11) DEFAULT NULL,
   `date_ajout_concert` datetime DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `fk_concert_salle1_idx` (`salle_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `concert`
 --
 
-INSERT INTO `concert` (`ID`, `nom_du_concert`, `date_du_concert`, `heure_du_concert`, `salle_ID`, `date_ajout_concert`) VALUES
-(7, 'eda', '2014-03-19', '18:00:00', NULL, NULL),
-(8, 'dezbulfj', '2014-03-19', '16:00:00', NULL, '2014-05-09 12:05:10'),
-(9, 'testacsalle', '2014-01-01', '00:00:00', 3, '2014-06-05 10:35:22');
+INSERT INTO `concert` (`ID`, `nom_du_concert`, `image_concert`, `date_du_concert`, `heure_du_concert`, `salle_ID`, `date_ajout_concert`) VALUES
+(7, 'eda', NULL, '2014-03-19', '18:00:00', NULL, NULL),
+(8, 'dezbulfj', NULL, '2014-03-19', '16:00:00', NULL, '2014-05-09 12:05:10'),
+(9, 'testacsalle', NULL, '2014-01-01', '00:00:00', 3, '2014-06-05 10:35:22'),
+(10, 'testimage', 'ressources/avatars/concerts/administrateur1/testimage.png', '2014-01-01', '00:00:00', 3, '2014-06-13 10:52:54');
 
 -- --------------------------------------------------------
 
@@ -159,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `coup_de_coeur` (
 --
 
 INSERT INTO `coup_de_coeur` (`ID`, `ID_artiste1`, `ID_artiste2`) VALUES
-(1, 2, 4);
+(1, 10, 10);
 
 -- --------------------------------------------------------
 
@@ -245,7 +248,7 @@ INSERT INTO `membre` (`ID`, `pseudo`, `nom_membre`, `prenom_membre`, `adresse_em
 (7, 'mem', 'gsgtdde', 'HGDHDH', 'mem@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', ',hjgfdsc', NULL, 1, NULL, '2014-05-24 03:58:21', NULL, 0, 1, 0, '7c6f16c8564de39fb8e335b5cdff236f5409e148'),
 (8, 'testdep', 'test', 'tretsd', 'testdep@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'hfsdhbrdtht', 75, 1, NULL, '2014-05-27 16:14:22', NULL, 0, 1, 0, 'f564717f68611fc6743ebd90a6cd78a3fcc3f57a'),
 (9, 'administrateur', 'admin', 'admin', 'admin@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'vgfsdv', 0, 1, NULL, '2014-06-03 16:30:41', NULL, 0, 1, 0, 'bde32cebe2eec78215ae01c8aa0e87702e8b7a12'),
-(11, 'administrateur1', 'admin', 'admin', 'admin1@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'vgfsdv', 0, 1, NULL, '2014-06-03 16:35:09', NULL, 0, 4, 0, 'b2dbc0e2ed9dbb4b56bf4b4af2c63bc791b99868'),
+(11, 'administrateur1', 'admin', 'admin', 'admin1@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', 'vgfsdv', 75, 1, NULL, '2014-06-03 16:35:09', NULL, 0, 4, 0, 'b2dbc0e2ed9dbb4b56bf4b4af2c63bc791b99868'),
 (12, 'test2', '', '', 'prop@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', '', '1924-01-01', '', 0, NULL, NULL, '2014-06-03 18:19:02', NULL, 0, 1, 0, '289d111d27e34f32dd5d0b3c01c0f0dfa16a2434'),
 (13, 'julcity', 'Bosselut', 'Julian', 'julcity77@hotmail.fr', '2ede1726e584959557b4b2306f7bc479c93a52bf', 'ressources/avatars/membres/julcity/julcity.jpg', '1924-01-01', 'dfg 14', 75, 1, NULL, '2014-06-06 10:13:39', NULL, 0, 1, 0, '08fa86922756c4ad32b344853d02f0583fe62995');
 
@@ -408,7 +411,14 @@ CREATE TABLE IF NOT EXISTS `representation` (
   PRIMARY KEY (`ID`),
   KEY `fk_représentation_concert1_idx` (`concert_ID`),
   KEY `fk_représentation_artiste1_idx` (`artiste_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `representation`
+--
+
+INSERT INTO `representation` (`ID`, `concert_ID`, `artiste_ID`) VALUES
+(1, 10, 10);
 
 -- --------------------------------------------------------
 
@@ -450,15 +460,20 @@ CREATE TABLE IF NOT EXISTS `salle` (
   PRIMARY KEY (`ID`),
   KEY `fk_salle_membre1_idx` (`membre_ID`),
   KEY `ID` (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Contenu de la table `salle`
 --
 
 INSERT INTO `salle` (`ID`, `nom_de_la_salle`, `adresse_salle`, `departement`, `description_salle`, `image_salle`, `nombre_de_place`, `numero_de_telephone`, `membre_ID`) VALUES
-(3, 'testsalle', 'testsalle adresse 52 rue', NULL, 'belle salle de testsalle', 'fresfgre', 120, 1234567890, NULL),
-(4, 'hbbdrtbt', 'mlsfdm,lvd,mvdsm,', NULL, ',mlfdmfds', NULL, 123, 2147483647, NULL);
+(3, 'testsalle', 'testsalle adresse 52 rue', 75, 'belle salle de testsalle', 'fresfgre', 120, 1234567890, NULL),
+(4, 'hbbdrtbt', 'mlsfdm,lvd,mvdsm,', NULL, ',mlfdmfds', NULL, 123, 2147483647, NULL),
+(5, 'testsalledep', 'bvbfd', 75, 'dqsf', NULL, 345, 86543, NULL),
+(6, 'test ajout salle', 'gferziofzeoij', 75, 'geroinrseovn', 'ressources/avatars/salles', 2134324654, 43256, NULL),
+(7, 'testajoutsalle', 'gferziofzeoij', 75, 'geroinrseovn', 'ressources/avatars/salles', 2134324654, 43256, NULL),
+(8, 'testajoutsalle', 'gferziofzeoij', 75, 'geroinrseovn', 'ressources/avatars/salles', 2134324654, 43256, NULL),
+(9, 'testacimage', 'fqsgersq', 75, 'rfezhgreg', 'ressources/avatars/salles', 1234, 12435, NULL);
 
 -- --------------------------------------------------------
 
@@ -499,7 +514,7 @@ CREATE TABLE IF NOT EXISTS `statistique` (
 --
 
 INSERT INTO `statistique` (`ID`, `nombre_inscrit`, `nombre_visite`) VALUES
-(1, 0, 18);
+(1, 0, 19);
 
 -- --------------------------------------------------------
 
@@ -535,7 +550,7 @@ CREATE TABLE IF NOT EXISTS `top` (
 --
 
 INSERT INTO `top` (`ID`, `ID_artiste1`, `ID_artiste2`, `ID_artiste3`) VALUES
-(1, 3, 6, 7);
+(1, 10, 10, 10);
 
 -- --------------------------------------------------------
 

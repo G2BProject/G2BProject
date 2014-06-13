@@ -24,7 +24,7 @@ if (empty($_POST['nom_de_la_salle'])) {
 		include('vues/header.php');
 		die('Vous devez specifier un numero de departement pour votre salle.');
 	}
-}
+
 	$nom_de_la_salle = htmlspecialchars($_POST['nom_de_la_salle']);
 	$adresse_salle = htmlspecialchars($_POST['adresse_salle']);
 	$departement = htmlspecialchars($_POST['departement']);
@@ -71,5 +71,6 @@ if (empty($_POST['nom_de_la_salle'])) {
 	ajoutSalle($nom_de_la_salle,$adresse_salle,$departement,$description_salle,$image_salle,$nombre_de_place,$numero_de_telephone);
 		include('controleurs/accueil.php');
 		echo '<script> alert("Votre salle est bien ajoutée!");	</script>';
+}
 
  ?>
