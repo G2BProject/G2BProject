@@ -21,6 +21,18 @@
 		));
 
 	}
+	function verifPseudo($nom){
+	global $bdd;
+			$req = $bdd -> prepare('SELECT pseudo FROM membre WHERE pseudo = :pseudo');
+			$req -> execute(array('pseudo' => $nom));
+			$res = $req -> fetch();
+			if($res){
+				return true;
+			}else{
+				return false;
+			}
+ }
+
 	function verifMail($mail){
 			global $bdd;
 			$req = $bdd -> prepare('SELECT adresse_email FROM membre WHERE adresse_email = :adresse_email');
@@ -30,7 +42,7 @@
 	}
 	function connexion($pseudo,$password){
 		global $bdd;
-	    $query=$bdd->prepare('SELECT mot_de_passe, pseudo, departement
+	    $query=$bdd->prepare('SELECT mot_de_passe, pseudo, departement, Role_ID
 	    FROM membre WHERE membre.pseudo = :pseudo');
         $query->bindValue(':pseudo',$pseudo, PDO::PARAM_STR);
         $query->execute();

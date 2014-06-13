@@ -26,10 +26,7 @@ if (empty($_POST['Role_ID'])) {
 	if(preg_match("#\w#", $_POST['pseudo']))
 	{
 		$pseudo = htmlspecialchars($_POST['pseudo']);
-		$req = $bdd -> prepare('SELECT pseudo FROM membre WHERE pseudo = :pseudo');
-		$req -> execute(array('pseudo' => $pseudo));
-		$res = $req->fetch();
-		if($res)
+		if(verifPseudo($pseudo))
 		{ 
 			die('<div class="titre1"><p>'.$_PSEUDO_UTILISE.'.</p>
 		<p>'.$_APPUI.' <a href="javascript:history.go(-1)">'.$_ICI.'</a> '.$_REVENIR.'</p></div>
@@ -170,14 +167,12 @@ if (empty($_POST['Role_ID'])) {
 	}
 
 	inscription($Role_ID,$pseudo,$adresse_email,$mot_de_passe_hache,$nom_membre,$prenom_membre,$sexe,$date_de_naissance,$adresse_membre, $departement,$image_membre);
-
+	echo '<script> alert("'.$CORRECT.' '.$pseudo.'!");	</script>';
 	$_SESSION['pseudo'] = $pseudo;
 	$_SESSION['mot_de_passe'] = $mot_de_passe;
 	$_SESSION['departement'] = $departement;
-
-		include('vues/vue_accueil.php');
-		include('vues/footer.php');
-	echo '<script> alert("'.$CORRECT.' '.$pseudo.'!");	</script>';
+	header('Location: index.php');
+	
 }
 
  ?>
