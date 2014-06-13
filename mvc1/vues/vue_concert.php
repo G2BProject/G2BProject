@@ -2,7 +2,7 @@
 
 		<div class="container1Profil">
 		<br />
-		<br />
+		<br g/>
 		<img class="photo_profil" src=<?php echo $info['image_concert']; ?>>
 		<div class="pseudo"><?php echo $NOM_CONCERT ?> : <?php echo $info['nom_du_concert']; ?></div>
 		<ul>
