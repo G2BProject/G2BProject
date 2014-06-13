@@ -34,6 +34,20 @@
 //Fin Connexion
 
 
+//Connexion (controleur)
+$ERREUR = 'An error occurred during your identification ';
+$RETOUR_ACCUEIL = 'to return to the home page';
+$CHAMPS ='You must fill in all fields';
+$_ERREUR = 'Password or username entered is incorrect';
+$RETOUR_PAGE = 'to return to the previous page';
+// Fin Connexion (controleur)
+
+
+//Deconnexion (controleur)
+$_DECONNEXION = 'You have been successfully disconnected';
+// Fin Deconnexion (controleur)
+
+
 //Inscription
 
 	$TXT_UTILISATEUR = 'Log in';
@@ -52,7 +66,7 @@
 	$TXT_F = 'Woman';
 	$TXT_NAISSANCE = 'Date of birth';
 	$JANVIER = 'January';
-	$FERVRIER = 'February';
+	$FEVRIER = 'February';
 	$MARS= 'March';
 	$AVRIL = 'April';
 	$MAI = 'May';
@@ -126,6 +140,26 @@ $ROCK = 'Rock';
 // Fin liste artistes
 
 
+// Artiste (vue)
+$QUI = 'Who';
+$STYLE = 'Style of music';
+$A_VENIR = 'Coming';
+$PRODUCTION = 'Latest productions';
+$NBR_FAN = 'Number of fans';
+$DEVENIR_FAN = 'Become a fan';
+//$BIO = 'Biography';
+$RECEVOIR_ACTU = 'Receive news about';
+$PAR_MAIL = 'by e-mail';
+//$TXT_NOM_UTILISATEUR = 'Nom de l\'utilisateur';
+$DATE = 'Date';
+$COMM = 'Leave a comment';
+$PUBLIER = 'Submit';
+$POST = 'Messages posted on this artist';
+//$TXT_PSEUDO = 'Pseudo';
+$DATE_POST = 'Date of post';
+// Fin Artiste (vue)
+
+
 //Contact
 $CONTACT = 'Contact us';
 $NOM = 'Last name, First name';
@@ -171,4 +205,86 @@ $MES_GENRES = 'My genres';
 $GENRE = 'Genre';
 // Fin Profil
 
+// Administration/Back Office
+//$ADMIN = 'Site administration';
+$REMPLIR = 'Fill in the text to make the desired changes';
+$VIDE = 'Leave blank if you do not wish to change';
+$SUP_MEMBRE = 'Delete the following member';
+$SUP_ARTISTE = 'Delete the following artist';
+$SUP_CONCERT = 'Delete the following concert';
+//$SUP_PROPRIO = 'Delete the following stage\'s owner ';
+$CHOIX_NEWS = 'Choose above news';
+$CHANGER_COEUR = 'Change number 1 favorite';
+$ACTU_DONNEES = 'Updating data ';
+// Fin Administration/Back Office
+
+
+// Ajout artiste (vue)
+$DESCRIPTION = 'Description';
+$IMAGE = 'Picture';
+// Fin Ajout artiste (vue)
+
+// Ajout artiste (controleur)
+$_NOM_UTILISE = 'The chosen name is already used';
+//$_CHOIX = 'Vous devez choisir un nom d\'utilisateur';
+//$_EXTENSION = 'Extension invalide';
+//$_TAILLE = 'Le fichier d&eacutepasse la taille limite';
+//$_DIM = 'L\'image a des dimensions trop importantes';
+// Fin Ajout artiste (controleur)
+
+// Ajout salle (vue)
+//$NOM_SALLE = 'Stage name';
+//$ADRESSE = 'Adress';
+//$DEPARTEMENT = 'Department';
+//$DESCRIPTION = 'Description';
+$NUM = 'Phone number';
+$PLACE = 'Number of places';
+//$IMAGE = 'Picture';
+//$AJOUT_SALLE = 'Add a stage';
+// Fin Ajout salle (vue)
+
+
+// Ajout salle (controleur)
+$_CHOIX_NOM_SALLE = 'Vous devez indiquer le nom de la salle';
+$SPECIFIE_DEP_SALLE = 'you must specify a department number for the stage';
+$CORRECT_SALLE = 'The stage is added';
+// Fin Ajout salle (controlleur)
+
+// Ajout concert (vue)
+$NOM_CONCERT = 'Live name';
+//$NOM_SALLE = 'Stage name';
+//$NOM_ARTISTE = 'Artist name';
+$AFFICHE = 'Live poster';
+//$DATE_CONCERT = 'Date du concert';
+$HEURE_CONCERT = 'Live time';
+// Fin Ajout concert (vue)
+
+// Ajout concert (controleur)
+$_CHOIX_NOM_CONCERT = 'You must specify the name of the concert';
+//$_CHOIX_NOM_SALLE = 'You must specify the name of the stage';
+$PAS_NOM = 'The chosen artist name alreday exists';
+//$_CHOIX = 'You have to choose an user name';
+$CORRECT_CONCERT = 'The concert is added';
+// Fin Ajout concert (controleur)
+
+// Concert (vue)
+$DATE = 'Date';
+$LIEU = 'Place';
+$OU = 'Where can you book';
+$PLACE = 'Number of places';
+$LOCAL_CONCERT = 'Locate the live';
+//$RECEVOIR_ACTU = 'Recevoir l\'actualit&eacute de ';
+//$PAR_MAIL = 'par mail';
+$DESCRIPTION_CONCERT = 'Description of the live';
+//$TXT_NOM_UTILISATEUR = 'Nom de l\'utilisateur';
+//$DATE = 'Date';
+//$COMM = 'Laisser un commentaire';
+//$PUBLIER = 'Publier';
+$POST_CONCERT = 'Messages posted on this live';
+//$TXT_PSEUDO = 'Pseudo';
+//$DATE_POST = 'Date du post';
+// Fin Concert (vue)
+
+
  ?>
+ 

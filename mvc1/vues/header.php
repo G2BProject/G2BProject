@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
+<?php header( 'content-type: text/html; charset=utf-8' ); ?>
 <title>Save ur show</title>
 <link rel="stylesheet" href="ressources/style.css" type="text/css" media="screen" />
 
