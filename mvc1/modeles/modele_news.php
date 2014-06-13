@@ -40,7 +40,7 @@ function getNewArtiste(){
 }
 function getLastConcert(){
 		global $bdd;
-		$query=$bdd->prepare('SELECT nom_du_concert FROM concert ORDER BY date_du_concert DESC');
+		$query=$bdd->prepare('SELECT nom_du_concert, image_concert FROM concert ORDER BY date_du_concert DESC');
         $query->execute();
 	    $lastConcert=$query->fetchAll();
 	    return $lastConcert;

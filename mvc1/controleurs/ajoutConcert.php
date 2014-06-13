@@ -101,7 +101,7 @@ if (empty($_POST['nom_du_concert'])) {
 		$image_concert = NULL ;
 	}
 
-	ajoutConcert($nom_du_concert, $salle, $artiste, $date_du_concert, $heure_du_concert, $image_concert);
+	var_dump(ajoutConcert($nom_du_concert, $salle, $artiste, $date_du_concert, $heure_du_concert, $image_concert));
 		include('controleurs/accueil.php');
 	echo '<script> alert("Votre concert a bien été ajouté !");	</script>';
 }
