@@ -20,7 +20,7 @@ if (empty($_POST['nom_du_concert'])) {
 	if(isset($_POST['nom_du_concert']))
 	{
 		$nom_du_concert = htmlspecialchars($_POST['nom_du_concert']);
-		$nom_du_concert_image = preg_replace('/\s/', '', $nom_du_concert)
+		$nom_du_concert_image = preg_replace('/\s/', '', $nom_du_concert);
 		$res = nomConcert($nom_du_concert);
 		if($res)
 		{ 
@@ -81,7 +81,7 @@ if (empty($_POST['nom_du_concert'])) {
 		$image_sizes = getimagesize($_FILES['image_concert']['tmp_name']);
 		if ($image_sizes[0] > $max_width OR $image_sizes[1] > $max_height) $erreur = "'.$_DIM.'.";
 
-		if(isset($erreur)){
+		if(!empty($erreur)){
 			echo "$erreur";
 		}
 		else{

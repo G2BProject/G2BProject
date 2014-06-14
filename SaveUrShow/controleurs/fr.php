@@ -268,8 +268,8 @@ $PLACE = 'Nombre de places';
 
 // Ajout salle (controleur)
 $_CHOIX_NOM_SALLE = 'Vous devez indiquer le nom de la salle';
-$SPECIFIE_DEP_SALLE = 'Vous devez specifier un num&eacutero de d&eacutepartement pour votre salle';
-$CORRECT_SALLE = 'Votre salle est bien ajout&eacutee';
+$SPECIFIE_DEP_SALLE = 'Vous devez specifier un numéero de département pour votre salle';
+$CORRECT_SALLE = 'Votre salle est bien ajoutée';
 // Fin Ajout salle (controleur)
 
 
@@ -289,7 +289,7 @@ $_CHOIX_NOM_CONCERT = 'Vous devez indiquer le nom du concert';
 $_CHOIX_NOM_ARTISTE = 'Vous devez indiquer le nom de l\'artiste';
 $PAS_NOM = 'Le nom de l\'artiste choisi n\'existe pas';
 //$_CHOIX = 'Vous devez choisir un nom d\'utilisateur';
-$CORRECT_CONCERT = 'Votre concert a bien &eacutet&eacute ajout&eacute';
+$CORRECT_CONCERT = 'Votre concert a bien été ajoutée';
 // Fin Ajout concert (controleur)
 
 

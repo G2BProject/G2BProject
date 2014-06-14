@@ -1,16 +1,15 @@
 <?php 
 include('modeles/modele_administration.php');
-if  (isset($_SESSION['pseudo'])){
+if  (isset($_SESSION['Role_ID'])){
 	include('modeles/modele_utilisateur.php');
 	$nom=$_SESSION['pseudo'];
  
 	$info = infoProfil($nom);
-	if($info['role_ID']==4){
+
 		include('vues/header.php');
 		include('vues/vue_backOffice.php');
 		include('vues/footer.php');
-	}
-}
+
 if (!empty($_POST['suppMembre'])) {
 	if(verifMembre($_POST['suppMembre'])){
 		suppMembre($_POST['suppMembre']);
@@ -101,5 +100,6 @@ if(!empty($_POST['actu'])){
 	}	
 	updateActu($_POST['actu']);
 	echo '<script> alert("Vous avez mis a jour l\'actu de la page d\'accueil");	</script>';
+}
 }
  ?>

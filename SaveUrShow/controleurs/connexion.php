@@ -16,7 +16,7 @@
 
 	        echo '<div class="titre1"><p>'.$ERREUR.'.
 		'.$CHAMPS.'</p>
-		<p>'.$APPUI.' <a href="?page=connexion">'.$_ICI.'</a> '.$_REVENIR.'</p></div>';
+		<p> <a href="?page=connexion">'.$_ICI.'</a> '.$_REVENIR.'</p></div>';
 			include('vues/footer.php');
 	    }
 	    else //On check le mot de passe
@@ -36,9 +36,9 @@
 			else // Acces pas OK !
 			{
 				include('vues/header.php');
-			    echo  '<div class="titre1"><p>'.$ERREUR.'.<br /> '.$_ERREUR.'.</p><p>'.$APPUI.' <a href="?page=connexion">'.$_ICI.'</a> 
+			    echo  '<div class="titre1"><p>'.$ERREUR.'.<br /> '.$_ERREUR.'.</p><p> <a href="?page=connexion">'.$_ICI.'</a> 
 			    '.$RETOUR_PAGE.'
-			    <br /><br />'.$APPUI.' <a href="index.php">'.$_ICI.'</a> 
+			    <br /><br /><a href="index.php">'.$_ICI.'</a> 
 			    '.$RETOUR_ACCUEIL.'</p> </div>';
 				include('vues/footer.php');
 			}

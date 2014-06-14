@@ -1,7 +1,7 @@
 <div class="Profil">
 
 	<div class="container1Profil">
-		<div class="modifier_profil"><a href="#"> <?php echo $MODIF ?></a></div>
+		<div class="modifier_profil"><a href="?page=gestion_profil&profil=<?php echo $_GET['profil'] ?>"> <?php echo $MODIF ?></a></div>
 		<div ><img class="photo_profil" src=<?php 
 		if(empty($info['image_membre'])){
 		echo '"ressources/avatars/defaultPicture.jpg"';
