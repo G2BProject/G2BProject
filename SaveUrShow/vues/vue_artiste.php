@@ -21,8 +21,8 @@
 	</div>
 
 	<div class="container8">
-		<div><a class="txt3" href="#"><?php echo $BIO ?></a></div>
-		<div><a class="txtbio" href="#"><?php echo $data_artiste['bio_artiste']; ?> </a></div>
+		<div><a class="txt3" ><?php echo $BIO ?></a></div>
+		<div><a class="txtbio" ><?php echo $data_artiste['bio_artiste']; ?> </a></div>
 		
 	</div>
 	<div class="container9">
