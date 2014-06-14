@@ -158,7 +158,7 @@ $DATE_POST = 'Date du post';
 
 //Contact
 $CONTACT = 'Nous contacter';
-$NOM = 'Nom, Prémon';
+$NOM = 'Nom, Prénom';
 //$TXT_MAIL = 'Adresse mail';
 $OBJET = 'Objet';
 $MESSAGE = 'Message';

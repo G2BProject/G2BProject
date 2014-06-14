@@ -19,9 +19,9 @@
 	</div>
 
 	<div class="container3concert">
-		<div> <a class="txt3concert" href="#"><?php echo $DESCRIPTION_CONCERT ?> </a> </div>
-		<div> <a class="txtbioconcert" href="#"> Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla </a> </div>
-		<div> <a class="txtbioconcert" href="#"> Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla </a> </div>
+		<div> <a class="txt3concert" ><?php echo $DESCRIPTION_CONCERT ?> </a> </div>
+		<div> <a class="txtbioconcert" > Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla </a> </div>
+		<div> <a class="txtbioconcert" > Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla Blabla </a> </div>
 	</div>
 
 	<div class="container4concert">
