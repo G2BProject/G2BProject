@@ -14,7 +14,7 @@
 	
 // Body
 	$TXT_SUIVRE = 'Follow-us!';
-	$TXT_CONNECTES = 'Connected';
+	$TXT_CONNECTES = 'Visits';
 	$TXT_INSCRITS = 'Subscribers';
 //Fin body
 
@@ -216,7 +216,31 @@ $SUP_CONCERT = 'Delete the following concert';
 $CHOIX_NEWS = 'Choose above news';
 $CHANGER_COEUR = 'Change number 1 favorite';
 $ACTU_DONNEES = 'Updating data ';
+$IMAGE_ACTU = "Image of the news";
+$CHANGER_COEURS = 'Change ours favorite' ;
+$NUM_1 = 'Number 1';
+$NUM_2 = 'Number 2';
+$CHANGER_TOP = 'Change the top 3';
+$TOP_1 = ' Top 1 ';
+$TOP_2 = ' Top 2 ';
+$TOP_3 = ' Top 3 ';
 // Fin Administration/Back Office
+
+//BackOffice (controleur)
+$SUPP_COMPTE =' You have deleted the following account  ';
+$PAS_MEMBRE = 'is not an existing account';
+$SUPP_ARTISTE =' You have deleted the account of the following artist ';
+$PAS_ARTISTE = 'is not an existing artist';
+$SUPP_CONCERT =' You have deleted the following live';
+$PAS_CONCERT = 'is not an existing live';
+$PAS_COEUR = 'One of your favorite is doesn\'t exist';
+$MAJ_COEUR = 'You have updated your favorite';
+$REMPLIR_COEUR = 'You have to fill in the favorite fields';
+$PAS_TOP_ARTISTE = 'One of your following artist of the top 3 doesn\'t exist';
+$MAJ_TOP = 'You have updated your top 3';
+$CHAMPS_TOP = 'You have to fill in all fields of the top 3';
+$MAJ_ACTU = 'You have updated the news from the homepage';
+// Fin BackOffice (controleur)
 
 
 // Ajout artiste (vue)
@@ -262,6 +286,7 @@ $HEURE_CONCERT = 'Live time';
 // Ajout concert (controleur)
 $_CHOIX_NOM_CONCERT = 'You must specify the name of the concert';
 //$_CHOIX_NOM_SALLE = 'You must specify the name of the stage';
+$_CHOIX_NOM_ARTISTE = 'You must specify the name of the artist';
 $PAS_NOM = 'The chosen artist name alreday exists';
 //$_CHOIX = 'You have to choose an user name';
 $CORRECT_CONCERT = 'The concert is added';
@@ -285,6 +310,21 @@ $POST_CONCERT = 'Messages posted on this live';
 //$DATE_POST = 'Date du post';
 // Fin Concert (vue)
 
+
+//Concerts (vue)
+//$NOM_CONCERT = 'Nom du concert';
+//$DATE = 'Date';
+$ET = ' and ';
+//$HEURE_CONCERT = 'Heure du concert';
+//$NOM_SALLE = 'Nom de la salle';
+//Fin Concerts (vue)
+
+
+// listeSalle (vue)
+//$NOM_SALLE = 'Nom de la salle';
+//$ADRESSE = 'Adresse';
+$NUM_SALLE = 'Number';
+// Fin listeSalle (vue)
 
  ?>
  

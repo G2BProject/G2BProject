@@ -14,7 +14,7 @@
 
 // Body
 	$TXT_SUIVRE = 'Suivez-nous!';
-	$TXT_CONNECTES = 'Connectés';
+	$TXT_CONNECTES = 'Visites';
 	$TXT_INSCRITS = 'Inscrits';
 //Fin body
 
@@ -42,7 +42,7 @@ $RETOUR_PAGE = 'pour revenir &agrave la page pr&eacutec&eacutedente';
 
 
 //Deconnexion (controleur)
-$_DECONNEXION = 'Vous &ecirctes d&eacuteconnect&eacute';
+$_DECONNEXION = 'Vous êtes déconnecté';
 // Fin Deconnexion (controleur)
 
 
@@ -211,9 +211,33 @@ $SUP_ARTISTE = 'Supprimer l\'artiste suivant';
 $SUP_CONCERT = 'Supprimer le concert suivant';
 //$SUP_PROPRIO = 'Supprimer le propriétaire de salle suivant';
 $CHOIX_NEWS = 'Choisissez ci-dessus les news';
-$CHANGER_COEUR = 'Changer le coup de coeur numéro 1';
+$CHANGER_COEUR = 'Changer le coup de coeur ';
 $ACTU_DONNEES = 'Actualisation des données';
+$IMAGE_ACTU = "Image de l'actualit&eacute";
+$CHANGER_COEURS = 'Changer les coups de coeur' ;
+$NUM_1 = 'Num&eacutero 1';
+$NUM_2 = 'Num&eacutero 2';
+$CHANGER_TOP = 'Changer le top 3';
+$TOP_1 = ' Top 1 ';
+$TOP_2 = ' Top 2 ';
+$TOP_3 = ' Top 3 ';
 // Fin Administration/Back Office
+
+//BackOffice (controleur)
+$SUPP_COMPTE =' Vous avez supprim&eacute le compte de ';
+$PAS_MEMBRE = 'n\'est pas un membre existant';
+$SUPP_ARTISTE =' Vous avez supprim&eacute le compte de l\'artiste ';
+$PAS_ARTISTE = 'n\'est pas un artiste existant';
+$SUPP_CONCERT =' Vous avez supprim&eacute le concert ';
+$PAS_CONCERT = 'n\'est pas un concert existant';
+$PAS_COEUR = 'Un de vos coups de coeur n\'existe pas';
+$MAJ_COEUR = 'Vous aves bien mis à jour vos coups de coeur';
+$REMPLIR_COEUR = 'Vous devez remplir le coup de coeur 1 et 2';
+$PAS_TOP_ARTISTE = 'Un de vos artistes du top n\'existe pas';
+$MAJ_TOP = 'Vous aves bien mis à jour votre top 3';
+$CHAMPS_TOP = 'Vous devez remplir tous les champs de votre top';
+$MAJ_ACTU = 'Vous avez mis à jour l\'actualité de la page d\'accueil';
+// Fin BackOffice (controleur)
 
 
 // Ajout artiste (vue)
@@ -262,6 +286,7 @@ $HEURE_CONCERT = 'Heure du concert';
 // Ajout concert (controleur)
 $_CHOIX_NOM_CONCERT = 'Vous devez indiquer le nom du concert';
 //$_CHOIX_NOM_SALLE = 'Vous devez indiquer le nom de la salle';
+$_CHOIX_NOM_ARTISTE = 'Vous devez indiquer le nom de l\'artiste';
 $PAS_NOM = 'Le nom de l\'artiste choisi n\'existe pas';
 //$_CHOIX = 'Vous devez choisir un nom d\'utilisateur';
 $CORRECT_CONCERT = 'Votre concert a bien &eacutet&eacute ajout&eacute';
@@ -286,5 +311,18 @@ $POST_CONCERT = 'Messages post&eacutes sur ce concert';
 //$DATE_POST = 'Date du post';
 // Fin Concert (vue)
 
+//listeConcerts (vue)
+//$NOM_CONCERT = 'Nom du concert';
+//$DATE = 'Date';
+$ET = ' et ';
+//$HEURE_CONCERT = 'Heure du concert';
+//$NOM_SALLE = 'Nom de la salle';
+//Fin Concerts (vue)
 
+
+// listeSalle (vue)
+//$NOM_SALLE = 'Nom de la salle';
+//$ADRESSE = 'Adresse';
+$NUM_SALLE = 'Num&eacutero';
+// Fin listeSalle (vue)
  ?>
