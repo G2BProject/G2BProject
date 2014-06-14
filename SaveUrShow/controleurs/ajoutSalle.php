@@ -67,7 +67,7 @@ if (empty($_POST['nom_de_la_salle'])) {
 		}
 	}
 	else{
-		$image_salle = NULL ;
+		$image_salle = 'ressources/avatars/salleDefault.jpg' ;
 	}
 
 	ajoutSalle($nom_de_la_salle,$adresse_salle,$departement,$description_salle,$image_salle,$nombre_de_place,$numero_de_telephone);
