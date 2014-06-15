@@ -14,7 +14,7 @@ $post=$_GET['post'];
 
 
 include('vues/vue_creationmessage.php');
-require('modeles/modele_messages.php');
+
 
 
 
