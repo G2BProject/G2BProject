@@ -98,4 +98,24 @@ function updateActu($actu){
 	$bdd -> exec("UPDATE actu SET texte= '$actu'");
 }
 
+
+function ajoutMessageAdmin($nom,$mail,$objet,$message){
+	global $bdd;
+	$req = $bdd->prepare('INSERT INTO message_admin(nom,email,objet,message,date) VALUES(:nom,:mail,:objet,:message, NOW())');
+	$req -> execute(array(
+		'nom'=>$nom,
+		'mail'=>$mail,
+		'objet'=>$objet,
+		'message'=>$message,
+	));
+}
+
+
+function messageAdmin(){
+	global $bdd;
+	$req = $bdd -> query("SELECT * FROM message_admin ORDER BY date");
+
+	return $req;
+}
+
  ?>

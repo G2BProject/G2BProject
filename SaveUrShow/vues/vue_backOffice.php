@@ -29,4 +29,20 @@
 		</p>	
 		<p class="details"><input type="submit" value="<?php echo $ACTU_DONNEES ?>" /></p>
 </div> </form>
+<div>
+	<ul>
+		<div class="details">Ci dessous les messages qui sont adressés à l'administration:</div>
+	<?php  
+foreach ($messages as $message) {
+				
+				echo '<li class="details">Nom: '.$message['nom'].'<br /></li>';
+				echo '<li class="details">email: '.$message['email'].'<br /></li>';
+				echo '<li class="details">objet du message: '.$message['objet'].'<br /></li>';
+				echo '<li class="details">'.$message['message'].'<br /></li>';
+				echo '<li class="details">'.$message['date'].'<br /></li><br /><br /><br />';
+			}
+	?>
+	</ul>
+
+</div>
 </html>

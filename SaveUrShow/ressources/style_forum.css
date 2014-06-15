@@ -267,8 +267,8 @@ label.sous_categorie_forum{
 }
 /* style creation message */
 .conteneur{
- width: 800px;
- height: 200px;
+ width: 900px;
+ height: 150px;
  background: #666666;
  margin-top:5px;
  border:solid 2px;
@@ -286,13 +286,14 @@ text-align:center;
 }
 .message{
 position: relative;
+margin:auto;
 text-align: center;
 top:15px;
 
 }
 .date{
 position: relative; 
-bottom:-70px; 
+float:right; 
 right:0px;  
 text-align: right;
 font-size: 15px;
@@ -306,4 +307,10 @@ margin-top:-(hauteur/2)px;
 margin-left:-(largeur/2)px;
 margin-right: 0px;
  
+}
+
+.decalage{
+
+margin-left:200px;
+
 }
