@@ -33,11 +33,11 @@
 
             <tbody>
                 <tr>
-                    <td class="cellule"> <a href= "#" style="text-decoration:none"><div class="rubrique1"> <?php $reponse = $bdd->query('SELECT sous_categorie_forum  FROM sous_categorie_forum WHERE categorie_forum_ID =2 ORDER BY ID DESC ');
+                    <td class="cellule"> <a href= "?page=reponse" style="text-decoration:none"> <?php $reponse = $bdd->query('SELECT sous_categorie_forum  FROM sous_categorie_forum WHERE categorie_forum_ID =2 ORDER BY ID DESC ');
 
 while ($donnees = $reponse->fetch())
 {
-     echo $donnees['sous_categorie_forum'] . '<br />';
+      echo '<a href= "?page=messageforum&post='.$donnees['sous_categorie_forum'].'" style="text-decoration:none">'.$donnees['sous_categorie_forum'] . '<br /></div></a>';
 }
 
 $reponse->closeCursor();
@@ -47,12 +47,7 @@ $reponse->closeCursor();
                     <td class="cellule">  </td>
                     <td class="cellule">  </a></td>
                 </tr>
-                <tr>
-                    <td class="cellule"><a href="#"  style="text-decoration:none"><div class="rubrique2"></div></a></br>
-                                    
-                    <td class="cellule"> </td>
-                    <td class="cellule"> <a href= "#"> </a>
-                </tr>
+               
             </tbody>
         </table>
 </nav>

@@ -25,6 +25,7 @@
 <body>
 <div class= "formulairediscuss">
 	<form action="index.php?page=discussion" method="post">
+				
 				<p><span class="standard">Catégories :</span>
 					<select name="categorie_forum_ID">
 						<option value="1">Aide,Bugs du site</option>
@@ -42,7 +43,7 @@
 <footer> 
 	
 
-	<div id ="footer"> 
+	<div class="footer"> 
 		
 			
 				<a href="#" class="boutonforum"  style="text-decoration:none"><div class="faqcontact">FAQ</div></a></li>

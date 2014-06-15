@@ -37,7 +37,7 @@
 
 while ($donnees = $reponse->fetch())
 {
-	 echo $donnees['sous_categorie_forum'] . '<br />';
+	  echo '<a href= "?page=messageforum&post='.$donnees['sous_categorie_forum'].'" style="text-decoration:none">'.$donnees['sous_categorie_forum'] . '<br /></div></a>';
 }
 
 $reponse->closeCursor();
@@ -47,12 +47,7 @@ $reponse->closeCursor();
 					<td class="cellule">  </td>
 					<td class="cellule">  </a></td>
 				</tr>
-				<tr>
-					<td class="cellule"><a href="#"  style="text-decoration:none"><div class="rubrique2"></div></a></br>
-									
-					<td class="cellule"> </td>
-					<td class="cellule"> <a href= "#"> </a>
-				</tr>
+				
 			</tbody>
 		</table>
 </nav>

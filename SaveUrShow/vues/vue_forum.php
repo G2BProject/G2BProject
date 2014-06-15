@@ -25,9 +25,15 @@
 
 
 <nav>
-				
+				<?php if (isset($_SESSION['pseudo'])){
+echo '<a href="?page=discussion" class="boutonforum"  style="text-decoration:none"><div class="discuss">Créer discussion</div></a>';
 
-				<a href="?page=discussion" class="boutonforum"  style="text-decoration:none"><div class="discuss">Créer discussion</div></a>
+				}else{
+					echo '<a href="?page=connexion" style="color:white">Veuillez vous connecter pour créer un post!</a> ou  <a href="?page=inscription" style="color:white">inscrivez-vous! </a>';
+				} ?>
+					
+
+				
 		<table class= "tableforum">
 			<thead>
 				<tr class= "categforum1">
@@ -96,7 +102,7 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
        
      echo $count['nbsujets'];   
 ?>  </td>
-					<td class="cellule"> Le 15/03/14 à 9h10 par <a href= "#"> justinbib</a></td>
+					<td class="cellule"> Le 15/03/14 à 9h10 par <a href= "#"> </a></td>
 				</tr>
 			</tbody>
 		</table>
