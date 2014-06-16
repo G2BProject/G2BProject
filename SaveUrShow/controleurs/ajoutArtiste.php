@@ -19,7 +19,7 @@ else
 	if(isset($_POST['nom_artiste']))
 	{
 		$nom_artiste = htmlspecialchars($_POST['nom_artiste']);
-		$nom_artiste_image = preg_replace('/\s/', '', $nom_artiste)
+		$nom_artiste_image = preg_replace('/\s/', '', $nom_artiste);
 		$res = nomArtiste($nom_artiste);
 		if($res)
 		{ 
