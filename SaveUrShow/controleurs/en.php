@@ -197,13 +197,13 @@ $AJOUT_CONCERT = 'Add a concert';
 $AJOUT_SALLE = 'Add a stage';
 $ADMIN = 'Site administration';
 $NOM_ARTISTE = 'Artist name';
-$DATE_CONCERT = 'Concert date';
+$DATE_CONCERT = 'Live date';
 $LIEU = 'Place';
 $NOM_SALLE = 'Stage name';
 $PREFERE = 'Favorite artists';
 $MES_GENRES = 'My genres';
 $GENRE = 'Genre';
-$DATE_CONCERT='Live date';
+
 // Fin Profil
 
 // Administration/Back Office
@@ -327,5 +327,29 @@ $ET = ' and ';
 $NUM_SALLE = 'Number';
 // Fin listeSalle (vue)
 
- ?>
+
+//Forum (vue)
+$CREER_DISCUSSION = 'Create a discussion ';
+$CONNECT = 'Please connect to create a comment';
+$INSCRIRE = 'register';
+$PROPOS = 'About the site';
+$SUJET = 'SUBJECTS/MESSAGES';
+$AIDE = 'Help,Bugs of the site';
+$ACTUALITE = 'News of the site, help and diverse questions, suggestions';
+$PBM = 'Ask all your questions in case of problems, and leave us your remarks, wishes of improvement, bugs';
+$AVIS = 'Notice and suggestions';
+$PART_AVIS = 'You can share with us your notices to improve the site';
+$DISCUSSION = 'DISCUSSIONS';
+$GROUPES = 'Groups/Artists';
+$DISCUTE_GROUPE = 'Come discuss about your favorite groups / artists ';
+$TXT_CONCERTS = 'Concerts';
+$DISCUTE_DATE = 'Discuss the next live date';
+// Fin Forum (vue)
+
+//Sous-catégorie 1, 2, 3 et 4
+$_AIDE = 'HELP, NEWS ABOUT THE SITE';
+$NUM_MESSAGE = 'NUMBER OF MESSAGES';
+$MAJ_CONCERT = 'CONCERTS';
+// Fin Sous-catégorie 1, 2, 3 et 4
+?>
  

@@ -97,7 +97,7 @@
 						
 							
 								<a href="#" class="boutonforum"  style="text-decoration:none"><div class="faqcontact">FAQ</div></a></li>
-								<a href="index.php?page=contact" class= "boutonforum"  style="text-decoration:none"><div class="faqcontact">Contacts</div></a></li>
+								<a href="#" class= "boutonforum"  style="text-decoration:none"><div class="faqcontact">Contacts</div></a></li>
 							
 						
 					</div>

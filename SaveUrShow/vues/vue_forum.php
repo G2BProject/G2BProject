@@ -19,10 +19,10 @@
 
 <nav>
 				<?php if (isset($_SESSION['pseudo'])){
-echo '<a href="?page=discussion" class="boutonforum"  style="text-decoration:none"><div class="discuss">Créer discussion</div></a>';
+echo '<a href="?page=discussion" class="boutonforum"  style="text-decoration:none"><div class="discuss">'.$CREER_DISCUSSION.'</div></a>';
 
 				}else{
-					echo '<a href="?page=connexion" style="color:white">Veuillez vous connecter pour créer un post!</a> ou  <a href="?page=inscription" style="color:white">inscrivez-vous! </a>';
+					echo '<a href="?page=connexion" style="color:white">'.$CONNECT.'!</a> ou  <a href="?page=inscription" style="color:white">'.$INSCRIRE.'! </a>';
 				} ?>
 					
 
@@ -30,17 +30,17 @@ echo '<a href="?page=discussion" class="boutonforum"  style="text-decoration:non
 		<table class= "tableforum">
 			<thead>
 				<tr class= "categforum1">
-					<th> A PROPOS DU SITE... </th>
-					<th> SUJETS/MESSAGES </th>
+					<th> <?php echo $PROPOS ?> ... </th>
+					<th> <?php echo $SUJET ?></th>
 					
 				</tr>		
 			</thead>
 
 			<tbody>
 				<tr>
-					<td class="cellule"><a href="?page=sous_categ1" style="text-decoration:none"><div class="rubrique1">Aide,Bugs du site</div></a></br>
-									<div class="descriptif">Actualités du site, aide et questions diverses,suggestions...</br>
-									Posez toutes vos questions en cas de problèmes, et faites nous part de vos remarques,souhaits d'amélioraton,bugs</div></td>
+					<td class="cellule"><a href="?page=sous_categ1" style="text-decoration:none"><div class="rubrique1"><?php echo $AIDE ?></div></a></br>
+									<div class="descriptif"><?php echo $ACTUALITE ?> ...</br>
+									<?php echo $PBM ?> </div></td>
 					<td class="cellule">  <?php $reponse = $bdd->query('SELECT COUNT(*) AS nbsujets  FROM sous_categorie_forum WHERE categorie_forum_ID=1 ');
 
 $count = $reponse->fetch(PDO::FETCH_ASSOC);   
@@ -49,8 +49,8 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
 ?> </td>
 				</tr>
 				<tr>
-					<td class="cellule"><a href="?page=sous_categ2"  style="text-decoration:none"><div class="rubrique2">Avis et Suggestions</div></a></br>
-									<div class="descriptif">Vous pouvez nous faire part de vos avis afin d'améliorer le site</div></td>
+					<td class="cellule"><a href="?page=sous_categ2"  style="text-decoration:none"><div class="rubrique2"><?php echo $AVIS ?></div></a></br>
+									<div class="descriptif"><?php echo $PART_AVIS ?></div></td>
 					<td class="cellule"> <?php $reponse = $bdd->query('SELECT COUNT(*) AS nbsujets  FROM sous_categorie_forum WHERE categorie_forum_ID=2 ');
 
 $count = $reponse->fetch(PDO::FETCH_ASSOC);   
@@ -66,16 +66,16 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
 		<table class= "tableforum2">
 			<thead>
 				<tr class= "categforum2">
-					<th> DISCUSSIONS </th>
-					<th> SUJETS/MESSAGES </th>
+					<th> <?php echo $DISCUSSION ?> </th>
+					<th> <?php echo $SUJET ?> </th>
 					
 				</tr>		
 			</thead>
 
 			<tbody>
 				<tr>
-					<td class="cellule"><a href="?page=sous_categ3" style="text-decoration:none"><div class="rubrique3">Groupes/Artistes</div></a></br>
-									<div class="descriptif">Venez discuter de vos groupes/artistes préférées</div></td>
+					<td class="cellule"><a href="?page=sous_categ3" style="text-decoration:none"><div class="rubrique3"> <?php echo $GROUPES ?></div></a></br>
+									<div class="descriptif"><?php echo $DISCUTE_GROUPE ?></div></td>
 									
 					<td class="cellule">  <?php $reponse = $bdd->query('SELECT COUNT(*) AS nbsujets  FROM sous_categorie_forum WHERE categorie_forum_ID=3 ');
 
@@ -86,8 +86,8 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
 			
 				</tr>
 				<tr>
-					<td class="cellule"><a href="?page=sous_categ4"  style="text-decoration:none"><div class="rubrique4">Concerts</div></a></br>
-									<div class="descriptif">Discuter des prochaines dates de concerts</div></td>
+					<td class="cellule"><a href="?page=sous_categ4"  style="text-decoration:none"><div class="rubrique4"><?php echo $TXT_CONCERTS ?></div></a></br>
+									<div class="descriptif"><?php echo $DISCUTE_DATE ?></div></td>
 					<td class="cellule">  <?php $reponse = $bdd->query('SELECT COUNT(*) AS nbsujets  FROM sous_categorie_forum WHERE categorie_forum_ID=4 ');
 
 $count = $reponse->fetch(PDO::FETCH_ASSOC);   
@@ -110,8 +110,8 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
 	<div id ="footer"> 
 		
 			
-				<a href="#" class="boutonforum"  style="text-decoration:none"><div class="faqcontact">FAQ</div></a></li>
-				<a href="index.php?page=contact" class= "boutonforum"  style="text-decoration:none"><div class="faqcontact">Contacts</div></a></li>
+				<a href="#" class="boutonforum"  style="text-decoration:none"><div class="faqcontact"><?php echo $TXT_FAQ ?></div></a></li>
+				<a href="#" class= "boutonforum"  style="text-decoration:none"><div class="faqcontact"><?php echo $TXT_CONTACTS ?></div></a></li>
 			
 		
 	</div>

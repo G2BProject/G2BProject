@@ -20,9 +20,8 @@
 	<table class= "tableforum">
 			<thead>
 				<tr class= "categforum1">
-					<th> AIDE,ACTUALITES DU SITE </th>
-					<th> NOMBRE MESSAGES </th>
-					<th> DERNIER MESSAGE </th>
+					<th> <?php echo $_AIDE ?> </th>
+					<th> <?php echo $NUM_MESSAGE ?></th>
 				</tr>		
 			</thead>
 
@@ -39,8 +38,8 @@ $reponse->closeCursor();
 ?>
 </br>
 									</td>
-					<td class="cellule">  </td>
-					<td class="cellule">  </a></td>
+					<td class="cellule"></a>  </td>
+					
 				</tr>
 				
 			</tbody>
@@ -54,8 +53,8 @@ $reponse->closeCursor();
 	<div id ="footer"> 
 		
 			
-				<a href="#" class="boutonforum"  style="text-decoration:none"><div class="faqcontact">FAQ</div></a></li>
-				<a href="index.php?page=contact" class= "boutonforum"  style="text-decoration:none"><div class="faqcontact">Contacts</div></a></li>
+				<a href="#" class="boutonforum"  style="text-decoration:none"><div class="faqcontact"><?php echo $TXT_FAQ ?></div></a></li>
+				<a href="#" class= "boutonforum"  style="text-decoration:none"><div class="faqcontact"><?php echo $TXT_CONTACTS ?></div></a></li>
 			
 		
 	</div>
