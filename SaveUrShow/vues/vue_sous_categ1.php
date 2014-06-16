@@ -11,12 +11,7 @@
 	
 
 <header> 
-	
-	<form id="search" method="post">
-	<div class="btn-left-loupe"></div>
-	<input class="search_data" name="saisie" type="text" placeholder="Recherche..." required />
-	<input class="btn-right-fleche" name="go" type="submit"  value="" />
-	</form>
+
 					
 	<a href= "?page=accueil"> <img src=ressources/image/Titre.png alt= "nom logo" /></a>
 

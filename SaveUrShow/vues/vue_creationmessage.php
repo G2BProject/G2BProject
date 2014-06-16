@@ -81,6 +81,7 @@
 				</p>
 				<p>
 				  <input type="submit" name="submit" id="submit" value="Poster message" />
+				  <a href="index.php?page=messageforum&post='.$post.'" class="rubrique1">Actualiser</a>
 				</p>
 				</form>
 				</nav>
@@ -107,4 +108,5 @@
 				';
 				
 			}
+			
 			 ?>

@@ -11,14 +11,7 @@
 <body>
 	
 
-<header> 
-	
-	<form id="search" method="post">
-	<div class="btn-left-loupe"></div>
-	<input class="search_data" name="saisie" type="text" placeholder="Recherche..." required />
-	<input class="btn-right-fleche" name="go" type="submit"  value="" />
-	</form>
-					
+<header> 				
 	<a href= "?page=accueil"> <img src=ressources/image/Titre.png alt= "nom logo" /></a>
 
 </header>
@@ -39,7 +32,7 @@ echo '<a href="?page=discussion" class="boutonforum"  style="text-decoration:non
 				<tr class= "categforum1">
 					<th> A PROPOS DU SITE... </th>
 					<th> SUJETS/MESSAGES </th>
-					<th> DERNIER MESSAGE </th>
+					
 				</tr>		
 			</thead>
 
@@ -54,7 +47,6 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
        
      echo $count['nbsujets'];   
 ?> </td>
-					<td class="cellule"> Le 14/02/14 à 17h48 par <a href= "#"><?php $nom_du_visiteur = "saveurshowfan" ; echo $nom_du_visiteur ?></a></td>
 				</tr>
 				<tr>
 					<td class="cellule"><a href="?page=sous_categ2"  style="text-decoration:none"><div class="rubrique2">Avis et Suggestions</div></a></br>
@@ -67,7 +59,7 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
 ?> 
 
 </td>
-					<td class="cellule"> Le 15/03/14 à 9h10 par <a href= "#"> justintimber</a>
+
 				</tr>
 			</tbody>
 		</table>
@@ -76,7 +68,7 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
 				<tr class= "categforum2">
 					<th> DISCUSSIONS </th>
 					<th> SUJETS/MESSAGES </th>
-					<th> DERNIER MESSAGE </th>
+					
 				</tr>		
 			</thead>
 
@@ -91,7 +83,7 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
        
      echo $count['nbsujets'];   
 ?> </td>
-					<td class="cellule"> Le 14/03/14 à 18h00 par <a href= "#"></a>
+			
 				</tr>
 				<tr>
 					<td class="cellule"><a href="?page=sous_categ4"  style="text-decoration:none"><div class="rubrique4">Concerts</div></a></br>
@@ -102,7 +94,7 @@ $count = $reponse->fetch(PDO::FETCH_ASSOC);
        
      echo $count['nbsujets'];   
 ?>  </td>
-					<td class="cellule"> Le 15/03/14 à 9h10 par <a href= "#"> </a></td>
+
 				</tr>
 			</tbody>
 		</table>
