@@ -199,6 +199,9 @@ $NOM_SALLE = 'Nom de la salle';
 $PREFERE = 'Artistes pr&eacutef&eacuter&eacutes';
 $MES_GENRES = 'Mes genres musicaux';
 $GENRE = 'Genre';
+$DATE_CONCERT='Date du concert';
+$HEURE_CONCERT='Heure du concert';
+
 // Fin Profil
 
 

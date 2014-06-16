@@ -39,33 +39,4 @@
 		</ul>
 	</div>
 
-	<div class="container2Profil">
-		<div class="txt2Profil"> <?php echo $VENIR ?> : </div>
-		<ul>
-			<li class="txt3Profil"><?php echo $NOM_ARTISTE ?></li>
-			<li class="txt1bisProfil"><?php echo $DATE_CONCERT ?> : </li>
-			<li class="txt1bisProfil"><?php echo $LIEU ?> : </li>
-			<li class="txt1bisProfil"><?php echo $NOM_SALLE ?> : </li>
-		</ul>
-		<div ><a href='#'><img class="photo_concertavenir" src "groupex.jpg"/></a></div>
-	</div>
-
-	<div class="container3Profil">
-		<div class="txt2Profil"> <?php echo $PREFERE ?>: </div>
-		<ul>
-			<li class="txt3Profil"><?php echo $NOM_ARTISTE ?> 1 :</li>
-			<li class="txt3Profil"><?php echo $NOM_ARTISTE ?> 2 :</li>
-			<li class="txt3Profil"><?php echo $NOM_ARTISTE ?> 3 :</li>
-		</ul>
-	</div>
-
-	<div class="container4Profil">
-		<div class="txt2Profil"> <?php echo $MES_GENRES ?>:</div>
-		<ul>
-			<li class="txt3Profil"><?php echo $GENRE ?> 1 :</li>
-			<li class="txt3Profil"><?php echo $GENRE ?> 2 :</li>
-			<li class="txt3Profil"><?php echo $GENRE ?> 3 :</li>
-		</ul>
-	</div>
-
 </div>

@@ -203,6 +203,7 @@ $NOM_SALLE = 'Stage name';
 $PREFERE = 'Favorite artists';
 $MES_GENRES = 'My genres';
 $GENRE = 'Genre';
+$DATE_CONCERT='Live date';
 // Fin Profil
 
 // Administration/Back Office
