@@ -26,15 +26,15 @@
 <div class= "formulairediscuss">
 	<form action="index.php?page=discussion" method="post">
 				
-				<p><span class="standard">Catégories :</span>
+				<p><span class="standard"> <?php echo $CATEGORIES ?>:</span>
 					<select name="categorie_forum_ID">
-						<option value="1">Aide,Bugs du site</option>
-						<option value="2">Avis et Suggestions</option>
-						<option value="3">Groupes/Artistes</option>
-						<option value="4">Concerts</option>
+						<option value="1"><?php echo $AIDE?></option>
+						<option value="2"><?php echo $AVIS?></option>
+						<option value="3"><?php echo $GROUPES?></option>
+						<option value="4"><?php echo $TXT_CONCERTS?></option>
 					</select>
-	<p><label for="sous_categorie_forum" class="sous_categorie_forum" >Sujet :</label><input type="text" name="sous_categorie_forum" id="sous_categorie_forum" rows="5" cols="30"/></p>
-	<p class="standard"><input type="submit" value="Valider"></p>
+	<p><label for="sous_categorie_forum" class="sous_categorie_forum" ><?php echo $SUJET_DISCUSSION ?>:</label><input type="text" name="sous_categorie_forum" id="sous_categorie_forum" rows="5" cols="30"/></p>
+	<p class="standard"><input type="submit" value="<?php echo $VALIDE ?>"></p>
        			</form>
 
 
@@ -46,8 +46,8 @@
 	<div class="footer"> 
 		
 			
-				<a href="#" class="boutonforum"  style="text-decoration:none"><div class="faqcontact">FAQ</div></a></li>
-				<a href="#" class= "boutonforum"  style="text-decoration:none"><div class="faqcontact">Contacts</div></a></li>
+				<a href="#" class="boutonforum"  style="text-decoration:none"><div class="faqcontact"><?php echo $TXT_FAQ ?></div></a></li>
+				<a href="#" class= "boutonforum"  style="text-decoration:none"><div class="faqcontact"><?php echo $TXT_CONTACTS ?></div></a></li>
 			
 		
 	</div>

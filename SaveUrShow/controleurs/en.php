@@ -352,5 +352,11 @@ $_AIDE = 'HELP, NEWS ABOUT THE SITE';
 $NUM_MESSAGE = 'NUMBER OF MESSAGES';
 $MAJ_CONCERT = 'CONCERTS';
 // Fin Sous-catégorie 1, 2, 3 et 4
+
+//Discussion (vue)
+$CATEGORIE = 'Categories';
+$SUJET_DISCUSSION = 'Subjects';
+$VALIDE = 'Confirm';
+//Fin Discussion (vue)
 ?>
  
