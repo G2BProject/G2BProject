@@ -6,5 +6,9 @@
 }else{
 		include('controleurs/fr.php');
 }
-	include('controleurs/accueil.php');
+	If($_GET['current']!="select_lang"){
+		include('controleurs/'.$_GET['current'].'.php');
+	}else{
+		include('controleurs/accueil.php');
+	}
 ?>
