@@ -20,9 +20,8 @@
 	<table class= "tableforum">
 			<thead>
 				<tr class= "categforum1">
-					<th> CONCERTS </th>
-					<th> NOMBRE MESSAGES </th>
-					<th> DERNIER MESSAGE </th>
+					<th><?php echo $MAJ_CONCERT ?> </th>
+					<th> <?php echo $NUM_MESSAGE?></th>
 				</tr>		
 			</thead>
 
@@ -39,9 +38,9 @@ $reponse->closeCursor();
 ?>
 </div></a></br>
 									</td>
-					<td class="cellule">
+					<td class="cellule"></a>
  </td>
-					<td class="cellule">  </a></td>
+					
 				</tr>
 				
 			</tbody>

@@ -18,11 +18,13 @@
 	$TXT_INSCRITS = 'Inscrits';
 //Fin body
 
+
 //Footer
 	$TXT_FAQ = 'FAQ';
 	$TXT_CONTACTS = 'Contacts';
 	$TXT_CG = 'Conditions Générales';
 //Fin footer
+
 
 //Connexion (vue)
 	//$CONNEXION = 'Connexion'; existe déjà
@@ -47,7 +49,7 @@ $_DECONNEXION = 'Vous êtes déconnecté';
 
 
 //Inscription
-// sign up
+
 	$TXT_UTILISATEUR = 'Type d\'utilisateur';
 	$TXT_MEMBRE = 'Membre';
 	$TXT_ARTISTE = 'Artiste';
@@ -90,6 +92,7 @@ $_DECONNEXION = 'Vous êtes déconnecté';
 	$TXT_S_INSCRIRE = 'S\'inscrire';
 //Fin Inscription
 
+
 //Conditions inscription
 $_CONDITION = 'Vous devez accepter les conditions g&eacuten&eacutenerales d\'utilisation du site pour vous inscrire';
 $_APPUI = 'Cliquez';
@@ -118,6 +121,7 @@ $_NEW_ARTISTE = 'Nouveaux artistes';
 $COEUR = 'Coup de coeur';
 $VENIR = 'Concerts &agrave venir';
 //Fin Accueil
+
 
 //Liste artistes
 $_RECHERCHE_GENRE = 'Rechercher pas genre';
@@ -199,9 +203,6 @@ $NOM_SALLE = 'Nom de la salle';
 $PREFERE = 'Artistes pr&eacutef&eacuter&eacutes';
 $MES_GENRES = 'Mes genres musicaux';
 $GENRE = 'Genre';
-$DATE_CONCERT='Date du concert';
-$HEURE_CONCERT='Heure du concert';
-
 // Fin Profil
 
 
@@ -328,4 +329,29 @@ $ET = ' et ';
 //$ADRESSE = 'Adresse';
 $NUM_SALLE = 'Num&eacutero';
 // Fin listeSalle (vue)
- ?>
+
+//Forum (vue)
+$CREER_DISCUSSION = 'Créer discussion';
+$CONNECT = 'Veuillez vous connecter pour créer un post';
+$INSCRIRE = 'inscrivez-vous';
+$PROPOS = 'A PROPOS DU SITE';
+$SUJET = 'SUJETS/MESSAGES';
+$AIDE = 'Aide,Bugs du site';
+$ACTUALITE = 'Actualités du site, aide et questions diverses,suggestions';
+$PBM = 'Posez toutes vos questions en cas de problèmes, et faites nous part de vos remarques,souhaits d\'amélioration,bugs';
+$AVIS = 'Avis et Suggestions';
+$PART_AVIS = 'Vous pouvez nous faire part de vos avis afin d\'améliorer le site';
+$DISCUSSION = 'DISCUSSIONS';
+$GROUPES = 'Groupes/Artistes';
+$DISCUTE_GROUPE = 'Venez discuter de vos groupes/artistes préférées';
+//$TXT_CONCERTS = 'Concerts';
+$DISCUTE_DATE = 'Discuter des prochaines dates de concerts';
+// Fin Forum (vue)
+
+
+//Sous-catégorie 1, 2, 3 et 4
+$_AIDE = 'AIDE,ACTUALITES DU SITE';
+$NUM_MESSAGE = 'NOMBRE DE MESSAGES';
+$MAJ_CONCERT = 'CONCERTS';
+// Fin Sous-catégorie 1, 2, 3 et 4
+?>

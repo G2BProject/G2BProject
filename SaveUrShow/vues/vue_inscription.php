@@ -402,12 +402,6 @@ src="vues/javascript.js">
 				<p><label for="image_membre" class="standard"><?php echo $AVATAR ?> (PNG, JPG ou JPEG, 1 Mo max.) :</label><input type="file" name="image_membre" id="image_membre"/></p>
 				<p><input type="hidden" name="maxFileSize" value="1000000" /></p>
 
-				<p><span class="standard"><?php echo $TXT_NEWS ?></span>
-					 <input type="radio" name="newsletter" value="oui" id="oui" /> <label for="oui"><?php echo $OUI ?></label>
-       					 <input type="radio" name="newsletter" value="non" id="non" /> <label for="non"><?php echo $NON ?></label></p>
-						<!-- voir pour la traduction du bouton "choisissez un fichier"-->
-       			<p><label class="standard" for="cgu"><span class="etoile">*</span><?php echo $TXT_CGU ?>.</label><input type="checkbox" name="cgu" id="cgu" /></p>
-
 				<p class="details"><span class="etoile"> * </span> : <?php echo $TXT_OBLIGATOIRE ?></p>
 
        			<p class="standard"><input type="submit" value="<?php echo $TXT_S_INSCRIRE ?>"></p>
