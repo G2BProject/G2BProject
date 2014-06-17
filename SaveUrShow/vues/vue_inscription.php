@@ -401,6 +401,8 @@ src="vues/javascript.js">
  
 				<p><label for="image_membre" class="standard"><?php echo $AVATAR ?> (PNG, JPG ou JPEG, 1 Mo max.) :</label><input type="file" name="image_membre" id="image_membre"/></p>
 				<p><input type="hidden" name="maxFileSize" value="1000000" /></p>
+				<p><label class="standard" for="cgu"><span class="etoile">*</span><?php echo $TXT_CGU ?>.</label><input type="checkbox" name="cgu" id="cgu" /></p>
+
 
 				<p class="details"><span class="etoile"> * </span> : <?php echo $TXT_OBLIGATOIRE ?></p>
 
