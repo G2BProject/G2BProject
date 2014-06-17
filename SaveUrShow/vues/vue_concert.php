@@ -11,6 +11,7 @@
 			<li class="txt1Profil"><?php echo $DATE_CONCERT ?> : <?php echo $info['date_du_concert']; ?></li>
 			<li class="txt1Profil"><?php echo $HEURE_CONCERT ?> : <?php echo $info['heure_du_concert']; ?></li>
 			<li class="txt1Profil"><?php echo $NUM ?> : <?php echo $info['numero_de_telephone']; ?></li>
+			<li class="txt1Profil"><?php echo $NOM_ARTISTE ?> : <?php echo $info['nom_artiste']; ?></li>
 		</ul>
 	</div>
 
