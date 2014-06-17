@@ -20,7 +20,6 @@ if ($_SESSION['lang']=='en') {
 		include('controleurs/fr.php');
 }
 
-//include('controleurs/fr.php');
 if(!empty($_GET['page']) AND is_file('controleurs/'.$_GET['page'].'.php') ){
 	include('controleurs/'.$_GET['page'].'.php');
 }else{

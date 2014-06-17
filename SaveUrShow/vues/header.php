@@ -16,8 +16,8 @@
 	</div></a>
 
 	<div id="drapeau">
-	<a href="?page=select_lang&lang=fr&current=<?php echo $_GET['page']; ?>"> <img src="ressources/image/drap_fr.png" alt="Version Française" /></a>
-	<a href="?page=select_lang&lang=en&current=<?php echo $_GET['page']; ?>"> <img src="ressources/image/drap_en.png" alt="Version Anglaise"/></a>
+	<a href="?page=select_lang&lang=fr&current=<?php if(!empty($_GET['page'])){echo $_GET['page'];} ?>"> <img src="ressources/image/drap_fr.png" alt="Version Française" /></a>
+	<a href="?page=select_lang&lang=en&current=<?php if(!empty($_GET['page'])){echo $_GET['page'];} ?>"> <img src="ressources/image/drap_en.png" alt="Version Anglaise"/></a>
 	</div>
 
 	<div id="connexion">

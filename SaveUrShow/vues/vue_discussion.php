@@ -26,7 +26,7 @@
 <div class= "formulairediscuss">
 	<form action="index.php?page=discussion" method="post">
 				
-				<p><span class="standard"> <?php echo $CATEGORIES ?>:</span>
+				<p><span class="standard"> <?php echo $CATEGORIE ?>:</span>
 					<select name="categorie_forum_ID">
 						<option value="1"><?php echo $AIDE?></option>
 						<option value="2"><?php echo $AVIS?></option>
