@@ -12,7 +12,7 @@
 		</p>
 		<p>
 		<div class="details"><?php echo $CHOIX_NEWS ?></div><br />
-		<label for="actu" class="standard"><?php echo $CHANGER_COEUR ?> :</label><input type="text" name="actu" id="actu" />
+		<label for="actu" class="standard"><?php echo $CHANGER_NEW ?> :</label><input type="text" name="actu" id="actu" />
 		<p><label for="photo_actu" class="standard"><?php echo $IMAGE_ACTU ?> (PNG, 1 Mo max.) :</label><input type="file" name="photo_actu" id="photo_actu"/></p>
 		<p><input type="hidden" name="maxFileSize" value="1000000" /></p>
 		</p>

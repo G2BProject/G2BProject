@@ -219,6 +219,7 @@ $CHANGER_COEUR = 'Change number 1 favorite';
 $ACTU_DONNEES = 'Updating data ';
 $IMAGE_ACTU = "Image of the news";
 $CHANGER_COEURS = 'Change ours favorite' ;
+$CHANGER_NEW = 'Choose the text of the news' ;
 $NUM_1 = 'Number 1';
 $NUM_2 = 'Number 2';
 $CHANGER_TOP = 'Change the top 3';

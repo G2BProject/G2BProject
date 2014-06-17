@@ -216,6 +216,7 @@ $SUP_CONCERT = 'Supprimer le concert suivant';
 //$SUP_PROPRIO = 'Supprimer le propriétaire de salle suivant';
 $CHOIX_NEWS = 'Choisissez ci-dessus les news';
 $CHANGER_COEUR = 'Changer le coup de coeur ';
+$CHANGER_NEW = 'Choisir le texte de la news' ;
 $ACTU_DONNEES = 'Actualisation des données';
 $IMAGE_ACTU = "Image de l'actualit&eacute";
 $CHANGER_COEURS = 'Changer les coups de coeur' ;
