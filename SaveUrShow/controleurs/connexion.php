@@ -1,5 +1,4 @@
 <?php 
-
 	if (!isset($_POST['pseudo'])) //On est dans la page de formulaire
 	{
 
@@ -45,5 +44,4 @@
 	    }
 
 	}
-
  ?>
