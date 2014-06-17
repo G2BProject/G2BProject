@@ -1474,3 +1474,24 @@ margin-left: 10px;
 margin-left: 10px;
 width:225px;
 }
+
+/*faq*/
+.FAQ{
+text-decoration:underline;
+width: 800px;
+margin-top:0px;
+color:white;
+font-size: 120%;
+text-align : center ;
+}
+
+.faq{
+color : white ;
+font-size: 80%;
+}
+
+.faq1{
+color : white ;
+font-size: 80%;
+}
+
