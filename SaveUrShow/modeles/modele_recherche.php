@@ -12,8 +12,12 @@
 			$req -> execute(array('mot_cle' => '%'.$mot_cle.'%'));
 			return $req ;
 		}else{
-				$req = $bdd -> query("SELECT nom_de_la_salle FROM salle WHERE nom_de_la_salle like '%$mot_cle%'");
-				return $req;
+				// $req = $bdd -> query("SELECT nom_de_la_salle FROM salle WHERE nom_de_la_salle like '%$mot_cle%'");
+				// return $req;
+
+				$req = $bdd -> prepare('SELECT nom_de_la_salle, adresse_salle, nombre_de_place, image_salle, numero_de_telephone FROM salle WHERE salle.nom_de_la_salle like :mot_cle');
+				$req -> execute(array('mot_cle' => '%'.$mot_cle.'%'));
+				return $req ;
 		}
     			
 			}

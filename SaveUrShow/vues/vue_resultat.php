@@ -30,8 +30,13 @@ echo "<ul>";
 		echo "<br/>";
 			if($reqRecherche!='empty'){
 				echo "<p class='result' style='color:#66CCCC;'>".$TXT_SALLES."</p>";
-		foreach ($reqRecherche as $nom_de_la_salle) {
-				echo '<li> <a href="">'.$nom_de_la_salle['nom_de_la_salle'].'</a><br /></li>';
+		foreach ($reqRecherche as $salle) {
+			echo'
+			<div class="conteneur"> <img class="gauche" alt="Concert" width="200" height="200" src="'.$salle['image_salle'].'" />
+			  <h1>'.$NOM_SALLE.' : '.$salle['nom_de_la_salle'].'</h1> 
+			  <p>'.$ADRESSE.' : '.$salle['adresse_salle'].'</p>
+			  <p>'.$NUM.' : '.$salle['numero_de_telephone'].'</p>
+			  </div>';
 			}
 		}
 	}
